@@ -2549,6 +2549,23 @@
 {"src": "bortezomib", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived"}
 {"src": "bortezomib", "rel": "competes_with", "dst": "talquetamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived"}
 {"src": "bortezomib", "rel": "competes_with", "dst": "teclistamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "cariprazine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "lumateperone", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "lumateperone", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "paliperidone palmitate", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "paliperidone", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "olanzapine", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "olanzapine", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "olanzapine", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "esketamine", "basis": "shared_indication:depression", "etype": "derived"}
@@ -2567,23 +2584,59 @@
 {"src": "cariprazine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "olanzapine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
-{"src": "aripiprazole", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "aripiprazole", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "aripiprazole", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "aripiprazole", "rel": "competes_with", "dst": "cariprazine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "aripiprazole", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "lumateperone", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "cariprazine", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "lumateperone", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "paliperidone palmitate", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "paliperidone", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "cariprazine", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "olanzapine", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "cariprazine", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "olanzapine", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "cariprazine", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "olanzapine", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "cariprazine", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "gemcitabine", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "omeprazole", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lutetium lu-177 dotatate", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "olaparib", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "esomeprazole", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lansoprazole", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "gemcitabine", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "gemcitabine", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "gemcitabine", "rel": "competes_with", "dst": "lutetium lu-177 dotatate", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "gemcitabine", "rel": "competes_with", "dst": "olaparib", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "esomeprazole", "rel": "competes_with", "dst": "gemcitabine", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "gemcitabine", "rel": "competes_with", "dst": "lansoprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "omeprazole", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lutetium lu-177 dotatate", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "esomeprazole", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lansoprazole", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lutetium lu-177 dotatate", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "olaparib", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lansoprazole", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lutetium lu-177 dotatate", "rel": "competes_with", "dst": "olaparib", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "esomeprazole", "rel": "competes_with", "dst": "lutetium lu-177 dotatate", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lansoprazole", "rel": "competes_with", "dst": "lutetium lu-177 dotatate", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "esomeprazole", "rel": "competes_with", "dst": "olaparib", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "lansoprazole", "rel": "competes_with", "dst": "olaparib", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "esomeprazole", "rel": "competes_with", "dst": "lansoprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
+{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "durvalumab", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "docetaxel", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "cadonilimab", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "trastuzumab", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "durvalumab", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "trastuzumab deruxtecan", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "pembrolizumab with berahyaluronidase alfa", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "docetaxel", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "cadonilimab", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "durvalumab", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "pembrolizumab with berahyaluronidase alfa", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "docetaxel", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "cadonilimab", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "durvalumab", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "durvalumab", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "docetaxel", "rel": "competes_with", "dst": "durvalumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "cadonilimab", "rel": "competes_with", "dst": "durvalumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "pembrolizumab with berahyaluronidase alfa", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "docetaxel", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "cadonilimab", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "docetaxel", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "cadonilimab", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
+{"src": "cadonilimab", "rel": "competes_with", "dst": "docetaxel", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
 {"src": "camizestrant", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:breast-cancer", "etype": "derived"}
 {"src": "inetetamab", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:breast-cancer", "etype": "derived"}
 {"src": "datopotamab deruxtecan", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:breast-cancer", "etype": "derived"}
@@ -2758,33 +2811,6 @@
 {"src": "abemaciclib", "rel": "competes_with", "dst": "sacituzumab govitecan", "basis": "shared_indication:breast-cancer", "etype": "derived"}
 {"src": "goserelin", "rel": "competes_with", "dst": "sacituzumab govitecan", "basis": "shared_indication:breast-cancer", "etype": "derived"}
 {"src": "abemaciclib", "rel": "competes_with", "dst": "goserelin", "basis": "shared_indication:breast-cancer", "etype": "derived"}
-{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "durvalumab", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "docetaxel", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "cadonilimab", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "trastuzumab", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "durvalumab", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "trastuzumab deruxtecan", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "pembrolizumab with berahyaluronidase alfa", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "docetaxel", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "cadonilimab", "rel": "competes_with", "dst": "trastuzumab deruxtecan", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "durvalumab", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "pembrolizumab with berahyaluronidase alfa", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "docetaxel", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "cadonilimab", "rel": "competes_with", "dst": "trastuzumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "durvalumab", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "durvalumab", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "docetaxel", "rel": "competes_with", "dst": "durvalumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "cadonilimab", "rel": "competes_with", "dst": "durvalumab", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "pembrolizumab with berahyaluronidase alfa", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "docetaxel", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "cadonilimab", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "docetaxel", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "cadonilimab", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
-{"src": "cadonilimab", "rel": "competes_with", "dst": "docetaxel", "basis": "shared_indication:gastric-cancer", "etype": "derived"}
 {"src": "alectinib", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:lung-cancer", "etype": "derived"}
 {"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "pemetrexed", "basis": "shared_indication:lung-cancer", "etype": "derived"}
 {"src": "brigatinib", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:lung-cancer", "etype": "derived"}
@@ -3127,32 +3153,6 @@
 {"src": "atezolizumab", "rel": "competes_with", "dst": "docetaxel", "basis": "shared_indication:lung-cancer", "etype": "derived"}
 {"src": "docetaxel", "rel": "competes_with", "dst": "ivonescimab", "basis": "shared_indication:lung-cancer", "etype": "derived"}
 {"src": "atezolizumab", "rel": "competes_with", "dst": "ivonescimab", "basis": "shared_indication:lung-cancer", "etype": "derived"}
-{"src": "gemcitabine", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "paclitaxel nanoparticle", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "omeprazole", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lutetium lu-177 dotatate", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "olaparib", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "esomeprazole", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lansoprazole", "rel": "competes_with", "dst": "paclitaxel nanoparticle", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "gemcitabine", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "gemcitabine", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "gemcitabine", "rel": "competes_with", "dst": "lutetium lu-177 dotatate", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "gemcitabine", "rel": "competes_with", "dst": "olaparib", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "esomeprazole", "rel": "competes_with", "dst": "gemcitabine", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "gemcitabine", "rel": "competes_with", "dst": "lansoprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "omeprazole", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lutetium lu-177 dotatate", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "esomeprazole", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lansoprazole", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lutetium lu-177 dotatate", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "olaparib", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lansoprazole", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lutetium lu-177 dotatate", "rel": "competes_with", "dst": "olaparib", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "esomeprazole", "rel": "competes_with", "dst": "lutetium lu-177 dotatate", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lansoprazole", "rel": "competes_with", "dst": "lutetium lu-177 dotatate", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "esomeprazole", "rel": "competes_with", "dst": "olaparib", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "lansoprazole", "rel": "competes_with", "dst": "olaparib", "basis": "shared_indication:gi-cancer", "etype": "derived"}
-{"src": "esomeprazole", "rel": "competes_with", "dst": "lansoprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
 {"src": "rsv prefusion f vaccine", "rel": "competes_with", "dst": "rsvpref3 oa", "basis": "shared_indication:rsv", "etype": "derived"}
 {"src": "nirsevimab", "rel": "competes_with", "dst": "rsv prefusion f vaccine", "basis": "shared_indication:rsv", "etype": "derived"}
 {"src": "clesrovimab", "rel": "competes_with", "dst": "rsv prefusion f vaccine", "basis": "shared_indication:rsv", "etype": "derived"}
@@ -4520,6 +4520,9 @@
 {"src": "durvalumab", "rel": "competes_with", "dst": "tar-200", "basis": "shared_indication:bladder-cancer", "etype": "derived"}
 {"src": "durvalumab", "rel": "competes_with", "dst": "enfortumab vedotin", "basis": "shared_indication:bladder-cancer", "etype": "derived"}
 {"src": "enfortumab vedotin", "rel": "competes_with", "dst": "tar-200", "basis": "shared_indication:bladder-cancer", "etype": "derived"}
+{"src": "dasatinib", "rel": "competes_with", "dst": "imatinib", "basis": "shared_indication:all-leukemia", "etype": "derived"}
+{"src": "brexucabtagene autoleucel", "rel": "competes_with", "dst": "imatinib", "basis": "shared_indication:all-leukemia", "etype": "derived"}
+{"src": "brexucabtagene autoleucel", "rel": "competes_with", "dst": "dasatinib", "basis": "shared_indication:all-leukemia", "etype": "derived"}
 {"src": "imatinib", "rel": "competes_with", "dst": "ponatinib", "basis": "shared_indication:cml", "etype": "derived"}
 {"src": "dasatinib", "rel": "competes_with", "dst": "imatinib", "basis": "shared_indication:cml", "etype": "derived"}
 {"src": "asciminib", "rel": "competes_with", "dst": "ponatinib", "basis": "shared_indication:cml", "etype": "derived"}
@@ -4527,9 +4530,6 @@
 {"src": "nilotinib", "rel": "competes_with", "dst": "ponatinib", "basis": "shared_indication:cml", "etype": "derived"}
 {"src": "asciminib", "rel": "competes_with", "dst": "dasatinib", "basis": "shared_indication:cml", "etype": "derived"}
 {"src": "dasatinib", "rel": "competes_with", "dst": "nilotinib", "basis": "shared_indication:cml", "etype": "derived"}
-{"src": "dasatinib", "rel": "competes_with", "dst": "imatinib", "basis": "shared_indication:all-leukemia", "etype": "derived"}
-{"src": "brexucabtagene autoleucel", "rel": "competes_with", "dst": "imatinib", "basis": "shared_indication:all-leukemia", "etype": "derived"}
-{"src": "brexucabtagene autoleucel", "rel": "competes_with", "dst": "dasatinib", "basis": "shared_indication:all-leukemia", "etype": "derived"}
 {"src": "insulin lispro", "rel": "competes_with", "dst": "teplizumab", "basis": "shared_indication:type-1-diabetes", "etype": "derived"}
 {"src": "eculizumab", "rel": "competes_with", "dst": "nipocalimab", "basis": "shared_indication:gmg", "etype": "derived"}
 {"src": "nipocalimab", "rel": "competes_with", "dst": "ravulizumab", "basis": "shared_indication:gmg", "etype": "derived"}
