@@ -1,0 +1,8 @@
+# generated audio binaries — scripts are committed, audio is not
+audio/*.mp3
+audio/*.wav
+audio/*.m4a
+.DS_Store
+
+# generated public mirror working dir (see publish.py)
+.public-mirror/
