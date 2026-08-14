@@ -1,66 +1,68 @@
 # pharma-space
 
-An open learning resource about the pharmaceutical industry: who the major companies are, what drugs they sell, how they got here (30 years of history), and what they're betting on next.
+**A plain-language map of the pharmaceutical industry.** 22 major companies: the drugs they sell, how they got here over 30 years, what they're betting on next, and what they tried that failed. Built to be read, listened to, and queried by an agent.
 
-Built and maintained collaboratively by a human learner and two AI agents over a ~3-month intensive period, then maintained ongoing. The repo doubles as a **queryable knowledge base for agents** and a **structured curriculum for humans**.
+Started August 2026. Written by a human learner working with two AI agents — one for research and structure, one for a daily news feed. Content is AI-researched from public reporting and machine-checked for internal consistency; it is not primary-source audited.
 
-## How to read this repo
+## Who it's for
 
-**New to pharma? Read in this order:**
-1. `reference/01_drug_naming_primer.md` — decode drug names instead of memorizing them (15 min, highest leverage)
-2. `reference/00_company_list.md` — the 22 companies covered and why
-3. `reference/04_industry_themes.md` — the four cross-company stories (GLP-1, ADCs, IRA, China BD); daily news makes sense against these
-4. Any 2-3 files in `companies/` — each is a self-contained deep-dive (~10 min each)
-5. `reference/02_drug_index.md` — bookmark it; it's the lookup table for any unfamiliar drug name
-6. `news/` — daily digests
+Anyone who needs to get oriented in this industry quickly and doesn't have a database subscription: someone starting a job in pharma or biotech, a scientist moving from academia to industry, someone covering the sector, or anyone whose work keeps colliding with drug names they can't decode. It also works as a corpus for an AI agent to answer structural questions about the industry.
 
-## Structure
+The premise is that pharma is hard to enter not because the facts are secret but because they're scattered — and because the vocabulary is designed to be looked up, not learned. So the naming primer comes first, and every company file follows the same shape so the second one is faster to read than the first.
 
-| Path | Content | Update cadence | Trust level |
-|---|---|---|---|
-| `reference/` | Cross-company reference: company list, naming primer, drug index, industry themes | Curation passes only | Curated, verified |
-| `companies/` | One deep-dive per company: assets, 1995-2025 history, current bets, risks | Curation passes only | Curated, verified |
-| `news/YYYY-MM/` | Daily news digests, append-only | Daily | Raw, unverified |
-| `news/inbox.md` | Flags: news items that should update curated files | Daily (add) / curation (clear) | Queue |
-| `audio/scripts/` | TTS-ready narration scripts generated from curated files | After curation passes | Generated |
-| `audio/pronunciation.md` | Drug-name respellings for TTS substitution and human reference | With drug index | Curated |
+## Who it's not for
 
-**Two-tier trust model:** curated files (`reference/`, `companies/`) are only edited during explicitly-instructed curation passes with fact verification. News files are append-only daily captures — useful, but unverified. If a news digest and a company file disagree, the company file is more likely right about the past; the digest about the last 24 hours.
+- **Not investment advice or due-diligence material.** Figures are approximate, dated, and sometimes estimated. Do not trade on them.
+- **Not medical or clinical guidance.** Nothing here informs treatment decisions. Drug indications are listed to explain markets, not to guide care.
+- **Not a substitute for primary sources.** Company filings, FDA labels, ClinicalTrials.gov, and commercial databases (Citeline, Evaluate) are authoritative; this is orientation.
+- **Not exhaustive.** 22 companies, not the whole industry. Roughly the top ten assets per company, not full portfolios. The failure registry is representative, not a census. Pipeline coverage is thin by design.
+- **Not real-time.** Each file carries an `updated:` date in its frontmatter. Check it.
 
-## Contributing
+If a number matters to a decision you're making, verify it at the source.
 
-See `AGENTS.md` for the full contract. In short:
-- **Maintainer** (Yue): sets learning goals, assigns curation passes, and may edit directly under the same synchronization rules
-- **Deep-dive agent** (Claude Science): writes company files and reference files in batch sessions
-- **Daily agent** (OpenClaw): appends news digests and inbox flags; generates audio
-- **Either agent** runs the weekly curation pass — but only when explicitly instructed by the maintainer
+## Four ways to use it
 
-## Audio
+**1. Read it.** Start with [`reference/01_drug_naming_primer.md`](reference/01_drug_naming_primer.md) — 15 minutes, and the highest-leverage thing here. Generic drug names are systematic: the suffix tells you what the molecule *is* (`-mab` = antibody, `-tinib` = kinase inhibitor, `-cel` = cell therapy, `-glutide` = GLP-1). Learn ~25 stems and unfamiliar names stop being noise. Then [`reference/04_industry_themes.md`](reference/04_industry_themes.md) for the four stories driving the industry right now, then any file in [`companies/`](companies) (~10 min each, self-contained).
 
-Company files are written so the History and Current Bets sections work as spoken prose. `audio/scripts/` contains table-free, abbreviation-expanded scripts for TTS synthesis (~8-10 min per company). Generated audio files are not committed (see `.gitignore`); scripts are.
+**2. Listen to it.** [`audio/scripts/`](audio/scripts) holds a narration script per company — tables converted to prose, abbreviations expanded, numbers written as spoken ("about sixty-five billion dollars"). Pipe one into any text-to-speech tool for an 8–10 minute listen; [`audio/pronunciation.md`](audio/pronunciation.md) is a substitution table so drug names come out right (*ustekinumab* is not obvious on sight). Useful for commutes, and it turns out hearing a drug name is what makes it stick.
+
+**3. Explore the graph.** Download [`graph/explorer.html`](graph/explorer.html) and open it in a browser — one self-contained file, no server, works offline. Click a company to see its assets and deal history; click a drug for owner, sales, patent expiry, target, and how it changed hands; click a target to see every company on it and what died there. Space expands the neighbourhood one hop, shift+space retracts. Failed drugs are grey — the graveyard visibly haunting its targets.
+
+**4. Query it with an agent.** Clone the repo and point any coding agent at it: *"who are the main players in obesity?"*, *"which targets have the most failed programs?"*, *"what did Bristol Myers Squibb acquire and when?"*. The prose carries the reasoning; [`graph/nodes.jsonl`](graph/nodes.jsonl) and [`graph/edges.jsonl`](graph/edges.jsonl) carry the structure (one JSON object per line — a few lines of Python is enough to traverse it). Schema in [`graph/README.md`](graph/README.md).
+
+## What's inside
+
+| Path | Contents |
+|---|---|
+| [`companies/`](companies) | 22 deep dives: marketed assets, 1995–2025 history, current strategic bets, key risks |
+| [`reference/`](reference) | Company list · drug naming primer · drug index (481 brands) · target convergence · industry themes · graveyard (129 clinical-stage failures) |
+| [`reference/modalities/`](reference/modalities) | Technology pages: CAR-T, T-cell engagers, ADCs, radioligands, siRNA/ASO, gene therapy |
+| [`players/`](players) | 10 one-page profiles of licensors and partners outside the core 22 |
+| [`graph/`](graph) | Derived knowledge graph: 1,319 nodes (533 molecules, 285 targets, 353 deals) / 4,795 edges, plus the interactive explorer and a static overview figure |
+| [`audio/`](audio) | 22 narration scripts + pronunciation guide |
+
+Companies are tagged by how much coverage they actually have: **core** (full deep dive), **partner** (one-page profile), **cited** (named by a deal record only — no file, unverified). The explorer renders the three differently so a passing mention is never mistaken for research.
+
+## Accuracy and corrections
+
+Facts were researched from public reporting (company results, regulatory announcements, trade press) and cross-checked; load-bearing numbers — revenues, deal values, approval dates — were verified against multiple sources, while product-level sales are sometimes run-rate estimates and are marked `(est.)`. A validator (`graph/validate.py`) checks the graph for internal contradictions on every rebuild, and the honest gaps it finds are counted rather than hidden.
+
+Expect errors anyway, particularly in product-level figures and patent-expiry years. This is a generated snapshot of a working repository; issues and pull requests here are not monitored. If something is wrong, the `updated:` date and the Sources section of each file tell you what to check.
+
+## Reproducing the derived files
+
+Two scripts ship and run against the published data with no extra inputs:
+
+```bash
+python3 graph/validate.py        # correctness checks over the graph
+python3 graph/build_overview.py  # regenerate graph/overview.png (needs matplotlib)
+```
+
+The extraction pipeline that *builds* the graph from the prose is not included — it depends on cached model outputs that stay in the private working repo.
 
 ## License
 
-Content: CC-BY-4.0 (attribution required). Sources are cited in each file; figures are approximate and dated — always check the `updated:` frontmatter field.
-
-## Public mirror
-
-A curated snapshot of the content tiers is published to **https://github.com/Yue-Jiang/pharma-space-public** — generated by `publish.py`, never hand-edited. The private working repo keeps the maintainer workflow files (`queries/`, `REQUESTS.md`, `AGENTS.md`, `news/inbox.md`); everything else ships.
-
-## Status
-
-- [x] Repo structure, agent contract, naming primer, drug index (288 brands)
-- [x] Company deep-dives: 22 / 22 — complete
-- [x] Industry themes file (reference/04_industry_themes.md)
-- [x] Knowledge graph (graph/extract.py, incremental with LLM cache) + target-convergence table
-- [x] Drug index upgraded to a drug dictionary: `status` column (marketed/legacy/withdrawn/historical/failed/pipeline), 481 rows incl. historical landmarks (Kymriah, Gleevec, Lipitor, Vioxx, Aduhelm)
-- [x] `players/` tier: 10 profiles of non-covered partners/licensors (Legend, Arcellx, Genmab, Ionis, Akeso, Hansoh, Kelun, 3SBio, Zealand, BioNTech)
-- [x] `reference/modalities/` tier: technology-organized pages (CAR-T, T-cell engagers, ADC, radioligand, siRNA/ASO, gene therapy)
-- [x] `queries/log.md`: query log + coverage-boundary rule in AGENTS.md — usage drives the curation backlog
-- [x] Graveyard registry (reference/05_graveyard.md, 128 clinical-stage failures) + failed_on graph edges + CT.gov miner (graph/ctgov_failures.py)
-- [x] Maintenance model: event->scope table, verification tiers, quarterly earnings pass (AGENTS.md)
-- [x] Audio scripts: all 22 companies
-- [x] Daily news pipeline live
+Content: [CC BY 4.0](LICENSE) — use it, adapt it, attribute it. Sources are cited within each file.
 
 
 ---

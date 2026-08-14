@@ -1,90 +1,68 @@
----
-type: reference
-updated: 2026-08-12
-status: generated
----
-# graph/ — derived knowledge graph
+# graph/ — the knowledge graph
 
-A structured index over the prose knowledge base. **Derived, never hand-edited**: regenerated from `companies/*.md` + `reference/02_drug_index.md` after curation passes. The prose is the source of truth; if graph and prose disagree, the prose wins and the graph needs regenerating.
-
-## Why it exists (division of labor)
-
-- Prose answers: "tell me about X", "why did X do Y" — narrative, judgment.
-- Graph answers: reverse lookups ("everything targeting obesity"), completeness-guaranteed enumerations ("ALL ADCs"), multi-hop chains ("cliffs 2027-2030 with no in-house successor"), aggregations, and **consistency linting** (partnership edges must be derivable from both partners' files; every asset must have index + pronunciation rows).
+A structured index over the prose knowledge base, derived from `companies/*.md` and `reference/*.md`. **The prose is the source of truth**; if graph and prose disagree, the prose wins. Nothing here is hand-edited.
 
 ## Files
 
-| File | One JSON object per line |
+| File | What it is |
 |---|---|
-| `nodes.jsonl` | `{id, kind, ...}` — kinds: `company`, `molecule`, `target`, `disease_area`, `indication`, `modality`, `deal` |
-| `edges.jsonl` | `{src, rel, dst, ...}` — see vocabulary below |
+| `nodes.jsonl` | one JSON object per line, one line per node |
+| `edges.jsonl` | one JSON object per line, one line per edge |
+| `explorer.html` | self-contained interactive view — open in any browser, works offline |
+| `overview.png` | static figure: companies against the most crowded targets |
+| `validate.py` | correctness checks (`--json`, `--strict`) |
+| `build_overview.py` | regenerates `overview.png` from the jsonl (needs matplotlib) |
 
-## Node conventions
+## Node kinds
 
-- `molecule` nodes are canonical (generic/INN name as id, e.g. `tirzepatide`). Brands are a `brands` list attribute — never separate nodes. Attributes: `modality`, `sales_2025_usd_bn` (approx, nullable), `loe_year` (nullable), `phase` (marketed | ph3 | ph2 | ...).
-- `company` ids are repo slugs (`eli-lilly`). `indication` ids are lowercase (`obesity`, `nsclc`), each linked to one of ~8 `disease_area` nodes (oncology, immunology, cardiometabolic, neuroscience, vaccines-id, rare, respiratory, other).
-- `target` nodes: gene/protein symbol as id (`PD-1`, `GLP-1R`, `KRAS-G12C`); murky MoA -> no edge rather than fake precision.
-- `deal` nodes: `{id, kind:"deal", type: acquisition|license|divestiture|partnership, year, value_usd_bn (nullable), notes}`.
+| kind | key fields |
+|---|---|
+| `company` | `tier` — `core` (deep dive in `companies/`), `partner` (profile in `players/`), `cited` (named by a deal record only; no file, unverified) |
+| `molecule` | `brands`, `class`, `modality`, `sales_2025_usd_bn`, `loe_year` (patent expiry), `phase` (`failed` for graveyard entries) |
+| `target` | the molecular target; id is a canonical symbol |
+| `indication` | disease treated |
+| `disease_area` | coarse grouping of indications |
+| `modality` | drug format (`mab`, `adc`, `small-molecule`, `cell-therapy`, …) |
+| `deal` | `type`, `year`, `value_usd_bn`, `counterparty`, `assets` |
 
-## Edge vocabulary
+## Edge relations
 
-| rel | src → dst | Notes |
-|---|---|---|
-| `owns` | company → molecule | `from`/`to` years when known; current owner has no `to` |
-| `originated` | company → molecule | who discovered/first developed |
-| `licensed_to` / `co_develops` / `co_markets` | company → company | `asset:` attribute names the molecule; `geography:` when split (e.g. Xarelto US vs ex-US) |
-| `royalty_on` | company → molecule | economic interest without control |
-| `treats` | molecule → indication | one edge per indication |
-| `in_area` | indication → disease_area | the 2-level hierarchy |
-| `has_modality` | molecule → modality | flat controlled vocabulary |
-| `acts_on` | molecule → target | `action: agonist\|inhibitor\|...`; ADCs use the antibody antigen; bispecifics get one edge per arm |
-| `acquired_via` / `divested_via` | molecule → deal | connects assets to transactions |
-| `party_to` | company → deal | acquirer/acquiree/licensor/licensee in `role:` |
-| `competes_with` | molecule → molecule | **derived**, same-indication only; `basis: shared_indication` |
-| `pressure_on` | any → any | **thesis-type** edges: payer crowding, capacity constraints. MUST carry `source:` and `as_of:` |
+| rel | meaning |
+|---|---|
+| `owns` | company → molecule it markets |
+| `acts_on` | molecule → target (`action`: inhibitor, agonist, …) |
+| `treats` | molecule → indication |
+| `failed_on` | dead molecule → target it failed against (`year`, `mode`) |
+| `has_modality` | molecule → modality |
+| `in_area` | indication → disease area |
+| `party_to` | company → deal (`role`) |
+| `acquired_via` / `via` | molecule → the deal that moved it |
+| `competes_with` | molecule ↔ molecule, derived from a shared indication (`basis`) — the only inferred relation; `etype` is `derived`, everything else is `fact` |
 
-**fact vs thesis:** every edge has `etype: fact | derived | thesis`. Agents answering questions should state which tier they used. Thesis edges expire: ignore if `as_of` older than ~6 months.
+## Querying it
 
-## Regeneration
+```python
+import json
+from collections import defaultdict
 
-`python graph/extract.py` (run from repo root; part of the curation-pass checklist, step 5). Extraction is LLM-assisted for History/Current-bets sections and mechanical for the drug-index table; a run prints a lint report (asymmetric partnerships, index/pronunciation gaps, molecules with no indication).
+nodes = {n["id"]: n for n in map(json.loads, open("graph/nodes.jsonl"))}
+edges = [json.loads(l) for l in open("graph/edges.jsonl")]
 
-## Current coverage
-
-16 / 22 companies (batches 1-3). Rebuilt: 2026-08-12.
-
-## Company coverage tiers
-
-Company nodes carry a `tier` field stating how much the KB actually knows about them — so a licensor that appears once is never mistaken for a fully-researched company:
-
-| tier | meaning | source of truth | explorer rendering |
-|---|---|---|---|
-| `core` | one of the Core 22, full deep dive | `companies/<slug>.md` | large solid blue |
-| `partner` | recurring licensor/partner/co-owner with a one-page profile | `players/<slug>.md` | medium light blue |
-| `cited` | named only by a deal record or an asset row; **no KB file, details unverified** | none | small hollow outline |
-
-`tier` is derived at rebuild time from which files exist — promoting a company is just adding its file and re-running `extract.py`. A `cited` company accumulating several deal edges is the signal that it deserves a `players/` profile (the lint prints the current list).
-
-## Validation
-
-`python3 graph/validate.py` (`--json`, `--strict`). Checks structural invariants, semantic plausibility (name-stem vs modality, biologic-vs-small-molecule, status-vs-graph-membership, failed-with-sales, ownerless molecules, un-merged target aliases) and reports the size of every catch-all bucket. Catch-alls are treated as first-class findings, not footnotes: the KB's worst failures have all been plausible-looking defaults rather than visible gaps. See AGENTS.md for the level semantics and the curation-pass step.
-
-## Reproducing the visualisations (no LLM)
-
-| file | built by | inputs |
-|---|---|---|
-| `explorer.html` | `python3 graph/build_explorer.py` | `nodes.jsonl`, `edges.jsonl`, `reference/02_drug_index.md`, `reference/00_company_list.md`, `players/*.md`, `cache/graveyard.json`, `cache/layout.json`, `explorer_template.html` |
-| `overview.png` | `python3 graph/build_overview.py` | `nodes.jsonl`, `edges.jsonl` |
-
-Both are **fully deterministic — they make no model calls** and produce byte-identical output on repeated runs. All LLM-derived facts are frozen in `graph/cache/*.json` by `extract.py`; the builders only read them. So the pipeline after any KB edit is:
-
-```
-python3 graph/extract.py          # re-derive graph (LLM only if cache misses -> writes cache/TODO.md)
-python3 graph/validate.py         # correctness checks; --strict for CI
-python3 graph/build_explorer.py   # interactive view
-python3 graph/build_overview.py   # static figure
+# who has marketed assets against GLP-1R?
+owns = defaultdict(list)
+for e in edges:
+    if e["rel"] == "owns":
+        owns[e["dst"]].append(e["src"])
+for e in edges:
+    if e["rel"] == "acts_on" and e["dst"] == "GLP-1R":
+        print(e["src"], "->", owns.get(e["src"]))
 ```
 
-**Layout stability:** node positions live in `cache/layout.json` so the picture doesn't reshuffle when the graph grows — new nodes are placed at the centroid of their placed neighbours with a name-hash jitter (deterministic). `build_explorer.py --relayout` recomputes everything with networkx; it moves every node, so use it rarely.
+`competes_with` dominates the edge count (~2,100 of 4,795) because it is combinatorial within an indication; filter it out for most traversals.
 
-The UI itself (CSS + JS) is `explorer_template.html`, with `__NODES__`/`__EDGES__` placeholders. Edit the template to change interaction or styling; edit `build_explorer.py` to change what data reaches the panels.
+## Caveats
+
+- **Marketed-asset bias.** The graph covers what companies sell today plus the failure registry. Pipeline assets named in prose mostly have no nodes yet.
+- **Sales figures** are approximate, sometimes run-rate estimates, and FX-converted for non-USD reporters.
+- **Coverage tiers matter.** A `cited` company node carries no verified information beyond its name.
+- Run `python3 graph/validate.py` to see the current gap counts — molecules without a target, indications that fell into the `other` bucket, and so on. They are counted rather than papered over.
