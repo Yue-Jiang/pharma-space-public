@@ -40,7 +40,7 @@
  <div id="kinds"></div><div style="font-size:11px;color:#9aa;margin:6px 0 2px">companies by KB coverage:<br><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#1f77b4;margin-right:5px"></span>core (deep dive)<br><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#5fa8d3;margin-right:7px"></span>partner (one-pager)<br><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0e0e12;border:1.5px solid #7f9cb0;margin-right:7px"></span>cited only (no file)</div><hr style="border-color:#333">
  <div id="rels"></div>
  <div id="zoomrow" style="margin:8px 0"><button id="zin" style="width:32px">+</button> <button id="zout" style="width:32px">&minus;</button> <button id="zfit">fit</button></div>
- <div class="hint" id="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = neighborhood + details &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br>bottom strip = disconnected satellites (graveyard molecules on untracked targets).</div>
+ <div class="hint" id="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = neighborhood + details &middot; shift/&#8984;-click (or long-press) = add a node, showing only what connects to <em>all</em> of them &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br>bottom strip = disconnected satellites (graveyard molecules on untracked targets).</div>
 </div>
 <div id="info"></div>
 <svg id="g" width="100%" height="100%"></svg>
@@ -64,7 +64,10 @@ const gN=document.createElementNS('http://www.w3.org/2000/svg','g');
 const gL=document.createElementNS('http://www.w3.org/2000/svg','g');
 svg.append(gE,gN,gL);
 
-let focus=null, selEdge=null;
+// Selection is a LIST of anchors, not a single node. One anchor behaves as before;
+// several anchors intersect their neighbourhoods (see hoodMulti).
+let anchors=[], selEdge=null;
+function focusPrimary(){return anchors.length?anchors[0]:null;}  // layout centre
 function visible(){
   const vn=new Set(); NODES.forEach((n,i)=>{if(kindOn[n.kind])vn.add(i);});
   const vl=links.filter(l=>relOn[l.rel]&&vn.has(l.s)&&vn.has(l.t));
@@ -106,6 +109,20 @@ function focusLayout(f, showN){
   }
 }
 let focusDepth=1;
+// Multi-anchor query. One anchor: its d-hop neighbourhood (unchanged behaviour).
+// Several anchors: nodes reachable within d hops of EVERY anchor — the intersection —
+// so selecting a company + a modality answers "that company's assets of that kind".
+// Anchors are always kept so the result reads as a connected story.
+function hoodMulti(list, vl, depth){
+  if(!list.length) return null;
+  let acc=null;
+  list.forEach(i=>{
+    const h=hood(i, vl, depth);
+    acc = acc===null ? h : new Set([...acc].filter(x=>h.has(x)));
+  });
+  list.forEach(i=>acc.add(i));
+  return acc;
+}
 function hood(i, vl, depth){
   const nb=new Set([i]);
   for(let d=0;d<depth;d++){
@@ -116,12 +133,36 @@ function hood(i, vl, depth){
   }
   return nb;
 }
-function setFocus(i, depth){
-  focus=i; focusDepth=depth||1;
+// Describe the current selection. For an intersection this is the answer to the query,
+// so it leads with what was found rather than with one node's detail sheet.
+function anchorInfo(clicked){
+  if(!anchors.length) return '';
+  const nm=j=>`<b>${NODES[j].label}</b>`;
+  if(anchors.length===1){
+    const n=NODES[anchors[0]];
+    return `${nm(anchors[0])} <span style="color:#888">(${n.kind}${n.failed?', failed':''}, ${focusDepth}-hop)</span>\n${n.detail||n.title}`;
+  }
+  const {vn,vl}=visible();
+  const nb=hoodMulti(anchors, vl, focusDepth);
+  const shared=[...nb].filter(j=>!anchors.includes(j));
+  const byKind={};
+  shared.forEach(j=>{(byKind[NODES[j].kind]=byKind[NODES[j].kind]||[]).push(NODES[j].label);});
+  const parts=Object.keys(byKind).sort().map(k=>
+    `<b>${byKind[k].length} ${k}${byKind[k].length===1?'':'s'}</b>: ` +
+    byKind[k].sort().slice(0,24).join(', ') + (byKind[k].length>24?', …':''));
+  const head=`${anchors.map(nm).join(' &cap; ')} <span style="color:#888">(within ${focusDepth} hop${focusDepth>1?'s':''} of all ${anchors.length})</span>`;
+  return shared.length
+    ? `${head}\n\n${parts.join('\n\n')}`
+    : `${head}\n\nNothing connects all of these within ${focusDepth} hop${focusDepth>1?'s':''}. Press space to widen.`;
+}
+function setFocus(i, depth){ setAnchors(i===null?[]:[i], depth); }
+function setAnchors(list, depth){
+  anchors=list.slice(); focusDepth=depth||1;
   NODES.forEach(n=>{delete n.fx; delete n.fy;});
+  const i=focusPrimary();
   if(i!==null){
     const {vn,vl}=visible();
-    const nb=hood(i, vl, focusDepth);
+    const nb=hoodMulti(anchors, vl, focusDepth);
     const show=new Set([...vn].filter(j=>nb.has(j)));
     focusLayout(i, show);
     // auto-fit: viewport = laid-out subgraph bbox + margin (min size guards tiny subgraphs)
@@ -138,15 +179,16 @@ function setFocus(i, depth){
   }
 }
 function refocusInPlace(){
-  if(focus===null){NODES.forEach(n=>{delete n.fx; delete n.fy;}); return;}
+  const f=focusPrimary();
+  if(f===null){NODES.forEach(n=>{delete n.fx; delete n.fy;}); return;}
   const {vn,vl}=visible();
-  const nb=hood(focus, vl, focusDepth);
-  focusLayout(focus, new Set([...vn].filter(j=>nb.has(j))));
+  const nb=hoodMulti(anchors, vl, focusDepth);
+  focusLayout(f, new Set([...vn].filter(j=>nb.has(j))));
 }
 function render(){
   const {vn,vl}=visible();
   let showN=vn, showL=vl;
-  if(focus!==null){const nb=hood(focus, vl, focusDepth);
+  if(anchors.length){const nb=hoodMulti(anchors, vl, focusDepth);
     showN=new Set([...vn].filter(i=>nb.has(i)));
     showL=vl.filter(l=>showN.has(l.s)&&showN.has(l.t));}
   gE.innerHTML='';gN.innerHTML='';gL.innerHTML='';
@@ -172,15 +214,33 @@ function render(){
       if(vr<minR){const pad=document.createElementNS('http://www.w3.org/2000/svg','circle');
         pad.setAttribute('cx',px(n));pad.setAttribute('cy',py(n));pad.setAttribute('r',minR);
         pad.setAttribute('fill','rgba(0,0,0,0)');pad.style.cursor='pointer';
-        pad.onclick=ev=>{c.dispatchEvent(new MouseEvent('click',{bubbles:false}));ev.stopPropagation();};
+        pad.onclick=ev=>{c.dispatchEvent(new MouseEvent('click',{bubbles:false,shiftKey:multiTap}));ev.stopPropagation();};
         gN.appendChild(pad);}}
-    c.setAttribute('fill',n.hollow?'#0e0e12':n.color);c.setAttribute('stroke',n.hollow?n.color:(n.failed?'#777':'#000'));c.setAttribute('stroke-width',n.hollow?1.6:0.7);
+    const isAnchor=anchors.includes(i);
+    c.setAttribute('fill',n.hollow?'#0e0e12':n.color);
+    c.setAttribute('stroke',isAnchor?'#e8c766':(n.hollow?n.color:(n.failed?'#777':'#000')));
+    c.setAttribute('stroke-width',(isAnchor?3.2:(n.hollow?1.6:0.7))/(isAnchor?zoom*0.55:1));
     c.style.cursor='pointer';
-    c.onclick=ev=>{ev.stopPropagation();selEdge=null;setFocus(focus===i?null:i);
-      info(`<b>${n.label}</b> <span style="color:#888">(${n.kind}${n.failed?', failed':''})</span>\n${n.detail||n.title}`);render();};
+    c.onclick=ev=>{ev.stopPropagation();selEdge=null;
+      if(ev.shiftKey||ev.metaKey){                       // add/remove an anchor
+        const at=anchors.indexOf(i);
+        setAnchors(at>=0 ? anchors.filter(x=>x!==i) : anchors.concat([i]), focusDepth);
+      } else {
+        setAnchors(anchors.length===1&&anchors[0]===i ? [] : [i], focusDepth);
+      }
+      info(anchorInfo(i)); render();};
+    // touch: long-press (500ms) adds this node to the selection instead of replacing it
+    let lpTimer=null;
+    c.addEventListener('touchstart',()=>{lpTimer=setTimeout(()=>{lpTimer=null;
+      const at=anchors.indexOf(i);
+      setAnchors(at>=0?anchors.filter(x=>x!==i):anchors.concat([i]), focusDepth);
+      info(anchorInfo(i)); render();
+      if(navigator.vibrate) navigator.vibrate(15);}, 500);},{passive:true});
+    c.addEventListener('touchend',()=>{if(lpTimer){clearTimeout(lpTimer);lpTimer=null;}},{passive:true});
+    c.addEventListener('touchmove',()=>{if(lpTimer){clearTimeout(lpTimer);lpTimer=null;}},{passive:true});
     const t=document.createElementNS('http://www.w3.org/2000/svg','title');t.textContent=n.title;c.appendChild(t);gN.appendChild(c);
     // 5x label density: companies+modalities+areas always; targets deg>=2; molecules with sales or zoom
-    const lab = n.kind==='company'||n.kind==='modality'||n.kind==='disease_area'||focus!==null||zoom>1.6
+    const lab = n.kind==='company'||n.kind==='modality'||n.kind==='disease_area'||anchors.length||zoom>1.6
       ||(n.kind==='target'&&deg[i]>=2)||(n.kind==='molecule'&&n.size>8.5);
     if(lab){
       const tx=document.createElementNS('http://www.w3.org/2000/svg','text');
@@ -190,7 +250,7 @@ function render(){
       if(n.kind==='company')tx.setAttribute('font-weight','600');
       tx.textContent=n.label;gL.appendChild(tx);}});
 }
-svg.onclick=()=>{if(moved)return; setFocus(null);selEdge=null;document.getElementById('info').style.display='none';render();};
+svg.onclick=()=>{if(moved)return; setAnchors([]);selEdge=null;document.getElementById('info').style.display='none';render();};
 
 const kd=document.getElementById('kinds');
 KINDS.forEach(k=>{const l=document.createElement('label');
@@ -233,8 +293,10 @@ svg.addEventListener('mousemove',e=>{if(!drag)return;
   drag=[e.clientX,e.clientY];svg.setAttribute('viewBox',vb.join(' '));});
 svg.addEventListener('mouseup',()=>drag=null);
 document.addEventListener('keydown',e=>{
-  if(e.key===' '&&focus!==null&&e.target.tagName!=='INPUT'){e.preventDefault();setFocus(focus, e.shiftKey ? Math.max(1, focusDepth-1) : focusDepth+1);render();const n=NODES[focus];info(`<b>${n.label}</b> <span style=\"color:#888\">(${n.kind}, ${focusDepth}-hop neighborhood)</span>\n${n.detail||n.title}`);}
-  if(e.key==='Escape'){setFocus(null);document.getElementById('info').style.display='none';render();}});
+  if(e.key===' '&&anchors.length&&e.target.tagName!=='INPUT'){e.preventDefault();
+    setAnchors(anchors, e.shiftKey ? Math.max(1, focusDepth-1) : focusDepth+1);
+    render(); info(anchorInfo(anchors[0]));}
+  if(e.key==='Escape'){setAnchors([]);document.getElementById('info').style.display='none';render();}});
 
 // ---------------- mobile: drawer + touch gestures ----------------
 const isTouch = window.matchMedia("(max-width:760px), (pointer:coarse)").matches;
@@ -250,7 +312,7 @@ svg.addEventListener('touchstart', () => {
 }, {passive:true});
 
 // one-finger drag = pan, two-finger pinch = zoom (mirrors the trackpad convention)
-let tPan = null, tPinch = null;
+let tPan = null, tPinch = null, multiTap = false;
 function touchMid(e){const a=e.touches[0], b=e.touches[1];
   return [(a.clientX+b.clientX)/2, (a.clientY+b.clientY)/2];}
 function touchDist(e){const a=e.touches[0], b=e.touches[1];
