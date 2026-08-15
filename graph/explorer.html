@@ -205,6 +205,80 @@ function refocusInPlace(){
   const nb=hoodMulti(anchors, vl, focusDepth);
   focusLayout(f, new Set([...vn].filter(j=>nb.has(j))));
 }
+
+// ---- label placement ----
+// Labels used to be pinned to the right of every dot, so in dense areas they overprinted
+// each other. This does a greedy pass: important labels claim their spot first, each
+// remaining one tries a ring of candidate offsets (right, left, above, below, diagonals)
+// and takes the first that collides with nothing already placed. If every candidate is
+// blocked it is drawn at its default position anyway — overlapping beats disappearing,
+// since a missing label is a fact the reader never learns.
+// Occupancy is a uniform grid over view coordinates: O(n) rather than O(n^2).
+function placeLabels(pending, showN, zoom){
+  if(!pending.length) return;
+  const CH=0.55;                                  // mean glyph width / font-size
+  const cell=Math.max(vb[2],vb[3])/90;            // grid cell in view units
+  const grid=new Map();
+  const key=(cx,cy)=>cx+','+cy;
+  function cellsOf(b){const out=[];
+    for(let cx=Math.floor(b.x0/cell); cx<=Math.floor(b.x1/cell); cx++)
+      for(let cy=Math.floor(b.y0/cell); cy<=Math.floor(b.y1/cell); cy++) out.push(key(cx,cy));
+    return out;}
+  function hits(b){
+    for(const k of cellsOf(b)){const arr=grid.get(k); if(!arr) continue;
+      for(const o of arr) if(b.x0<o.x1&&b.x1>o.x0&&b.y0<o.y1&&b.y1>o.y0) return true;}
+    return false;}
+  function occupy(b){for(const k of cellsOf(b)){
+    if(!grid.has(k)) grid.set(k,[]); grid.get(k).push(b);}}
+
+  // node dots are obstacles too, so a label never lands on another node
+  showN.forEach(i=>{const n=NODES[i], r=n.size*0.55;
+    occupy({x0:px(n)-r, y0:py(n)-r, x1:px(n)+r, y1:py(n)+r});});
+
+  // most important first: companies, then bigger nodes
+  pending.sort((a,b)=>(b.n.kind==='company')-(a.n.kind==='company') || b.n.size-a.n.size);
+
+  pending.forEach(p=>{
+    const w=String(p.n.label).length*p.fs*CH, hgt=p.fs;
+    const gap=p.r+2, x=px(p.n), y=py(p.n);
+    // Candidates: the familiar right/left spots first, then rings of increasing radius.
+    // Measured on the full view: 3 rings cut overlapping label pairs 119 -> 20, and half
+    // of all labels still land in the default right-hand position.
+    const cands=[[gap, hgt*0.34,'start'], [-gap, hgt*0.34,'end']];
+    [[10,1.0],[18,1.7],[24,2.5]].forEach(([count,rad])=>{
+      for(let k=0;k<count;k++){const a=2*Math.PI*k/count;
+        const dx=Math.cos(a)*(gap+w*0.15)*rad, dy=Math.sin(a)*(gap+hgt)*rad;
+        cands.push([dx, dy+hgt*0.34, dx>=0?'start':'end']);}});
+    let placed=null;
+    for(const [dx,dy,anch] of cands){
+      const lx=x+dx, ly=y+dy;
+      const x0 = anch==='start'? lx : anch==='end'? lx-w : lx-w/2;
+      const box={x0, y0:ly-hgt*0.8, x1:x0+w, y1:ly+hgt*0.25};
+      if(!hits(box)){placed={lx,ly,anch,box,dist:Math.hypot(dx,dy)}; break;}
+    }
+    if(!placed){                                   // nothing free: default spot, overlap
+      const lx=x+gap, ly=y+hgt*0.34;
+      placed={lx,ly,anch:'start',box:{x0:lx,y0:ly-hgt*0.8,x1:lx+w,y1:ly+hgt*0.25}, over:true};
+    }
+    occupy(placed.box);
+    // A label nudged far from its dot is ambiguous — draw a faint leader back to it.
+    if(placed.dist > p.r + 22){
+      const ld=document.createElementNS('http://www.w3.org/2000/svg','line');
+      const ex = placed.anch==='end' ? placed.box.x1 : placed.box.x0;
+      ld.setAttribute('x1',px(p.n)); ld.setAttribute('y1',py(p.n));
+      ld.setAttribute('x2',ex); ld.setAttribute('y2',placed.ly-p.fs*0.3);
+      ld.setAttribute('stroke','#555'); ld.setAttribute('stroke-width',0.4/zoom);
+      gL.appendChild(ld);
+    }
+    const tx=document.createElementNS('http://www.w3.org/2000/svg','text');
+    tx.setAttribute('x',placed.lx); tx.setAttribute('y',placed.ly);
+    tx.setAttribute('text-anchor',placed.anch);
+    tx.setAttribute('fill',p.fill); tx.setAttribute('font-size',p.fs);
+    if(p.bold) tx.setAttribute('font-weight','600');
+    if(placed.over) tx.setAttribute('opacity','0.75');   // de-emphasise forced overlaps
+    tx.textContent=p.n.label; gL.appendChild(tx);
+  });
+}
 function render(){
   const {vn,vl}=visible();
   let showN=vn, showL=vl;
@@ -271,6 +345,7 @@ function render(){
     hit.onclick=ev=>{ev.stopPropagation();selEdge=l;
       info(`<b>${NODES[l.s].label}</b> &rarr;&larr; <b>${NODES[l.t].label}</b> <span style="color:#888">(${l.rel})</span>\n${l.title}`);render();};
     gE.append(ln,hit);});
+  const pending=[];
   showN.forEach(i=>{const n=NODES[i];
     const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
     c.setAttribute('cx',px(n));c.setAttribute('cy',py(n));c.setAttribute('r',n.size*0.55);
@@ -306,13 +381,13 @@ function render(){
     c.addEventListener('touchmove',()=>{if(lpTimer){clearTimeout(lpTimer);lpTimer=null;}},{passive:true});
     const t=document.createElementNS('http://www.w3.org/2000/svg','title');t.textContent=n.title;c.appendChild(t);gN.appendChild(c);
     const lab = labelSet.has(i);
-    if(lab){
-      const tx=document.createElementNS('http://www.w3.org/2000/svg','text');
-      tx.setAttribute('x',px(n)+n.size*0.55+2);tx.setAttribute('y',py(n)+3);
-      tx.setAttribute('fill',n.kind==='company'?'#fff':'#bbb');
-      tx.setAttribute('font-size',(n.kind==='company'?13:9.5)/Math.sqrt(zoom));
-      if(n.kind==='company')tx.setAttribute('font-weight','600');
-      tx.textContent=n.label;gL.appendChild(tx);}});
+    // labels are not drawn here: collect them and place them in one pass below, so
+    // overlapping ones can be nudged to a free side (see placeLabels).
+    if(lab) pending.push({i, n, r:n.size*0.55,
+      fs:(n.kind==='company'?13:9.5)/Math.sqrt(zoom),
+      fill:n.kind==='company'?'#fff':'#bbb', bold:n.kind==='company'});});
+
+  placeLabels(pending, showN, zoom);
 }
 svg.onclick=()=>{if(moved)return; setAnchors([]);selEdge=null;document.getElementById('info').style.display='none';render();};
 
