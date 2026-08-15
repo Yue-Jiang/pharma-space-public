@@ -56,7 +56,7 @@ for t, gens in acts.items():
     cos = {c for g in live for c in owned_by[g]}
     if len(cos) >= MIN_COMPANIES:
         tgt_cos[t] = cos
-top = sorted(tgt_cos.items(), key=lambda kv: len(kv[1]))[-TOP_N:]
+top = sorted(tgt_cos.items(), key=lambda kv: (len(kv[1]), kv[0]))[-TOP_N:]
 if not top:
     sys.exit("no targets meet the crowding threshold — nothing to plot")
 
@@ -66,8 +66,11 @@ step = max(1, len(companies) - 1) / max(1, len(top) - 1)
 ty = {t: i * step for i, (t, _) in enumerate(top)}
 
 fig, ax = plt.subplots(figsize=(11, 8.5))
+# Draw order must be sorted: iterating the set `cos` varies with the hash seed, and
+# antialiasing blends differently where lines cross — the PNG pixels then differ between
+# runs on identical data. Sorted iteration keeps the file byte-stable.
 for t, cos in top:
-    for c in cos:
+    for c in sorted(cos):
         ax.plot([0, 1], [cy[c], ty[t]], color="#b9c6d2", lw=0.6, alpha=0.65, zorder=1)
 for c in companies:
     ax.scatter([0], [cy[c]], s=42, color="#1f77b4", zorder=3)
@@ -89,5 +92,7 @@ ax.text(0, 1.0, f"Node size = number of companies on the target · 'failed' coun
         transform=ax.transAxes, fontsize=6.5, color="#666", va="bottom")
 fig.tight_layout()
 out = os.path.join(G, "overview.png")
-fig.savefig(out, dpi=200)
+# matplotlib stamps creation time into PNG metadata, which made every rebuild a binary
+# diff even with identical data. Empty metadata keeps the file byte-stable.
+fig.savefig(out, dpi=200, metadata={"Software": ""})
 print(f"overview.png rebuilt: {len(top)} targets, {len(companies)} companies")
