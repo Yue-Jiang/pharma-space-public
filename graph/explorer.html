@@ -175,18 +175,29 @@ function setAnchors(list, depth, pin){
     const nb=hoodMulti(anchors, vl, focusDepth);
     const show=new Set([...vn].filter(j=>nb.has(j)));
     focusLayout(i, show);
-    // auto-fit: viewport = laid-out subgraph bbox + margin (min size guards tiny subgraphs)
-    let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
-    show.forEach(j=>{const n=NODES[j];
-      x0=Math.min(x0,px(n)-30); x1=Math.max(x1,px(n)+30+String(n.label).length*7);
-      y0=Math.min(y0,py(n)-30); y1=Math.max(y1,py(n)+30);});
-    let bw=Math.max(x1-x0, 260), bh=Math.max(y1-y0, 260*H/W);
-    // preserve aspect ratio
-    if(bw/bh > W/H) bh=bw*H/W; else bw=bh*W/H;
-    const bcx=(x0+x1)/2, bcy=(y0+y1)/2;
-    vb=[bcx-bw/2*1.1, bcy-bh/2*1.1, bw*1.1, bh*1.1];
-    svg.setAttribute('viewBox',vb.join(' '));
+    fitTo(show);
   }
+}
+// Fit the viewport to a set of nodes.
+// Two things this gets right that the previous inline version did not:
+//  1. ASPECT — the SVG is width/height 100%, so its real aspect is the window's, not the
+//     1800x1400 coordinate space. Fitting to W/H and letting preserveAspectRatio letterbox
+//     meant the subgraph never filled the screen and drifted off-centre.
+//  2. LABELS — the allowance was added only to the right edge, pushing the box centre right
+//     of the true content centre (so the clicked node appeared left of where you expected).
+//     It is now applied on the side each label actually extends.
+function fitTo(show){
+  const r=svg.getBoundingClientRect();
+  const aspect=(r.width&&r.height)? r.width/r.height : W/H;
+  let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+  show.forEach(j=>{const n=NODES[j]; const lab=30+String(n.label).length*3.5;
+    x0=Math.min(x0,px(n)-lab); x1=Math.max(x1,px(n)+lab);
+    y0=Math.min(y0,py(n)-28);  y1=Math.max(y1,py(n)+28);});
+  let bw=Math.max(x1-x0,200), bh=Math.max(y1-y0,200/aspect);
+  if(bw/bh > aspect) bh=bw/aspect; else bw=bh*aspect;   // grow the SHORT side only
+  const cx=(x0+x1)/2, cy=(y0+y1)/2, pad=1.06;
+  vb=[cx-bw/2*pad, cy-bh/2*pad, bw*pad, bh*pad];
+  svg.setAttribute('viewBox',vb.join(' '));
 }
 function refocusInPlace(){
   const f=focusPrimary();
@@ -274,9 +285,11 @@ document.getElementById('search').onkeydown=e=>{if(e.key!=='Enter')return;
   const q=e.target.value.toLowerCase();
   const hit=NODES.findIndex(n=>n.id.toLowerCase().includes(q)||String(n.label).toLowerCase().includes(q));
   if(hit>=0){const n=NODES[hit];selEdge=null;
-    vb=[n.x-W/6,n.y-H/6,W/3,H/3];svg.setAttribute('viewBox',vb.join(' '));
-    setFocus(hit);
-    info(`<b>${n.label}</b> <span style="color:#888">(${n.kind})</span>\n${n.detail||n.title}`);render();}};
+    // while pinning, search ADDS to the selection — otherwise you could never reach a
+    // second node that is off-screen or hard to find by eye.
+    if(pinMode && !anchors.includes(hit)) setAnchors(anchors.concat([hit]), focusDepth, true);
+    else setFocus(hit);
+    info(anchorInfo(hit)); render();}};
 
 let drag=null,moved=false,dragStart=[0,0];
 svg.addEventListener('wheel',e=>{e.preventDefault();
@@ -294,7 +307,7 @@ function zoomBy(f){const cx=vb[0]+vb[2]/2, cy=vb[1]+vb[3]/2;
   vb=[cx-vb[2]*f/2, cy-vb[3]*f/2, vb[2]*f, vb[3]*f];svg.setAttribute('viewBox',vb.join(' '));render();}
 document.getElementById('zin').onclick=()=>zoomBy(0.75);
 document.getElementById('zout').onclick=()=>zoomBy(1.33);
-document.getElementById('zfit').onclick=()=>{vb=[0,0,W,H];svg.setAttribute('viewBox',vb.join(' '));render();};
+document.getElementById('zfit').onclick=()=>{const {vn}=visible(); fitTo(vn.size?vn:new Set(NODES.map((_,i)=>i))); render();};
 svg.addEventListener('mousedown',e=>{drag=[e.clientX,e.clientY];dragStart=[e.clientX,e.clientY];moved=false;});
 svg.addEventListener('mousemove',e=>{if(!drag)return;
   if(Math.abs(e.clientX-dragStart[0])+Math.abs(e.clientY-dragStart[1])>4)moved=true;
@@ -311,6 +324,13 @@ document.addEventListener('keydown',e=>{
     else { setAnchors(anchors, e.shiftKey ? Math.max(1, focusDepth-1) : focusDepth+1, false); }
     render(); info(anchorInfo(anchors[0]));}
   if(e.key==='Escape'){setAnchors([]);document.getElementById('info').style.display='none';render();}});
+
+// the fit depends on the element's aspect, so redo it when the window changes shape
+let rzT=null;
+window.addEventListener('resize', ()=>{clearTimeout(rzT); rzT=setTimeout(()=>{
+  if(collapsed()){const {vn,vl}=visible(); const nb=hoodMulti(anchors, vl, focusDepth);
+    fitTo(new Set([...vn].filter(j=>nb.has(j))));}
+  render();}, 150);});
 
 // ---------------- mobile: drawer + touch gestures ----------------
 const isTouch = window.matchMedia("(max-width:760px), (pointer:coarse)").matches;
