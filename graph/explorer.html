@@ -40,7 +40,7 @@
  <div id="kinds"></div><div style="font-size:11px;color:#9aa;margin:6px 0 2px">companies by KB coverage:<br><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#1f77b4;margin-right:5px"></span>core (deep dive)<br><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#5fa8d3;margin-right:7px"></span>partner (one-pager)<br><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0e0e12;border:1.5px solid #7f9cb0;margin-right:7px"></span>cited only (no file)</div><hr style="border-color:#333">
  <div id="rels"></div>
  <div id="zoomrow" style="margin:8px 0"><button id="zin" style="width:32px">+</button> <button id="zout" style="width:32px">&minus;</button> <button id="zfit">fit</button></div>
- <div class="hint" id="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = neighborhood + details &middot; shift/&#8984;-click (or long-press) = add a node, showing only what connects to <em>all</em> of them &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br>bottom strip = disconnected satellites (graveyard molecules on untracked targets).</div>
+ <div class="hint" id="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = focus its neighborhood &middot; <b>shift/&#8984;-click (or long-press) = pin</b> — the graph stays full so you can pin a second node; two or more pins show only what connects to <em>all</em> of them &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br>bottom strip = disconnected satellites (graveyard molecules on untracked targets).</div>
 </div>
 <div id="info"></div>
 <svg id="g" width="100%" height="100%"></svg>
@@ -67,6 +67,11 @@ svg.append(gE,gN,gL);
 // Selection is a LIST of anchors, not a single node. One anchor behaves as before;
 // several anchors intersect their neighbourhoods (see hoodMulti).
 let anchors=[], selEdge=null;
+// pinMode: anchors are being COLLECTED, so the graph stays fully visible and you can still
+// find the next node. A plain click focuses immediately (collapse); shift-click pins.
+// With 2+ anchors the intersection is unambiguous, so it collapses regardless.
+let pinMode=false;
+function collapsed(){return anchors.length>=2 || (anchors.length===1 && !pinMode);}
 function focusPrimary(){return anchors.length?anchors[0]:null;}  // layout centre
 function visible(){
   const vn=new Set(); NODES.forEach((n,i)=>{if(kindOn[n.kind])vn.add(i);});
@@ -140,7 +145,10 @@ function anchorInfo(clicked){
   const nm=j=>`<b>${NODES[j].label}</b>`;
   if(anchors.length===1){
     const n=NODES[anchors[0]];
-    return `${nm(anchors[0])} <span style="color:#888">(${n.kind}${n.failed?', failed':''}, ${focusDepth}-hop)</span>\n${n.detail||n.title}`;
+    const state = pinMode
+      ? `<span style="color:#e8c766">pinned</span> <span style="color:#888">— graph still full; shift-click another node to intersect, or press space to focus this one</span>`
+      : `<span style="color:#888">(${n.kind}${n.failed?', failed':''}, ${focusDepth}-hop)</span>`;
+    return `${nm(anchors[0])} ${state}\n${n.detail||n.title}`;
   }
   const {vn,vl}=visible();
   const nb=hoodMulti(anchors, vl, focusDepth);
@@ -155,12 +163,14 @@ function anchorInfo(clicked){
     ? `${head}\n\n${parts.join('\n\n')}`
     : `${head}\n\nNothing connects all of these within ${focusDepth} hop${focusDepth>1?'s':''}. Press space to widen.`;
 }
-function setFocus(i, depth){ setAnchors(i===null?[]:[i], depth); }
-function setAnchors(list, depth){
+function setFocus(i, depth){ setAnchors(i===null?[]:[i], depth, false); }
+function setAnchors(list, depth, pin){
   anchors=list.slice(); focusDepth=depth||1;
+  if(pin!==undefined) pinMode=pin;
+  if(anchors.length===0) pinMode=false;
   NODES.forEach(n=>{delete n.fx; delete n.fy;});
   const i=focusPrimary();
-  if(i!==null){
+  if(i!==null && collapsed()){
     const {vn,vl}=visible();
     const nb=hoodMulti(anchors, vl, focusDepth);
     const show=new Set([...vn].filter(j=>nb.has(j)));
@@ -180,7 +190,7 @@ function setAnchors(list, depth){
 }
 function refocusInPlace(){
   const f=focusPrimary();
-  if(f===null){NODES.forEach(n=>{delete n.fx; delete n.fy;}); return;}
+  if(f===null || !collapsed()){NODES.forEach(n=>{delete n.fx; delete n.fy;}); return;}
   const {vn,vl}=visible();
   const nb=hoodMulti(anchors, vl, focusDepth);
   focusLayout(f, new Set([...vn].filter(j=>nb.has(j))));
@@ -188,7 +198,7 @@ function refocusInPlace(){
 function render(){
   const {vn,vl}=visible();
   let showN=vn, showL=vl;
-  if(anchors.length){const nb=hoodMulti(anchors, vl, focusDepth);
+  if(collapsed()){const nb=hoodMulti(anchors, vl, focusDepth);
     showN=new Set([...vn].filter(i=>nb.has(i)));
     showL=vl.filter(l=>showN.has(l.s)&&showN.has(l.t));}
   gE.innerHTML='';gN.innerHTML='';gL.innerHTML='';
@@ -222,18 +232,18 @@ function render(){
     c.setAttribute('stroke-width',(isAnchor?3.2:(n.hollow?1.6:0.7))/(isAnchor?zoom*0.55:1));
     c.style.cursor='pointer';
     c.onclick=ev=>{ev.stopPropagation();selEdge=null;
-      if(ev.shiftKey||ev.metaKey){                       // add/remove an anchor
+      if(ev.shiftKey||ev.metaKey){          // pin: keep browsing until 2+ anchors
         const at=anchors.indexOf(i);
-        setAnchors(at>=0 ? anchors.filter(x=>x!==i) : anchors.concat([i]), focusDepth);
-      } else {
-        setAnchors(anchors.length===1&&anchors[0]===i ? [] : [i], focusDepth);
+        setAnchors(at>=0 ? anchors.filter(x=>x!==i) : anchors.concat([i]), focusDepth, true);
+      } else {                              // plain click: focus this node now
+        setAnchors(anchors.length===1&&anchors[0]===i ? [] : [i], focusDepth, false);
       }
       info(anchorInfo(i)); render();};
     // touch: long-press (500ms) adds this node to the selection instead of replacing it
     let lpTimer=null;
     c.addEventListener('touchstart',()=>{lpTimer=setTimeout(()=>{lpTimer=null;
       const at=anchors.indexOf(i);
-      setAnchors(at>=0?anchors.filter(x=>x!==i):anchors.concat([i]), focusDepth);
+      setAnchors(at>=0?anchors.filter(x=>x!==i):anchors.concat([i]), focusDepth, true);
       info(anchorInfo(i)); render();
       if(navigator.vibrate) navigator.vibrate(15);}, 500);},{passive:true});
     c.addEventListener('touchend',()=>{if(lpTimer){clearTimeout(lpTimer);lpTimer=null;}},{passive:true});
@@ -294,7 +304,11 @@ svg.addEventListener('mousemove',e=>{if(!drag)return;
 svg.addEventListener('mouseup',()=>drag=null);
 document.addEventListener('keydown',e=>{
   if(e.key===' '&&anchors.length&&e.target.tagName!=='INPUT'){e.preventDefault();
-    setAnchors(anchors, e.shiftKey ? Math.max(1, focusDepth-1) : focusDepth+1);
+    // space on a SINGLE pinned node applies the focus at the current depth (the pin was
+    // "I might add more"; space says "no, just this one"). With 2+ anchors the view is
+    // already collapsed, so space means widen — don't waste the press on a mode flip.
+    if(pinMode && anchors.length===1){ setAnchors(anchors, focusDepth, false); }
+    else { setAnchors(anchors, e.shiftKey ? Math.max(1, focusDepth-1) : focusDepth+1, false); }
     render(); info(anchorInfo(anchors[0]));}
   if(e.key==='Escape'){setAnchors([]);document.getElementById('info').style.display='none';render();}});
 
