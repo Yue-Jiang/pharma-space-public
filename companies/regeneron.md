@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: regeneron
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Regeneron
@@ -30,6 +30,22 @@ Note on economics: Regeneron's reported revenue understates its commercial footp
 | Veopoz (pozelimab) | CHAPLE disease (ultra-rare) | mAb (C5) | minimal | 2030s (est.) |
 | Inmazeb (atoltivimab/maftivimab/odesivimab) | Ebola (Zaire) | 3-mAb cocktail | small; government/BARDA orders | n/a |
 | Arcalyst (rilonacept) | CAPS, recurrent pericarditis | IL-1 trap fusion protein | recorded by licensee Kiniksa | out-licensed |
+
+## Pipeline (clinical-stage)
+
+Regeneron is spending roughly $6.6B a year — about 40% of revenue — to prove it is more than Dupixent and Eylea, and 2026 is the year the argument gets tested: four FDA decisions, most of them on medicines invented in Tarrytown rather than bought in. The strategy is deliberately contrarian in obesity, where instead of chasing Lilly and Novo on raw weight loss the company is selling the *quality* of weight loss — pairing an in-licensed GLP-1/GIP agonist with antibodies that stop patients losing muscle. Alongside that sits a rare-disease and genetic-medicine cluster built on the Regeneron Genetics Center, plus a bispecific and Factor XI franchise still working through Phase 3.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Otarmeni | lunsotogene parvec (DB-OTO) | AAV gene therapy delivering otoferlin | genetic hearing loss (OTOF variants) | Approved 2026 | Accelerated approval April 2026; first approval under FDA's National Priority Voucher programme; supplied free in the US |
+| Garetosmab | garetosmab | anti-Activin A monoclonal antibody | fibrodysplasia ossificans progressiva (FOP) | Filed | FDA priority review with an August 2026 target action date; Ph3 OPTIMA showed a 94% reduction in new heterotopic bone lesions |
+| Cemdisiran | cemdisiran | C5 siRNA (Alnylam collaboration) | generalized myasthenia gravis | Filed | NDA accepted under priority review June 2026; would be the first siRNA in gMG, dosed four times a year |
+| Olatorepatide | olatorepatide (HS-20094) | GLP-1/GIP receptor dual agonist (Hansoh-licensed) | obesity | Ph3 | Up to 19% mean weight loss in Hansoh's China Ph3; global registrational programme starting 2026, plus a Praluent co-formulation |
+| Trevogrumab | trevogrumab (REGN1033) | anti-GDF8 (myostatin) monoclonal antibody | obesity — lean-mass preservation with semaglutide | Ph2 | Ph2 COURAGE completes late 2026; the core of the "quality of weight loss" thesis |
+| Fianlimab | fianlimab | LAG-3 monoclonal antibody, with Libtayo | advanced melanoma | Ph3 | Melanoma Ph3 interim analyses in H2 2026; Ph2 data did not support advancing in first-line NSCLC |
+| Itepekimab | itepekimab | IL-33 monoclonal antibody (Sanofi-partnered) | COPD; bronchiectasis | Ph3 | Split AERIFY-1/2 results in May 2025 (one hit, one miss); further Ph3 work underway |
+| REGN7508 | — | Factor XI (catalytic domain) monoclonal antibody | cancer-associated venous thromboembolism | Ph3 | Ph3 initiated 2026; anticoagulation without the bleeding penalty is the stated goal |
+| REGN9933 | — | Factor XI (A2 domain) monoclonal antibody | stroke prevention in atrial fibrillation | Ph3 | Three-arm Ph3 alongside REGN7508 in patients who cannot take daily anticoagulants |
 
 ## History: 1995-2025
 

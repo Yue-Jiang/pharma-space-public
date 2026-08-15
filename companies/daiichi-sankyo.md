@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: daiichi-sankyo
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Daiichi Sankyo
@@ -32,6 +32,20 @@ status: curated
 | Vanflyta (quizartinib) | FLT3-ITD-positive acute myeloid leukemia | Oral FLT3 inhibitor | small, not disclosed | ~2030s (est.) |
 | Turalio (pexidartinib) | Tenosynovial giant cell tumor (US) | Oral CSF1R inhibitor | small, not disclosed | ~2030s (est.) |
 | Ezharmia (valemetostat) | Adult T-cell leukemia/lymphoma (Japan) | Oral EZH1/2 inhibitor | small, not disclosed | ~2030s (est.) |
+
+## Pipeline (clinical-stage)
+
+Daiichi Sankyo is trying to prove that the chemistry behind Enhertu is a platform rather than a single lucky drug. Each candidate below attaches the same DXd chemotherapy payload to an antibody aimed at a different marker on cancer cells, so a success anywhere is partly evidence for the whole approach — and the patent clock on Enhertu is what makes the timing urgent. The near-term event is ifinatamab deruxtecan, filed with the FDA for small cell lung cancer, which would be the company's first entirely new ADC approval since Datroway and the first approved medicine anywhere against the B7-H3 marker.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Ifinatamab deruxtecan | ifinatamab deruxtecan | B7-H3-directed DXd ADC | Extensive-stage small cell lung cancer, post-platinum | Filed | FDA priority review, PDUFA 10 Oct 2026; potential first-in-class B7-H3 medicine; Ph3s also running in esophageal and prostate cancer |
+| Raludotatug deruxtecan | raludotatug deruxtecan | CDH6-directed DXd ADC | Platinum-resistant ovarian cancer | Ph3 | Ph3 part of REJOICE-Ovarian01 underway; Merck-partnered, positioned as the fourth approved ADC by 2030 |
+| Patritumab deruxtecan | patritumab deruxtecan | HER3-directed DXd ADC | Breast cancer, NSCLC | Ph2 | Development reset after failing to show benefit in EGFR-mutated lung cancer; biomarker-guided breast trials continue |
+| Gocatamig | gocatamig | DLL3 × CD3 T-cell engager | Small cell lung cancer | Ph1 | Merck-led (MK-6070/DS3280); being combined with ifinatamab deruxtecan in relapsed ES-SCLC |
+| DS-3939 | — | TA-MUC1-directed DXd ADC | Advanced solid tumours | Ph1 | Sixth DXd ADC to reach the clinic; first-in-human responses in ovarian, lung and breast cancer, now in dose expansion |
+| DS3610 | — | STING-agonist payload ADC | Advanced solid tumours | Ph1 | First STING-agonist ADC in the portfolio — an immune-activating payload rather than chemotherapy |
+| DS3790 | — | DXd ADC (haematology) | Haematologic malignancies | Ph1 | First DXd ADC aimed at blood cancers, extending the platform beyond solid tumours |
 
 ## History: 1995-2025
 

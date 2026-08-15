@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: boehringer-ingelheim
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -36,6 +36,20 @@ Note: as a family-owned company Boehringer Ingelheim (BI) reports less financial
 | Spevigo (spesolimab) | Generalized pustular psoriasis | Anti-IL-36R monoclonal antibody | Not material; global rights transferred to LEO Pharma (June 2025) | n/a |
 | NexGard (afoxolaner) | Flea/tick parasiticide (dogs) | Animal health, oral chewable | €1.4B | Ongoing generic pressure (est.) |
 | Vetmedin (pimobendan) | Canine congestive heart failure | Animal health, oral | Not disclosed; top AH brand (est.) | Post-LOE (est.) |
+
+## Pipeline (clinical-stage)
+
+Boehringer is a private company that ploughs an unusually large share of sales — 22.9% in 2025 — back into research, and the pipeline it is buying with that money is meant to replace Jardiance and Ofev before both go off patent late this decade. Two bets dominate: metabolic and liver health, where survodutide is the company's late entry into the obesity race with a liver-focused twist, and kidney disease, where Boehringer is trying to turn its cardio-renal-metabolic franchise into something bigger than one SGLT2 pill. A third, smaller wave is precision oncology, where three Phase 3 trials started in June 2026 alone.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Survodutide | survodutide (BI 456906) | glucagon/GLP-1 receptor dual agonist | obesity; MASH | Ph3 | 16.6% mean weight loss in SYNCHRONIZE-1; two Ph3 MASH trials with FDA Breakthrough status |
+| Apecotrep | apecotrep (BI 764198) | oral TRPC6 inhibitor (non-immunosuppressive) | primary FSGS (rare kidney disease) | Ph3 | Potential first disease-modifying therapy for FSGS; Ph3 opened Jan 2026 after 40% proteinuria reduction in Ph2 |
+| Vicadrostat | vicadrostat (BI 690517) | aldosterone synthase inhibitor, given with empagliflozin | chronic kidney disease | Ph3 | EASi-KIDNEY, run with Oxford Population Health — the attempt to extend the Jardiance franchise past its LOE |
+| Verducatib | verducatib (BI 1291583) | oral DPP1 / cathepsin C inhibitor | bronchiectasis | Ph3 | AIRTIVITY Ph3; no medicine is approved for bronchiectasis itself |
+| Obrixtamig | obrixtamig (BI 764532) | DLL3xCD3 bispecific T-cell engager | small cell lung cancer; extrapulmonary neuroendocrine carcinoma | Ph3 | Two Ph3s (DAREON-Lung-1, DAREON-NEC-1) initiated June 2026; discovered with Oxford BioTherapeutics |
+| Brigimadlin | brigimadlin (BI 907828) | MDM2-p53 antagonist | dedifferentiated liposarcoma | Ph2 | Registrational Ph2/3 Brightline-1; Boehringer's lead oncology small molecule behind zongertinib |
+| BI 3034701 | — | GLP-1/GIP/NPY2 triple agonist | obesity | Ph2 | Next-generation obesity candidate, Ph2 from mid-2026 (est.) |
 
 ## History: 1995-2025
 

@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: eli-lilly
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Eli Lilly
@@ -42,6 +42,23 @@ Other FY2025 metrics: net income $20.64B; non-GAAP EPS $24.21; R&D ~$13B (~20% o
 | Inluriyo (imlunestrant) | ER+/HER2- advanced breast cancer | Oral SERD | Launched late 2025 | 2030s |
 
 Tirzepatide (Mounjaro + Zepbound) = $36.5B in 2025, ~56% of total revenue — the world's best-selling drug, surpassing Keytruda ($31.7B).
+
+## Pipeline (clinical-stage)
+
+Lilly's pipeline is mostly an argument about how long the obesity franchise can last. Tirzepatide is a weekly injection whose US patent runs to about 2036, so the next generation is about convenience and depth of effect: a pill (orforglipron, approved as Foundayo in April 2026), a stronger triple-hormone injection (retatrutide), and combinations meant to preserve muscle rather than just cut weight. Around that core sit two smaller but strategically important bets — lowering Lp(a), a genetically inherited cholesterol-like particle no approved drug currently treats, and building an oncology and neuroscience portfolio that does not depend on metabolism at all.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Foundayo | orforglipron | Oral small-molecule GLP-1 receptor agonist | Obesity; type 2 diabetes | Approved 2026 | Approved 1 Apr 2026 via FDA national priority voucher; $98M in first partial quarter, T2D filing to follow |
+| Inluriyo | imlunestrant | Oral SERD | ER+/HER2- advanced breast cancer | Approved 2025 | Launched late 2025; EMBER-3 established it as endocrine backbone alongside Verzenio |
+| Retatrutide | retatrutide | GLP-1 / GIP / glucagon triple agonist | Obesity; knee osteoarthritis | Ph3 | TRIUMPH programme positive; FDA filing guided to 2027, the deepest weight-loss candidate in the class |
+| Eloralintide | eloralintide (LY3841136) | Amylin receptor agonist | Obesity | Ph3 | Advanced to Phase III in 2026, alone and with tirzepatide; Lilly's answer to Novo's amylin programme |
+| Bimagrumab | bimagrumab | Anti-activin type II receptor mAb | Obesity (muscle preservation) | Ph2 | From the 2023 Versanis deal; tests whether weight loss can be made fat-selective |
+| Lepodisiran | lepodisiran | siRNA against LPA | Elevated Lp(a) / ASCVD risk | Ph3 | ACCLAIM-Lp(a) outcomes trial; would open an untreated cardiovascular market |
+| Muvalaplin | muvalaplin | Oral small-molecule Lp(a) disruptor | Elevated Lp(a) | Ph2 | Oral alternative to injected Lp(a) lowering; Lilly's second shot at the same target |
+| Remternetug | remternetug | Anti-amyloid mAb (subcutaneous) | Early Alzheimer's disease | Ph3 | Subcutaneous successor to Kisunla, whose infusion burden has slowed uptake |
+| Olomorasib | olomorasib | Second-generation KRAS G12C inhibitor | KRAS G12C-mutant NSCLC | Ph3 | SUNRAY-01 pivotal with pembrolizumab; FDA Breakthrough Therapy designation |
+| VERVE-102 | — | In vivo base editing of PCSK9 | Heterozygous familial hypercholesterolaemia / ASCVD | Ph1 | One-time gene-editing cholesterol treatment from the 2025 Verve acquisition |
 
 ## History: 1995-2025
 

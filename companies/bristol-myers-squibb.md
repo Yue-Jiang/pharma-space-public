@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: bristol-myers-squibb
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Bristol Myers Squibb
@@ -39,6 +39,23 @@ BMS splits reporting into a **Growth Portfolio** ($26.4B in 2025, +17%, now 55% 
 | Opdivo Qvantig (SC nivolumab) | Opdivo indications, subcutaneous | mAb + hyaluronidase | $238M | Launched Jan 2025; cliff mitigation to ~2038 |
 | Krazati (adagrasib) | KRAS G12C NSCLC, CRC | Small molecule | $205M | From Mirati |
 | Cobenfy (xanomeline-trospium) | Schizophrenia | Small molecule (M1/M4 muscarinic agonist) | $155M | From Karuna; patents 2030-2033 |
+
+## Pipeline (clinical-stage)
+
+Bristol Myers Squibb spends the rest of this decade handing Eliquis, Opdivo and Revlimid to generic competitors, so every asset below is judged on whether it can arrive in time. 2026 was built as the answer: six registrational readouts in a single year, and the first two of a new class of oral protein degraders — CELMoDs — reaching the FDA, one of them already approved. Beyond the degraders the company is betting on cell therapy pushed out of cancer into autoimmune disease, on radiopharmaceuticals, and on two large oncology programmes it licensed from Chinese biotechs rather than discovered itself.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Zenbexus | iberdomide | Oral CELMoD (cereblon E3 ligase modulator) | Relapsed/refractory multiple myeloma | Approved 2026 | FDA accelerated approval Aug 13, 2026 — the first approved CELMoD; BMS intends it to replace Revlimid and Pomalyst in second-line triplets |
+| Mezigdomide | mezigdomide | Oral CELMoD | Relapsed/refractory multiple myeloma | Filed | NDA accepted on positive Ph3 SUCCESSOR-2 data; PDUFA May 13, 2027 |
+| Milvexian | milvexian | Oral Factor XIa inhibitor | Secondary stroke prevention; atrial fibrillation | Ph3 | The intended Eliquis successor, co-developed with J&J; stroke data late 2026, the 20,500-patient AF trial Q1 2027 |
+| Admilparant | admilparant | Oral LPA1 antagonist | Idiopathic and progressive pulmonary fibrosis | Ph3 | Potential first-in-class in a market BMS sizes at $8-10B by the mid-2030s; IPF readout expected by end-2026 |
+| Arlo-cel | — | GPRC5D-directed CAR-T | Relapsed/refractory multiple myeloma | Ph3 | Registrational QUINTESSENTIAL data in 2026; gives BMS a myeloma cell-therapy target beyond BCMA |
+| Golcadomide | golcadomide | CELMoD | First-line large B-cell lymphoma | Ph3 | Ph3 GOLSEEK-1, data expected 2027 — extends the degrader platform out of myeloma into lymphoma |
+| Pumitamig | pumitamig | PD-L1×VEGF-A bispecific antibody | Small-cell and non-small-cell lung cancer, TNBC | Ph3 | Co-developed with BioNTech (originally Biotheus); BMS's entry into the PD-1/VEGF bispecific race |
+| Iza-bren | izalontamab brengitecan | EGFR×HER3 bispecific ADC | Nasopharyngeal, esophageal and breast cancers | Ph3 | SystImmune/Biokin-originated; NMPA approvals in China during 2026 while the global Ph3 programme runs |
+| RYZ101 | — | Actinium-225 radiopharmaceutical targeting SSTR2 | GEP neuroendocrine tumours | Ph3 | Lead asset from the RayzeBio acquisition; ACTION-1 data expected 2026 |
+| Zola-cel | — | CD19-directed CAR-T | Systemic lupus erythematosus, systemic sclerosis | Ph3 | Moves BMS's cell-therapy platform out of oncology into autoimmune disease; data 2027-2028 |
 
 ## History: 1995-2025
 

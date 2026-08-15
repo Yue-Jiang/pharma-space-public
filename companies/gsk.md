@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: gsk
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -34,6 +34,23 @@ FY2025 segment split: Specialty Medicines £13.5B (+17%), Vaccines £9.2B (+2%),
 | Zejula (niraparib) | Ovarian cancer maintenance | Oral PARP inhibitor | ~£400M (est., declining) | ~2027–2030 (est.) |
 | Blenrep (belantamab mafodotin) | Relapsed/refractory multiple myeloma (3L+ US; 2L+ EU/Japan) | BCMA antibody-drug conjugate | Small (relaunch year; £4M through Q3, US launch Q4) | 2030s (est.) |
 | Augmentin (amoxicillin/clavulanate) | Bacterial infections | Oral antibiotic | ~£600M (est.) | Long off-patent |
+
+## Pipeline (clinical-stage)
+
+GSK's pipeline problem is arithmetic: dolutegravir, the backbone of a £7.7 billion HIV business, loses protection in 2027-28, and the >£40 billion 2031 target assumes new medicines fill the hole. The heaviest spending goes to a hepatitis B drug that can functionally cure a meaningful share of patients, respiratory biologics dosed twice or even once a year, and an oncology portfolio assembled largely by cheque book — Chinese-originated antibody-drug conjugates from Hansoh, a KIT inhibitor from IDRx, and two lung-cancer drugs acquired with Nuvalent in 2026. In July 2026 management said it now expects more than 20 Phase III trial starts during the year, roughly triple the 2024 pace.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Bepirovirsen | bepirovirsen | Antisense oligonucleotide against HBsAg | Chronic hepatitis B | Filed | Functional cure in roughly half of patients with low baseline HBsAg; filed Q1 2026 in US/EU/China/Japan with priority review |
+| Efimosfermin | efimosfermin alfa | FGF21 analogue, monthly dosing | MASH | Ph3 | $1.2B upfront from Boston Pharmaceuticals; FDA Breakthrough and EMA PRIME |
+| Risvutatug rezetecan | risvutatug rezetecan | B7-H3 antibody-drug conjugate | SCLC; osteosarcoma; other solid tumours | Ph3 | Hansoh-licensed; two positive China Ph3s in 2026; GSK's global EMBOLD SCLC study reads out 2027 |
+| Velzatinib | velzatinib | KIT inhibitor | GIST | Ph3 | Ex-IDRx (~$1B upfront) |
+| Neladalkib | neladalkib | ALK inhibitor | TKI-pretreated ALK+ NSCLC | Filed | Acquired with Nuvalent; FDA decision pending |
+| Jideytro | zidesamtinib | ROS1 inhibitor | TKI-pretreated ROS1+ NSCLC | Approved 2026 | First approval out of the Nuvalent deal; launch only beginning |
+| Exdensur | depemokimab | Ultra-long-acting anti-IL-5 mAb, twice-yearly | Severe eosinophilic asthma; nasal polyps; COPD and EGPA next | Approved 2025 | GSK sees up to ~$4B peak sales (est.); EU and China approvals followed in 2026 |
+| Utebzi | tebipenem pivoxil | Oral carbapenem antibiotic | Complicated urinary tract infection | Approved 2026 | First oral carbapenem approved in the US; licensed from Spero |
+| Lynavoy | linerixibat | IBAT (ileal bile acid transporter) inhibitor | Cholestatic pruritus in primary biliary cholangitis | Approved 2026 | First US approval for the indication; worldwide rights being out-licensed to Alfasigma |
+| GSK5784283 | — | Ultra-long-acting anti-TSLP mAb, twice-yearly | Asthma | Ph2 | Ex-Aiolos, Hengrui-originated; Ph3 starts H2 2026 |
 
 ## History: 1995-2025
 

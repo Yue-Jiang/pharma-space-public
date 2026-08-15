@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: merck
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -33,6 +33,22 @@ Known as MSD (Merck Sharp & Dohme) outside the US and Canada; unrelated to Germa
 | Prevymis (letermovir) | CMV prophylaxis in transplant | Oral/IV small molecule | ~$900M FY2025 (est.) | ~2029 |
 
 Animal Health (Bravecto, livestock biologics) added $6.4B FY2025. Enflonsia (clesrovimab), an RSV antibody for infants approved June 2025, and Lagevrio (molnupiravir) round out the portfolio.
+
+## Pipeline (clinical-stage)
+
+Everything in Merck's pipeline is measured against one date. Keytruda loses US exclusivity in 2028, and it is roughly half the company's revenue, so the pipeline's job is to replace an unrepeatable drug. The answer has two halves: new oncology mechanisms meant to become the next backbone of cancer treatment — a TROP2 ADC, a PD-1/VEGF bispecific, an individualised mRNA cancer vaccine — and a deliberate spread into places Keytruda never went, including the first pill that works like the injected cholesterol biologics, once-weekly HIV treatment, and flu prevention that does not depend on a vaccine. A striking share of it was licensed from Chinese biotechs.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Lipfendra | enlicitide | Oral macrocyclic-peptide PCSK9 inhibitor | Hypercholesterolemia, including heterozygous familial hypercholesterolemia | Approved 2026 | The first and only oral PCSK9 inhibitor; 56-59% placebo-adjusted LDL-C reduction at week 24; a 14,500-patient outcomes trial is still running |
+| Idvynso | doravirine/islatravir | Two-drug NNRTI + nucleoside analogue single tablet | HIV-1, switch in virologically suppressed adults | Approved 2026 | Approved Apr 21, 2026; first non-INSTI, tenofovir-free complete two-drug regimen |
+| Sac-TMT | sacituzumab tirumotecan | TROP2-directed ADC | Lung, breast, endometrial and gastroesophageal cancers | Ph3 | Licensed from Kelun-Biotech and already approved in China; positive TroFuse-005 endometrial data in 2026 and an FDA national priority voucher |
+| Islatravir + lenacapavir | islatravir / lenacapavir | Once-weekly oral nucleoside analogue + capsid inhibitor | HIV-1 maintenance | Ph3 | Positive Ph3 with Gilead reported in 2026 — would be the first once-weekly oral HIV regimen |
+| Intismeran autogene | intismeran autogene | Individualised mRNA neoantigen therapy | Resected melanoma and other solid tumours | Ph3 | Co-developed with Moderna; the largest and most novel of Merck's post-Keytruda oncology bets |
+| Tulisokibart | tulisokibart | Anti-TL1A mAb | Ulcerative colitis, Crohn's disease | Ph3 | Merck's push into large-market immunology, acquired with Prometheus Biosciences |
+| CD388 | — | Drug-Fc conjugate (long-acting neuraminidase inhibitor) | Influenza prophylaxis | Ph3 | Season-long flu protection that does not rely on an immune response to a vaccine; via Cidara |
+| MK-2010 | — | PD-1/VEGF bispecific antibody | Solid tumours, non-small-cell lung cancer first | Ph1 | Licensed from LaNova as a hedge against ivonescimab-class rivals; first-in-human data at AACR 2026 |
+| HRS-5346 | — | Oral Lp(a) inhibitor | Elevated lipoprotein(a) and associated cardiovascular risk | Ph2 | Licensed from Jiangsu Hengrui ($200M upfront); Lp(a) is a large cardiovascular risk factor with no approved treatment |
 
 ## History: 1995-2025
 

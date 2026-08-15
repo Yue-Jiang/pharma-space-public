@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: takeda
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Takeda
@@ -31,6 +31,23 @@ FY2025 = Takeda fiscal year April 2025–March 2026. Full-year per-product FY202
 | Livtencity (maribavir) | Refractory post-transplant CMV | Oral antiviral | ~$250M (est.; +44% FY2025) | Mid-2030s (est.) |
 | Ninlaro (ixazomib) | Multiple myeloma | Oral proteasome inhibitor | ~$300M, declining (est.) | Late 2020s (est.) |
 | Alunbrig (brigatinib) | ALK+ non-small cell lung cancer | Oral ALK TKI | ~$200M (est.) | ~2030 (est.) |
+
+## Pipeline (clinical-stage)
+
+Takeda spent the Vyvanse cliff years buying late-stage drugs rather than discovering them, and the resulting cluster of assets — six of them, which management has said carry $10-20 billion in combined peak-sales potential — is now arriving all at once. Three of the four nearest-term products came from outside: a TYK2 pill bought from Nimbus for $4 billion, a blood-disorder peptide from Protagonist, an anaemia drug from Keros. The genuinely home-grown one is Orzeyful, an orexin agonist approved in August 2026 that treats the underlying cause of narcolepsy rather than its symptoms, and which Takeda hopes to turn into a family of sleep-disorder medicines. Behind these, a 2025 oncology partnership with China's Innovent is the company's attempt to buy back into cancer after retreating from cell therapy.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Orzeyful | oveporexton (TAK-861) | Oral orexin receptor 2 agonist | Narcolepsy type 1 | Approved 2026 | US approval 5 Aug 2026 (launch pending DEA scheduling); first drug addressing narcolepsy's underlying cause |
+| Rusfertide | rusfertide | Hepcidin mimetic peptide | Polycythemia vera | Filed | FDA priority review; Protagonist opted out of the US profit share in Apr 2026 |
+| Zasocitinib | zasocitinib (TAK-279) | Oral allosteric TYK2 inhibitor | Plaque psoriasis; psoriatic arthritis | Filed | $4B Nimbus asset; Phase 3 positive late 2025, launch guided 2027 against Sotyktu and icotrokinra |
+| Elritercept | elritercept (KER-050) | Modified activin receptor IIA ligand trap | Anaemia in myelodysplastic syndromes, myelofibrosis | Ph3 | Phase 3 RENEW; from the Dec 2024 Keros deal ($200M upfront) |
+| Mezagitamab | mezagitamab (TAK-079) | Anti-CD38 mAb (subcutaneous) | Immune thrombocytopenia; IgA nephropathy | Ph3 | Home-grown plasma-cell depleter aimed at multiple autoantibody diseases |
+| Fazirsiran | fazirsiran | RNAi against alpha-1 antitrypsin | Alpha-1 antitrypsin deficiency liver disease | Ph3 | Partnered with Arrowhead; Takeda's main RNAi bet after exiting cell therapy |
+| TAK-360 | — | Oral orexin receptor 2 agonist | Narcolepsy type 2; idiopathic hypersomnia | Ph2 | Extends the orexin franchise beyond Orzeyful's NT1 label |
+| Olverembatinib | olverembatinib | Third-generation BCR-ABL inhibitor | Ph+ leukaemias | Ph3 | Option deal with Ascentage Pharma; would succeed Iclusig past its ~2026-27 LOE |
+| IBI363 | — | PD-1/IL-2α-bias bispecific fusion protein | NSCLC, melanoma, colorectal cancer | Ph3 | Lead asset of the Oct 2025 Innovent partnership; Takeda's re-entry into immuno-oncology |
+| IBI343 | — | CLDN18.2-directed ADC | Pancreatic, gastric cancer | Ph3 | Second Innovent asset; pivotal in pancreatic cancer, a setting with almost no options |
 
 ## History: 1995-2025
 

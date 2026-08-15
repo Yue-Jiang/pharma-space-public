@@ -121,11 +121,50 @@ for line in open(idx_path):
     c = [x.strip() for x in s.strip("|").split("|")]
     if len(c) == 7:
         idx_status.setdefault(re.sub(r"\s*\(.*?\)", "", c[1].lower()).strip(), set()).add(c[5])
-wrong_tier = {g for g in mol if idx_status.get(g) and not (idx_status[g] & {"marketed", "legacy"})
+LIVE = {"marketed", "legacy", "pipeline"}
+wrong_tier = {g for g in mol if idx_status.get(g) and not (idx_status[g] & LIVE)
               and mol[g].get("phase") != "failed"}
 if wrong_tier:
     add("ERROR", "status-graph-mismatch",
-        "molecule is in the marketed graph but the index says it is not marketed/legacy", wrong_tier)
+        "molecule is in the live graph but the index says it is not marketed/legacy/pipeline", wrong_tier)
+
+# c2) phase must agree with the curated index status — the graph must never ASSERT approval.
+# This is the check that would have caught 17 trial-stage assets being labelled "marketed".
+phase_lie = {g for g, n in mol.items()
+             if idx_status.get(g) and n.get("phase") in ("marketed", "legacy")
+             and idx_status[g] == {"pipeline"}}
+if phase_lie:
+    add("ERROR", "phase-asserts-approval",
+        "graph says marketed/legacy but the drug index says the asset is still pipeline", phase_lie)
+
+# c3) vocabulary guard: an unrecognised phase means someone added a value without
+# teaching the consumers (explorer colouring, convergence table) about it.
+bad_phase = {g for g, n in mol.items() if n.get("phase") not in (LIVE | {"failed"})}
+if bad_phase:
+    add("ERROR", "unknown-phase", "molecule phase outside the controlled vocabulary", bad_phase)
+
+# c4) coverage: pipeline assets named in prose but absent from the graph. A warn, counted
+# so it shrinks — the KB's job is to make strategic bets queryable, not just readable.
+import glob as _glob
+prose_assets = set()
+for _p in _glob.glob(os.path.join(ROOT, "companies", "*.md")):
+    _t = open(_p).read()
+    _m = re.search(r"## Pipeline \(clinical-stage\)(.*?)(?=\n## )", _t, re.S)
+    if not _m:
+        continue
+    for _line in _m.group(1).splitlines():
+        _s = _line.strip()
+        if not _s.startswith("|") or _s.lower().startswith("| asset"):
+            continue
+        if set(_s.replace("|", "").strip()) <= {"-", ":", " "}:
+            continue
+        _c = [x.strip() for x in _s.strip("|").split("|")]
+        if len(_c) >= 2 and _c[1] not in ("—", "-", ""):
+            prose_assets.add(re.sub(r"\s*\(.*?\)", "", _c[1].lower()).strip())
+missing_pipe = {a for a in prose_assets if a not in mol}
+if missing_pipe:
+    add("WARN", "pipeline-not-in-graph",
+        "asset in a company Pipeline table has no graph node (add a drug-index row)", missing_pipe)
 
 # d) failed molecules must not carry sales
 failed_with_sales = {g for g, n in mol.items() if n.get("phase") == "failed" and n.get("sales_2025_usd_bn")}

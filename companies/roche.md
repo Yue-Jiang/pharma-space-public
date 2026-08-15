@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: roche
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -33,6 +33,22 @@ Roche is the world's largest biotech by revenue and the only top-tier pharma tha
 | Gazyva/Gazyvaro (obinutuzumab) | CLL, FL; lupus nephritis (new 2025) | Glycoengineered anti-CD20 mAb | ~CHF 0.9B FY2025 (est.) | ~2028–2030 (est.) |
 | Avastin (bevacizumab) / Herceptin (trastuzumab) / MabThera-Rituxan (rituximab) | Various cancers | mAbs (legacy trio) | ~CHF 3.5B combined FY2025 (est.), declining | Expired; biosimilar erosion since 2017–2019 |
 | Columvi (glofitamab) + Lunsumio (mosunetuzumab) | R/R DLBCL, FL | CD20xCD3 bispecific T-cell engagers | ~CHF 0.5B combined FY2025 (est.) | 2030s |
+
+## Pipeline (clinical-stage)
+
+Roche has spent 2025-26 buying and building its way out of a portfolio that was mostly oncology and mostly injected. Two of its boldest bets are new territory altogether: an obesity franchise assembled from two acquisitions and a partnership, and a brain-penetrant amyloid antibody in Alzheimer's. In neurology, fenebrutinib would be the first BTK inhibitor approved in multiple sclerosis, defending the ground Ocrevus holds before its patents lapse around 2029. In oncology the emphasis has shifted from checkpoint inhibitors to oral targeted drugs, where divarasib has now beaten both approved rivals in its class head-to-head.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Fenebrutinib | fenebrutinib | Oral brain-penetrant BTK inhibitor | Relapsing & primary progressive multiple sclerosis | Ph3 | Three positive Ph3 trials; US submission being completed mid-2026 with filing acceptance expected in Q3; >CHF 3B peak sales guided |
+| Giredestrant | giredestrant | Oral selective estrogen receptor degrader (SERD) | ER-positive/HER2-negative breast cancer, adjuvant and ESR1-mutated advanced | Filed | Two US filings accepted — adjuvant under Priority Review (decision due by Nov 30, 2026) and with everolimus (Dec 18, 2026) |
+| Divarasib | divarasib | Oral KRAS G12C inhibitor | KRAS G12C non-small-cell lung cancer | Ph3 | Beat sotorasib and adagrasib head-to-head on both PFS and overall survival (Krascendo 1, Jul 2026); filing to follow |
+| Trontinemab | trontinemab | Brain Shuttle anti-amyloid mAb (transferrin-receptor transport) | Early Alzheimer's disease | Ph3 | Rapid amyloid clearance at low ARIA rates; TRONTIER readouts expected ~2027-28 |
+| Enicepatide | enicepatide | GLP-1/GIP dual receptor agonist | Obesity, with or without type 2 diabetes | Ph3 | Acquired with Carmot ($2.7B); entered Ph3 in Q1 2026 |
+| Petrelintide | petrelintide | Amylin analogue | Obesity | Ph3 | Zealand partnership ($1.65B upfront); ~10.7% weight loss at 42 weeks in Ph2b with placebo-like GI tolerability; a fixed-dose combination with enicepatide is planned |
+| Pegozafermin | pegozafermin | FGF21 analogue | MASH with F2-F3 fibrosis and with cirrhosis | Ph3 | Acquired with 89bio (up to $3.5B) — Roche's entry into metabolic liver disease |
+| Afimkibart | afimkibart | Anti-TL1A mAb | Ulcerative colitis, Crohn's disease | Ph3 | The asset that justified the $7.1B Telavant deal |
+| Sefaxersen | sefaxersen | Antisense oligonucleotide against complement factor B | IgA nephropathy | Ph3 | Ionis-partnered; Ph3 IMAGINATION in a kidney-disease market Roche has not previously competed in |
 
 ## History: 1995–2025
 

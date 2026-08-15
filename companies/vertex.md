@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: vertex
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -32,6 +32,21 @@ status: curated
 | Journavx (suzetrigine) | Moderate-to-severe acute pain (adults) | Oral NaV1.8 sodium-channel pain-signal inhibitor (non-opioid) | ~$50–70M (est.; $33M through Q3 2025) | ~2040 (est.) |
 
 Legacy CF products (Kalydeco, Orkambi, Symdeko) are not broken out individually in 2025 reporting; they sit in "Other product revenues" alongside Casgevy and Journavx (Q4 2025 total: $237M). Estimates above are directional.
+
+## Pipeline (clinical-stage)
+
+Vertex has one enormous business — cystic fibrosis, still roughly 96% of revenue — and an explicit plan to end that dependence by standing up four or five more franchises. 2026 is the year the plan starts producing products rather than promises: povetacicept for a common kidney disease faces an FDA decision on 30 November, and a $10 billion acquisition of Crinetics adds a rare-endocrine business with one drug already approved. The two biggest long shots are suzetrigine in chronic nerve pain, where Vertex's non-opioid painkiller has yet to prove itself beyond short-term surgical pain, and zimislecel, a one-time islet transplant that left most Phase 1/2 patients insulin-independent.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Povetacicept | povetacicept | Dual BAFF/APRIL antagonist (engineered fusion protein) | IgA nephropathy | Filed | PDUFA Nov 30, 2026 under accelerated approval; 52% proteinuria reduction in RAINIER; would be Vertex's first nephrology product |
+| Suzetrigine (DPN) | suzetrigine | Oral NaV1.8 sodium-channel pain-signal inhibitor | Diabetic peripheral neuropathy pain | Ph3 | Two Ph3 studies enrolling to completion by end-2026; the chronic-pain prize behind Journavx |
+| Zimislecel | zimislecel | Stem-cell-derived islet cell therapy (one-time) | Severe type 1 diabetes | Ph3 | Ph1/2/3 dosing resumed 2026 after a manufacturing pause; 10 of 12 Ph1/2 patients insulin-independent at one year |
+| Inaxaplin | inaxaplin | Oral APOL1 channel inhibitor | APOL1-mediated kidney disease | Ph3 | AMPLITUDE full enrollment H2 2026; Ph3 interim data late 2026/early 2027 |
+| Atumelnant | atumelnant | Oral ACTH receptor antagonist | Congenital adrenal hyperplasia | Ph3 | Lead pipeline asset of the $10B Crinetics acquisition (announced July 2026, close expected Q3 2026); CALM-CAH enrolling |
+| Palsonify | paltusotine | Oral somatostatin receptor 2 (SST2) agonist | Acromegaly | Approved 2025 | FDA Sept 2025, EU April 2026; arrives with Crinetics, whose two lead assets Vertex puts at $5B+ combined peak sales (est.) |
+| VX-407 | — | Small-molecule polycystin-1 (PC1) corrector | Autosomal dominant polycystic kidney disease (PKD1 variants) | Ph2 | AGLOW proof-of-concept fully enrolled (26 patients); addresses up to ~10% of ADPKD patients |
+| VX-993 | — | Next-generation oral NaV1.8 inhibitor | Diabetic peripheral neuropathy pain | Ph2 | Follow-on to suzetrigine after disappointing 2025 data; DPN enrollment completing end-2026 |
 
 ## History: 1995–2025
 

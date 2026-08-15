@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: abbvie
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -33,6 +33,24 @@ status: curated
 | Elahere (mirvetuximab soravtansine) | FRα-positive platinum-resistant ovarian cancer | ADC (anti-FRα) | $0.69B | ~2035 (est.) |
 | Vyalev (foscarbidopa/foslevodopa) | Advanced Parkinson's disease | 24-hr subcutaneous infusion prodrugs | ~$0.4B (est.); blockbuster expected 2026 | ~2035 (est.) |
 | Epkinly (epcoritamab) | DLBCL, follicular lymphoma (3L+) | CD3xCD20 bispecific antibody (Genmab partnership) | ~$0.3B (est.; H1 2025 $121M) | ~2035+ (est.) |
+
+## Pipeline (clinical-stage)
+
+AbbVie's problem is arithmetic: Skyrizi and Rinvoq now carry the company, and almost everything below exists to give it a third and fourth act before those two peak. The nearest-term bets are in neuroscience — tavapadon, a once-daily Parkinson's pill awaiting an FDA decision, on top of the Vyalev infusion already launched — and in a widening oncology bench of antibody-drug conjugates and T-cell engagers, two of which reached the market in the past year. The longer-dated bets are a $10.9B move for an anti-IL-13 antibody that could be dosed as rarely as quarterly, and a first entry into obesity that deliberately avoids the GLP-1 mechanism everyone else is crowding into.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Tavapadon | tavapadon | Oral dopamine D1/D5 receptor partial agonist | Parkinson's disease | Filed | NDA submitted Sep 2025 on the three-trial TEMPO programme; AbbVie guides >$5B peak for the Parkinson's franchise |
+| Decnupaz | pivekimab sunirine | CD123-directed ADC | BPDCN (blastic plasmacytoid dendritic cell neoplasm) | Approved 2026 | FDA approval May 27, 2026 — AbbVie's first ADC approved in a blood cancer, from ImmunoGen |
+| Boey | trenibotulinumtoxinE | Botulinum neurotoxin type E (fast-onset, short-acting) | Glabellar lines (aesthetics) | Approved 2026 | EC approval Jul 2026; the US BLA drew a manufacturing-only CRL in Apr 2026, with no safety or efficacy concerns cited |
+| Zumilokibart | zumilokibart | Half-life-extended anti-IL-13 mAb | Atopic dermatitis | Ph3 | The asset behind the $10.9B Apogee acquisition (closing expected Q3 2026); quarterly-or-less maintenance dosing |
+| Lutikizumab | lutikizumab | Dual anti-IL-1α/IL-1β antibody | Hidradenitis suppurativa | Ph3 | Ph3 readout is one of AbbVie's headline 2026 immunology catalysts, in patients who failed anti-TNF therapy |
+| Temab-A | telisotuzumab adizutecan | c-Met-directed ADC (topoisomerase-1 payload) | Colorectal cancer (c-Met-overexpressing) | Ph3 | Breakthrough designation; a second Ph3, in combination with bevacizumab, started Jun 2026 |
+| Etentamig | etentamig | BCMAxCD3 bispecific T-cell engager | Relapsed/refractory multiple myeloma | Ph3 | Ph3 CERVINO monotherapy in third-line-plus disease, on monthly dosing |
+| ABBV-RGX-314 | — | AAV8 gene therapy encoding an anti-VEGF antibody fragment | Wet age-related macular degeneration | Ph3 | One-time subretinal dose as an alternative to repeat eye injections (Regenxbio partnership) |
+| Bretisilocin | bretisilocin | Psychedelic-derived serotonin 5-HT2A agonist | Major depressive disorder | Ph2 | Acquired with Gilgamesh Pharmaceuticals for ~$1.2B (Aug 2025) — AbbVie's re-entry into psychiatry |
+| ABBV-295 | — | Long-acting amylin/calcitonin receptor agonist | Obesity | Ph1 | 7.7-9.8% weight loss at 12 weeks in Ph1; a Ph2 dose-finding study was registered in 2026; licensed from Gubra |
+| CPTX2309 | — | In vivo anti-CD19 CAR-T via targeted lipid nanoparticles | Autoimmune disease (immune reset) | Ph1 | Lead asset of the $2.1B Capstan acquisition; no cell manufacturing or lymphodepletion required |
 
 ## History: 1995-2025
 

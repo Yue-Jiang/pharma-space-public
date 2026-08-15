@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: biogen
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Biogen
@@ -39,6 +39,21 @@ FY2025 sales unless noted; figures marked (est.) are derived from quarterly disc
 | Empaveli (pegcetacoplan)* | PNH; C3G; primary IC-MPGN | Systemic C3 complement inhibitor | ~$104M (2025, under Apellis, est.) | 2030s (est.) |
 
 *Acquired with Apellis Pharmaceuticals (closed May 14, 2026); combined $689M net revenue in 2025. Biogen also earns anti-CD20 royalty/profit-share revenue (Rituxan, Ocrevus, Gazyva via Genentech/Roche), roughly $1.8B/yr (est.).
+
+## Pipeline (clinical-stage)
+
+Biogen's next act depends less on multiple sclerosis than on a cluster of late-stage bets in immunology, kidney disease and rare neurology, most of them bought or licensed rather than discovered in-house. Five registrational readouts land between late 2026 and late 2027, beginning with litifilimab in lupus, and management has been explicit that this run of trials — not the eroding MS franchise — is what the investment case now rests on. In Alzheimer's the company is pushing on two fronts at once: making Leqembi easier to take, via a home autoinjector, and testing whether attacking tau rather than amyloid can slow the disease.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Litifilimab | litifilimab | Anti-BDCA2 mAb (dampens type I interferon) | SLE; cutaneous lupus | Ph3 | Two fully enrolled Ph3 SLE studies read out by end-2026 — first real test of the immunology strategy |
+| Dapirolizumab pegol | dapirolizumab pegol | Anti-CD40L pegylated Fab (with UCB) | SLE | Ph3 | Second Ph3 (PHOENYCS FLY) running after one positive study |
+| Felzartamab | felzartamab | Anti-CD38 mAb | Antibody-mediated kidney transplant rejection; IgAN; primary membranous nephropathy | Ph3 | Ex-HI-Bio; ~$2B US addressable market in AMR (est.); first Ph3 readout 1H 2027 |
+| Zorevunersen | zorevunersen | Antisense oligonucleotide raising SCN1A expression | Dravet syndrome | Ph3 | Licensed from Stoke for ex-North America; EMPEROR readout Q3 2027 |
+| Salanersen | salanersen | Antisense oligonucleotide correcting SMN2 splicing | Spinal muscular atrophy | Ph3 | Once-yearly dosing; FDA Breakthrough June 2026; three Ph3 studies (STELLAR-1, STELLAR-2, SOLAR) |
+| Diranersen | diranersen | Anti-tau antisense oligonucleotide (with Ionis) | Early Alzheimer's disease | Ph2 | First tau-directed agent to show a cognitive signal; Ph3 planned despite the missed Ph2 primary endpoint |
+| Leqembi Iqlik | lecanemab-irmb | Anti-amyloid-beta protofibril mAb, subcutaneous autoinjector | Early Alzheimer's disease | Approved 2025 | At-home dosing: SC maintenance approved Aug 2025, SC initiation July 2026 (US launch late Aug 2026) |
+| BIIB091 | — | Oral peripheral BTK inhibitor | Relapsing MS | Ph2 | Biogen's remaining internal MS bet, at proof-of-concept stage |
 
 ## History: 1995-2025
 

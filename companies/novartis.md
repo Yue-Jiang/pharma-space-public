@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: novartis
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -37,6 +37,23 @@ Novartis describes itself as a "pure-play" innovative medicines company after sp
 | Kymriah (tisagenlecleucel) | B-cell ALL (≤25 yrs), 3L+ large B-cell lymphoma, 3L+ follicular lymphoma | CD19 CAR-T cell therapy | ~$0.4B (est.; Q4 2025 $85M, -21% YoY) | n/a (cell therapy) |
 
 Sales are FY2025 from Novartis 20-F/Q4 2025 report unless marked (est.). Xolair US revenue accrues to Genentech (Novartis co-promotes and books ex-US sales only).
+
+## Pipeline (clinical-stage)
+
+Novartis has told investors it will grow straight through the biggest patent expiry in its history — Entresto, Promacta and Tasigna all going generic at once — which means the pipeline has to produce replacements on a schedule. The company is not chasing obesity; it is betting instead on cardiovascular risk factors that no approved drug addresses (Lp(a), factor XI clotting), on autoimmune kidney disease, and on RNA-based medicines that can be aimed at muscle tissue, the platform it paid roughly USD 12 billion for Avidity to acquire. Two 2026 readouts — pelacarsen in Lp(a) and remibrutinib in multiple sclerosis — are the ones management itself flags as making or breaking the growth story.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Pelacarsen | pelacarsen | Antisense oligonucleotide against Lp(a) (Ionis-partnered) | Elevated Lp(a) / ASCVD | Ph3 | Lp(a)HORIZON cardiovascular outcomes readout is the company's largest binary event |
+| Rhapsido | remibrutinib | Oral covalent BTK inhibitor | Chronic spontaneous urticaria; relapsing MS (Ph3) | Approved 2025 | Approved 2025 in CSU; two Phase III MS trials called a key near-term growth determinant |
+| Itvisma | onasemnogene abeparvovec (intrathecal) | AAV9 gene therapy, SMN1 replacement | Spinal muscular atrophy (older patients) | Approved 2025 | US approval Q4 2025; extends the Zolgensma franchise beyond infants |
+| Abelacimab | abelacimab | Anti-factor XI/XIa mAb | Atrial fibrillation / thrombosis | Ph3 | From the 2025 Anthos deal (up to USD 3.1B); originated in Novartis labs |
+| Ianalumab | ianalumab | Anti-BAFF-R mAb | Sjögren's disease; immune thrombocytopenia | Ph3 | Would be the first approved disease-modifying therapy in Sjögren's |
+| Zigakibart | zigakibart | Anti-APRIL mAb | IgA nephropathy | Ph3 | From the 2023 Chinook deal; third Novartis shot at IgAN after Fabhalta and Vanrafia |
+| Del-desiran | delpacibart etedesiran | Antibody-oligonucleotide conjugate (AOC), DMPK-targeting | Myotonic dystrophy type 1 | Ph3 | Lead Avidity asset; launch targeted before 2030 |
+| Del-brax | delpacibart braxlosiran | AOC targeting DUX4 | Facioscapulohumeral muscular dystrophy | Ph3 | Second Avidity AOC into pivotal development |
+| Del-zota | delpacibart zotadirsen | AOC, exon-44 skipping | Duchenne muscular dystrophy | Ph2 | Accelerated-approval filing progressing per the Q2 2026 call |
+| Pacibekitug | pacibekitug | Anti-IL-6 mAb | Cardiovascular inflammation (elevated hsCRP) | Ph2 | From the USD 1.4B Tourmaline acquisition; Phase III outcomes programme planned (est.) |
 
 ## History: 1995-2025
 

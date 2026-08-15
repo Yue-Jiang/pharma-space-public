@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: amgen
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Amgen
@@ -40,6 +40,21 @@ FY2025 sales per Amgen 10-K. 14 products exceeded $1B in 2025.
 | Vectibix (panitumumab) | Colorectal cancer | mAb (EGFR) | $1.18B (+12%) | — |
 
 Other notable: Uplizna (rare autoimmune; new IgG4-RD and gMG indications), Imdelltra (tarlatamab, DLL3 BiTE, full FDA approval in ES-SCLC), Lumakras (sotorasib, KRAS G12C), Tavneos (avacopan), and a growing biosimilars business (Amjevita/Humira, Wezlana/Stelara, Pavblu/Eylea, Bekemv/Soliris, Mvasi/Avastin).
+
+## Pipeline (clinical-stage)
+
+Amgen's growth after 2030 rests on three bets that are all still in trials. The biggest by far is MariTide, an obesity drug designed to be injected monthly or less often rather than weekly — Amgen is not claiming more weight loss than Lilly or Novo, it is claiming a more convenient schedule, and it has put six Phase 3 studies behind that claim. Behind MariTide sit olpasiran, which lowers a genetically inherited cholesterol-like particle that no approved drug currently treats, and a set of cancer and immunology assets; a fourth, quieter bet is the biosimilar unit, which is building copies of the biggest-selling cancer drugs in the world ahead of their patent expiries.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| MariTide | maridebart cafraglutide | GIPR antagonist / GLP-1R agonist antibody-peptide conjugate | Obesity, obesity + T2D | Ph3 | Amgen's largest pipeline bet; six global Ph3 MARITIME studies incl. ASCVD, heart failure and sleep apnea outcomes; Ph2 in T2D |
+| Olpasiran | olpasiran | siRNA against lipoprotein(a) | LDL-C lowering / CV risk reduction (elevated Lp(a)) | Ph3 | OCEAN(a)-Outcomes enrolled 7,297 patients at Lp(a) ≥200 nmol/L; lowers Lp(a) >95% |
+| Xaluritamig | xaluritamig | STEAP1 × CD3 T-cell engager | Metastatic castration-resistant prostate cancer | Ph3 | Two Ph3s: XALute (post-taxane) and XALience (chemo-naive, + abiraterone, opened 2026) |
+| Dazodalibep | dazodalibep | CD40L-blocking fusion protein | Sjögren's disease | Ph3 | Near-term binary readout; both Ph3 studies complete in H2 2026 |
+| Daxdilimab | daxdilimab | ILT7-targeted plasmacytoid dendritic cell-depleting mAb | Discoid lupus erythematosus | Ph2 | First-in-class; met Ph2 primary endpoint on skin disease activity |
+| ABP 234 | — | PD-1 mAb (pembrolizumab biosimilar) | NSCLC and other Keytruda indications | Ph3 | Aimed at the largest-selling medicine in the industry as its patents lapse |
+| ABP 206 | — | PD-1 mAb (nivolumab biosimilar) | Melanoma, NSCLC | Ph3 | Comparative study enrolment complete |
+| ABP 692 | — | CD20 mAb (ocrelizumab biosimilar) | Relapsing-remitting multiple sclerosis | Ph3 | Extends biosimilars beyond oncology into neurology |
 
 ## History: 1995-2025
 

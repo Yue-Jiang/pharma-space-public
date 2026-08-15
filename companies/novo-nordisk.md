@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: novo-nordisk
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -37,6 +37,22 @@ status: curated
 | Alhemo (concizumab) | Hemophilia A/B with inhibitors (US Dec 2024) | Anti-TFPI monoclonal antibody | Small; launch phase | 2030s |
 
 Semaglutide across its three brands was ~DKK 228B in FY2025 — roughly 74% of company sales.
+
+## Pipeline (clinical-stage)
+
+Novo Nordisk's pipeline is essentially an attempt to build the next semaglutide before the current one erodes: one molecule is roughly three-quarters of revenue and its patents have begun to expire. CagriSema is the closest answer, now under FDA review, with amycretin behind it — both engineered to strip off more weight than Wegovy does. The bets outside obesity are thinner, and got thinner in July 2026 when the IL-6 antibody ziltivekimab failed its first large cardiovascular outcomes trial.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| CagriSema | cagrilintide/semaglutide | Long-acting amylin analogue + GLP-1 receptor agonist | Obesity | Filed | US decision expected end-2026, launch 2027; missed non-inferiority vs tirzepatide in REDEFINE-4 |
+| Amycretin | zenagamtide | Unimolecular GLP-1/amylin receptor co-agonist | Obesity | Ph3 | Ph3 started 2026 in both subcutaneous and oral forms; Novo's most important internal asset |
+| Cagrilintide | cagrilintide | Long-acting amylin analogue (monotherapy) | Obesity | Ph3 | High-dose Ph3 initiation in 2026; tests amylin without a GLP-1 partner |
+| Efruxifermin | efruxifermin | FGF21 analogue | MASH with fibrosis | Ph3 | Basis of the $4.7B Akero acquisition (Dec 2025); Ph3 F1–F4 results due 2026 |
+| Mim8 | denecimig | FVIIIa-mimetic bispecific antibody | Hemophilia A | Filed | US and EU decisions expected 2026; also submitted in China |
+| Etavopivat | etavopivat | Oral pyruvate kinase-R activator | Sickle cell disease; thalassemia | Ph3 | Positive Ph3 HIBISCUS; US and EU submissions planned Q4 2026 (from the 2022 Forma acquisition) |
+| UBT251 | — | GLP-1/GIP/glucagon triple agonist | Obesity; type 2 diabetes | Ph2 | Licensed from United Laboratories ex-Greater China; Novo's answer to retatrutide; T2D Ph2 started 2026 |
+| Ziltivekimab | ziltivekimab | Anti-IL-6 monoclonal antibody | Heart failure; post-myocardial infarction | Ph3 | ZEUS missed MACE reduction (July 2026, HR 0.99) and triggered an impairment; HERMES and ARTEMIS read out H1 2027 |
+| Icosema | insulin icodec/semaglutide | Once-weekly basal insulin + GLP-1 fixed combination | Type 2 diabetes | Approved 2026 | Approved in Japan and China in 2026; not yet filed in the US |
 
 ## History: 1995–2025
 

@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: moderna
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Moderna
@@ -23,6 +23,21 @@ Moderna's entire commercial portfolio is mRNA vaccines delivered in lipid nanopa
 | mRESVIA (mRNA-1345; RSV vaccine, mRNA) | RSV lower respiratory tract disease, 60+ and high-risk 18–59 | mRNA-LNP vaccine | $8M (FY2025) | N/A |
 | mFLUSIVA (mRNA-1010; influenza vaccine, mRNA) | Seasonal influenza, adults 50+ (65+ accelerated approval); FDA approved Aug 5, 2026 | mRNA-LNP vaccine | — (launching 2026–27 season) | N/A |
 | mCOMBRIAX (mRNA-1083; flu + COVID combination vaccine) | Influenza + COVID-19; EU approval Q1 2026, not yet US | mRNA-LNP combination vaccine | — (launching from 2026, ex-US first) | N/A |
+
+## Pipeline (clinical-stage)
+
+Moderna's pipeline splits cleanly in two. The vaccines are what pay the bills: two products cleared regulators in 2026 and are only now reaching the market, and the norovirus candidate would open a genuinely new seasonal franchise if it works. Everything else is the long bet — above all intismeran autogene, a cancer therapy custom-manufactured for each individual patient from their own tumour's mutations, which is the single asset most likely to prove that mRNA is a medicine platform and not just a vaccine platform.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Intismeran autogene | intismeran autogene | Individualised neoantigen mRNA therapy (mRNA-4157/V940, + pembrolizumab) | Adjuvant melanoma, NSCLC, bladder, renal | Ph3 | Flagship pipeline bet, Merck-partnered; nine Ph2/Ph3 trials; Ph3 adjuvant melanoma fully enrolled with data possible 2026 |
+| mFLUSIVA | — | mRNA-LNP influenza vaccine (mRNA-1010) | Seasonal influenza, adults 50+ | Approved 2026 | FDA approved 5 Aug 2026; launching for the 2026-27 season, no sales yet; filings under review in EU, Canada, Australia |
+| mCOMBRIAX | — | mRNA-LNP flu + COVID combination vaccine (mRNA-1083) | Influenza + COVID-19 | Approved 2026 | EU approval Q1 2026; not yet approved in the US; ex-US launches from 2026-27 |
+| mRNA-1403 | — | mRNA-LNP trivalent norovirus vaccine | Norovirus gastroenteritis | Ph3 | Would be a fourth seasonal product; missed early-success criteria at Ph3 interim and is enrolling an additional cohort |
+| mRNA-3927 | — | mRNA enzyme replacement (propionyl-CoA carboxylase subunits) | Propionic acidemia | Ph2 | Registrational part of the Ph1/2 study fully enrolled, readout expected end-2026; global commercialisation licensed to Recordati |
+| mRNA-4359 | — | mRNA cancer antigen therapy | Metastatic melanoma, NSCLC | Ph2 | Wholly owned; Ph2 cohorts in 1L melanoma, 2L+ melanoma and 1L NSCLC with data expected 2026 |
+| mRNA-1647 | — | mRNA-LNP cytomegalovirus vaccine | CMV prevention in transplant recipients | Ph2 | Narrowed to the transplant setting after the congenital CMV programme was discontinued |
+| mRNA-3705 | — | mRNA enzyme replacement (methylmalonyl-CoA mutase) | Methylmalonic acidemia | Ph1 | Selected for the FDA's START rare-disease pilot; registrational study expected to begin 2026 |
 
 ## History: 1995-2025
 

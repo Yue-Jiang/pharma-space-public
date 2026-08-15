@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: pfizer
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -32,6 +32,22 @@ FY2025 sales are Pfizer-reported global revenues (10-K, Feb 2026) unless marked 
 | Lorbrena (lorlatinib) | ALK+ non-small cell lung cancer | Small molecule (ALK inhibitor) | ~$1.0B (est.) | ~2030s |
 | Xeljanz (tofacitinib) | Rheumatoid arthritis, UC, PsA | Small molecule (JAK inhibitor) | ~$0.6B (est.) | 2025 (US) — eroding |
 | Elrexfio (elranatamab) | Relapsed/refractory multiple myeloma | BCMA-CD3 bispecific antibody | <$0.5B (est.), growing | 2030s |
+
+## Pipeline (clinical-stage)
+
+Pfizer has to replace roughly $20 billion of revenue that loses exclusivity by 2030, and it is buying two answers: obesity and more oncology. The obesity bet is PF-08653944, the ultra-long-acting injectable GLP-1 acquired with Metsera, now the subject of a ten-trial Phase 3 programme with a launch targeted for 2028. In cancer the Seagen-built antibody-drug-conjugate engine, a Chinese-licensed PD-1/VEGF bispecific and a run of next-generation breast-cancer drugs give Pfizer around twenty pivotal trial starts a year — the volume behind its claim of eight or more blockbuster oncology medicines by 2030.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| PF-08653944 | — | Ultra-long-acting GLP-1 receptor agonist, weekly then monthly injection | Obesity | Ph3 | The ex-Metsera MET-097i; 10 Ph3 trials advancing in 2026, launch targeted 2028 |
+| PF-08634404 | — | PD-1 x VEGF bispecific antibody | 1L NSCLC; 1L colorectal cancer | Ph3 | The 3SBio-licensed SSGJ-707 ($1.25B upfront); Symbiotic Ph3 programme |
+| Atirmociclib | atirmociclib | Selective CDK4 inhibitor | HR+/HER2- breast cancer | Ph3 | Planned Ibrance successor, now focused on first-line and early disease; FOURLIGHT-3 could read out 2027 |
+| Prifetrastat | prifetrastat | KAT6A/B inhibitor (epigenetic) | HR+/HER2- breast cancer after CDK4/6 inhibitors | Ph3 | KATSIS-1 pivotal trial is Pfizer's second-line answer post-Ibrance |
+| Sigvotatug vedotin | sigvotatug vedotin | Integrin beta-6 antibody-drug conjugate | NSCLC | Ph3 | Second-line SigVie-002 missed overall survival in June 2026; first-line studies continue |
+| Fetrastobart vedotin | fetrastobart vedotin | PD-L1-directed antibody-drug conjugate | 2L+ NSCLC | Ph3 | Seagen-originated PDL1V; PADL1NK-005 pivotal |
+| Sasanlimab | sasanlimab | Subcutaneous anti-PD-1 mAb | Non-muscle-invasive bladder cancer | Ph3 | Positive Ph3 CREST in combination with BCG; EU registration under way |
+| Ponsegromab | ponsegromab | Anti-GDF-15 mAb | Cancer cachexia | Ph2 | Ph2b in pancreatic cancer is sizing a pivotal trial in a disease with no approved drug |
+| Veppanu | vepdegestrant | Oral PROTAC estrogen-receptor degrader | ESR1-mutant ER+/HER2- advanced breast cancer | Approved 2026 | First FDA-approved PROTAC (May 2026); global rights out-licensed to Rigel, with Pfizer and Arvinas splitting royalties |
 
 ## History: 1995-2025
 

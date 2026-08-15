@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: johnson-and-johnson
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Johnson & Johnson (Innovative Medicine)
@@ -38,6 +38,22 @@ Sales are FY2025 unless noted; "~" = estimate from quarterly disclosures, not co
 | Spravato (esketamine) | Treatment-resistant depression | Intranasal NMDA modulator | ~$1.5B (+50%) | ~2030s |
 | Rybrevant/Lazcluze (amivantamab + lazertinib) | EGFR-mutant NSCLC | EGFR×MET bispecific + 3rd-gen TKI | ~$1B (Q2 $289M, +61%) | New |
 | Caplyta (lumateperone) | Schizophrenia, bipolar depression, adj. MDD | Oral atypical antipsychotic (via Intra-Cellular) | ~$0.9B (Apr-Dec under J&J) | 2030s |
+
+## Pipeline (clinical-stage)
+
+J&J's problem is arithmetic: Stelara fell from roughly $10.4B to $6.1B in a single year, and Darzalex — now over $14B — faces its own patents early in the 2030s. The answer management has chosen is breadth rather than one replacement blockbuster: an oral pill that does what an injected biologic does (icotrokinra), a drug-device that treats bladder cancer without removing the bladder (the TARIS platform), T-cell engagers aimed at prostate cancer and leukaemia, and a rebuilt neuroscience portfolio. Notably absent is any obesity programme — J&J has said openly it would rather spend the money on oncology, immunology and the brain.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Icotyde | icotrokinra (JNJ-2113) | oral IL-23 receptor peptide antagonist | plaque psoriasis | Approved 2026 | Approved US March 2026 on four positive Ph3s incl. superiority vs Sotyktu; Ph3 UC/PsA ongoing; $10B peak claim |
+| Inlexzo | TAR-200 (intravesical gemcitabine) | gemcitabine-releasing intravesical drug-device | BCG-unresponsive non-muscle-invasive bladder cancer | Approved 2025 | First product of the TARIS platform, which J&J pitches at $5B+ |
+| Erda-iDRS | erdafitinib (TAR-210) | FGFR inhibitor released inside the bladder | intermediate- and high-risk non-muscle-invasive bladder cancer | Ph3 | Second TARIS asset (MoonRISe-1); first-in-human data reported Q1 2026 |
+| Milvexian | milvexian | oral Factor XIa inhibitor (BMS-partnered) | stroke prevention; atrial fibrillation | Ph3 | LIBREXIA-AF and LIBREXIA-STROKE continue after the ACS trial was stopped for futility in Nov 2025 |
+| Pasritamig | pasritamig (JNJ-78278343) | KLK2xCD3 T-cell engager | metastatic castration-resistant prostate cancer | Ph3 | J&J's lead attempt to bring T-cell engagers into solid tumours |
+| Bleximenib | bleximenib (JNJ-75276617) | menin-MLL inhibitor | acute myeloid leukemia | Ph3 | Placed by J&J in its $1-5B peak-sales band |
+| Seltorexant | seltorexant (JNJ-42847922) | orexin-2 receptor antagonist | major depressive disorder with insomnia symptoms | Ph3 | Ph3 met all endpoints; slots alongside Caplyta and Spravato in the rebuilt neuroscience franchise |
+| Posdinemab | posdinemab | anti-phospho-tau monoclonal antibody | early Alzheimer's disease | Ph2 | Ph2b AuTonomy — J&J's principal Alzheimer's bet after bapineuzumab's 2012 failure |
+| JNJ-1887 | — | soluble CD59 AAV gene therapy | geographic atrophy | Ph2 | One-time eye injection intended to replace chronic anti-complement dosing |
 
 ## History: 1995-2025
 

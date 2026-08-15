@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: bayer
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # Bayer (Pharmaceuticals)
@@ -38,6 +38,21 @@ Note: Bayer is a three-division conglomerate (Crop Science €21.6B, Pharmaceuti
 | Beyonttra (acoramidis) | Transthyretin amyloid cardiomyopathy (ATTR-CM); EU/UK rights from BridgeBio | Oral TTR stabilizer | Launch year (small) | 2030s (est.) |
 | Lynkuet (elinzanetant) | Moderate-to-severe menopausal vasomotor symptoms; FDA approval Oct 2025 | Oral dual NK-1/NK-3 receptor antagonist | Launch year (small) | 2030s (est.) |
 | Hyrnuo (sevabertinib) | HER2 (ERBB2)-mutated non-squamous NSCLC, 2L; FDA accelerated approval Nov 2025 | Oral HER2 tyrosine kinase inhibitor | Launch year (small) | 2030s (est.) |
+
+## Pipeline (clinical-stage)
+
+Bayer Pharma's near-term problem is arithmetic: Xarelto and Eylea are shrinking faster than Nubeqa and Kerendia are growing, so the gap has to be closed by things that are not yet selling. The largest of those is asundexian, the blood thinner that failed in atrial fibrillation in 2023 and then succeeded in secondary stroke prevention, now filed in the US, Japan and China as Xarelto's intended successor. Behind it sit a refreshed radiology franchise, a first-in-class stem-cell therapy for Parkinson's, and gene therapies from the AskBio subsidiary that would finally justify a $2 billion acquisition many investors questioned.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Asundexian | asundexian | Oral Factor XIa inhibitor | Secondary prevention after non-cardioembolic ischemic stroke or TIA | Filed | FDA Priority Review (NDA accepted May 2026), plus Japan and China filings; 26% ischemic stroke reduction in OCEANIC-STROKE |
+| Ambelvist | gadoquatrane | Low-dose macrocyclic gadolinium-based MRI contrast agent | Contrast-enhanced MRI of CNS and other body regions | Approved 2026 | FDA approval June 2026 (Japan March 2026); refreshes the ~€2B radiology franchise at 60% less gadolinium |
+| Hyrnuo | sevabertinib | Oral HER2 tyrosine kinase inhibitor | HER2 (ERBB2)-mutated non-squamous NSCLC | Approved 2025 | FDA accelerated approval Nov 2025; 1L sNDA under FDA Priority Review since May 2026 |
+| Lynkuet | elinzanetant | Oral dual NK-1/NK-3 receptor antagonist | Moderate-to-severe menopausal vasomotor symptoms | Approved 2025 | FDA approval Oct 2025; non-hormonal anchor for the women's health franchise |
+| Bemdaneprocel | bemdaneprocel | Allogeneic stem-cell-derived dopaminergic neuron cell therapy | Parkinson's disease | Ph3 | First Ph3 of a pluripotent stem-cell therapy in Parkinson's (exPDite-2, first patient Sept 2025); BlueRock, FDA RMAT |
+| 124I-Evuzamitide | evuzamitide | Amyloid-binding PET imaging tracer | Diagnosis of cardiac amyloidosis | Ph3 | REVEAL study; the molecular-imaging milestone Bayer named for 2026 |
+| AB-1005 | — | AAV gene therapy delivering GDNF | Parkinson's disease | Ph2 | AskBio's REGENERATE-PD programme |
+| AB-1002 | — | AAV gene therapy (inhibitor-1 transgene) | Congestive heart failure | Ph2 | AskBio; cardiology gene therapy highlighted in the JPM 2026 portfolio update |
 
 ## History: 1995-2025
 

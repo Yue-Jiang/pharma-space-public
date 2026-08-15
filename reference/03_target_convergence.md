@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-14
+updated: 2026-08-15
 status: generated
 ---
 # Target convergence — where the industry piles up
@@ -17,7 +17,7 @@ status: generated
 | PD-1 | 6: akeso, bristol-myers-squibb, gsk, merck, regeneron, summit | cadonilimab, cemiplimab, dostarlimab, ivonescimab, nivolumab, nivolumab + relatlimab, pembrolizumab, pembrolizumab with berahyaluronidase alfa, penpulimab |  |  |
 | HER2 | 6: 3sbio, astrazeneca, bayer, boehringer-ingelheim, daiichi-sankyo, roche | inetetamab, pertuzumab, pertuzumab + trastuzumab + hyaluronidase, sevabertinib, trastuzumab, trastuzumab deruxtecan, trastuzumab emtansine, zongertinib |  |  |
 | BCMA | 6: bristol-myers-squibb, gsk, johnson-and-johnson, legend, pfizer, regeneron | belantamab mafodotin, ciltacabtagene autoleucel, elranatamab, idecabtagene vicleucel, linvoseltamab, teclistamab | 2 |  |
-| BTK | 6: abbvie, astrazeneca, eli-lilly, johnson-and-johnson, novartis, sanofi | acalabrutinib, ibrutinib, pirtobrutinib, remibrutinib, rilzabrutinib | 1 |  |
+| BTK | 6: abbvie, astrazeneca, eli-lilly, johnson-and-johnson, novartis, sanofi | acalabrutinib, ibrutinib, pirtobrutinib, remibrutinib, rilzabrutinib |  |  |
 | VEGF-A | 5: akeso, bayer, regeneron, roche, summit | aflibercept, bevacizumab, faricimab, ivonescimab, ranibizumab, ziv-aflibercept | 2 |  |
 | EGFR | 5: amgen, astrazeneca, bristol-myers-squibb, hansoh-pharma, johnson-and-johnson | amivantamab, aumolertinib, cetuximab, gefitinib, osimertinib, panitumumab | 1 |  |
 | DRD2 | 5: abbvie, boehringer-ingelheim, bristol-myers-squibb, eli-lilly, johnson-and-johnson | aripiprazole, cariprazine, olanzapine, paliperidone, paliperidone palmitate, pramipexole |  |  |
@@ -128,4 +128,4 @@ status: generated
 | CB1 | 2 | rimonabant, taranabant |
 | alpha-1 antitrypsin deficiency corrector | 2 | vx-814, vx-864 |
 
-*Marketed assets only — pipeline extraction pending. Molecules: 417 | targets: 231 | deals: 353 | rebuilt 2026-08-14.*
+*Marketed assets only — pipeline extraction pending. Molecules: 545 | targets: 231 | deals: 353 | rebuilt 2026-08-15.*

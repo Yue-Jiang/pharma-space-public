@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: astrazeneca
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 # AstraZeneca
@@ -37,6 +37,25 @@ FY2025 sales; AZ-recorded revenue unless noted. Estimates marked (est.).
 | Tezspire (tezepelumab) | Severe asthma | Anti-TSLP mAb (Amgen partnership) | $1.94B combined (AZ alliance revenue $673M) | 2030s (est.) |
 | Breztri/Trixeo (budesonide/glycopyrronium/formoterol) | COPD | Triple ICS/LAMA/LABA inhaler | ~$1.3B (est.) | 2030s (est.) |
 | Beyfortus (nirsevimab) | RSV prophylaxis in infants | Long-acting mAb (Sanofi partnership) | AZ alliance revenue $422M (2025) | — |
+
+## Pipeline (clinical-stage)
+
+AstraZeneca's $80B-by-2030 ambition depends on a pipeline broad enough to outrun the Farxiga cliff that is already here and the Tagrisso and Calquence cliffs that arrive around 2032, and 2025-2026 is when that pipeline starts landing. The nearest-term wave is cardiometabolic and rare disease: a first-in-class blood-pressure pill approved in May 2026, an oral weight-loss pill moving into Phase III, and three Alexion rare-disease medicines sitting with regulators. The oncology bets are larger and slower — bispecific antibodies designed to succeed Imfinzi as the immunotherapy backbone, a more selective successor to Lynparza, and antibody-drug conjugates that deliver chemotherapy directly to tumour cells — and most of them, like baxdrostat and the oral GLP-1, were bought or licensed rather than discovered in-house.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Baxfendy | baxdrostat | Aldosterone synthase inhibitor | Uncontrolled / resistant hypertension | Approved 2026 | First-in-class ASI; US approval 18 May 2026, from the 2023 CinCor deal |
+| Camizestrant | camizestrant | Next-generation oral SERD | HR+/HER2- advanced breast cancer | Filed | SERENA-6 positive; US decision date extended in 2026, already approved in UAE and Saudi Arabia |
+| Gefurulimab | gefurulimab | Dual-binding anti-C5 nanobody | Generalised myasthenia gravis | Filed | PREVAIL Phase III met primary and all secondary endpoints; next-generation Alexion complement asset |
+| Efzimfotase alfa | efzimfotase alfa | Next-generation TNSALP enzyme replacement | Hypophosphatasia | Filed | Subcutaneous every-two-weeks successor to Strensiq; US and Japan filings under review |
+| Eneboparatide | eneboparatide | PTH receptor 1 agonist | Hypoparathyroidism | Filed | From the 2024 Amolyt acquisition; US and EU filings under review |
+| Elecoglipron | elecoglipron (AZD5004) | Oral small-molecule GLP-1 receptor agonist | Obesity, type 2 diabetes | Ph3 | VISTA and SOLSTICE Phase IIb positive; Phase III programme opened 2026, licensed from Eccogene |
+| AZD0780 | — | Oral PCSK9 inhibitor | Dyslipidaemia / ASCVD | Ph3 | Cardiovascular outcomes trial running; intended as an oral combination partner for elecoglipron |
+| Tozorakimab | tozorakimab | Anti-IL-33 ligand mAb | COPD, viral lower respiratory tract disease | Ph3 | Three Phase III COPD trials plus TILIA; the largest Respiratory & Immunology bet |
+| Volrustomig | volrustomig | PD-1/CTLA-4 bispecific mAb | Cervical, lung, head and neck cancers | Ph3 | Positioned to succeed Imfinzi as AZ's immunotherapy backbone |
+| Rilvegostomig | rilvegostomig | PD-1/TIGIT bispecific mAb | Biliary tract, lung, gastric cancers | Ph3 | Being combined with AZ's ADCs across multiple Phase III trials |
+| Saruparib | saruparib | Selective PARP1 inhibitor | HR+ breast, prostate cancer (BRCA/HRR) | Ph3 | Cleaner-profile successor to Lynparza ahead of its ~2028 LOE (est.) |
+| Sonesitatug vedotin | sonesitatug vedotin (AZD0901) | CLDN18.2-directed ADC | Gastric/GEJ cancer | Ph3 | China-originated (KYM Biosciences); pivotal CLARITY-Gastric01 |
 
 ## History: 1995-2025
 

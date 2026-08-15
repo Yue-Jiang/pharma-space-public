@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: gilead
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -31,6 +31,20 @@ status: curated
 | Yescarta (axicabtagene ciloleucel) | Large B-cell lymphoma, follicular lymphoma | CD19 CAR T-cell therapy | $1.5B (down 5%) | n/a (biologic/cell therapy; competitive erosion) |
 | Tecartus (brexucabtagene autoleucel) | Mantle cell lymphoma, adult ALL | CD19 CAR T-cell therapy | $344M (down 15%) | n/a |
 | AmBisome (liposomal amphotericin B) | Systemic fungal infections | Liposomal IV antifungal | ~$0.5B (est.) | long off-patent; formulation moat |
+
+## Pipeline (clinical-stage)
+
+Gilead faces no major loss of exclusivity until 2036, and it is spending that unusually calm decade trying to become something other than an HIV company. The near-term bets are still HIV — pairing lenacapavir, its twice-yearly injectable, with other drugs to make the smallest daily pill and the first weekly one — but the capital is going into oncology, where nearly $13 billion of 2026 acquisitions bought a CAR-T for myeloma and a next-generation antibody-drug conjugate platform. Four of these assets face an FDA decision or a launch inside the next twelve months.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| BIC/LEN | bictegravir/lenacapavir | INSTI + capsid inhibitor, once-daily single tablet | HIV-1 treatment (virologically suppressed adults) | Filed | PDUFA Aug 27, 2026; first dedicated switch regimen and smallest single-tablet regimen if approved |
+| Anito-cel | anitocabtagene autoleucel | BCMA-directed CAR T-cell therapy | Relapsed/refractory multiple myeloma (4L+) | Filed | PDUFA Dec 23, 2026; the asset behind the $7.8B Arcellx acquisition, positioned against Carvykti |
+| Lenacapavir (weekly oral) | lenacapavir | HIV capsid inhibitor, once-weekly oral | HIV pre-exposure prophylaxis (PrEP) | Filed | FDA accepted the filing June 2026; extends the Yeztugo PrEP franchise from injection to pill |
+| ISL/LEN | islatravir/lenacapavir | NRTTI + capsid inhibitor, once-weekly oral | HIV-1 treatment (virologically suppressed adults) | Ph3 | Positive ISLEND-1/-2 at AIDS 2026; would be the first weekly oral regimen, launch targeted 2027; with Merck |
+| Hepcludex | bulevirtide | Injectable entry inhibitor | Chronic hepatitis D | Approved 2026 | First and only FDA-approved HDV treatment; US launch began Q2 2026 (EU-approved since 2020) |
+| GS-8824 | — | NaPi2b-directed antibody-drug conjugate | Platinum-resistant ovarian cancer | Ph1 | 61% confirmed response rate in Ph1 (ASCO 2026); lead asset of the $3.15B Tubulis deal, registrational Ph3 planned |
+| Emvistagrast | emvistagrast | Oral α4β7 integrin inhibitor | Ulcerative colitis | Ph2 | Gilead's most advanced inflammation bet; Ph2 SWIFT completed but data still undisclosed as of Q2 2026 |
 
 ## History: 1995-2025
 

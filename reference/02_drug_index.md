@@ -15,8 +15,17 @@ status: curated
 
 | Brand | Generic (INN) | Company | Class / mechanism | Used for | Status | Same molecule as |
 |---|---|---|---|---|---|---|
+| 124I-Evuzamitide | evuzamitide | Bayer | Amyloid-binding PET imaging tracer | Diagnosis of cardiac amyloidosis | pipeline | — |
+| AB-1002 | — | Bayer | AAV gene therapy (inhibitor-1 transgene) | Congestive heart failure | pipeline | — |
+| AB-1005 | — | Bayer | AAV gene therapy delivering GDNF | Parkinson's disease | pipeline | — |
+| ABBV-295 | — | AbbVie | Long-acting amylin/calcitonin receptor agonist | Obesity | pipeline | Licensed from Gubra as GUB014295 |
+| ABBV-RGX-314 | — | AbbVie | AAV8 gene therapy encoding an anti-VEGF antibody fragment | Wet age-related macular degeneration | pipeline | Regenxbio partnership |
 | Abecma | idecabtagene vicleucel | BMS | CAR-T cell therapy | Multiple myeloma | marketed | CAR-T myeloma; Celgene; approved 2021; consolidated via 2seventy |
+| Abelacimab | abelacimab | Novartis | Anti-factor XI/XIa mAb | Atrial fibrillation / thrombosis | pipeline | — |
 | Abilify | aripiprazole | BMS | Atypical antipsychotic (dopamine D2 antagonist) | Schizophrenia; bipolar disorder; major depressive disorder; autism spectrum disorder irritability | legacy | Antipsychotic; Otsuka partnership; now generic |
+| ABP 206 | — | Amgen | PD-1 mAb (nivolumab biosimilar) | Melanoma, NSCLC | pipeline | Opdivo (nivolumab) |
+| ABP 234 | — | Amgen | PD-1 mAb (pembrolizumab biosimilar) | NSCLC and other pembrolizumab indications | pipeline | Keytruda (pembrolizumab) |
+| ABP 692 | — | Amgen | CD20 mAb (ocrelizumab biosimilar) | Relapsing-remitting multiple sclerosis | pipeline | Ocrevus (ocrelizumab) |
 | Abraxane | paclitaxel nanoparticle | BMS | Microtubule stabilizer (taxane) | Non-small-cell lung cancer; breast cancer; pancreatic cancer; gastric cancer | marketed | Cancer; Celgene; declining 30-55%/yr |
 | Abrysvo | RSV prefusion F vaccine | Pfizer | Protein subunit vaccine | RSV prevention (older adults, maternal) | marketed | — |
 | Accutane | isotretinoin | Roche | Retinoid (retinoic acid receptor agonist) | Severe recalcitrant acne | withdrawn | Severe acne; pulled US market 2009 amid generics litigation |
@@ -25,9 +34,10 @@ status: curated
 | Actos | pioglitazone | Takeda | Thiazolidinedione (peroxisome proliferator-activated receptor gamma agonist) | Type 2 diabetes mellitus | legacy | Type 2 diabetes blockbuster; patent expired 2012, litigation-plagued |
 | Adcetris | brentuximab vedotin | Takeda | CD30-directed antibody-drug conjugate | Hodgkin lymphoma, T-cell lymphomas (Takeda ex-US) | marketed | Adcetris (Pfizer/Seagen, US) |
 | Adempas | riociguat | Bayer | Soluble guanylate cyclase stimulator | Pulmonary arterial hypertension, CTEPH | marketed | — |
-| Admilparant | admilparant | BMS | — | LPA1 antagonist IPF/PPF; Ph3 data 2026-2027 | failed | — |
+| Admilparant | admilparant | BMS | — | LPA1 antagonist IPF/PPF; Ph3 data 2026-2027 | pipeline | — |
 | Aduhelm | aducanumab | Biogen | — | Alzheimer's anti-amyloid; accelerated approval 2021, discontinued January 2024 | failed | — |
 | Advair | fluticasone/salmeterol | GSK | Inhaled corticosteroid/long-acting beta-2 agonist | Asthma; chronic obstructive pulmonary disease | marketed | Asthma/COPD inhaler; peaked ~$8B; now genericized |
+| Afimkibart | afimkibart | Roche | Anti-TL1A monoclonal antibody | Ulcerative colitis; Crohn's disease | pipeline | RVT-3101; from Telavant |
 | Agenerase | amprenavir | Vertex | Protease inhibitor (HIV protease inhibitor) | HIV infection | marketed | HIV protease inhibitor, GSK partnership, approved 1999 |
 | Alecensa | alectinib | Roche | Oral ALK inhibitor | ALK-positive non-small cell lung cancer | marketed | — |
 | Alhemo | concizumab | Novo | Anti-TFPI monoclonal antibody | Hemophilia A/B with inhibitors | marketed | — |
@@ -36,19 +46,26 @@ status: curated
 | Altuviiio | efanesoctocog alfa | Sanofi | Factor VIII-Fc-VWF-XTEN fusion protein | Hemophilia A | marketed | — |
 | Alunbrig | brigatinib | Takeda | Oral ALK tyrosine kinase inhibitor | ALK-positive non-small cell lung cancer | marketed | — |
 | Alyftrek | vanzacaftor/tezacaftor/deutivacaftor | Vertex | Small-molecule next-gen triple CFTR modulator (once-daily) | Cystic fibrosis, ages 6+ | marketed | — |
+| Ambelvist | gadoquatrane | Bayer | Low-dose macrocyclic gadolinium-based MRI contrast agent | Contrast-enhanced MRI of CNS and other body regions | marketed | — |
 | Ambien | zolpidem | Sanofi | Non-benzodiazepine hypnotic (GABA-A agonist) | Insomnia | marketed | Insomnia drug; legacy portfolio component |
 | AmBisome | liposomal amphotericin B | Gilead | Liposomal IV antifungal | Systemic fungal infections | marketed | amphotericin B (generic, older formulations) |
 | Ameile | aumolertinib | Hansoh Pharma | Third-generation EGFR tyrosine kinase inhibitor | EGFR-mutant non-small cell lung cancer (China) | marketed | — |
 | Amitiza | lubiprostone | Takeda | Chloride channel activator | Irritable bowel syndrome with constipation; chronic idiopathic constipation | legacy | IBS-C; pay-for-delay antitrust verdict May 2026, ¥402.5B provision |
-| Amycretin | zenagamtide | Novo | — | Unimolecular GLP-1/amylin co-agonist, ~22% weight loss phase 1b/2a, phase 3 Q1 2026 | failed | — |
+| Amlitelimab | amlitelimab | Sanofi | Anti-OX40L mAb | Celiac disease | pipeline | — |
+| Amycretin | zenagamtide | Novo | — | Unimolecular GLP-1/amylin co-agonist, ~22% weight loss phase 1b/2a, phase 3 Q1 2026 | pipeline | — |
+| Anito-cel | anitocabtagene autoleucel | Gilead | BCMA-directed CAR T-cell therapy | Relapsed/refractory multiple myeloma (4L+) | pipeline | — |
 | Anselamimab | anselamimab | AZ | — | Alexion rare-disease candidate; Phase III readouts 2025-2026 | legacy | — |
+| Apecotrep | apecotrep | Boehringer | TRPC6 inhibitor (oral, non-immunosuppressive) | Primary focal segmental glomerulosclerosis (FSGS) | pipeline | — |
 | Apretude | cabotegravir extended-release | GSK | Long-acting injectable integrase inhibitor | HIV pre-exposure prophylaxis (PrEP) | marketed | same molecule as in Cabenuva |
 | Aranesp | darbepoetin alfa | Amgen | Erythropoietin biologic | Anemia | marketed | — |
 | Arcalyst | rilonacept | Regeneron | IL-1 trap fusion protein | Cryopyrin-associated periodic syndromes, recurrent pericarditis (marketed by licensee Kiniksa) | marketed | — |
 | Arexvy | RSVPreF3 OA (adjuvanted RSV vaccine) | GSK | Adjuvanted recombinant protein vaccine | RSV prevention in older adults | marketed | — |
 | Arlo-cel | arlo-cel | BMS | — | GPRC5D CAR-T myeloma; registrational data 2026 | pipeline | — |
 | Aspirin Cardio | acetylsalicylic acid | Bayer | Antiplatelet (COX inhibitor) | Cardiovascular event prevention | marketed | Same molecule as generic aspirin |
+| Asundexian | asundexian | Bayer | Oral Factor XIa inhibitor | Secondary stroke prevention after non-cardioembolic ischemic stroke or TIA | pipeline | — |
+| Atirmociclib | atirmociclib | Pfizer | Selective CDK4 inhibitor | HR+/HER2- breast cancer | pipeline | — |
 | Atripla | efavirenz/tenofovir/emtricitabine | Gilead | Non-nucleoside reverse transcriptase inhibitor + nucleoside reverse transcriptase inhibitors | HIV infection | marketed | First once-daily HIV pill 2006 with BMS; superseded |
+| Atumelnant | atumelnant | Vertex | Oral ACTH receptor antagonist | Congenital adrenal hyperplasia; Cushing's syndrome | pipeline | — |
 | Aucatzyl | obecabtagene autoleucel (obe-cel) | Autolus | CD19 CAR T-cell therapy | Adult relapsed/refractory B-cell precursor ALL | marketed | First CAR-T approved without a REMS programme (Nov 2024) |
 | Augmentin | amoxicillin/clavulanate | GSK | Oral beta-lactam antibiotic + beta-lactamase inhibitor | Bacterial infections | marketed | — |
 | Augtyro | repotrectinib | BMS | Tyrosine kinase inhibitor (ROS1/NTRK) | ROS1-positive non-small-cell lung cancer; NTRK fusion-positive solid tumors | marketed | ROS1/NTRK inhibitor; Turning Point; approved 2023 |
@@ -63,29 +80,41 @@ status: curated
 | AZD5004 | AZD5004 | AZ | — | Oral GLP-1 licensed from Eccogone; cardiometabolic expansion in development | marketed | — |
 | Azilva | — | Takeda | — | Japan legacy brand; eroding from generics and price cuts | legacy | — |
 | AZT | zidovudine | GSK | Nucleoside reverse transcriptase inhibitor | HIV infection | marketed | HIV pioneer from Wellcome acquisition; still marketed but superseded |
-| Baxdrostat | baxdrostat | AZ | — | First-in-class aldosterone synthase inhibitor; BaxHTN Phase III positive, PDUFA 2026 | marketed | — |
+| Balinatunfib | balinatunfib | Sanofi | Oral TNFR1 signalling inhibitor | Psoriasis, inflammatory bowel disease | pipeline | — |
+| Baxdrostat | baxdrostat | AZ | — | First-in-class aldosterone synthase inhibitor; BaxHTN Phase III positive, PDUFA 2026 | pipeline | — |
+| Bemdaneprocel | bemdaneprocel | Bayer | Allogeneic stem-cell-derived dopaminergic neuron cell therapy | Parkinson's disease | pipeline | — |
 | Benepali | etanercept-ykro (biosimilar) | Biogen | TNF receptor fusion protein biosimilar (w/ Samsung Bioepis) | Rheumatoid arthritis and other inflammatory diseases | marketed | Enbrel (etanercept, Amgen/Pfizer) |
 | Benicar | olmesartan | Daiichi | Angiotensin II receptor antagonist | Hypertension | legacy | Hypertension blockbuster; peak ~25% of revenue, now genericized post-LOE 2016 |
 | Benlysta | belimumab | GSK | Anti-BLyS monoclonal antibody | Systemic lupus erythematosus, lupus nephritis | marketed | — |
+| Bepirovirsen | bepirovirsen | GSK | Antisense oligonucleotide against HBsAg | Chronic hepatitis B | pipeline | — |
 | Betaferon | interferon beta-1b | Bayer | Interferon beta-1b | Multiple sclerosis | marketed | Multiple sclerosis drug from Schering |
 | Bexsero | meningococcal group B vaccine | GSK | Protein-based vaccine | Meningococcal B disease prevention | marketed | — |
 | Bextra | valdecoxib | Pfizer | — | COX-2 inhibitor, withdrawn 2005 on safety grounds | withdrawn | — |
 | Beyfortus | nirsevimab | AZ | Long-acting monoclonal antibody (Sanofi partnership) | RSV prophylaxis in infants | marketed | — |
 | Beyonttra | acoramidis | Bayer | Oral transthyretin (TTR) stabilizer | Transthyretin amyloid cardiomyopathy (EU/UK; from BridgeBio) | marketed | Same molecule as BridgeBio's US Attruby |
+| BI 3034701 | — | Boehringer | GLP-1/GIP/NPY2 triple receptor agonist | Obesity | pipeline | — |
+| BIIB091 | — | Biogen | Oral peripheral BTK inhibitor | Relapsing multiple sclerosis | pipeline | — |
 | Biktarvy | bictegravir/emtricitabine/tenofovir alafenamide | Gilead | Oral single-tablet HIV regimen (INSTI + 2 NRTIs) | HIV-1 treatment | marketed | — |
+| Bimagrumab | bimagrumab | Lilly | Anti-activin type II receptor mAb | Obesity (muscle preservation) | pipeline | — |
 | Blenrep | belantamab mafodotin | GSK | BCMA-targeted antibody-drug conjugate | Relapsed/refractory multiple myeloma | marketed | — |
+| Bleximenib | bleximenib | J&J | Menin-MLL inhibitor (oral) | Acute myeloid leukemia | pipeline | — |
 | Blincyto | blinatumomab | Amgen | Bispecific T-cell engager (BiTE) | B-cell leukemia (ALL) | marketed | — |
 | Blopress | candesartan | Takeda | Angiotensin II receptor antagonist | Hypertension | marketed | Hypertension blockbuster; sold via TAP/Abbott JV, genericized |
 | Blujepa | gepotidacin | GSK | First-in-class oral triazaacenaphthylene antibiotic | Uncomplicated urinary tract infections | marketed | — |
 | BMS-986094 | BMS-986094 | BMS | — | Hepatitis C nucleotide; halted after patient death; $1.8B writedown | failed | — |
+| Boey | trenibotulinumtoxinE | AbbVie | Botulinum neurotoxin type E (fast-onset, short-acting) | Glabellar lines (aesthetics) | marketed | — |
 | Botox | onabotulinumtoxinA | AbbVie | Botulinum neurotoxin | Chronic migraine, spasticity, cervical dystonia; cosmetic wrinkle reduction | marketed | — |
 | Braftovi | encorafenib | Pfizer | BRAF kinase inhibitor | Colorectal cancer | marketed | BRAF-mutant colorectal cancer, expanding on BREAKWATER data |
+| Bretisilocin | bretisilocin | AbbVie | Psychedelic-derived serotonin 5-HT2A agonist | Major depressive disorder | pipeline | From Gilgamesh Pharmaceuticals |
 | Breyanzi | lisocabtagene maraleucel ("liso-cel") | BMS | CAR-T cell therapy | Lymphomas, CLL | marketed | — |
 | Breztri (Trixeo in EU) | budesonide/glycopyrronium/formoterol | AZ | Triple ICS/LAMA/LABA combination inhaler | COPD | marketed | — |
 | Bridion | sugammadex | Merck | Small molecule (modified gamma-cyclodextrin, IV) | Reversal of neuromuscular blockade after surgery | marketed | — |
+| Brigimadlin | brigimadlin | Boehringer | MDM2-p53 antagonist (oral) | Dedifferentiated liposarcoma | pipeline | — |
+| Brivekimig | brivekimig | Sanofi | Anti-TNF/OX40L bispecific nanobody | Hidradenitis suppurativa | pipeline | — |
 | Buscopan | hyoscine butylbromide | Boehringer | Anticholinergic antispasmodic | Irritable bowel syndrome; abdominal pain | marketed | Consumer antispasmodic; divested to Sanofi 2017 |
 | Byetta | exenatide | Lilly | GLP-1 receptor agonist | Type 2 diabetes | marketed | GLP-1 agonist T2D; acquired via Amylin 2005 |
 | Cabenuva | cabotegravir/rilpivirine | GSK | Long-acting injectable INSTI + NNRTI | HIV-1 treatment (monthly or every-2-month injection) | marketed | cabotegravir also in Apretude, Vocabria |
+| Cagrilintide | cagrilintide | Novo | Long-acting amylin analogue (monotherapy) | Obesity | pipeline | CagriSema (component) |
 | CagriSema | cagrilintide + semaglutide | Novo | — | Amylin/GLP-1 combo, 20.4–22.7% weight loss, FDA filed Dec 2025, failed non-inferiority REDEFINE-4 | failed | — |
 | Calquence | acalabrutinib | AZ | Small molecule, BTK inhibitor | Chronic lymphocytic leukemia, mantle cell lymphoma | marketed | — |
 | Camizestrant | camizestrant | AZ | Estrogen receptor degrader | Breast cancer | marketed | Oral selective estrogen receptor degrader; SERENA-6 positive, est. >$5B peak |
@@ -94,40 +123,65 @@ status: curated
 | Capvaxive | pneumococcal 21-valent conjugate vaccine | Merck | Conjugate vaccine | Adult pneumococcal disease prevention | marketed | — |
 | Carvykti | ciltacabtagene autoleucel ("cilta-cel") | J&J (w/ Legend) | CAR-T cell therapy | Multiple myeloma | marketed | — |
 | Casgevy | exagamglogene autotemcel (exa-cel) | Vertex | Ex vivo CRISPR/Cas9 gene-edited cell therapy (one-time) | Severe sickle cell disease; transfusion-dependent beta thalassemia | marketed | — |
+| CD388 | — | Merck | Drug-Fc conjugate (long-acting neuraminidase inhibitor) | Influenza prophylaxis | pipeline | From Cidara Therapeutics |
+| Cemdisiran | cemdisiran | Regeneron | C5 siRNA (Alnylam collaboration) | Generalized myasthenia gravis | pipeline | — |
+| Cenrifki | tolebrutinib | Sanofi | Oral brain-penetrant BTK inhibitor | Non-relapsing secondary progressive multiple sclerosis | marketed | — |
 | Cialis | tadalafil | Lilly | Phosphodiesterase-5 inhibitor | Erectile dysfunction; benign prostatic hyperplasia | marketed | PDE5 inhibitor ED/BPH; launched 2003, patent extended |
 | Cipterbin | inetetamab | 3SBio | Anti-HER2 monoclonal antibody | HER2-positive metastatic breast cancer (China) | marketed | — |
 | Cobenfy | xanomeline-trospium | BMS | Muscarinic agonist combo (oral) | Schizophrenia (first new MOA in decades) | marketed | — |
 | Columvi | glofitamab | Roche | CD20xCD3 bispecific T-cell engager | Relapsed/refractory diffuse large B-cell lymphoma | marketed | — |
 | Comirnaty | tozinameran (COVID-19 mRNA vaccine) | Pfizer | mRNA vaccine (with BioNTech) | COVID-19 prevention | marketed | — |
 | Cosentyx | secukinumab | Novartis | Monoclonal antibody (anti-IL-17A) | Psoriasis, psoriatic arthritis, axial spondyloarthritis, hidradenitis suppurativa | marketed | — |
+| CPTX2309 | — | AbbVie | In vivo anti-CD19 CAR-T via targeted lipid nanoparticles | Autoimmune disease (B-cell immune reset) | pipeline | From Capstan Therapeutics |
 | Cravit | levofloxacin | Daiichi | Fluoroquinolone antibiotic | Bacterial infections | marketed | Antibiotic discovered by Daiichi; branded in Japan, now generic |
 | Crestor | rosuvastatin | AZ | HMG-CoA reductase inhibitor | Hyperlipidemia; cardiovascular disease prevention | legacy | HMG-CoA reductase inhibitor; US patent expired 2016, major revenue loss |
 | Cuvitru | immune globulin (human, 20% SC) | Takeda | Plasma-derived immunoglobulin (subcutaneous) | Primary immunodeficiency | marketed | — |
 | Cyltezo | adalimumab-adbm | Boehringer | TNF-α inhibitor biosimilar | Rheumatoid arthritis; inflammatory bowel disease; psoriasis | legacy | Adalimumab biosimilar; first interchangeable US launch 2023 |
 | Cymbalta | duloxetine | Lilly | Serotonin-norepinephrine reuptake inhibitor | Major depressive disorder; generalized anxiety disorder; diabetic peripheral neuropathy; fibromyalgia | marketed | SNRI antidepressant/pain; peak ~$5B, patent cliff Dec 2013 |
 | Daichirona | — | Daiichi | — | mRNA COVID-19 vaccine; Japan marketed asset | legacy | — |
+| Dapirolizumab pegol | dapirolizumab pegol | Biogen | Anti-CD40L pegylated Fab (with UCB) | Systemic lupus erythematosus | pipeline | — |
 | Darzalex / Darzalex Faspro | daratumumab | J&J | Anti-CD38 antibody (IV / SC) | Multiple myeloma | marketed | Faspro = SC formulation |
 | Datroway | datopotamab deruxtecan | Daiichi (w/ AZ) | TROP2-directed antibody-drug conjugate (Daiichi Sankyo partnership) | HR+/HER2- breast cancer, EGFR-mutated NSCLC | marketed | — |
 | Dawnzera | donidalorsen | Ionis | Prekallikrein-targeting antisense oligonucleotide | Hereditary angioedema prophylaxis, age 12+ | marketed | — |
+| Daxdilimab | daxdilimab | Amgen | ILT7-targeted plasmacytoid dendritic cell-depleting mAb | Discoid lupus erythematosus | pipeline | — |
+| Dazodalibep | dazodalibep | Amgen | CD40L-blocking fusion protein | Sjögren's disease | pipeline | — |
+| Decnupaz | pivekimab sunirine | AbbVie | CD123-directed antibody-drug conjugate | Blastic plasmacytoid dendritic cell neoplasm (BPDCN) | marketed | — |
+| Del-brax | delpacibart braxlosiran | Novartis | Antibody-oligonucleotide conjugate targeting DUX4 | Facioscapulohumeral muscular dystrophy | pipeline | — |
+| Del-desiran | delpacibart etedesiran | Novartis | Antibody-oligonucleotide conjugate, DMPK-targeting | Myotonic dystrophy type 1 | pipeline | — |
+| Del-zota | delpacibart zotadirsen | Novartis | Antibody-oligonucleotide conjugate, exon-44 skipping | Duchenne muscular dystrophy | pipeline | — |
 | Dengvaxia | — | Sanofi | Dengue vaccine | Dengue fever | withdrawn | Dengue vaccine; Philippines crisis 2017; reputational damage |
 | Descovy | emtricitabine/tenofovir alafenamide | Gilead | Oral 2-NRTI backbone | HIV treatment backbone; HIV PrEP | marketed | — |
 | Diovan | valsartan | Novartis | Angiotensin II receptor antagonist | Hypertension; heart failure | legacy | Hypertension blockbuster; peaked USD 6B; US patent expiry 2012 |
+| Diranersen | diranersen | Biogen | Anti-tau antisense oligonucleotide (with Ionis) | Early Alzheimer's disease | pipeline | — |
+| Divarasib | divarasib | Roche | Oral KRAS G12C inhibitor | KRAS G12C non-small-cell lung cancer | pipeline | — |
 | Dovato | dolutegravir/lamivudine | GSK | Oral integrase inhibitor two-drug regimen | HIV-1 treatment | marketed | dolutegravir also in Tivicay, Triumeq, Juluca |
+| DS-3939 | — | Daiichi | TA-MUC1-directed DXd antibody-drug conjugate | Advanced solid tumours | pipeline | — |
+| DS3610 | — | Daiichi | STING-agonist payload antibody-drug conjugate | Advanced solid tumours | pipeline | — |
+| DS3790 | — | Daiichi | DXd antibody-drug conjugate (haematology) | Haematologic malignancies | pipeline | — |
 | Dulcolax | bisacodyl | Boehringer | Osmotic laxative | Constipation | marketed | Consumer laxative; divested to Sanofi 2017 |
 | Dupixent | dupilumab | Sanofi | Anti-IL-4R alpha monoclonal antibody | Atopic dermatitis, asthma, CRSwNP, eosinophilic esophagitis, prurigo nodularis, chronic spontaneous urticaria, COPD, bullous pemphigoid | marketed | — (co-marketed with Regeneron) |
 | Duragesic | fentanyl transdermal | J&J | Opioid agonist | Chronic pain | marketed | Opioid patch; subject to opioid litigation claims |
+| Duvakitug | duvakitug | Sanofi (w/ Teva) | Anti-TL1A mAb | Ulcerative colitis, Crohn's disease | pipeline | — |
 | Ebglyss | lebrikizumab | Lilly | IL-13 antibody | Atopic dermatitis | marketed | — |
+| Efimosfermin | efimosfermin alfa | GSK | FGF21 analogue | MASH | pipeline | — |
+| Efruxifermin | efruxifermin | Novo | FGF21 analogue | MASH with fibrosis | pipeline | — |
 | Efzimfotase alfa | efzimfotase alfa | AZ | — | Alexion rare-disease candidate; Phase III readouts 2025-2026 | legacy | — |
 | Elahere | mirvetuximab soravtansine | AbbVie | Antibody-drug conjugate (anti-FRα) | Platinum-resistant ovarian cancer (FRα-positive) | marketed | — |
+| Elecoglipron | elecoglipron | AZ | Oral small-molecule GLP-1 receptor agonist | Obesity, type 2 diabetes | pipeline | — |
 | Eliquis | apixaban | BMS (w/ Pfizer) | Factor Xa anticoagulant (oral) | Stroke prevention, clots | marketed | — |
+| Eloralintide | eloralintide | Lilly | Amylin receptor agonist | Obesity | pipeline | — |
 | Elrexfio | elranatamab | Pfizer | BCMA-CD3 bispecific antibody | Relapsed/refractory multiple myeloma | marketed | — |
+| Elritercept | elritercept | Takeda | Modified activin receptor IIA ligand trap | Anaemia in myelodysplastic syndromes, myelofibrosis | pipeline | — |
 | Emgality | galcanezumab | Lilly | CGRP antibody | Migraine prevention | marketed | — |
 | Empaveli | pegcetacoplan | Biogen | Systemic C3 complement inhibitor (pegylated peptide; ex-Apellis) | Paroxysmal nocturnal hemoglobinuria; C3 glomerulopathy; primary IC-MPGN | marketed | Syfovre (same molecule, intravitreal); Aspaveli (EU brand) |
 | Emrelis | telisotuzumab vedotin | AbbVie | Antibody-drug conjugate (anti-c-Met) | c-Met-high non-squamous non-small cell lung cancer | marketed | — |
 | Emtriva | emtricitabine | Gilead | Nucleoside reverse transcriptase inhibitor | HIV infection | marketed | HIV nucleoside; acquired Triangle Pharmaceuticals 2003 |
+| Emvistagrast | emvistagrast | Gilead | Oral alpha-4-beta-7 integrin inhibitor | Ulcerative colitis | pipeline | — |
 | Enbrel | etanercept | Amgen | TNF-blocker fusion protein | Rheumatoid arthritis, psoriasis | marketed | — |
+| Eneboparatide | eneboparatide | AZ | PTH receptor 1 agonist | Hypoparathyroidism | pipeline | — |
 | Enflonsia | clesrovimab | Merck | Long-acting monoclonal antibody | RSV prevention in infants | marketed | — |
 | Enhertu | trastuzumab deruxtecan | Daiichi (w/ AZ) | HER2-directed antibody-drug conjugate (Daiichi Sankyo partnership) | HER2-positive/HER2-low breast, gastric, lung cancer | marketed | — |
+| Enicepatide | enicepatide | Roche | GLP-1/GIP dual receptor agonist | Obesity, with or without type 2 diabetes | pipeline | CT-388; from Carmot Therapeutics |
 | Entresto | sacubitril/valsartan | Novartis | Small molecule combo (neprilysin inhibitor + ARB) | Chronic heart failure, hypertension | marketed | — |
 | Entyvio | vedolizumab | Takeda | Anti-α4β7 integrin monoclonal antibody | Ulcerative colitis, Crohn's disease | marketed | — |
 | Epclusa | sofosbuvir/velpatasvir | Gilead | Oral pan-genotypic direct-acting antiviral | Chronic hepatitis C (curative) | marketed | sofosbuvir also in Sovaldi, Harvoni, Vosevi |
@@ -135,9 +189,12 @@ status: curated
 | Epkinly | epcoritamab | AbbVie | CD3xCD20 bispecific antibody | Diffuse large B-cell lymphoma, follicular lymphoma | marketed | Tepkinly (EU brand); Genmab partnership |
 | Epogen | epoetin alfa | Amgen | Erythropoietin-stimulating agent | Anemia of chronic kidney disease | legacy | Pioneering recombinant EPO; dialysis anemia. Launched 1989 |
 | Erbitux | cetuximab | BMS | EGFR monoclonal antibody | Colorectal cancer; head and neck cancer | marketed | EGFR inhibitor; co-developed via ImClone; FDA refusal-to-file 2001 |
+| Erda-iDRS | erdafitinib | J&J | FGFR inhibitor released by an intravesical drug-delivery system | Intermediate- and high-risk non-muscle-invasive bladder cancer | pipeline | Balversa (same molecule, oral) |
 | Erleada | apalutamide | J&J | Androgen receptor blocker (oral) | Prostate cancer | marketed | — |
 | Esbriet | pirfenidone | Roche | Antifibrotic agent | Idiopathic pulmonary fibrosis | marketed | Idiopathic pulmonary fibrosis; acquired InterMune 2014 |
 | Essure | — | Bayer | — | Permanent contraceptive implant withdrawn amid injury claims, $1.6B settlement 2020 | withdrawn | — |
+| Etavopivat | etavopivat | Novo | Oral pyruvate kinase-R activator | Sickle cell disease; thalassemia | pipeline | — |
+| Etentamig | etentamig | AbbVie | BCMAxCD3 bispecific T-cell engager | Relapsed/refractory multiple myeloma | pipeline | Also known as ABBV-383 |
 | Evenity | romosozumab | Amgen | Sclerostin antibody (bone-forming) | Osteoporosis | marketed | — |
 | Evista | raloxifene | Lilly | Selective estrogen receptor modulator | Osteoporosis; breast cancer prevention | legacy | SERM for osteoporosis; patent cliff 2014 |
 | Evkeeza | evinacumab | Regeneron | Monoclonal antibody (ANGPTL3 inhibitor) | Homozygous familial hypercholesterolemia | marketed | — |
@@ -152,55 +209,76 @@ status: curated
 | Fabrazyme | agalsidase beta | Sanofi | Enzyme replacement therapy | Fabry disease | marketed | — |
 | Farxiga | dapagliflozin | AZ | Small molecule, SGLT2 inhibitor | Type 2 diabetes, heart failure, chronic kidney disease | marketed | — |
 | Fasenra | benralizumab | AZ | Anti-IL-5 receptor alpha monoclonal antibody | Severe eosinophilic asthma, EGPA | marketed | — |
+| Fazirsiran | fazirsiran | Takeda | RNAi against alpha-1 antitrypsin | Alpha-1 antitrypsin deficiency liver disease | pipeline | — |
+| Felzartamab | felzartamab | Biogen | Anti-CD38 mAb | Antibody-mediated kidney transplant rejection; IgA nephropathy; primary membranous nephropathy | pipeline | — |
+| Fenebrutinib | fenebrutinib | Roche | Oral brain-penetrant BTK inhibitor | Relapsing and primary progressive multiple sclerosis | pipeline | — |
+| Fetrastobart vedotin | fetrastobart vedotin | Pfizer | PD-L1-directed antibody-drug conjugate | Non-small cell lung cancer | pipeline | — |
+| Fianlimab | fianlimab | Regeneron | LAG-3 monoclonal antibody; combined with Libtayo | Advanced melanoma | pipeline | — |
 | Flixabi | infliximab biosimilar | Biogen | Anti-TNF monoclonal antibody biosimilar (w/ Samsung Bioepis) | Inflammatory diseases | marketed | Remicade (infliximab, J&J/Merck) |
 | Flomax | tamsulosin | Boehringer | Alpha-1 adrenergic receptor antagonist | Benign prostatic hyperplasia | marketed | Benign prostatic hyperplasia alpha-blocker; widely genericized |
 | Fluzone HD / Flublok / Vaxigrip | influenza vaccines | Sanofi | Vaccines (inactivated/recombinant) | Seasonal influenza | marketed | — |
 | Forteo | teriparatide | Lilly | Parathyroid hormone analog | Osteoporosis | legacy | Recombinant PTH for osteoporosis; launched 2002 |
 | Fosamax | alendronate | Merck | Bisphosphonate | Osteoporosis; Paget's disease | marketed | Bisphosphonate for osteoporosis; now generic, iconic 1990s franchise |
 | Foundayo | orforglipron | Lilly | — | Oral GLP-1 small-molecule obesity; April 1 2026 approval, $98M first quarter | marketed | — |
+| Frexalimab | frexalimab | Sanofi | Anti-CD40L mAb | Relapsing and secondary progressive multiple sclerosis | pipeline | — |
 | Frontline | — | Boehringer | — | Animal-health flea/tick; acquired via Merial 2017 | marketed | — |
 | Fruzaqla | fruquintinib | Takeda | Oral VEGFR-1/2/3 tyrosine kinase inhibitor | Previously treated metastatic colorectal cancer | marketed | Elunate (HutchMed/Lilly, China) |
 | Gadovist | gadobutrol | Bayer | Gadolinium MRI contrast agent | Magnetic resonance imaging contrast | marketed | — |
 | Gammagard | — | Takeda | Immunoglobulin replacement | Primary immunodeficiency; chronic inflammatory demyelinating polyneuropathy; immune thrombocytopenia; multifocal motor neuropathy | marketed | Immunoglobulin; plasma-derived, acquired via Shire 2019 |
 | Gammagard Liquid | immune globulin (human) | Takeda | Plasma-derived polyclonal immunoglobulin (IV) | Primary immunodeficiency, other immune disorders | marketed | Kiovig (ex-US name) |
 | Gardasil / Gardasil 9 | HPV vaccine (9-valent recombinant) | Merck | Recombinant virus-like-particle vaccine | Prevention of HPV-related cancers (cervical, anal, oropharyngeal) | marketed | — |
+| Garetosmab | garetosmab | Regeneron | Anti-Activin A monoclonal antibody | Fibrodysplasia ossificans progressiva (FOP) | pipeline | — |
 | Gazyva | obinutuzumab | Roche | Glycoengineered anti-CD20 monoclonal antibody | Chronic lymphocytic leukemia, follicular lymphoma, lupus nephritis | marketed | — |
 | Gefurulimab | gefurulimab | AZ | — | Alexion rare-disease candidate; Phase III readouts 2025-2026 | legacy | — |
 | Gemzar | gemcitabine | Lilly | Nucleoside antimetabolite | Pancreatic cancer; non-small-cell lung cancer; bladder cancer; breast cancer | marketed | Pancreatic/lung antimetabolite; patent cliff 2010 |
 | Genvoya | elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide | Gilead | Oral single-tablet HIV regimen | HIV-1 treatment | marketed | — |
 | Gilenya | fingolimod | Novartis | Sphingosine-1-phosphate receptor modulator | Relapsing-remitting multiple sclerosis; secondary progressive multiple sclerosis | legacy | First oral multiple sclerosis drug; launched 2010 |
+| Giredestrant | giredestrant | Roche | Oral selective estrogen receptor degrader (SERD) | ER-positive/HER2-negative breast cancer (adjuvant; ESR1-mutated advanced) | pipeline | — |
 | Gleevec | imatinib | Novartis | BCR-ABL tyrosine kinase inhibitor | Chronic myeloid leukemia; gastrointestinal stromal tumor; acute lymphoblastic leukemia | legacy | CML breakthrough; multi-billion-dollar franchise; lost US exclusivity 2016 |
 | Glucophage | metformin | BMS | Biguanide | Type 2 diabetes mellitus | marketed | Diabetes; now generic |
-| Golcadomide | golcadomide | BMS | — | CELMoD lymphoma; Ph3 GOLSEEK-1; 2027 data expected | marketed | — |
+| Gocatamig | gocatamig | Daiichi (w/ Merck) | DLL3 × CD3 T-cell engager | Small cell lung cancer | pipeline | — |
+| Golcadomide | golcadomide | BMS | — | CELMoD lymphoma; Ph3 GOLSEEK-1; 2027 data expected | pipeline | — |
+| GS-8824 | — | Gilead | NaPi2b-directed antibody-drug conjugate | Platinum-resistant ovarian cancer | pipeline | — |
+| GSK5784283 | — | GSK | Ultra-long-acting anti-TSLP mAb | Asthma | pipeline | — |
 | Harvoni | sofosbuvir/ledipasvir | Gilead | Nucleoside polymerase inhibitor/NS5A inhibitor | Hepatitis C virus infection | marketed | HCV fixed-dose combination 2014; followed Sovaldi |
 | Heartgard | — | Boehringer | Macrocyclic lactone | Heartworm disease prevention | marketed | Animal-health heartworm preventive; acquired via Merial 2017 |
 | Hemlibra | emicizumab | Roche | Bispecific antibody (factor IXa/X mimetic) | Hemophilia A prophylaxis | marketed | — |
 | Hepcludex | bulevirtide | Gilead | Injectable entry inhibitor (lipopeptide) | Chronic hepatitis D | marketed | — |
 | Herceptin | trastuzumab | Roche | Anti-HER2 monoclonal antibody | HER2-positive breast and gastric cancer (biosimilar-eroded) | marketed | **Phesgo** (co-formulated), **Kadcyla** (ADC payload carrier) |
 | Hernexeos | zongertinib | Boehringer | HER2-selective tyrosine kinase inhibitor (oral) | HER2 (ERBB2)-mutant advanced non-small cell lung cancer | marketed | — |
+| HRS-5346 | — | Merck | Oral lipoprotein(a) inhibitor | Elevated Lp(a) and associated cardiovascular risk | pipeline | Licensed from Jiangsu Hengrui |
 | Humalog | insulin lispro | Lilly | Rapid-acting insulin analog | Type 1 diabetes mellitus; type 2 diabetes mellitus | legacy | Rapid-acting insulin analog; list prices cut ~70% (2023) |
 | Humalog / Humulin / Basaglar | insulin lispro etc. | Lilly | Insulins | Diabetes | marketed | — |
 | Humira | adalimumab | AbbVie | Anti-TNF monoclonal antibody | Rheumatoid arthritis, psoriasis, IBD and others | marketed | Biosimilars: Amjevita, Hyrimoz, etc. |
 | HyQvia | immune globulin + recombinant hyaluronidase | Takeda | Plasma-derived immunoglobulin (facilitated SC) | Primary immunodeficiency, CIDP | marketed | — |
 | Hyrnuo | sevabertinib | Bayer | Oral HER2 tyrosine kinase inhibitor | HER2-mutated non-small cell lung cancer | marketed | — |
-| Iberdomide | iberdomide | BMS | — | CELMoD oral myeloma; NDA filed; PDUFA Aug 2026; first CELMoD | marketed | — |
+| Ianalumab | ianalumab | Novartis | Anti-BAFF-R mAb | Sjögren's disease; immune thrombocytopenia | pipeline | — |
+| Iberdomide | iberdomide | BMS | — | CELMoD oral myeloma; NDA filed; PDUFA Aug 2026; first CELMoD | pipeline | — |
+| IBI343 | — | Takeda | CLDN18.2-directed ADC | Pancreatic, gastric cancer | pipeline | — |
+| IBI363 | — | Takeda | PD-1/IL-2 alpha-bias bispecific fusion protein | NSCLC, melanoma, colorectal cancer | pipeline | — |
 | Ibrance | palbociclib | Pfizer | Small molecule, CDK4/6 inhibitor | HR+/HER2- metastatic breast cancer | marketed | — |
 | Iclusig | ponatinib | Takeda | Oral BCR-ABL tyrosine kinase inhibitor | Philadelphia-chromosome-positive CML and ALL | marketed | — |
-| Icotyde | icotrokinra | J&J | — | Oral IL-23R peptide (Protagonist-partnered); approved US March 2026; immunology | legacy | — |
-| Imaavy | nipocalimab | J&J | FcRn antagonist | Generalized myasthenia gravis | legacy | FcRn blocker (Momenta 2020); approved April 2025 for gMG; multiple indication expansion |
+| Icosema | insulin icodec/semaglutide | Novo | Once-weekly basal insulin + GLP-1 fixed-dose combination | Type 2 diabetes | marketed | Awiqli (insulin icodec); Ozempic (semaglutide) |
+| Icotyde | icotrokinra | J&J | — | Oral IL-23R peptide (Protagonist-partnered); approved US March 2026; immunology | marketed | — |
+| Idvynso | doravirine/islatravir | Merck | Fixed-dose NNRTI + nucleoside analogue reverse transcriptase inhibitor | HIV-1 (switch in virologically suppressed adults) | marketed | Contains doravirine, also sold alone as Pifeltro |
+| Ifinatamab deruxtecan | ifinatamab deruxtecan | Daiichi (w/ Merck) | B7-H3-directed DXd antibody-drug conjugate | Extensive-stage small cell lung cancer | pipeline | — |
+| Imaavy | nipocalimab | J&J | FcRn antagonist | Generalized myasthenia gravis | marketed | FcRn blocker (Momenta 2020); approved April 2025 for gMG; multiple indication expansion |
 | Imbruvica | ibrutinib | J&J (w/ AbbVie) | BTK inhibitor (oral) | CLL, lymphoma | marketed | — |
 | Imfinzi | durvalumab | AZ | Anti-PD-L1 monoclonal antibody (immunotherapy) | Lung, bladder, gastric, biliary tract, liver cancers | marketed | — |
 | Imraldi | adalimumab biosimilar | Biogen | Anti-TNF monoclonal antibody biosimilar (w/ Samsung Bioepis) | Inflammatory diseases | marketed | Humira (adalimumab, AbbVie) |
+| Inaxaplin | inaxaplin | Vertex | Oral APOL1 channel inhibitor | APOL1-mediated kidney disease | pipeline | — |
 | Incivek | telaprevir | Vertex | Hepatitis C protease inhibitor | Hepatitis C virus infection | failed | HCV protease inhibitor, approved 2011, discontinued US 2014 |
 | Injectafer | ferric carboxymaltose | Daiichi | Intravenous iron | Iron deficiency anemia (US, via American Regent) | marketed | — |
-| Inlexzo | TAR-200 | J&J | Intravesical gemcitabine delivery system | Non-muscle-invasive bladder cancer | legacy | Intravesical gemcitabine-releasing system; bladder cancer; approved 2025; $5B+ asset |
+| Inlexzo | TAR-200 | J&J | Intravesical gemcitabine delivery system | Non-muscle-invasive bladder cancer | marketed | Intravesical gemcitabine-releasing system; bladder cancer; approved 2025; $5B+ asset |
 | Inluriyo | imlunestrant | Lilly | Oral SERD | ER+ breast cancer | marketed | — |
 | Inmazeb | atoltivimab/maftivimab/odesivimab | Regeneron | Three-antibody cocktail | Ebola virus (Zaire) infection | marketed | — |
+| Intismeran autogene | intismeran autogene | Merck | Individualised mRNA neoantigen therapy | Resected melanoma and other solid tumours | pipeline | V940 / mRNA-4157; Moderna collaboration |
 | Invega Sustenna | paliperidone palmitate | J&J | Atypical antipsychotic | Schizophrenia; schizoaffective disorder; bipolar I disorder | marketed | Long-acting antipsychotic; launched 2009; franchise eroding late-2020s |
 | Invega Sustenna / Trinza / Hafyera | paliperidone | J&J | Long-acting injectable antipsychotic | Schizophrenia | marketed | Suffixes = 1/3/6-month intervals |
 | Iressa | gefitinib | AZ | EGFR tyrosine kinase inhibitor | Non-small-cell lung cancer | legacy | EGFR tyrosine kinase inhibitor; early stumble in unselected lung cancer 2002-2004 |
 | ISB 2001 | — | AbbVie | — | CD3/BCMA/CD38 trispecific; via IGI Jul 2025; ~$1.9B total value | marketed | — |
 | Isentress | raltegravir | Merck | HIV integrase inhibitor | HIV-1 infection | marketed | HIV integrase inhibitor; 2007 launch, now generic landscape |
+| Itepekimab | itepekimab | Sanofi (w/ Regeneron) | Anti-IL-33 mAb | COPD, chronic rhinosinusitis with nasal polyps | pipeline | — |
 | Itovebi | inavolisib | Roche | PIK3CA inhibitor | Breast cancer | marketed | PIK3CA inhibitor; breast cancer approval Oct 2024 |
 | Iza-bren | iza-bren | BMS | — | EGFR×HER3 bispecific ADC; SystImmune; China approvals 2026; global Ph3 | pipeline | — |
 | Jakavi | ruxolitinib | Novartis | Small molecule (JAK1/2 inhibitor) | Myelofibrosis, polycythemia vera, GvHD (ex-US) | marketed | Jakafi (ruxolitinib, Incyte, US) |
@@ -211,7 +289,9 @@ status: curated
 | Jaypirca | pirtobrutinib | Lilly | Non-covalent BTK inhibitor (oral) | CLL, MCL | marketed | — |
 | Jemperli | dostarlimab | GSK | Anti-PD-1 monoclonal antibody | Endometrial cancer, dMMR solid tumors | marketed | — |
 | Jiatailai (sac-TMT) | sacituzumab tirumotecan | Kelun-Biotech / Merck | TROP2-directed antibody-drug conjugate | EGFR-mutant NSCLC, TNBC, HR+/HER2- breast cancer (China; 4 indications) | marketed | Also known as SKB264 / MK-2870 |
+| Jideytro | zidesamtinib | GSK | ROS1 inhibitor | ROS1+ non-small cell lung cancer | marketed | — |
 | Jivi | antihemophilic factor (recombinant, PEGylated) | Bayer | Factor VIII (PEGylated recombinant) | Hemophilia A | legacy | Extended-half-life hemophilia A therapy; franchise under pressure |
+| JNJ-1887 | — | J&J | Soluble CD59 AAV gene therapy (intravitreal) | Geographic atrophy | pipeline | — |
 | Journavx | suzetrigine | Vertex | Oral NaV1.8 sodium-channel inhibitor (non-opioid) | Moderate-to-severe acute pain in adults | marketed | — |
 | Juvederm | hyaluronic acid fillers | AbbVie | Injectable dermal filler | Aesthetic facial volume/wrinkles | marketed | — |
 | Kadcyla | trastuzumab emtansine | Roche | HER2-targeted antibody-drug conjugate | Breast cancer; gastric cancer | marketed | Antibody-drug conjugate; HER2-targeted breast cancer |
@@ -233,7 +313,9 @@ status: curated
 | Lantus | insulin glargine | Sanofi | Long-acting insulin analog | Diabetes | marketed | Basaglar/Semglee/Rezvoglar (biosimilars) |
 | Lartruvo | olaratumab | Lilly | — | PDGFRα inhibitor soft-tissue sarcoma; withdrawn 2019 after ANNOUNCE failure | withdrawn | — |
 | Lenvima | lenvatinib | Merck | Oral multikinase inhibitor (Eisai alliance) | Thyroid, liver, renal, endometrial cancers | marketed | — |
+| Lepodisiran | lepodisiran | Lilly | siRNA against LPA | Elevated Lp(a) / ASCVD risk | pipeline | — |
 | Leqembi | lecanemab | Biogen | Monoclonal antibody (anti-amyloid-beta protofibril), IV/SC; with Eisai | Early Alzheimer's disease | marketed | — |
+| Leqembi Iqlik | lecanemab-irmb | Biogen | Anti-amyloid-beta protofibril mAb, subcutaneous autoinjector | Early Alzheimer's disease | marketed | Leqembi |
 | Leqvio | inclisiran | Novartis | siRNA (PCSK9-targeting) | LDL cholesterol lowering in ASCVD | marketed | — |
 | Letairis | ambrisentan | Gilead | Endothelin receptor antagonist | Pulmonary arterial hypertension | marketed | Pulmonary hypertension; acquired Myogen 2006 |
 | Levemir | insulin detemir | Novo | Basal insulin analog | Type 1 diabetes mellitus; type 2 diabetes mellitus | withdrawn | Basal insulin analog 2004–2024, discontinued US 2024 due to pricing pressure |
@@ -242,6 +324,7 @@ status: curated
 | Lipfendra | enlicitide (decanoate) | Merck | Oral macrocyclic peptide PCSK9 inhibitor | LDL-cholesterol lowering / hypercholesterolemia | marketed | — |
 | Lipitor | atorvastatin | Pfizer | HMG-CoA reductase inhibitor | Hyperlipidemia; coronary artery disease prevention | legacy | Best-selling drug in pharma history, peaked ~$13B/year, off-patent 2011 |
 | Lipobay | cerivastatin | Bayer | HMG-CoA reductase inhibitor | Hyperlipidemia | marketed | Statin withdrawn August 2001 after ~100 deaths from rhabdomyolysis |
+| Litifilimab | litifilimab | Biogen | Anti-BDCA2 mAb | Systemic and cutaneous lupus erythematosus | pipeline | — |
 | Livdelzi | seladelpar | Gilead | Oral PPAR-delta agonist | Primary biliary cholangitis | marketed | — |
 | Livtencity | maribavir | Takeda | Oral UL97 kinase inhibitor antiviral | Refractory post-transplant cytomegalovirus | marketed | — |
 | Lixiana / Savaysa | edoxaban | Daiichi | Oral factor Xa inhibitor anticoagulant | Stroke prevention in atrial fibrillation; venous thromboembolism | marketed | — |
@@ -250,30 +333,42 @@ status: curated
 | Lovenox | enoxaparin | Sanofi | Low-molecular-weight heparin | Anticoagulation | marketed | — (biosimilars/generics) |
 | Lucentis | ranibizumab | Roche | Anti-VEGF monoclonal antibody | Neovascular age-related macular degeneration; diabetic macular edema; retinal vein occlusion | marketed | Anti-VEGF for age-related macular degeneration |
 | Lumakras | sotorasib | Amgen | KRAS G12C inhibitor | Non-small-cell lung cancer (KRAS G12C-mutant) | marketed | First-ever KRAS G12C inhibitor; 2021 accelerated approval, full conversion declined |
+| Lunsekimig | lunsekimig | Sanofi | IL-13 × TSLP bispecific nanobody | Severe asthma, CRSwNP, COPD | pipeline | — |
 | Lunsumio | mosunetuzumab | Roche | CD20xCD3 bispecific T-cell engager | Relapsed/refractory follicular lymphoma | marketed | — |
 | Lutathera | lutetium Lu-177 dotatate | Novartis | Radioligand therapy (somatostatin-targeted) | Gastroenteropancreatic neuroendocrine tumors | marketed | — |
+| Lutikizumab | lutikizumab | AbbVie | Dual anti-IL-1α/IL-1β antibody | Hidradenitis suppurativa | pipeline | Also known as ABT-981 |
+| Lynavoy | linerixibat | GSK | IBAT (ileal bile acid transporter) inhibitor | Cholestatic pruritus in primary biliary cholangitis | marketed | — |
 | Lynkuet | elinzanetant | Bayer | Oral dual NK-1/NK-3 receptor antagonist | Menopausal vasomotor symptoms (hot flashes) | marketed | — |
 | Lynozyfic | linvoseltamab | Regeneron | Bispecific antibody (BCMA x CD3) | Relapsed/refractory multiple myeloma | marketed | — |
 | Lynparza | olaparib | Merck | Oral PARP inhibitor (AstraZeneca alliance) | Ovarian, breast, prostate, pancreatic cancers | marketed | — |
-| MariTide | maridebart cafraglutide | Amgen | — | Antibody-peptide conjugate; GLP-1/GIPR. Phase 3 MARITIME obesity (2025 initiation) | failed | — |
+| MariTide | maridebart cafraglutide | Amgen | — | Antibody-peptide conjugate; GLP-1/GIPR. Phase 3 MARITIME obesity (2025 initiation) | pipeline | — |
 | Mavyret | glecaprevir/pibrentasvir | AbbVie | HCV NS5A/NS3 protease inhibitor combination | Chronic hepatitis C | failed | Hepatitis C combination; launched 2017; displaced Viekira Pak |
 | mCOMBRIAX | mRNA-1083 (influenza + COVID-19 vaccine, mRNA) | Moderna | mRNA-LNP combination vaccine | Influenza + COVID-19 prevention (EU approved; not yet US) | marketed | — |
 | Mekinist | trametinib | Novartis | Small molecule (MEK inhibitor) | BRAF V600+ melanoma, NSCLC (with Tafinlar) | marketed | — |
 | Metalyse | tenecteplase | Boehringer | Engineered tPA fibrinolytic (biologic) | Acute ischemic stroke, myocardial infarction thrombolysis | marketed | — |
 | Mevalotin | pravastatin | Daiichi | HMG-CoA reductase inhibitor | Hyperlipidemia; coronary artery disease prevention | marketed | Statin discovered at Sankyo; Japan blockbuster, now genericized |
-| Mezigdomide | mezigdomide | BMS | — | CELMoD oral myeloma; NDA accepted; PDUFA May 2027 | marketed | — |
+| Mezagitamab | mezagitamab | Takeda | Anti-CD38 mAb (subcutaneous) | Immune thrombocytopenia; IgA nephropathy | pipeline | — |
+| Mezigdomide | mezigdomide | BMS | — | CELMoD oral myeloma; NDA accepted; PDUFA May 2027 | pipeline | — |
 | mFLUSIVA | mRNA-1010 (influenza vaccine, mRNA) | Moderna | mRNA-LNP vaccine | Seasonal influenza prevention, adults 50+ | marketed | — |
 | Micardis | telmisartan | Boehringer | Angiotensin II receptor antagonist | Hypertension; diabetic nephropathy | marketed | Primary-care hypertension staple; patent cliff 2014 |
-| Milvexian | milvexian | BMS | — | Oral Factor XIa inhibitor (Eliquis successor); J&J co-dev; Ph3 ongoing | failed | — |
+| Milvexian | milvexian | BMS | — | Oral Factor XIa inhibitor (Eliquis successor); J&J co-dev; Ph3 ongoing | pipeline | — |
 | Mim8 | denecimig | Novo | — | FVIIIa-mimetic bispecific hemophilia A, filed US/EU 2025 | pipeline | — |
 | Mirapex | pramipexole | Boehringer | Dopamine agonist | Parkinson's disease; restless legs syndrome | marketed | Parkinson's disease dopamine agonist; established franchise |
 | Mirena | levonorgestrel IUS | Bayer | Progestin-releasing intrauterine system | Contraception; heavy menstrual bleeding | legacy | Intrauterine system from Schering acquisition |
 | Mirena / Kyleena / Jaydess | levonorgestrel | Bayer | Hormonal intrauterine system | Long-acting contraception | marketed | levonorgestrel also in Plan B and many OC brands |
+| MK-2010 | — | Merck | PD-1/VEGF bispecific antibody | Solid tumours, non-small-cell lung cancer first | pipeline | LM-299; licensed from LaNova Medicines |
 | mNEXSPIKE | mRNA-1283 (COVID-19 vaccine, mRNA) | Moderna | mRNA-LNP vaccine (next-gen, lower dose) | COVID-19 prevention, adults 65+ and high-risk 12–64 | marketed | — |
 | Mounjaro | tirzepatide | Lilly | GIP/GLP-1 dual agonist peptide | Type 2 diabetes | marketed | **= Zepbound** |
 | mRESVIA | mRNA-1345 (RSV vaccine, mRNA) | Moderna | mRNA-LNP vaccine | Respiratory syncytial virus prevention, 60+ and high-risk 18–59 | marketed | — |
+| mRNA-1403 | — | Moderna | mRNA-LNP trivalent norovirus vaccine | Norovirus gastroenteritis | pipeline | — |
+| mRNA-1647 | — | Moderna | mRNA-LNP cytomegalovirus vaccine | CMV prevention in transplant recipients | pipeline | — |
+| mRNA-3705 | — | Moderna | mRNA enzyme replacement (methylmalonyl-CoA mutase) | Methylmalonic acidemia | pipeline | — |
+| mRNA-3927 | — | Moderna | mRNA enzyme replacement (propionyl-CoA carboxylase subunits) | Propionic acidemia | pipeline | — |
+| mRNA-4359 | — | Moderna | mRNA cancer antigen therapy | Metastatic melanoma, NSCLC | pipeline | — |
 | Mucosolvan | ambroxol | Boehringer | Mucoactive agent | Acute and chronic bronchitis; productive cough | marketed | Consumer mucoactive; divested to Sanofi 2017 |
+| Muvalaplin | muvalaplin | Lilly | Oral small-molecule Lp(a) disruptor | Elevated Lp(a) | pipeline | — |
 | Natrecor | nesiritide | J&J | B-type natriuretic peptide | Acute decompensated heart failure | legacy | Heart failure drug (Scios 2003); partial failure after safety concerns |
+| Neladalkib | neladalkib | GSK | ALK inhibitor | ALK+ non-small cell lung cancer | pipeline | — |
 | Neulasta | pegfilgrastim | Amgen | Pegylated granulocyte colony-stimulating factor | Chemotherapy-induced neutropenia | legacy | Pegylated G-CSF; approved 2001. Biosimilar erosion from 2018-2019 |
 | Neupogen | filgrastim | Amgen | Granulocyte colony-stimulating factor | Chemotherapy-induced neutropenia; severe chronic neutropenia | legacy | G-CSF for neutropenia. Launched 1991; biosimilar erosion 2018+ |
 | NexGard | afoxolaner | Boehringer | Isoxazoline parasiticide (animal health, oral chewable) | Flea and tick prevention in dogs | marketed | — |
@@ -290,13 +385,17 @@ status: curated
 | Nubeqa | darolutamide | Bayer | Oral androgen receptor inhibitor | Prostate cancer | marketed | — |
 | Nucala | mepolizumab | GSK | Anti-IL-5 monoclonal antibody | Severe eosinophilic asthma, COPD, EGPA, nasal polyps, hypereosinophilic syndrome | marketed | — |
 | Nurtec ODT | rimegepant | Pfizer | Small molecule, CGRP receptor antagonist | Migraine (acute treatment and prevention) | marketed | **Vydura** (EU brand, same molecule) |
+| Obrixtamig | obrixtamig | Boehringer | DLL3 x CD3 bispecific T-cell engager | Small cell lung cancer; extrapulmonary neuroendocrine carcinoma | pipeline | — |
 | Ocrevus | ocrelizumab | Roche | Anti-CD20 monoclonal antibody (IV + SC) | Relapsing and primary progressive multiple sclerosis | marketed | — |
 | Odefsey | rilpivirine/emtricitabine/tenofovir alafenamide | Gilead | Oral single-tablet HIV regimen | HIV-1 treatment | marketed | rilpivirine also in J&J's Edurant |
 | Ofev | nintedanib | Boehringer | Triple tyrosine kinase inhibitor (oral) | Idiopathic pulmonary fibrosis, progressive pulmonary fibrosis, SSc-ILD | marketed | — |
 | Ohtuvayre | ensifentrine | Merck | Inhaled dual PDE3/PDE4 inhibitor | COPD maintenance treatment | marketed | — |
 | Ojjaara | momelotinib | GSK | Oral JAK1/2 and ACVR1 inhibitor | Myelofibrosis with anemia | marketed | sold as Omjjara in EU |
-| Olpasiran | olpasiran | Amgen | — | siRNA vs Lp(a); Phase 3 OCEAN(a) outcomes; cardiovascular expansion | marketed | — |
+| Olatorepatide | olatorepatide | Regeneron | GLP-1/GIP receptor dual agonist (Hansoh-licensed) | Obesity | pipeline | — |
+| Olomorasib | olomorasib | Lilly | Second-generation KRAS G12C inhibitor | KRAS G12C-mutant NSCLC | pipeline | — |
+| Olpasiran | olpasiran | Amgen | — | siRNA vs Lp(a); Phase 3 OCEAN(a) outcomes; cardiovascular expansion | pipeline | — |
 | Olumiant | baricitinib | Lilly | JAK inhibitor (oral) | RA, alopecia areata | marketed | — |
+| Olverembatinib | olverembatinib | Takeda | Third-generation BCR-ABL inhibitor | Ph+ leukaemias | pipeline | — |
 | Omvoh | mirikizumab | Lilly | IL-23 antibody | Ulcerative colitis, Crohn's | marketed | — |
 | Opdivo | nivolumab | BMS | PD-1 checkpoint inhibitor (IV) | Many cancers | marketed | **= Opdivo Qvantig** (SC) |
 | Opdualag | nivolumab + relatlimab | BMS | PD-1 + LAG-3 combo | Melanoma | marketed | contains nivolumab |
@@ -305,21 +404,34 @@ status: curated
 | Orencia | abatacept | BMS | T-cell costimulation blocker | Rheumatoid arthritis | marketed | — |
 | Orkambi | lumacaftor/ivacaftor | Vertex | Small-molecule CFTR corrector+potentiator combo | Cystic fibrosis, F508del homozygous | marketed | — |
 | Orzeyful | oveporexton | Takeda | Oral orexin receptor 2 (OX2R) agonist | Narcolepsy type 1 | marketed | — |
+| Otarmeni | lunsotogene parvec | Regeneron | AAV gene therapy delivering otoferlin | Genetic hearing loss from OTOF variants | marketed | — |
 | Otezla | apremilast | Amgen | PDE4 inhibitor (oral) | Psoriasis | marketed | — |
 | Oxbryta | voxelotor | Pfizer | Hemoglobin S polymerization inhibitor | Sickle cell disease | withdrawn | Sickle-cell drug from GBT acquisition, withdrawn worldwide 2024 |
 | Ozempic | semaglutide | Novo | GLP-1 receptor agonist (weekly peptide injection) | Type 2 diabetes; cardiovascular risk; chronic kidney disease | legacy | **Wegovy**, **Rybelsus** (same molecule, different dose/route) |
+| Pacibekitug | pacibekitug | Novartis | Anti-IL-6 mAb | Cardiovascular inflammation (elevated hsCRP) | pipeline | — |
 | Padcev | enfortumab vedotin | Pfizer | Nectin-4 antibody-drug conjugate | Urothelial (bladder) cancer | marketed | — |
+| Palsonify | paltusotine | Vertex | Oral somatostatin receptor 2 (SST2) agonist | Acromegaly | marketed | — |
+| Pasritamig | pasritamig | J&J | KLK2 x CD3 bispecific T-cell engager | Metastatic castration-resistant prostate cancer | pipeline | — |
+| Patritumab deruxtecan | patritumab deruxtecan | Daiichi (w/ Merck) | HER3-directed DXd antibody-drug conjugate | Breast cancer, NSCLC | pipeline | — |
 | Pavblu | aflibercept biosimilar | Regeneron | — | Amgen's biosimilar; launched Oct 2024 | failed | — |
 | Paxil | paroxetine | GSK | Selective serotonin reuptake inhibitor | Depression; anxiety disorders; obsessive-compulsive disorder; panic disorder | withdrawn | Antidepressant from SmithKline Beecham; off-label promotion fine 2012 |
 | Paxlovid | nirmatrelvir/ritonavir | Pfizer | Small molecule, protease inhibitor antiviral | COVID-19 treatment | marketed | — |
+| Pegozafermin | pegozafermin | Roche | FGF21 analogue | MASH with F2-F3 fibrosis and with cirrhosis | pipeline | From 89bio |
+| Pelacarsen | pelacarsen | Novartis | Antisense oligonucleotide against Lp(a) | Elevated Lp(a) / ASCVD | pipeline | — |
 | Penmenvy | MenABCWY vaccine | GSK | Meningococcal conjugate vaccine | Meningococcal disease prevention | marketed | Meningococcal vaccine; FDA approved 2025 |
 | Perjeta | pertuzumab | Roche | Anti-HER2 monoclonal antibody | HER2-positive breast cancer | marketed | **Phesgo** (co-formulated) |
+| Petrelintide | petrelintide | Roche | Amylin analogue | Obesity | pipeline | Zealand Pharma partnership |
+| PF-08634404 | — | Pfizer | PD-1 x VEGF bispecific antibody | Non-small cell lung cancer; colorectal cancer | pipeline | — |
+| PF-08653944 | — | Pfizer | Ultra-long-acting GLP-1 receptor agonist | Obesity | pipeline | — |
 | Phesgo | pertuzumab + trastuzumab + hyaluronidase | Roche | Fixed-dose subcutaneous HER2 antibody combo | HER2-positive breast cancer | marketed | **Perjeta** (pertuzumab), **Herceptin** (trastuzumab) |
 | Plavix | clopidogrel | Sanofi | Antiplatelet small molecule (P2Y12) | Cardiovascular event prevention | marketed | — (generics widespread) |
 | Plegridy | peginterferon beta-1a | Biogen | Pegylated recombinant interferon | Relapsing multiple sclerosis | marketed | Avonex (non-pegylated form) |
 | Pluvicto | lutetium Lu-177 vipivotide tetraxetan | Novartis | Radioligand therapy (PSMA-targeted) | PSMA-positive metastatic prostate cancer | marketed | — |
 | Polivy | polatuzumab vedotin | Roche | Anti-CD79b antibody-drug conjugate | Diffuse large B-cell lymphoma | marketed | — |
 | Pomalyst / Imnovid | pomalidomide | BMS | Immunomodulatory imide (oral) | Multiple myeloma | marketed | Imnovid = ex-US brand |
+| Ponsegromab | ponsegromab | Pfizer | Anti-GDF-15 mAb | Cancer cachexia | pipeline | — |
+| Posdinemab | posdinemab | J&J | Anti-phospho-tau monoclonal antibody | Early Alzheimer's disease | pipeline | — |
+| Povetacicept | povetacicept | Vertex | Dual BAFF/APRIL antagonist (engineered fusion protein) | IgA nephropathy | pipeline | — |
 | Pradaxa | dabigatran etexilate | Boehringer | Direct thrombin inhibitor (oral anticoagulant) | Stroke prevention in atrial fibrillation, VTE | marketed | — |
 | Praluent | alirocumab | Regeneron | Monoclonal antibody (PCSK9 inhibitor) | High LDL cholesterol, atherosclerotic cardiovascular disease | marketed | — |
 | Praxbind | idarucizumab | Boehringer | Dabigatran-specific antidote | Dabigatran overdose/bleeding reversal | marketed | Dabigatran reversal agent; specific antidote; FDA 2015 |
@@ -327,6 +439,7 @@ status: curated
 | Prevnar | — | Pfizer | — | Pneumococcal vaccine franchise gained via Wyeth 2009 | legacy | — |
 | Prevnar 20 | pneumococcal 20-valent conjugate vaccine | Pfizer | Conjugate vaccine | Prevention of pneumococcal disease | marketed | — |
 | Prevymis | letermovir | Merck | Oral/IV CMV terminase inhibitor | Cytomegalovirus prophylaxis in transplant patients | marketed | — |
+| Prifetrastat | prifetrastat | Pfizer | KAT6A/B inhibitor | HR+/HER2- breast cancer | pipeline | — |
 | Prolia | denosumab | Amgen | RANKL antibody | Osteoporosis | marketed | **= Xgeva** |
 | Promacta/Revolade | eltrombopag | Novartis | Small molecule (thrombopoietin receptor agonist) | Immune thrombocytopenia, severe aplastic anemia | marketed | — |
 | Propulsid | cisapride | J&J | Dopamine agonist/prokinetic agent | Gastroesophageal reflux disease; gastroparesis | withdrawn | Heartburn/reflux agent; withdrawn from US market 2000 due to fatal arrhythmias |
@@ -335,30 +448,46 @@ status: curated
 | Qalsody | tofersen | Biogen | Antisense oligonucleotide, intrathecal | SOD1 amyotrophic lateral sclerosis | marketed | — |
 | Qdenga | dengue tetravalent vaccine (TAK-003) | Takeda | Live-attenuated tetravalent vaccine | Dengue prevention (ex-US) | marketed | — |
 | Qulipta | atogepant | AbbVie | Oral CGRP receptor antagonist | Migraine prevention | marketed | Aquipta (EU brand) |
+| Raludotatug deruxtecan | raludotatug deruxtecan | Daiichi (w/ Merck) | CDH6-directed DXd antibody-drug conjugate | Platinum-resistant ovarian cancer | pipeline | — |
 | Ranexa | ranolazine | Gilead | Piperazine derivative (metabolic modulator) | Chronic stable angina | marketed | Chronic angina; acquired CV Therapeutics 2009 |
 | Reblozyl | luspatercept | BMS | Erythroid maturation agent | Anemia (MDS, thalassemia) | marketed | — |
 | REGEN-COV | casirivimab + imdevimab | Regeneron | — | COVID-19 monoclonal cocktail; FDA authorization revoked Jan 2022 | marketed | — |
+| REGN7508 | — | Regeneron | Factor XI (catalytic domain) monoclonal antibody | Cancer-associated venous thromboembolism | pipeline | — |
+| REGN9933 | — | Regeneron | Factor XI (A2 domain) monoclonal antibody | Stroke prevention in atrial fibrillation | pipeline | — |
 | Remicade | infliximab | J&J | TNF-α inhibitor | Rheumatoid arthritis; Crohn's disease; ulcerative colitis; ankylosing spondylitis; psoriatic arthritis; psoriasis | legacy | TNF inhibitor; multi-billion anchor, faced US biosimilar competition from 2016 |
+| Remternetug | remternetug | Lilly | Anti-amyloid mAb (subcutaneous) | Early Alzheimer's disease | pipeline | — |
 | Repatha | evolocumab | Amgen | PCSK9 antibody | Cholesterol lowering | marketed | — |
+| Retatrutide | retatrutide | Lilly | GLP-1 / GIP / glucagon triple agonist | Obesity; knee osteoarthritis | pipeline | — |
 | Retevmo | selpercatinib | Lilly | RET tyrosine kinase inhibitor | Medullary thyroid carcinoma; papillary thyroid carcinoma; non-small-cell lung cancer | withdrawn | RET inhibitor thyroid/lung; Loxo Oncology acquisition 2019 |
 | Revlimid | lenalidomide | BMS | Immunomodulatory imide (oral) | Multiple myeloma | marketed | — |
 | Rezurock | belumosudil | Sanofi | ROCK2 inhibitor (small molecule) | Chronic graft-versus-host disease | marketed | — |
 | Rhapsido | remibrutinib | Novartis | Bruton tyrosine kinase inhibitor | Chronic spontaneous urticaria | marketed | Oral BTK inhibitor; chronic spontaneous urticaria FDA 2025; MS Phase III pending |
+| Riliprubart | riliprubart | Sanofi | Anti-C1s complement inhibitor mAb | Chronic inflammatory demyelinating polyneuropathy | pipeline | — |
+| Rilvegostomig | rilvegostomig | AZ | PD-1/TIGIT bispecific mAb | Biliary tract, lung, gastric cancers | pipeline | — |
 | Rinvoq | upadacitinib | AbbVie | Oral JAK1 inhibitor | Rheumatoid arthritis, atopic dermatitis, IBD, spondyloarthritis | marketed | — |
 | Risperdal | risperidone | J&J | Atypical antipsychotic (D2/5-HT2A antagonist) | Schizophrenia; bipolar disorder; autism-associated irritability | withdrawn | Antipsychotic; lost exclusivity 2007-08; subject to gynecomastia litigation |
+| Risvutatug rezetecan | risvutatug rezetecan | GSK | B7-H3 antibody-drug conjugate | Small-cell lung cancer; osteosarcoma; other solid tumours | pipeline | — |
 | Rituxan | rituximab | Roche | Anti-CD20 monoclonal antibody | B-cell lymphomas, rheumatoid arthritis (biosimilar-eroded) | marketed | — |
 | rocatinlimab | rocatinlimab | Amgen | Interleukin-4 receptor antagonist | Atopic dermatitis | failed | IL-4Rα antagonist; atopic dermatitis. Kyowa Kirin collab terminated early 2026 |
 | Roundup | glyphosate | Bayer | — | Herbicide from Monsanto; >100k lawsuits, $10.9B+ settlement 2020 | non-drug | — |
 | Rova-T | rovalpituzumab tesirine | AbbVie | — | Lung-cancer ADC; failed trials, scrapped 2019; $5.8B write-off | failed | — |
+| Rovadicitinib | rovadicitinib | Sanofi | Oral JAK/ROCK inhibitor | Chronic graft-versus-host disease | pipeline | — |
+| Rusfertide | rusfertide | Takeda | Hepcidin mimetic peptide | Polycythemia vera | pipeline | — |
 | Rybelsus | semaglutide | Novo | Oral GLP-1 receptor agonist (SNAC absorption tech) | Type 2 diabetes | legacy | **Ozempic**, **Wegovy** |
 | Rybrevant | amivantamab | J&J | EGFR-MET bispecific antibody | EGFR-mutant lung cancer | marketed | paired w/ Lazcluze (lazertinib) |
-| RYZ101 | RYZ101 | BMS | — | Actinium-225 SSTR2 radiopharmaceutical; RayzeBio; GEP-NETs Ph3 2026 | marketed | — |
+| RYZ101 | RYZ101 | BMS | — | Actinium-225 SSTR2 radiopharmaceutical; RayzeBio; GEP-NETs Ph3 2026 | pipeline | — |
+| Salanersen | salanersen | Biogen | Antisense oligonucleotide correcting SMN2 splicing | Spinal muscular atrophy | pipeline | — |
 | Sarclisa | isatuximab | Sanofi | Anti-CD38 monoclonal antibody | Multiple myeloma | marketed | — (same target class as Darzalex/daratumumab) |
+| Saruparib | saruparib | AZ | Selective PARP1 inhibitor | HR+ breast, prostate cancer (BRCA/HRR) | pipeline | — |
+| Sasanlimab | sasanlimab | Pfizer | Subcutaneous anti-PD-1 mAb | Non-muscle-invasive bladder cancer | pipeline | — |
 | Saxenda | liraglutide | Novo | Daily GLP-1 receptor agonist (3.0 mg) | Obesity | marketed | **Victoza** |
 | Scemblix | asciminib | Novartis | Small molecule (STAMP/allosteric ABL inhibitor) | Chronic myeloid leukemia | marketed | — |
+| Sefaxersen | sefaxersen | Roche | Antisense oligonucleotide against complement factor B | IgA nephropathy | pipeline | Ionis partnership |
+| Seltorexant | seltorexant | J&J | Orexin-2 receptor antagonist (oral) | Major depressive disorder with insomnia symptoms | pipeline | — |
 | SEPO | recombinant human erythropoietin | 3SBio | Recombinant human erythropoietin (rhEPO) | Anemia of chronic kidney disease and chemotherapy (China) | marketed | EPIAO (3SBio) |
 | Seroquel | quetiapine | AZ | Atypical antipsychotic (D2/5-HT2A antagonist) | Schizophrenia; bipolar disorder; bipolar depression | withdrawn | Atypical antipsychotic; US patent 2012, off-label marketing settlement 2010 |
 | Shingrix | recombinant zoster vaccine (RZV) | GSK | Adjuvanted recombinant protein vaccine | Shingles prevention in adults 50+ | marketed | — |
+| Sigvotatug vedotin | sigvotatug vedotin | Pfizer | Integrin beta-6 antibody-drug conjugate | Non-small cell lung cancer | pipeline | — |
 | Simponi / Simponi Aria | golimumab | J&J | TNF antibody | RA, ulcerative colitis | marketed | Aria = IV formulation |
 | Singulair | montelukast | Merck | Cysteinyl leukotriene receptor antagonist | Asthma; allergic rhinitis | marketed | Leukotriene receptor antagonist; patent cliff 2012 erased several billion revenue |
 | Skyclarys | omaveloxolone | Biogen | Oral small molecule (Nrf2 activator) | Friedreich's ataxia | marketed | — |
@@ -366,6 +495,7 @@ status: curated
 | Sogroya | somapacitan | Novo | Once-weekly growth hormone | Growth hormone deficiency | marketed | — |
 | solanezumab | solanezumab | Lilly | — | Anti-amyloid Alzheimer's; EXPEDITION3 Phase 3 failure Nov 2016 | withdrawn | — |
 | Soliris | eculizumab | AZ | Anti-C5 complement monoclonal antibody | PNH, aHUS, generalized myasthenia gravis, NMOSD | marketed | — |
+| Sonesitatug vedotin | sonesitatug vedotin | AZ | CLDN18.2-directed ADC | Gastric/GEJ cancer | pipeline | — |
 | Sotyktu | deucravacitinib | BMS | TYK2 inhibitor (oral) | Psoriasis | marketed | — |
 | Sovaldi | sofosbuvir | Gilead | Nucleotide hepatitis C virus polymerase inhibitor | Hepatitis C virus infection | marketed | HCV cure 2013; $11.2B Pharmasset deal; market-collapsing breakthrough |
 | Spevigo | spesolimab | Boehringer | Anti-IL-36 receptor monoclonal antibody | Generalized pustular psoriasis (rights transferred to LEO Pharma 2025) | marketed | — |
@@ -380,11 +510,13 @@ status: curated
 | Strattera | atomoxetine | Lilly | Norepinephrine reuptake inhibitor | Attention-deficit/hyperactivity disorder | legacy | ADHD non-stimulant; launched 2002 |
 | STX-478 | — | Lilly | — | Mutant-selective PI3Kα inhibitor; Scorpion Therapeutics acquisition | marketed | — |
 | Sunlenca | lenacapavir | Gilead | Twice-yearly injectable HIV capsid inhibitor | Multidrug-resistant HIV treatment | marketed | Yeztugo (same molecule, PrEP) |
+| Survodutide | survodutide | Boehringer | Glucagon/GLP-1 receptor dual agonist (injectable) | Obesity; MASH | pipeline | — |
 | Syfovre | pegcetacoplan injection | Biogen | Intravitreal C3 complement inhibitor (pegylated peptide; ex-Apellis) | Geographic atrophy secondary to age-related macular degeneration | marketed | Empaveli (same molecule, systemic) |
 | Symbicort | budesonide/formoterol | AZ | ICS/LABA combination inhaler | Asthma, COPD | marketed | — |
 | Symdeko / Symkevi | tezacaftor/ivacaftor | Vertex | Small-molecule CFTR corrector+potentiator combo | Cystic fibrosis | marketed | tezacaftor also in Trikafta and Alyftrek |
 | Tafinlar | dabrafenib | Novartis | Small molecule (BRAF inhibitor) | BRAF V600+ melanoma, NSCLC (with Mekinist) | marketed | — |
 | Tagrisso | osimertinib | AZ | Small molecule, third-generation EGFR tyrosine kinase inhibitor | EGFR-mutated non-small cell lung cancer | marketed | — |
+| TAK-360 | — | Takeda | Oral orexin receptor 2 agonist | Narcolepsy type 2; idiopathic hypersomnia | pipeline | — |
 | Takecab | vonoprazan | Takeda | Potassium-competitive acid blocker (oral) | Acid-related disorders (Japan/Asia) | marketed | Voquezna (Phathom, US) |
 | Takhzyro | lanadelumab | Takeda | Anti-plasma-kallikrein monoclonal antibody | Hereditary angioedema prophylaxis | marketed | — |
 | Taltz | ixekizumab | Lilly | IL-17A antibody | Psoriasis, PsA | marketed | — |
@@ -392,6 +524,7 @@ status: curated
 | Tamiflu | oseltamivir | Gilead | Influenza neuraminidase inhibitor | Influenza A and B | marketed | Neuraminidase inhibitor licensed to Roche 1996; pandemic standard |
 | Tarlige | mirogabalin | Daiichi | Oral gabapentinoid | Neuropathic pain (Japan/Asia) | marketed | — |
 | Tasigna | nilotinib | Novartis | Small molecule (BCR-ABL TKI) | Chronic myeloid leukemia | marketed | — |
+| Tavapadon | tavapadon | AbbVie | Oral dopamine D1/D5 receptor partial agonist | Parkinson's disease | pipeline | — |
 | Tavneos | avacopan | Amgen | C5a complement receptor antagonist | Granulomatosis with polyangiitis; microscopic polyangiitis | legacy | C5a receptor antagonist; ANCA vasculitis. From ChemoCentryx 2022 |
 | Taxol | paclitaxel | BMS | Mitotic spindle poison (taxane) | Ovarian cancer; breast cancer; non-small-cell lung cancer; Kaposi sarcoma | marketed | Cancer drug from NIH CRADA; now generic |
 | Taxotere | docetaxel | Sanofi | Mitotic spindle poison (taxane) | Breast cancer; non-small-cell lung cancer; gastric cancer; head and neck cancer; prostate cancer | marketed | Chemotherapy agent; oncology franchise |
@@ -400,7 +533,7 @@ status: curated
 | Tecfidera | dimethyl fumarate | Biogen | Oral small molecule (fumarate) | Relapsing multiple sclerosis | marketed | — |
 | Tecvayli | teclistamab | J&J | BCMA bispecific antibody | Multiple myeloma | marketed | — |
 | Tegsedi | inotersen | Ionis | TTR-targeting antisense oligonucleotide | Hereditary transthyretin amyloidosis polyneuropathy | marketed | — |
-| Temab-A | ABBV-400 | AbbVie | — | c-Met ADC; colorectal cancer; Phase 3; breakthrough designation | marketed | — |
+| Temab-A | ABBV-400 | AbbVie | — | c-Met ADC; colorectal cancer; Phase 3; breakthrough designation | pipeline | — |
 | Tepezza | teprotumumab | Amgen | IGF-1R antibody | Thyroid eye disease | marketed | — |
 | Tezspire | tezepelumab | Amgen (w/ AZ) | TSLP antibody | Severe asthma | marketed | — |
 | Tivdak | tisotumab vedotin | Genmab / Pfizer (Seagen) | Tissue factor-directed antibody-drug conjugate | Recurrent or metastatic cervical cancer | marketed | — |
@@ -415,22 +548,27 @@ status: curated
 | Trelegy Ellipta | fluticasone furoate/umeclidinium/vilanterol | GSK | Inhaled triple combination (ICS/LAMA/LABA) | COPD and asthma maintenance | marketed | fluticasone furoate also in Breo/Relvar Ellipta and Arnuity |
 | Tremfya | guselkumab | J&J | IL-23 antibody | Psoriasis, IBD | marketed | — |
 | Tresiba | insulin degludec | Novo | Long-acting basal insulin analog | Diabetes | marketed | — |
+| Trevogrumab | trevogrumab | Regeneron | Anti-GDF8 (myostatin) monoclonal antibody | Obesity — lean-mass preservation alongside GLP-1 therapy | pipeline | — |
 | Trikafta / Kaftrio | elexacaftor/tezacaftor/ivacaftor | Vertex | Small-molecule triple CFTR modulator | Cystic fibrosis (F508del and many other CFTR mutations) | marketed | — |
 | Trintellix | vortioxetine | Takeda | Oral serotonin modulator | Major depressive disorder | marketed | Brintellix (Lundbeck, ex-US) |
 | Triumeq | dolutegravir/abacavir/lamivudine | GSK | Oral integrase inhibitor triple regimen | HIV-1 treatment | marketed | dolutegravir also in Tivicay, Dovato |
 | Trodelvy | sacituzumab govitecan | Gilead | Trop-2 antibody-drug conjugate | Metastatic triple-negative and HR+/HER2- breast cancer | marketed | — |
+| Trontinemab | trontinemab | Roche | Brain Shuttle anti-amyloid antibody (transferrin-receptor transport) | Early Alzheimer's disease | pipeline | — |
 | Trulicity | dulaglutide | Lilly | GLP-1 agonist peptide | Type 2 diabetes | marketed | — |
 | Truvada | tenofovir/emtricitabine | Gilead | Nucleoside reverse transcriptase inhibitor combination | HIV-1 infection; HIV-1 pre-exposure prophylaxis | marketed | HIV 2004; PrEP approval 2012; US LOE 2020–2021 |
 | Tryngolza | olezarsen | Ionis | APOC3-targeting antisense oligonucleotide | Familial chylomicronemia syndrome; severe hypertriglyceridemia (approved June 2026) | marketed | — |
+| Tulisokibart | tulisokibart | Merck | Anti-TL1A monoclonal antibody | Ulcerative colitis; Crohn's disease | pipeline | MK-7240; from Prometheus Biosciences |
 | Turalio | pexidartinib | Daiichi | Oral CSF1R inhibitor | Tenosynovial giant cell tumor | marketed | — |
 | Tylenol | acetaminophen | J&J | Analgesic/antipyretic (TRPV1 modulator) | Fever; pain | marketed | Analgesic/antipyretic; recall 2010-11 McNeil plant-quality failures |
 | Tysabri | natalizumab | Biogen | Monoclonal antibody (anti-alpha-4 integrin), IV | Relapsing multiple sclerosis; Crohn's disease (US) | marketed | — |
 | Tzield | teplizumab | Sanofi | Anti-CD3 monoclonal antibody | Delay of type 1 diabetes onset | marketed | — |
 | Ubrelvy | ubrogepant | AbbVie | Oral CGRP receptor antagonist | Acute migraine treatment | marketed | — |
+| UBT251 | — | Novo | GLP-1/GIP/glucagon triple agonist | Obesity; type 2 diabetes | pipeline | — |
 | Ultomiris | ravulizumab | AZ | Long-acting anti-C5 complement monoclonal antibody | PNH, aHUS, generalized myasthenia gravis, NMOSD | marketed | — |
 | Ultravist | iopromide | Bayer | Iodinated CT contrast agent | Computed tomography contrast | marketed | — |
 | Uplizna | inebilizumab | Amgen | CD19 B-cell-targeting monoclonal antibody | Neuromyelitis optica spectrum disorder; IgG4-related disease; myasthenia gravis | legacy | CD19 B-cell targeting; NMOSD. From Horizon; 2025 new indications IgG4, GMG |
 | Uptravi | selexipag | J&J | Prostacyclin agonist (oral) | Pulmonary arterial hypertension | marketed | — |
+| Utebzi | tebipenem pivoxil | GSK | Oral carbapenem antibiotic | Complicated urinary tract infection | marketed | — |
 | Vabysmo | faricimab | Roche | Bispecific anti-VEGF/Ang-2 antibody (intravitreal) | Wet AMD, diabetic macular edema, retinal vein occlusion | marketed | — |
 | Vanflyta | quizartinib | Daiichi | Oral FLT3 inhibitor | FLT3-ITD-positive acute myeloid leukemia | marketed | — |
 | Vanrafia | atrasentan | Novartis | Endothelin A receptor antagonist | IgA nephropathy | legacy | Kidney disease; from Chinook acquisition; IgA nephropathy indication |
@@ -439,22 +577,30 @@ status: curated
 | Vectibix | panitumumab | Amgen | EGFR antibody | Colorectal cancer | marketed | — |
 | Veklury | remdesivir | Gilead | IV nucleotide antiviral | COVID-19 (hospitalized patients) | marketed | — |
 | Velcade | bortezomib | Takeda | Proteasome inhibitor | Multiple myeloma; mantle cell lymphoma; light chain amyloidosis | legacy | Proteasome inhibitor; acquired via Millennium 2008, oncology anchor |
+| Velzatinib | velzatinib | GSK | KIT inhibitor | Gastrointestinal stromal tumours | pipeline | — |
 | Vemlidy | tenofovir alafenamide | Gilead | Oral nucleotide antiviral | Chronic hepatitis B | marketed | TAF also in Biktarvy, Descovy, Genvoya, Odefsey |
 | Venclexta | venetoclax | AbbVie | Oral BCL-2 inhibitor | Chronic lymphocytic leukemia, acute myeloid leukemia | marketed | Venclyxto (EU brand) |
+| Venglustat | venglustat | Sanofi | Oral glucosylceramide synthase inhibitor | Gaucher disease type 3, Fabry disease | pipeline | — |
 | Venofer | iron sucrose | Daiichi | Intravenous iron | Iron deficiency anemia in chronic kidney disease | marketed | — |
 | Veopoz | pozelimab | Regeneron | Monoclonal antibody (complement C5 inhibitor) | CHAPLE disease (ultra-rare complement disorder) | marketed | — |
+| Veppanu | vepdegestrant | Pfizer | Oral PROTAC estrogen-receptor degrader | ESR1-mutant ER+/HER2- advanced breast cancer | marketed | — |
+| Verducatib | verducatib | Boehringer | DPP1 / cathepsin C inhibitor (oral) | Bronchiectasis | pipeline | — |
 | Verquvo | vericiguat | Bayer | Soluble guanylate cyclase stimulator | Heart failure with mildly reduced ejection fraction | marketed | Soluble guanylate cyclase stimulator (with Merck & Co.) |
 | VERVE-102 | — | Lilly | — | In vivo base editing PCSK9; Phase 1b via Verve acquisition | marketed | — |
 | Verzenio | abemaciclib | Lilly | CDK4/6 inhibitor (oral) | Breast cancer | marketed | — |
 | Vetmedin | pimobendan | Boehringer | Inodilator (animal health, oral) | Canine congestive heart failure | marketed | — |
 | Viagra | sildenafil | Pfizer | Phosphodiesterase-5 inhibitor | Erectile dysfunction; pulmonary arterial hypertension; benign prostatic hyperplasia | marketed | Approved 1998, cultural phenomenon, still marketed |
+| Vicadrostat | vicadrostat | Boehringer | Aldosterone synthase inhibitor (oral); given with empagliflozin | Chronic kidney disease | pipeline | — |
 | Victoza | liraglutide | Novo | Daily GLP-1 receptor agonist | Type 2 diabetes | marketed | **Saxenda** (same molecule, higher dose) |
 | Viekira Pak | ombitasvir/paritaprevir/ritonavir/dasabuvir | AbbVie | HCV NS3/4A protease inhibitor; NS5A inhibitor; NS5B polymerase inhibitor | Chronic hepatitis C | withdrawn | Hepatitis C combination; underperformed against Gilead; superseded by Mavyret |
 | Vioxx | rofecoxib | Merck | — | COX-2 inhibitor; withdrawn Sept 2004 for cardiovascular risk after $4.85B settlement | marketed | — |
 | Viread | tenofovir disoproxil fumarate (TDF) | Gilead | Nucleotide reverse transcriptase inhibitor | HIV-1 infection; hepatitis B | marketed | HIV backbone 2001; superseded by TAF but still marketed |
 | Vistide | cidofovir | Gilead | Nucleotide analog DNA polymerase inhibitor | Cytomegalovirus retinitis | marketed | CMV retinitis treatment, 1996 launch; modest first breakthrough |
+| Volrustomig | volrustomig | AZ | PD-1/CTLA-4 bispecific mAb | Cervical, lung, head and neck cancers | pipeline | — |
 | Vraylar | cariprazine | AbbVie | Oral atypical antipsychotic (D3/D2 partial agonist) | Schizophrenia, bipolar I disorder, adjunctive major depression | marketed | — |
 | Vumerity | diroximel fumarate | Biogen | Oral small molecule (fumarate prodrug) | Relapsing multiple sclerosis | marketed | Tecfidera (same active metabolite, monomethyl fumarate) |
+| VX-407 | — | Vertex | Small-molecule polycystin-1 (PC1) corrector | Autosomal dominant polycystic kidney disease (PKD1 variants) | pipeline | — |
+| VX-993 | — | Vertex | Next-generation oral NaV1.8 sodium-channel inhibitor | Diabetic peripheral neuropathy pain | pipeline | — |
 | Vyalev | foscarbidopa/foslevodopa | AbbVie | Subcutaneous 24-hr infusion (levodopa/carbidopa prodrugs) | Advanced Parkinson's disease | marketed | Produodopa (EU brand) |
 | Vydura | rimegepant | Pfizer | Small molecule, CGRP receptor antagonist | Migraine (EU brand) | marketed | **Nurtec ODT** (US brand, same molecule) |
 | Vyndaqel / Vyndamax | tafamidis | Pfizer | Small molecule, TTR stabilizer | Transthyretin amyloid cardiomyopathy (ATTR-CM) | marketed | — |
@@ -482,14 +628,20 @@ status: curated
 | Yisaipu | etanercept biosimilar (TNF fusion protein) | 3SBio | TNF-alpha receptor fusion protein | Rheumatoid arthritis, ankylosing spondylitis, psoriasis (China) | marketed | — |
 | Zaltrap | ziv-aflibercept | Regeneron | VEGF trap fusion protein | Metastatic colorectal cancer | marketed | Colorectal cancer (2012); flopped amid pricing controversy |
 | Zantac | ranitidine | GSK | H2-receptor antagonist | Peptic ulcer disease; gastroesophageal reflux disease | withdrawn | World's best-selling medicine 1988; withdrawn from market 2020 amid safety concerns |
+| Zasocitinib | zasocitinib | Takeda | Oral allosteric TYK2 inhibitor | Plaque psoriasis; psoriatic arthritis | pipeline | — |
 | Zejula | niraparib | GSK | Oral PARP inhibitor | Ovarian cancer maintenance | marketed | — |
 | Zelboraf | vemurafenib | Roche | BRAF V600E/V600K kinase inhibitor | Melanoma with BRAF V600E/V600K mutation | marketed | BRAF inhibitor for melanoma; personalized healthcare flagship |
 | Zepbound | tirzepatide | Lilly | GIP/GLP-1 dual agonist peptide | Obesity, sleep apnea | marketed | **= Mounjaro** |
 | Zeposia | ozanimod | BMS | S1P modulator (oral) | MS, ulcerative colitis | marketed | — |
+| Zigakibart | zigakibart | Novartis | Anti-APRIL mAb | IgA nephropathy | pipeline | — |
+| Ziltivekimab | ziltivekimab | Novo | Anti-IL-6 monoclonal antibody | Heart failure; post-myocardial infarction | pipeline | — |
+| Zimislecel | zimislecel | Vertex | Stem-cell-derived islet cell therapy (one-time) | Severe type 1 diabetes | pipeline | — |
 | Zocor | simvastatin | Merck | HMG-CoA reductase inhibitor | Hypercholesterolemia; coronary artery disease prevention | marketed | HMG-CoA reductase inhibitor; statin pioneer, now genericized |
 | Zola-cel | zola-cel | BMS | — | CD19 CAR-T autoimmune (SLE/SSc); Ph3 data 2027-2028 | pipeline | — |
 | Zoladex | goserelin | AZ | GnRH agonist | Prostate cancer; breast cancer; endometriosis | marketed | GnRH agonist in prostate and breast cancer; sustained-release formulation |
 | Zolgensma | onasemnogene abeparvovec | Novartis | AAV9 gene therapy | Spinal muscular atrophy | marketed | Itvisma (same vector, intrathecal formulation) |
+| Zorevunersen | zorevunersen | Biogen | Antisense oligonucleotide raising SCN1A expression | Dravet syndrome | pipeline | — |
+| Zumilokibart | zumilokibart | AbbVie | Half-life-extended anti-IL-13 monoclonal antibody | Atopic dermatitis | pipeline | Also known as APG777 (Apogee) |
 | Zurzuvae | zuranolone | Biogen | Oral neuroactive steroid (GABA-A receptor modulator); with Sage (US) | Postpartum depression | marketed | — |
 | Zyprexa | olanzapine | Lilly | Atypical antipsychotic | Schizophrenia; bipolar disorder; major depressive disorder (adjunctive) | legacy | Atypical antipsychotic; peak ~$4.8B, patent cliff Oct 2011 |
 | Zytiga | abiraterone acetate | J&J | CYP17A1 inhibitor | Castration-resistant prostate cancer | legacy | Prostate cancer (Cougar 2009); approved 2011; went generic 2018-19 |

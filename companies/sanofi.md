@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: sanofi
-updated: 2026-08-12
+updated: 2026-08-14
 status: curated
 ---
 
@@ -35,6 +35,25 @@ status: curated
 | Tzield (teplizumab) | Delay of type 1 diabetes onset | Anti-CD3 mAb | ~€70M (est.) | 2030s (est.) |
 | Influenza vaccine franchise (Fluzone HD, Flublok, Vaxigrip) | Seasonal influenza | Vaccines | ~€2.5B (est.) | n/a (franchise) |
 
+## Pipeline (clinical-stage)
+
+Everything Sanofi does in the pipeline is shaped by one deadline: Dupixent, which is roughly a third of the company, starts losing US patent protection in 2031. The plan was to replace it with several immunology drugs at once, and 2026 has been a hard year for that plan — amlitelimab, the designated successor, was abandoned in eczema in July after Sanofi judged it no better than what doctors already have. What remains is a broader and less concentrated set of bets: bowel disease and lung inflammation with partners, three neurology assets, and rare-disease drugs where the competition is thinner.
+
+| Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
+|---|---|---|---|---|---|
+| Cenrifki | tolebrutinib | Oral brain-penetrant BTK inhibitor | Non-relapsing secondary progressive multiple sclerosis | Approved 2026 | EU approval Jun 2026, first medicine there targeting disability progression; US application rejected, launching first in Germany with liver-monitoring requirements |
+| Wayrilz | rilzabrutinib | Oral reversible BTK inhibitor | Immune thrombocytopenia | Approved 2025 | US Aug 2025, EU Dec 2025, Japan Jun 2026; still in launch year with further immunology indications in development |
+| Duvakitug | duvakitug | Anti-TL1A mAb | Ulcerative colitis, Crohn's disease | Ph3 | Teva-partnered; Ph2b maintenance data showed durable efficacy over 44 weeks, Ph3 programmes running in both diseases |
+| Itepekimab | itepekimab | Anti-IL-33 mAb | COPD, chronic rhinosinusitis with nasal polyps | Ph3 | Regeneron-partnered; met the primary endpoint in one of two COPD Ph3s, path dependent on regulatory feedback; CEREN 1/2 Ph3s ongoing in CRSwNP |
+| Frexalimab | frexalimab | Anti-CD40L mAb | Relapsing and secondary progressive multiple sclerosis | Ph3 | One of three assets Sanofi calls a "pipeline-in-a-product"; Ph3 readouts expected 2027 |
+| Riliprubart | riliprubart | Anti-C1s complement inhibitor mAb | Chronic inflammatory demyelinating polyneuropathy | Ph3 | Ph3 readout expected 2027; part of the neurology franchise meant to outlast tolebrutinib's US setback |
+| Venglustat | venglustat | Oral glucosylceramide synthase inhibitor | Gaucher disease type 3, Fabry disease | Ph3 | Met all primary endpoints in Ph3 Gaucher type 3, where no approved therapy exists for the neurologic symptoms |
+| Rovadicitinib | rovadicitinib | Oral JAK/ROCK inhibitor | Chronic graft-versus-host disease | Ph3 | In-licensed from Sino Biopharm's Chia Tai Tianqing for $1.53B — a rare full-global-rights deal from a Chinese pharma; Ph3 in China, US Ph2 cleared |
+| Lunsekimig | lunsekimig | IL-13 × TSLP bispecific nanobody | Severe asthma, CRSwNP, COPD | Ph2 | Promoted to Sanofi's next respiratory priority after positive Ph2b in both asthma and CRSwNP; Ph3 progression confirmed, Ph2b/3 COPD study running |
+| Balinatunfib | balinatunfib | Oral TNFR1 signalling inhibitor | Psoriasis, inflammatory bowel disease | Ph2 | Third "pipeline-in-a-product"; an oral that blocks the destructive TNF receptor while sparing the protective one |
+| Amlitelimab | amlitelimab | Anti-OX40L mAb | Celiac disease | Ph2 | Former lead successor to Dupixent; atopic dermatitis development discontinued Jul 2026, only the Ph2 celiac study continues (readout H2 2026) |
+| Brivekimig | brivekimig | Anti-TNF/OX40L bispecific nanobody | Hidradenitis suppurativa | Ph2 | Positive Ph2a; the immunology asset Sanofi's R&D head put forward as the more positive 2026 story |
+
 ## History: 1995-2025
 
 ### 1995-2004: French national champions converge
@@ -54,14 +73,14 @@ On April 30, 2025 Sanofi closed the sale of a 50% controlling stake in consumer 
 
 ## Current strategic bets
 
-Sanofi enters 2026 as a pure-play biopharma with an immunology-first strategy and an explicit goal of managing the early-2030s Dupixent cliff. The central bet is **amlitelimab** (anti-OX40L, from Kymab), which posted positive phase 3 atopic dermatitis readouts (COAST 2, SHORE) in late 2025 and is positioned as a lower-frequency-dosing successor/complement to Dupixent. **Rilzabrutinib (Wayrilz)** is the newest launch — first BTK inhibitor for immune thrombocytopenia, approved in the US (Aug 2025), EU (Dec 2025), and Japan (Jun 2026), with additional immunology indications in development. **Tolebrutinib** remains a high-value, high-uncertainty neurology asset: provisionally approved in the UAE, under EU review, but facing a US complete response letter that Sanofi is contesting; a related IFRS impairment test was flagged with FY2025 results. **Itepekimab** (anti-IL-33, COPD, with Regeneron) had split phase 3 results in 2025 (est.), leaving its path unclear. **Duvakitug** (anti-TL1A, partnered with Teva) showed clinically meaningful phase 2b maintenance data in ulcerative colitis and Crohn's disease. In vaccines, Sanofi is defending its influenza leadership while facing US policy hostility, and is building next-generation respiratory combinations (Vicebio) and an mRNA platform (Translate Bio legacy).
+Sanofi enters 2026 as a pure-play biopharma with an immunology-first strategy and an explicit goal of managing the early-2030s Dupixent cliff. The designated central bet was **amlitelimab** (anti-OX40L, from Kymab), which posted positive phase 3 atopic dermatitis readouts (COAST 1, COAST 2, SHORE) across 2025-26 — but in July 2026 Sanofi declined to file it in atopic dermatitis, judging that it would not meaningfully improve on the standard of care; only a phase 2 celiac study survives. That leaves the cliff defense spread across duvakitug, itepekimab, lunsekimig, balinatunfib and a Dupixent co-formulation rather than resting on one successor. **Rilzabrutinib (Wayrilz)** is the newest launch — first BTK inhibitor for immune thrombocytopenia, approved in the US (Aug 2025), EU (Dec 2025), and Japan (Jun 2026), with additional immunology indications in development. **Tolebrutinib** was approved in the EU as Cenrifki (June 2026) for non-relapsing SPMS — the first medicine there aimed at disability progression — after provisional UAE approval in 2025, but remains rejected in the US, and a related IFRS impairment test was flagged with FY2025 results. **Itepekimab** (anti-IL-33, COPD, with Regeneron) had split phase 3 results in 2025 (est.), leaving its path unclear. **Duvakitug** (anti-TL1A, partnered with Teva) showed clinically meaningful phase 2b maintenance data in ulcerative colitis and Crohn's disease. In vaccines, Sanofi is defending its influenza leadership while facing US policy hostility, and is building next-generation respiratory combinations (Vicebio) and an mRNA platform (Translate Bio legacy).
 
 Business development has leaned into AI-discovered and China-originated assets: a $1.7 billion deal with Earendil Labs (April 2025, two AI-derived bispecific antibodies for autoimmune/IBD indications), a bispecific pact with Dren Bio (~$600M upfront, 2025, est.), and a $1.53 billion global license (March 2026) for rovadicitinib, a first-in-class oral JAK/ROCK inhibitor from Sino Biopharm's Chia Tai Tianqing — a rare full-global-rights deal from a Chinese pharma. Management strategy under Garijo emphasizes R&D productivity, execution rigor, and governance; a €1 billion buyback was announced for 2026. Sanofi also reached an agreement with the US government in late 2025 to lower medicine costs (most-favored-nation-style pricing framework) while protecting innovation incentives.
 
 | Asset | Modality / target | Stage (mid-2026) |
 |---|---|---|
-| Amlitelimab | Anti-OX40L mAb | Phase 3 positive (atopic dermatitis); filings expected |
-| Tolebrutinib | Oral brain-penetrant BTK inhibitor | US CRL (nrSPMS); EU under review |
+| Amlitelimab | Anti-OX40L mAb | AD development discontinued Jul 2026; phase 2 celiac ongoing |
+| Tolebrutinib (Cenrifki) | Oral brain-penetrant BTK inhibitor | EU approved Jun 2026 (nrSPMS); US CRL stands |
 | Duvakitug (w/ Teva) | Anti-TL1A mAb | Phase 2b positive (UC/Crohn's); phase 3 |
 | Itepekimab (w/ Regeneron) | Anti-IL-33 mAb | Phase 3 (COPD), mixed results (est.) |
 | Rovadicitinib (ex-Sino Biopharm) | Oral JAK/ROCK inhibitor | Phase 3 in China (cGVHD); US phase 2 cleared |
@@ -70,7 +89,7 @@ Business development has leaned into AI-discovered and China-originated assets: 
 ## Key risks
 
 - **Dupixent concentration and 2031 cliff**: Dupixent was ~36% of FY2025 sales (~40% of Q1 2026 sales); the US compound patent expires March 2031. Sanofi touts a "vigorous defense" and formulation IP out to 2045, but biosimilar developers are already mobilizing. Revenue at risk is on the order of €15B+/year.
-- **Pipeline execution**: tolebrutinib's US complete response letter (Dec 2025) and PPMS failure, plus mixed itepekimab data, drove the abrupt CEO change; amlitelimab must convert trial wins into a franchise capable of absorbing part of the Dupixent gap.
+- **Pipeline execution**: tolebrutinib's US complete response letter (Dec 2025) and PPMS failure, plus mixed itepekimab data, drove the abrupt CEO change; and the July 2026 decision not to file amlitelimab in atopic dermatitis removed the single asset meant to absorb the largest share of the Dupixent gap.
 - **Vaccine business under US policy pressure**: 2026 vaccine sales guided "slightly negative" partly due to US vaccine policy shifts and skepticism; flu pricing competition in Europe is intense.
 - **US pricing / IRA**: insulins (Lantus/Toujeo) already face Medicare negotiation and $35 copay dynamics; the late-2025 US government pricing agreement and potential MFN mechanics compress US margins; ~51% of sales are US-based, adding tariff and policy exposure.
 - **Residual litigation**: Zantac state-court cases continue against Sanofi even after 2024 settlements (~$300-350M total, est.) and favorable Delaware rulings (Dec 2025/Apr 2026); Praluent/patent and antitrust probes (EU Dupixent-related inquiry reported) linger.
