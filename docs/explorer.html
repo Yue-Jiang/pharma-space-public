@@ -54,7 +54,6 @@ const kindOn = Object.fromEntries(KINDS.map(k=>[k, true]));
 const KIND_COLOR = {company:"#1f77b4",molecule:"#2ca02c",target:"#d62728",indication:"#9467bd",modality:"#ff7f0e",disease_area:"#8c564b"};
 const idx = {}; NODES.forEach((n,i)=>idx[n.id]=i);
 const links = EDGES.map(e=>({s:idx[e.source],t:idx[e.target],rel:e.rel,title:e.title})).filter(l=>l.s!==undefined&&l.t!==undefined);
-const deg = new Array(NODES.length).fill(0); links.forEach(l=>{deg[l.s]++;deg[l.t]++;});
 
 const svg=document.getElementById('g');
 const W=1800, H=1400;
@@ -214,6 +213,52 @@ function render(){
     showL=vl.filter(l=>showN.has(l.s)&&showN.has(l.t));}
   gE.innerHTML='';gN.innerHTML='';gL.innerHTML='';
   const zoom = W/vb[2];
+
+  // ---- which nodes get a text label ----
+  // Previously a static rule tuned for the full 966-node view: targets needed degree>=2,
+  // so 168 of 285 targets were permanently anonymous even when targets were the ONLY kind
+  // shown. Labeling is really a screen-space budget problem, so decide it per render:
+  //  (a) only nodes inside the current viewport compete (zooming in frees budget),
+  //  (b) if they all fit under the budget, label everything — no arbitrary exclusion,
+  //  (c) otherwise rank by importance and take the top N.
+  const inView=[...showN].filter(i=>{const n=NODES[i];
+    return px(n)>=vb[0]&&px(n)<=vb[0]+vb[2]&&py(n)>=vb[1]&&py(n)<=vb[1]+vb[3];});
+  // degree within the VISIBLE subgraph, not the whole graph
+  const vdeg={}; showL.forEach(l=>{vdeg[l.s]=(vdeg[l.s]||0)+1; vdeg[l.t]=(vdeg[l.t]||0)+1;});
+  const BUDGET=300;
+  // Per-kind quotas rather than a strict kind ordering: a global sort by kind let targets
+  // eat the entire budget and dropped Keytruda/Ozempic from the default view. Each kind
+  // gets a share, unused shares are redistributed, and within a kind the ranking is
+  // hubs-then-size. Kinds not listed are always labeled (there are few of them).
+  const QUOTA={target:120, molecule:110, indication:45};
+  let labelSet;
+  if(anchors.length || inView.length<=BUDGET){
+    labelSet=new Set(inView);                 // everything on screen fits: label it all
+  } else {
+    labelSet=new Set(); const pools={};
+    inView.forEach(i=>{const k=NODES[i].kind;
+      if(QUOTA[k]===undefined) labelSet.add(i); else (pools[k]=pools[k]||[]).push(i);});
+    const rank=(a,b)=>((vdeg[b]||0)-(vdeg[a]||0))||(NODES[b].size-NODES[a].size);
+    const spare=Math.max(0, BUDGET-labelSet.size);   // always-labeled kinds come off the top
+    const kinds=Object.keys(QUOTA).filter(k=>pools[k]);
+    // scale quotas so their sum never exceeds the spare budget
+    const qsum=kinds.reduce((s,k)=>s+QUOTA[k],0) || 1;
+    const scale=Math.min(1, spare/qsum);
+    const taken={};
+    kinds.forEach(k=>{pools[k].sort(rank);
+      taken[k]=Math.min(Math.floor(QUOTA[k]*scale), pools[k].length);});
+    let used=kinds.reduce((s,k)=>s+taken[k],0);
+    // redistribute whatever a small kind did not use
+    let left=spare-used;
+    while(left>0){
+      const growable=kinds.filter(k=>taken[k]<pools[k].length);
+      if(!growable.length) break;
+      const per=Math.max(1, Math.floor(left/growable.length));
+      growable.forEach(k=>{const add=Math.min(per, pools[k].length-taken[k], left);
+        taken[k]+=add; left-=add;});
+    }
+    kinds.forEach(k=>pools[k].slice(0, taken[k]).forEach(i=>labelSet.add(i)));
+  }
   showL.forEach((l,li)=>{const a=NODES[l.s],b=NODES[l.t];
     const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
     ln.setAttribute('x1',px(a));ln.setAttribute('y1',py(a));ln.setAttribute('x2',px(b));ln.setAttribute('y2',py(b));
@@ -260,9 +305,7 @@ function render(){
     c.addEventListener('touchend',()=>{if(lpTimer){clearTimeout(lpTimer);lpTimer=null;}},{passive:true});
     c.addEventListener('touchmove',()=>{if(lpTimer){clearTimeout(lpTimer);lpTimer=null;}},{passive:true});
     const t=document.createElementNS('http://www.w3.org/2000/svg','title');t.textContent=n.title;c.appendChild(t);gN.appendChild(c);
-    // 5x label density: companies+modalities+areas always; targets deg>=2; molecules with sales or zoom
-    const lab = n.kind==='company'||n.kind==='modality'||n.kind==='disease_area'||anchors.length||zoom>1.6
-      ||(n.kind==='target'&&deg[i]>=2)||(n.kind==='molecule'&&n.size>8.5);
+    const lab = labelSet.has(i);
     if(lab){
       const tx=document.createElementNS('http://www.w3.org/2000/svg','text');
       tx.setAttribute('x',px(n)+n.size*0.55+2);tx.setAttribute('y',py(n)+3);
