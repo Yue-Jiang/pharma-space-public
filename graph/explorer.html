@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>pharma-space knowledge graph</title>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"><title>pharma-space knowledge graph</title>
 <style>
  body{margin:0;font-family:-apple-system,Segoe UI,Helvetica,sans-serif;background:#0e0e12;color:#eee;overflow:hidden}
  #panel{position:fixed;top:10px;left:10px;background:rgba(20,20,25,.93);padding:14px 16px;border-radius:10px;max-width:280px;z-index:10;font-size:13px;line-height:1.75}
@@ -11,14 +12,35 @@
  svg{cursor:grab} .hint{color:#888;font-size:11px;margin-top:6px}
  line.sel{stroke:#e8c766 !important}
  button{background:#2a2a33;color:#eee;border:1px solid #555;border-radius:6px;padding:3px 8px;cursor:pointer;font-size:13px} button:hover{background:#3a3a45}
+
+ /* ---- toggle button: hidden on desktop, shown on narrow screens ---- */
+ #ptoggle{position:fixed;top:10px;left:10px;z-index:12;display:none;
+          background:rgba(20,20,25,.95);color:#eee;border:1px solid #555;border-radius:9px;
+          width:42px;height:42px;font-size:19px;line-height:1;cursor:pointer}
+ #panel.collapsed{display:none}
+
+ @media (max-width:760px), (pointer:coarse){
+   #ptoggle{display:block}
+   /* drawer: slides over the graph only while open, full-height and scrollable */
+   #panel{top:0;left:0;bottom:0;max-width:78vw;width:290px;border-radius:0 12px 12px 0;
+          overflow-y:auto;-webkit-overflow-scrolling:touch;padding-top:56px;
+          box-shadow:0 0 30px rgba(0,0,0,.6)}
+   /* details as a bottom sheet, not a floating box that covers the network */
+   #info{left:0;right:0;bottom:0;max-width:none;max-height:46vh;border-radius:14px 14px 0 0;
+         padding:14px 16px 20px;font-size:14px;line-height:1.55}
+   #hint{display:none}          /* keyboard hints are meaningless without a keyboard */
+   #zoomrow{display:flex;gap:8px}
+   #zoomrow button{width:44px;height:44px;font-size:18px}   /* 44px = min touch target */
+ }
 </style></head><body>
-<div id="panel">
+<button id="ptoggle" aria-label="toggle controls">&#9776;</button>
+<div id="panel" class="collapsed">
  <h2>pharma-space graph</h2>
  <input id="search" placeholder="search + Enter (e.g. GLP-1R, Keytruda)"/>
  <div id="kinds"></div><div style="font-size:11px;color:#9aa;margin:6px 0 2px">companies by KB coverage:<br><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#1f77b4;margin-right:5px"></span>core (deep dive)<br><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#5fa8d3;margin-right:7px"></span>partner (one-pager)<br><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0e0e12;border:1.5px solid #7f9cb0;margin-right:7px"></span>cited only (no file)</div><hr style="border-color:#333">
  <div id="rels"></div>
- <div style="margin:8px 0"><button id="zin" style="width:32px">+</button> <button id="zout" style="width:32px">&minus;</button> <button id="zfit">fit</button></div>
- <div class="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = neighborhood + details &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br>bottom strip = disconnected satellites (graveyard molecules on untracked targets).</div>
+ <div id="zoomrow" style="margin:8px 0"><button id="zin" style="width:32px">+</button> <button id="zout" style="width:32px">&minus;</button> <button id="zfit">fit</button></div>
+ <div class="hint" id="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = neighborhood + details &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br>bottom strip = disconnected satellites (graveyard molecules on untracked targets).</div>
 </div>
 <div id="info"></div>
 <svg id="g" width="100%" height="100%"></svg>
@@ -137,13 +159,21 @@ function render(){
     // invisible fat hit-area so thin edges are clickable
     const hit=document.createElementNS('http://www.w3.org/2000/svg','line');
     hit.setAttribute('x1',px(a));hit.setAttribute('y1',py(a));hit.setAttribute('x2',px(b));hit.setAttribute('y2',py(b));
-    hit.setAttribute('stroke','rgba(0,0,0,0)');hit.setAttribute('stroke-width',7/zoom);hit.style.cursor='pointer';
+    hit.setAttribute('stroke','rgba(0,0,0,0)');hit.setAttribute('stroke-width',(isTouch?16:7)/zoom);hit.style.cursor='pointer';
     hit.onclick=ev=>{ev.stopPropagation();selEdge=l;
       info(`<b>${NODES[l.s].label}</b> &rarr;&larr; <b>${NODES[l.t].label}</b> <span style="color:#888">(${l.rel})</span>\n${l.title}`);render();};
     gE.append(ln,hit);});
   showN.forEach(i=>{const n=NODES[i];
     const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
     c.setAttribute('cx',px(n));c.setAttribute('cy',py(n));c.setAttribute('r',n.size*0.55);
+    // fingertip precision is far coarser than a 4px dot: give every node an invisible
+    // touch target of >=11 CSS px radius without changing how it looks
+    if(isTouch){const minR=11/zoom, vr=n.size*0.55;
+      if(vr<minR){const pad=document.createElementNS('http://www.w3.org/2000/svg','circle');
+        pad.setAttribute('cx',px(n));pad.setAttribute('cy',py(n));pad.setAttribute('r',minR);
+        pad.setAttribute('fill','rgba(0,0,0,0)');pad.style.cursor='pointer';
+        pad.onclick=ev=>{c.dispatchEvent(new MouseEvent('click',{bubbles:false}));ev.stopPropagation();};
+        gN.appendChild(pad);}}
     c.setAttribute('fill',n.hollow?'#0e0e12':n.color);c.setAttribute('stroke',n.hollow?n.color:(n.failed?'#777':'#000'));c.setAttribute('stroke-width',n.hollow?1.6:0.7);
     c.style.cursor='pointer';
     c.onclick=ev=>{ev.stopPropagation();selEdge=null;setFocus(focus===i?null:i);
@@ -205,5 +235,55 @@ svg.addEventListener('mouseup',()=>drag=null);
 document.addEventListener('keydown',e=>{
   if(e.key===' '&&focus!==null&&e.target.tagName!=='INPUT'){e.preventDefault();setFocus(focus, e.shiftKey ? Math.max(1, focusDepth-1) : focusDepth+1);render();const n=NODES[focus];info(`<b>${n.label}</b> <span style=\"color:#888\">(${n.kind}, ${focusDepth}-hop neighborhood)</span>\n${n.detail||n.title}`);}
   if(e.key==='Escape'){setFocus(null);document.getElementById('info').style.display='none';render();}});
+
+// ---------------- mobile: drawer + touch gestures ----------------
+const isTouch = window.matchMedia("(max-width:760px), (pointer:coarse)").matches;
+const panel = document.getElementById('panel');
+if(!isTouch) panel.classList.remove('collapsed');
+document.getElementById('ptoggle').onclick = e => {
+  e.stopPropagation();
+  panel.classList.toggle('collapsed');
+};
+// tapping the graph closes the drawer so it never sits over the network
+svg.addEventListener('touchstart', () => {
+  if(isTouch && !panel.classList.contains('collapsed')) panel.classList.add('collapsed');
+}, {passive:true});
+
+// one-finger drag = pan, two-finger pinch = zoom (mirrors the trackpad convention)
+let tPan = null, tPinch = null;
+function touchMid(e){const a=e.touches[0], b=e.touches[1];
+  return [(a.clientX+b.clientX)/2, (a.clientY+b.clientY)/2];}
+function touchDist(e){const a=e.touches[0], b=e.touches[1];
+  return Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);}
+
+svg.addEventListener('touchstart', e => {
+  if(e.touches.length === 1){ tPan = [e.touches[0].clientX, e.touches[0].clientY]; tPinch = null; }
+  else if(e.touches.length === 2){ tPinch = {d: touchDist(e), mid: touchMid(e), vb: vb.slice()}; tPan = null; }
+}, {passive:true});
+
+svg.addEventListener('touchmove', e => {
+  const r = svg.getBoundingClientRect();
+  if(tPinch && e.touches.length === 2){
+    e.preventDefault();
+    const f = tPinch.d / Math.max(touchDist(e), 1);         // fingers apart => f<1 => zoom in
+    const mx = tPinch.vb[0] + (tPinch.mid[0]-r.left)/r.width  * tPinch.vb[2];
+    const my = tPinch.vb[1] + (tPinch.mid[1]-r.top) /r.height * tPinch.vb[3];
+    vb = [mx-(mx-tPinch.vb[0])*f, my-(my-tPinch.vb[1])*f, tPinch.vb[2]*f, tPinch.vb[3]*f];
+    svg.setAttribute('viewBox', vb.join(' ')); render();
+  } else if(tPan && e.touches.length === 1){
+    e.preventDefault();
+    const dx = e.touches[0].clientX - tPan[0], dy = e.touches[0].clientY - tPan[1];
+    vb[0] -= dx*vb[2]/r.width; vb[1] -= dy*vb[3]/r.height;
+    tPan = [e.touches[0].clientX, e.touches[0].clientY];
+    svg.setAttribute('viewBox', vb.join(' ')); render();
+  }
+}, {passive:false});
+
+svg.addEventListener('touchend', e => {
+  if(e.touches.length === 0){ tPan = null; tPinch = null; }
+}, {passive:true});
+
+// on a phone, hit areas need to be bigger than a fingertip is precise
+if(isTouch) document.body.classList.add('touch');
 render();
 </script></body></html>
