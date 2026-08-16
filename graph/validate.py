@@ -29,6 +29,11 @@ edges = [json.loads(l) for l in open(os.path.join(G, "edges.jsonl"))]
 by_id = {n["id"]: n for n in nodes}
 mol = {n["id"]: n for n in nodes if n["kind"] == "molecule"}
 
+override_path = os.path.join(G, "cache", "modality_overrides.json")
+modality_overrides = json.load(open(override_path)) if os.path.exists(override_path) else {}
+graveyard_path = os.path.join(G, "cache", "graveyard.json")
+graveyard = json.load(open(graveyard_path)) if os.path.exists(graveyard_path) else {}
+
 findings = []  # (level, check, message, ids)
 def add(level, check, msg, ids=()):
     findings.append({"level": level, "check": check, "message": msg,
@@ -54,6 +59,71 @@ if unclassified_mod:
         "molecules whose modality could not be determined from their class text — "
         "resolve in graph/cache/modality_overrides.json (NEVER let these default to small-molecule)",
         unclassified_mod)
+
+modality_edges = defaultdict(set)
+invalid_modality_endpoints = set()
+for e in edges:
+    if e["rel"] != "has_modality":
+        continue
+    modality_edges[e["src"]].add(e["dst"])
+    if e["src"] not in mol or by_id.get(e["dst"], {}).get("kind") != "modality":
+        invalid_modality_endpoints.add(f"{e['src']} -> {e['dst']}")
+if invalid_modality_endpoints:
+    add("ERROR", "modality-edge-invalid-endpoints",
+        "has_modality edges must connect a molecule to a modality node",
+        invalid_modality_endpoints)
+
+modality_edge_mismatch = set()
+for g, n in mol.items():
+    expected = n.get("modality")
+    observed = modality_edges.get(g, set())
+    # Failed graveyard entries with unknown format intentionally omit the edge.
+    if expected == "unclassified" and not observed:
+        continue
+    if observed != {expected}:
+        modality_edge_mismatch.add(
+            f"{g} [node={expected}; edges={','.join(sorted(observed)) or 'none'}]"
+        )
+if modality_edge_mismatch:
+    add("ERROR", "modality-node-edge-mismatch",
+        "molecule modality field and has_modality edge disagree",
+        modality_edge_mismatch)
+
+# Overrides are exceptional assertions, not an unreviewed second classifier.
+# Require an inspectable source for every one, and make sure non-molecule
+# graveyard entities can never leak into the molecule graph.
+bad_override_schema = set()
+orphan_overrides = set()
+missing_override_sources = set()
+for generic, record in modality_overrides.items():
+    if (not isinstance(record, dict) or not record.get("modality")
+            or not record.get("source") or not record.get("evidence")):
+        bad_override_schema.add(generic)
+    if generic not in mol:
+        orphan_overrides.add(generic)
+    if isinstance(record, dict):
+        source = record.get("source", "")
+        if source and not source.startswith(("http://", "https://")) and not os.path.exists(os.path.join(ROOT, source)):
+            missing_override_sources.add(f"{generic} [{source}]")
+if bad_override_schema:
+    add("ERROR", "modality-override-missing-provenance",
+        "every modality override must contain modality, source, and evidence", bad_override_schema)
+if orphan_overrides:
+    add("ERROR", "modality-override-orphan",
+        "modality override does not correspond to a molecule node", orphan_overrides)
+if missing_override_sources:
+    add("ERROR", "modality-override-source-missing",
+        "modality override cites a repository source path that does not exist",
+        missing_override_sources)
+
+non_molecule_graveyard_nodes = {
+    generic for generic, record in graveyard.items()
+    if record.get("entity_type", "molecule") != "molecule" and generic in mol
+}
+if non_molecule_graveyard_nodes:
+    add("ERROR", "non-molecule-modeled-as-molecule",
+        "trial, platform, or programme-family graveyard entry became a molecule node",
+        non_molecule_graveyard_nodes)
 
 treats = defaultdict(set)
 for e in edges:
@@ -84,6 +154,7 @@ STEM_MODALITY = [
     (r"\w+(tide|glutide)\b", {"peptide", "aso", "sirna", "hormone", "small-molecule"}),  # -parin = heparins (small molecule/polysaccharide)
     (r"\w+(leucel|cabtagene)\b", {"cell-therapy", "gene-therapy", "gene-editing"}),
     (r"\w+(tinib|ciclib|parib|prazole|sartan|statin|vastatin)\b", {"small-molecule", "formulation-smallmolecule"}),
+    (r"\w+xaban\b", {"small-molecule", "formulation-smallmolecule"}),
 ]
 bad_mod = set()
 for g, n in mol.items():
@@ -108,8 +179,83 @@ if bio_as_sm:
     add("ERROR", "biologic-labelled-small-molecule",
         "class text describes a biologic but modality says small-molecule", bio_as_sm)
 
-# c) status vs graph membership: only marketed/legacy belong in the marketed graph
+# c) explicit small-molecule class text labelled as a biologic or other format.
+# This is the reverse of the check above. It catches rule-order failures where a
+# pathway word wins over an explicit molecular-format statement, as happened for
+# eltrombopag ("Small molecule (thrombopoietin receptor agonist)" -> cytokine).
+explicit_sm_mismatch = {
+    f"{g} [{n.get('modality')}]" for g, n in mol.items()
+    if re.search(r"\bsmall[- ]molecule\b", n.get("class", ""), re.I)
+    and n.get("modality") not in ("small-molecule", "formulation-smallmolecule")
+}
+if explicit_sm_mismatch:
+    add("ERROR", "explicit-small-molecule-mismatch",
+        "class text explicitly says small molecule but graph modality disagrees",
+        explicit_sm_mismatch)
+
+# e) independent source-to-graph modality census. These patterns intentionally
+# overlap the extractor only at the conceptual level. The validator reasons from
+# explicit format phrases in the source text, so a bad override and matching bad
+# node/edge cannot validate one another.
+SOURCE_MODALITY_ASSERTIONS = [
+    (r"\b(?:antibody[- ]drug conjugate|adc\b|dxd antibody|directed adc)", {"adc"}),
+    (r"\b(?:bispecific|trispecific|bite\b|t[- ]cell engager)", {"bispecific-ab"}),
+    (r"\b(?:gene[- ]edited|gene editing|crispr)", {"gene-editing"}),
+    (r"\b(?:car[- ]?t|cell therapy|stem[- ]cell[- ]derived)", {"cell-therapy"}),
+    (r"\b(?:mrna|rna-lnp)", {"mrna"}),
+    (r"\b(?:sirna|rnai)", {"sirna"}),
+    (r"\b(?:antisense|oligonucleotide)", {"aso"}),
+    (r"\b(?:gene therapy|aav\d*\b)", {"gene-therapy"}),
+    (r"\b(?:radioligand|radiopharmaceutical|radioconjugate)", {"radioligand"}),
+    (r"\b(?:vaccine|active immunization|viral vector)", {"vaccine"}),
+    (r"\bbiosimilar\b", {"biosimilar"}),
+    (r"\b(?:immunoglobulin|immune globulin)", {"immunoglobulin"}),
+    (r"\b(?:plasma[- ]derived|albumin)", {"plasma-derived"}),
+    (r"\b(?:monoclonal antibody|mab\b|antibody\b|fab\b)", {"mab"}),
+    (r"\b(?:fusion protein|peptibody|receptor fusion|ligand trap)", {"fusion-protein"}),
+    (r"\b(?:enzyme replacement|pegylated enzyme|enzyme\b)", {"enzyme"}),
+    (r"\b(?:recombinant factor (?:viii|viia|ix|x)\b|factor viii(?:-|\s)|antihemophilic factor)",
+     {"clotting-factor"}),
+    (r"\b(?:inhaled protein|recombinant(?:\s+\w+){0,4}\s+protein|protein analogue)",
+     {"recombinant-protein"}),
+    (r"\b(?:peptide|insulin|amylin|natriuretic)", {"peptide"}),
+    (r"\bsmall[- ]molecule\b", {"small-molecule", "formulation-smallmolecule"}),
+]
+
+def source_modality_assertion(text):
+    for pattern, allowed in SOURCE_MODALITY_ASSERTIONS:
+        if re.search(pattern, text or "", re.I):
+            return allowed
+    return None
+
+source_modality_conflicts = set()
+override_source_conflicts = set()
+for generic, node in mol.items():
+    source_text = node.get("class") or node.get("modality_note") or ""
+    allowed = source_modality_assertion(source_text)
+    if generic.endswith("xaban"):
+        allowed = {"small-molecule", "formulation-smallmolecule"}
+    if allowed and node.get("modality") not in allowed:
+        source_modality_conflicts.add(
+            f"{generic} [{node.get('modality')}; source={source_text}]"
+        )
+    record = modality_overrides.get(generic)
+    if allowed and isinstance(record, dict) and record.get("modality") not in allowed:
+        override_source_conflicts.add(
+            f"{generic} [{record.get('modality')}; source={source_text}]"
+        )
+if source_modality_conflicts:
+    add("ERROR", "modality-contradicts-source-format",
+        "explicit source format disagrees with generated molecule modality",
+        source_modality_conflicts)
+if override_source_conflicts:
+    add("ERROR", "modality-override-contradicts-source",
+        "manual override contradicts explicit source format",
+        override_source_conflicts)
+
+# d) status vs graph membership: only marketed/legacy belong in the marketed graph
 idx_status = {}
+idx_used_for = defaultdict(set)
 idx_path = os.path.join(ROOT, "reference", "02_drug_index.md")
 for line in open(idx_path):
     s = line.strip()
@@ -120,7 +266,38 @@ for line in open(idx_path):
         continue
     c = [x.strip() for x in s.strip("|").split("|")]
     if len(c) == 7:
-        idx_status.setdefault(re.sub(r"\s*\(.*?\)", "", c[1].lower()).strip(), set()).add(c[5])
+        generic = re.sub(r"\s*\(.*?\)", "", c[1].lower()).strip()
+        idx_status.setdefault(generic, set()).add(c[5])
+        idx_used_for[generic].add(c[4].lower())
+
+# d1) indication semantics that naive substring matching has previously broken.
+# A bipolar-depression phrase describes bipolar disorder, not unipolar
+# depression. A separate major/standalone depression clause may legitimately
+# produce both edges, so strip bipolar phrases before looking for that evidence.
+BIPOLAR_PHRASE = re.compile(
+    r"\bbipolar(?:\s+[ivx]+)?(?:\s+(?:disorder|depression))?\b", re.I
+)
+bipolar_as_depression = set()
+bronchitis_fallback = set()
+for generic, cells in idx_used_for.items():
+    used_for = "; ".join(sorted(cells))
+    without_bipolar = BIPOLAR_PHRASE.sub("", used_for)
+    if ("bipolar" in used_for and "depression" in treats.get(generic, set())
+            and "depress" not in without_bipolar):
+        bipolar_as_depression.add(generic)
+    if "bronchitis" in used_for and (
+            "bronchitis" not in treats.get(generic, set())
+            or "other" in treats.get(generic, set())):
+        bronchitis_fallback.add(generic)
+if bipolar_as_depression:
+    add("ERROR", "bipolar-collapsed-to-depression",
+        "bipolar terminology without a separate depression indication generated a depression edge",
+        bipolar_as_depression)
+if bronchitis_fallback:
+    add("ERROR", "bronchitis-mapped-to-other",
+        "drug-index text explicitly names bronchitis but the graph omits bronchitis or retains other",
+        bronchitis_fallback)
+
 LIVE = {"marketed", "legacy", "pipeline"}
 wrong_tier = {g for g in mol if idx_status.get(g) and not (idx_status[g] & LIVE)
               and mol[g].get("phase") != "failed"}
@@ -143,9 +320,52 @@ bad_phase = {g for g, n in mol.items() if n.get("phase") not in (LIVE | {"failed
 if bad_phase:
     add("ERROR", "unknown-phase", "molecule phase outside the controlled vocabulary", bad_phase)
 
+import glob as _glob
+
+# c5) sales that exist in a company assets table but never reached the graph.
+# The failure mode this catches: the drug index and the company tables spell multi-brand
+# entries differently ("Darzalex / Darzalex Faspro" vs "Darzalex/Darzalex Faspro"), so a
+# raw string comparison silently dropped 22 sales figures — including J&J's largest
+# product, which then rendered smaller than Stelara. Node SIZE encodes sales, so a missed
+# match is not a blank field, it is a visibly WRONG picture.
+def _brand_keys(s):
+    s = re.sub(r"\s*\(.*?\)", "", str(s)).strip().strip("*").lower()
+    s = re.sub(r"\s+franchise$", "", s)
+    flat = re.sub(r"\s*([/+])\s*", r"\1", s)
+    keys = {s, flat} | {p.strip() for p in re.split(r"[/+]", flat) if len(p.strip()) > 2}
+    return {k for k in keys if k}
+
+_prose_sales = {}
+for _p in _glob.glob(os.path.join(ROOT, "companies", "*.md")):
+    _sec = re.search(r"## Major marketed assets(.*?)## (?:Pipeline|History)", open(_p).read(), re.S)
+    if not _sec:
+        continue
+    for _line in _sec.group(1).splitlines():
+        _s = _line.strip()
+        if not _s.startswith("|"):
+            continue
+        _c = [x.strip() for x in _s.strip("|").split("|")]
+        if len(_c) < 5 or _c[0].lower().startswith("drug"):
+            continue
+        if not re.search(r"[\d.]+\s*[BM]\b", _c[3]):
+            continue          # genuinely undisclosed — not a defect
+        for _k in _brand_keys(re.match(r"([^(]+)", _c[0]).group(1) if re.match(r"([^(]+)", _c[0]) else _c[0]):
+            _prose_sales[_k] = _c[3]
+
+_graph_keys = set()
+for _g, _n in mol.items():
+    if _n.get("sales_2025_usd_bn"):
+        for _b in (_n.get("brands") or [_g]):
+            _graph_keys |= _brand_keys(_b)
+lost_sales = {k for k in _prose_sales if k not in _graph_keys}
+# only report the head of each multi-brand group to keep the list readable
+lost_sales = {k for k in lost_sales if not any(k != o and k in o for o in lost_sales)}
+if lost_sales:
+    add("WARN", "sales-in-prose-not-in-graph",
+        "company assets table states a sales figure the graph did not pick up", lost_sales)
+
 # c4) coverage: pipeline assets named in prose but absent from the graph. A warn, counted
 # so it shrinks — the KB's job is to make strategic bets queryable, not just readable.
-import glob as _glob
 prose_assets = set()
 for _p in _glob.glob(os.path.join(ROOT, "companies", "*.md")):
     _t = open(_p).read()

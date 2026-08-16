@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-13
+updated: 2026-08-15
 status: curated
 ---
 # The graveyard — clinical-stage failures registry
@@ -122,10 +122,10 @@ status: curated
 | elafibranor (in NASH) | dual PPARalpha/delta agonist | small molecule | Genfit | Ph3 | 2020 | efficacy | RESOLVE-IT interim (May 2020) missed NASH resolution endpoint; high placebo response; trial terminated. Later approved for PBC (Iqirvo, 2024). | Indication-level death is not molecule death; biopsy endpoints with high placebo response are treacherous. |
 | muraglitazar | dual PPARalpha/gamma agonist | small molecule | Bristol-Myers Squibb/Merck | Ph3 | 2006 | safety | AdCom-endorsed NDA derailed by Nissen JAMA analysis showing excess CV events, edema, heart failure; abandoned 2006. | Independent reanalysis of pooled safety data can reverse a near-approval. |
 | aleglitazar | dual PPARalpha/gamma agonist | small molecule | Roche | Ph3 | 2013 | efficacy | AleCardio (7,228 post-ACS diabetics) halted Jul 2013 for futility plus PPAR class toxicity: fractures, heart failure, GI bleeding. | Re-entering a class after two safety failures needs a mechanistic fix, not just a new molecule. |
-| inhaled insulin (Exubera) | insulin | inhaled protein | Pfizer/Nektar | Marketed (withdrawn) | 2007 | commercial | 'Marketing of this product will be discontinued' across 5 Ph3 terminations; ~$2.8B write-off | Device inconvenience + payer indifference kill even approved biologics; Novo's AERx followed in 2008 |
-| Exubera (inhaled human insulin) | insulin receptor | inhaled protein | Pfizer (with Nektar) | approved-withdrawn | 2007 | commercial | Approved 2006; Pfizer pulled it Oct 2007 for commercial failure (~$2.8B charge); bulky device, spirometry burden, payer resistance. | Delivery convenience must beat incumbent workflow; device friction sank an approved drug. |
-| Natrecor | natriuretic peptide receptor | protein | johnson-and-johnson | approved-withdrawn | — | safety | Partial failure after safety questions crushed sales following 2003 Scios acquisition. | — |
-| Axokine | neurotrophy/obesity | protein | regeneron | — | 2003 | efficacy | Neurotrophic-factor obesity program collapsed in clinical development in 2003. | — |
+| inhaled insulin (Exubera) | insulin | peptide (inhaled human insulin) | Pfizer/Nektar | Marketed (withdrawn) | 2007 | commercial | 'Marketing of this product will be discontinued' across 5 Ph3 terminations; ~$2.8B write-off | Device inconvenience + payer indifference kill even approved biologics; Novo's AERx followed in 2008 |
+| Exubera (inhaled human insulin) | insulin receptor | peptide (inhaled human insulin) | Pfizer (with Nektar) | approved-withdrawn | 2007 | commercial | Approved 2006; Pfizer pulled it Oct 2007 for commercial failure (~$2.8B charge); bulky device, spirometry burden, payer resistance. | Delivery convenience must beat incumbent workflow; device friction sank an approved drug. |
+| Natrecor | natriuretic peptide receptor | recombinant natriuretic peptide | johnson-and-johnson | approved-withdrawn | — | safety | Partial failure after safety questions crushed sales following 2003 Scios acquisition. | — |
+| Axokine | neurotrophy/obesity | recombinant CNTF protein | regeneron | — | 2003 | efficacy | Neurotrophic-factor obesity program collapsed in clinical development in 2003. | — |
 | VX-264 | type 1 diabetes (encapsulated islet) | cell therapy | vertex | — | 2025 | strategic | Encapsulated-islet program discontinued in 2025. | — |
 
 **Indication/launch-level failures of drugs that remain marketed** (not program deaths — the failed expansion carries the lesson):
@@ -150,13 +150,12 @@ status: curated
 | linrodostat (BMS-986205) | IDO1 | small molecule | Bristol-Myers Squibb | Ph3 | 2019 | efficacy | Wound down after epacadostat's ECHO-301 collapse; 4 Ph2/3 terminations citing SOC change/business | Class-lead readouts reprice every follower overnight; BMS cut before its own Ph3 read out |
 | favezelimab | LAG-3 | mAb (pembrolizumab coformulation) | Merck & Co. | Ph3 | 2024 | efficacy | KEYFORM program (incl. KEYFORM-008 lymphoma) discontinued Dec 2024 alongside vibostolimab after data review. | LAG-3 value proved setting-specific (relatlimab melanoma); expansion beyond validated niche quietly died. |
 | Cell-therapy platform | — | cell therapy | takeda | — | 2025 | strategic | Platform wound down in 2025 as part of restructuring. | — |
-| MYSTIC | PD-L1 | mAb | astrazeneca | Ph3 | 2017 | efficacy | High-profile failure of MYSTIC trial in 2017 in lung cancer. | — |
 | tiragolumab | TIGIT | mAb | Roche | Ph3 | 2024 | efficacy | SKYSCRAPER-01/-06 misses; 10 direct terminations plus the 28-trial atezolizumab combo cluster | Combo-partner deaths surface in the backbone drug's trial cluster — read clusters jointly |
 | vibostolimab (MK-7684) | TIGIT | mAb (pembrolizumab coformulation) | Merck & Co. | Ph3 | 2024 | efficacy | Four Ph3s hit futility (KeyVibe-003/-007/-008/-010); KeyVibe-008 OS HR 1.26 with excess irAEs; program discontinued Dec 2024. | Adding a second checkpoint can subtract: added toxicity drove adjuvant discontinuations, worsening efficacy. |
 | ociperlimab (BGB-A1217) | TIGIT | mAb | BeiGene | Ph3 | 2025 | efficacy | AdvanTIG-302 terminated at OS futility interim (Apr 2025); whole program killed; Novartis had earlier walked from option. | Partner walk-aways (Novartis 2023) are leading indicators of class-level futility. |
 | Belrestotug | TIGIT (oncology) | mAb | gsk | — | 2025 | unknown | Program terminated 2025 with £471M impairment. | — |
 | sabatolimab (MBG453) | TIM-3 | mAb | Novartis | Ph3 | 2023 | efficacy | STIMULUS-MDS2 miss ended the TIM-3 MDS/AML program; 9 terminations across both names | Second-wave checkpoint targets (TIM-3, TIGIT, LAG-3 beyond melanoma) mostly failed to repeat PD-1 |
-| Zaltrap | VEGF | mAb | regeneron | approved-withdrawn | 2012 | commercial | Ziv-aflibercept approved in 2012 for colorectal cancer but flopped amid pricing controversy. | — |
+| Zaltrap | VEGF | VEGF-trap fusion protein | regeneron | approved-withdrawn | 2012 | commercial | Ziv-aflibercept approved in 2012 for colorectal cancer but flopped amid pricing controversy. | — |
 | Lartruvo | VEGF-A | mAb | eli-lilly | approved-withdrawn | 2019 | efficacy | Withdrawn in 2019 after the ANNOUNCE Phase 3 trial failed. | — |
 | giredestrant | estrogen receptor (SERD) | small molecule | roche | Ph3 | — | efficacy | Failed in first-line metastatic breast cancer; repositioned to adjuvant setting with Priority Review. | — |
 | sigvotatug vedotin | integrin beta-6 ADC | ADC | pfizer | Ph3 | 2026 | efficacy | Phase 3 SigVie-002 second-line NSCLC trial missed overall survival in June 2026. | — |
@@ -169,6 +168,7 @@ status: curated
 | Blenrep | BCMA (multiple myeloma) | ADC | gsk | approved-withdrawn-relaunched | 2022 | efficacy | Won accelerated US approval 2020 but withdrawn from US market late 2022 after confirmatory DREAMM-3 trial failed. US withdrawal 2022 after DREAMM-3; relaunched 2025-26 on DREAMM-7/8. | — |
 | Opdivo (nivolumab) | PD-1 | mAb | bristol-myers-squibb | Ph3 | 2016 | efficacy | CheckMate-026 trial failed in August 2016: Opdivo monotherapy did not beat chemotherapy in first-line NSCLC with broad PD-L1 cutoff, ceding market leadership to Keytruda. | — |
 | Opdualag (nivolumab + ipilimumab) | PD-1 + CTLA-4 | mAb | bristol-myers-squibb | Ph3 | 2025 | efficacy | Adjuvant melanoma trial missed in 2025; limits expansion of combination checkpoint inhibitor franchise. | — |
+| Imfinzi ± tremelimumab (MYSTIC trial) | PD-L1 ± CTLA-4 | mAb combination | astrazeneca | Ph3 | 2018 | efficacy | MYSTIC was a trial, not a molecule. It missed its first-line metastatic NSCLC progression-free-survival endpoint in 2017 and overall-survival endpoints in 2018; both drugs continued in other settings. | Corrected 2026-08-15: model the failed indication/trial, not MYSTIC as a drug. |
 
 ### Immunology & inflammation  (10 entries)
 
@@ -216,13 +216,14 @@ status: curated
 | Bextra | COX-2 | small molecule | pfizer | approved-withdrawn | 2005 | safety | COX-2 inhibitor withdrawn in 2005 on safety grounds. | — |
 | ranitidine (Zantac) | H2 receptor antagonist | small molecule | sanofi | approved-withdrawn | 2019 | manufacturing | Pulled from market in 2019 over NDMA contamination; spawned mass litigation and ~$300-350M in settlements by 2024-2026. | — |
 | Propulsid | gastric motility | small molecule | johnson-and-johnson | approved-withdrawn | 2000 | safety | Withdrawn from US market in 2000 after fatal arrhythmias. | — |
-| Xigris | sepsis | small molecule | eli-lilly | approved-withdrawn | 2011 | efficacy | Sepsis drug withdrawn in 2011 after a failed confirmatory trial. | — |
+| Xigris | sepsis | recombinant activated protein C | eli-lilly | approved-withdrawn | 2011 | efficacy | Sepsis drug withdrawn in 2011 after a failed confirmatory trial. | — |
 | Oxbryta | soluble guanylate cyclase activator | small molecule | pfizer | approved-withdrawn | 2024 | strategic | Sickle-cell drug (voxelotor, core of GBT acquisition) withdrawn worldwide in 2024. | — |
 
 ---
 
 ## Source & coverage notes
 
+- **Modality corrections (2026-08-15):** FDA labels confirm Xigris as recombinant activated protein C and Zaltrap as a VEGF-trap fusion protein; Regeneron filings describe Axokine as engineered CNTF; AstraZeneca trial materials identify MYSTIC as the durvalumab ± tremelimumab Phase 3 trial rather than a molecule.
 - **CT.gov mining** (2,608 terminated/withdrawn/suspended Ph2-3 trials across 22 sponsor groups, clustered to ~3,000 interventions) contributed ~23 verified rows including silent kills with no press release (MK-0767's 10 blank-whyStopped terminations, esreboxetine, AVE5530). Terminated ≠ failed: most entries required news verification; most Ph3 efficacy failures never show as "terminated" at all.
 - **Known bias**: entries skew toward (1) failures big enough to make news, (2) our 22 covered companies, (3) post-2005 (CT.gov coverage). The pre-2000 graveyard and dead-biotech graveyard are underrepresented — that data substantially exists only in commercial pipeline databases.
 - **Update path**: OpenClaw's daily feed flags trial failures/discontinuations → curation pass appends rows here + updates `graph/cache/graveyard.json` (see AGENTS.md).

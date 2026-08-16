@@ -25,6 +25,8 @@ A structured index over the prose knowledge base, derived from `companies/*.md` 
 | `modality` | drug format (`mab`, `adc`, `small-molecule`, `cell-therapy`, …) |
 | `deal` | `type`, `year`, `value_usd_bn`, `counterparty`, `assets` |
 
+Modality records what the medicine is, not the protein or pathway it targets. The private build pipeline checks explicit source format independently from classifier output before these generated files are published.
+
 ## Edge relations
 
 | rel | meaning |

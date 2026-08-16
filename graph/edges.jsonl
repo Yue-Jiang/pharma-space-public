@@ -954,16 +954,22 @@
 {"src": "apremilast", "rel": "competes_with", "dst": "tofacitinib", "basis": "shared_indication:psoriasis", "etype": "derived"}
 {"src": "apremilast", "rel": "competes_with", "dst": "ustekinumab", "basis": "shared_indication:psoriasis", "etype": "derived"}
 {"src": "apremilast", "rel": "competes_with", "dst": "zasocitinib", "basis": "shared_indication:psoriasis", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "bretisilocin", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "cariprazine", "basis": "shared_indication:bipolar-disorder", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "cariprazine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "cariprazine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "duloxetine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "esketamine", "basis": "shared_indication:depression", "etype": "derived"}
-{"src": "aripiprazole", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "fluoxetine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:bipolar-disorder", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:bipolar-disorder", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "aripiprazole", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "seltorexant", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "aripiprazole", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "aripiprazole", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "arlo-cel", "rel": "competes_with", "dst": "avapritinib", "basis": "shared_indication:gist", "etype": "derived"}
 {"src": "arlo-cel", "rel": "competes_with", "dst": "belantamab mafodotin", "basis": "shared_indication:multiple-myeloma", "etype": "derived"}
@@ -1337,6 +1343,13 @@
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "rituximab", "basis": "shared_indication:lymphoma", "etype": "derived"}
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "tisagenlecleucel", "basis": "shared_indication:lymphoma", "etype": "derived"}
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "valemetostat", "basis": "shared_indication:lymphoma", "etype": "derived"}
+{"src": "bretisilocin", "rel": "competes_with", "dst": "duloxetine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "bretisilocin", "rel": "competes_with", "dst": "esketamine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "bretisilocin", "rel": "competes_with", "dst": "fluoxetine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "bretisilocin", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "bretisilocin", "rel": "competes_with", "dst": "seltorexant", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "bretisilocin", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "bretisilocin", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "brexucabtagene autoleucel", "rel": "competes_with", "dst": "dasatinib", "basis": "shared_indication:all-leukemia", "etype": "derived"}
 {"src": "brexucabtagene autoleucel", "rel": "competes_with", "dst": "dasatinib", "basis": "shared_indication:leukemia", "etype": "derived"}
 {"src": "brexucabtagene autoleucel", "rel": "competes_with", "dst": "epcoritamab", "basis": "shared_indication:lymphoma", "etype": "derived"}
@@ -1497,14 +1510,18 @@
 {"src": "carfilzomib", "rel": "competes_with", "dst": "pomalidomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived"}
 {"src": "carfilzomib", "rel": "competes_with", "dst": "talquetamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived"}
 {"src": "carfilzomib", "rel": "competes_with", "dst": "teclistamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "duloxetine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "esketamine", "basis": "shared_indication:depression", "etype": "derived"}
-{"src": "cariprazine", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "fluoxetine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:bipolar-disorder", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:bipolar-disorder", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "cariprazine", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "seltorexant", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "cariprazine", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
 {"src": "cariprazine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "casirivimab + imdevimab", "rel": "competes_with", "dst": "elasomeran", "basis": "shared_indication:covid", "etype": "derived"}
@@ -1981,10 +1998,14 @@
 {"src": "dulaglutide", "rel": "competes_with", "dst": "sitagliptin/metformin", "basis": "shared_indication:type-2-diabetes", "etype": "derived"}
 {"src": "dulaglutide", "rel": "competes_with", "dst": "teplizumab", "basis": "shared_indication:type-2-diabetes", "etype": "derived"}
 {"src": "dulaglutide", "rel": "competes_with", "dst": "zimislecel", "basis": "shared_indication:type-2-diabetes", "etype": "derived"}
+{"src": "duloxetine", "rel": "competes_with", "dst": "esketamine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "duloxetine", "rel": "competes_with", "dst": "fentanyl transdermal", "basis": "shared_indication:pain", "etype": "derived"}
 {"src": "duloxetine", "rel": "competes_with", "dst": "hyoscine butylbromide", "basis": "shared_indication:pain", "etype": "derived"}
 {"src": "duloxetine", "rel": "competes_with", "dst": "mirogabalin", "basis": "shared_indication:pain", "etype": "derived"}
+{"src": "duloxetine", "rel": "competes_with", "dst": "seltorexant", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "duloxetine", "rel": "competes_with", "dst": "suzetrigine", "basis": "shared_indication:pain", "etype": "derived"}
+{"src": "duloxetine", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "duloxetine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "ensifentrine", "basis": "shared_indication:copd", "etype": "derived"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:asthma", "etype": "derived"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived"}
@@ -2275,7 +2296,9 @@
 {"src": "eptacog alfa", "rel": "competes_with", "dst": "octocog alfa / damoctocog alfa pegol", "basis": "shared_indication:hemophilia", "etype": "derived"}
 {"src": "erdafitinib", "rel": "competes_with", "dst": "gemcitabine", "basis": "shared_indication:bladder-cancer", "etype": "derived"}
 {"src": "erdafitinib", "rel": "competes_with", "dst": "sasanlimab", "basis": "shared_indication:bladder-cancer", "etype": "derived"}
+{"src": "esketamine", "rel": "competes_with", "dst": "fluoxetine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "esketamine", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "esketamine", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "esketamine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "esomeprazole", "rel": "competes_with", "dst": "gemcitabine", "basis": "shared_indication:gi-cancer", "etype": "derived"}
 {"src": "esomeprazole", "rel": "competes_with", "dst": "golimumab", "basis": "shared_indication:gi-other", "etype": "derived"}
@@ -2476,6 +2499,9 @@
 {"src": "fingolimod", "rel": "competes_with", "dst": "ocrelizumab", "basis": "shared_indication:multiple-sclerosis", "etype": "derived"}
 {"src": "fingolimod", "rel": "competes_with", "dst": "peginterferon beta-1a", "basis": "shared_indication:multiple-sclerosis", "etype": "derived"}
 {"src": "fingolimod", "rel": "competes_with", "dst": "tolebrutinib", "basis": "shared_indication:multiple-sclerosis", "etype": "derived"}
+{"src": "fluoxetine", "rel": "competes_with", "dst": "seltorexant", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "fluoxetine", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "fluoxetine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "fluticasone furoate/umeclidinium/vilanterol", "rel": "competes_with", "dst": "itepekimab", "basis": "shared_indication:copd", "etype": "derived"}
 {"src": "fluticasone furoate/umeclidinium/vilanterol", "rel": "competes_with", "dst": "lunsekimig", "basis": "shared_indication:asthma", "etype": "derived"}
 {"src": "fluticasone furoate/umeclidinium/vilanterol", "rel": "competes_with", "dst": "lunsekimig", "basis": "shared_indication:copd", "etype": "derived"}
@@ -3106,10 +3132,9 @@
 {"src": "lubiprostone", "rel": "competes_with", "dst": "risankizumab", "basis": "shared_indication:gi-other", "etype": "derived"}
 {"src": "lubiprostone", "rel": "competes_with", "dst": "tofacitinib", "basis": "shared_indication:gi-other", "etype": "derived"}
 {"src": "lubiprostone", "rel": "competes_with", "dst": "tulisokibart", "basis": "shared_indication:gi-other", "etype": "derived"}
-{"src": "lumateperone", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "lumateperone", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:bipolar-disorder", "etype": "derived"}
 {"src": "lumateperone", "rel": "competes_with", "dst": "olanzapine", "basis": "shared_indication:schizophrenia", "etype": "derived"}
 {"src": "lumateperone", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "lumateperone", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "lunsekimig", "rel": "competes_with", "dst": "mepolizumab", "basis": "shared_indication:asthma", "etype": "derived"}
 {"src": "lunsekimig", "rel": "competes_with", "dst": "mepolizumab", "basis": "shared_indication:copd", "etype": "derived"}
 {"src": "lunsekimig", "rel": "competes_with", "dst": "montelukast", "basis": "shared_indication:asthma", "etype": "derived"}
@@ -3300,8 +3325,9 @@
 {"src": "ofatumumab", "rel": "competes_with", "dst": "peginterferon beta-1a", "basis": "shared_indication:multiple-sclerosis", "etype": "derived"}
 {"src": "ofatumumab", "rel": "competes_with", "dst": "tolebrutinib", "basis": "shared_indication:multiple-sclerosis", "etype": "derived"}
 {"src": "olanzapine", "rel": "competes_with", "dst": "paliperidone", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "olanzapine", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "olanzapine", "rel": "competes_with", "dst": "paliperidone palmitate", "basis": "shared_indication:schizophrenia", "etype": "derived"}
+{"src": "olanzapine", "rel": "competes_with", "dst": "seltorexant", "basis": "shared_indication:depression", "etype": "derived"}
+{"src": "olanzapine", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "olanzapine", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
 {"src": "olanzapine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "olaparib", "rel": "competes_with", "dst": "omeprazole", "basis": "shared_indication:gi-cancer", "etype": "derived"}
@@ -3472,7 +3498,6 @@
 {"src": "palbociclib", "rel": "competes_with", "dst": "trastuzumab emtansine", "basis": "shared_indication:breast-cancer", "etype": "derived"}
 {"src": "paliperidone", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
 {"src": "paliperidone palmitate", "rel": "competes_with", "dst": "xanomeline-trospium", "basis": "shared_indication:schizophrenia", "etype": "derived"}
-{"src": "paliperidone palmitate", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "panitumumab", "rel": "competes_with", "dst": "pembrolizumab with berahyaluronidase alfa", "basis": "shared_indication:colorectal-cancer", "etype": "derived"}
 {"src": "panitumumab", "rel": "competes_with", "dst": "regorafenib", "basis": "shared_indication:colorectal-cancer", "etype": "derived"}
 {"src": "panitumumab", "rel": "competes_with", "dst": "ziv-aflibercept", "basis": "shared_indication:colorectal-cancer", "etype": "derived"}
@@ -3721,7 +3746,9 @@
 {"src": "secukinumab", "rel": "competes_with", "dst": "zasocitinib", "basis": "shared_indication:psoriasis", "etype": "derived"}
 {"src": "selexipag", "rel": "competes_with", "dst": "sildenafil", "basis": "shared_indication:pulmonary-arterial-hypertension", "etype": "derived"}
 {"src": "selexipag", "rel": "competes_with", "dst": "sotatercept", "basis": "shared_indication:pulmonary-arterial-hypertension", "etype": "derived"}
+{"src": "seltorexant", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "seltorexant", "rel": "competes_with", "dst": "zolpidem", "basis": "shared_indication:sleep", "etype": "derived"}
+{"src": "seltorexant", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "semaglutide", "rel": "competes_with", "dst": "simvastatin", "basis": "shared_indication:dyslipidemia", "etype": "derived"}
 {"src": "semaglutide", "rel": "competes_with", "dst": "sitagliptin", "basis": "shared_indication:type-2-diabetes", "etype": "derived"}
 {"src": "semaglutide", "rel": "competes_with", "dst": "sitagliptin/metformin", "basis": "shared_indication:type-2-diabetes", "etype": "derived"}
@@ -3822,6 +3849,7 @@
 {"src": "valsartan", "rel": "competes_with", "dst": "vericiguat", "basis": "shared_indication:heart-failure", "etype": "derived"}
 {"src": "valsartan", "rel": "competes_with", "dst": "ziltivekimab", "basis": "shared_indication:heart-failure", "etype": "derived"}
 {"src": "vericiguat", "rel": "competes_with", "dst": "ziltivekimab", "basis": "shared_indication:heart-failure", "etype": "derived"}
+{"src": "vortioxetine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived"}
 {"src": "zidesamtinib", "rel": "competes_with", "dst": "zongertinib", "basis": "shared_indication:lung-cancer", "etype": "derived"}
 {"src": "acapatamab", "dst": "PSMA", "rel": "failed_on", "etype": "fact", "year": 2022, "mode": "strategic"}
 {"src": "aducanumab", "dst": "amyloid-beta", "rel": "failed_on", "etype": "fact", "year": 2024, "mode": "commercial"}
@@ -3887,7 +3915,6 @@
 {"src": "mongersen", "dst": "SMAD7", "rel": "failed_on", "etype": "fact", "year": 2017, "mode": "efficacy"}
 {"src": "mrna-1647", "dst": "Cytomegalovirus", "rel": "failed_on", "etype": "fact", "year": 2025, "mode": "efficacy"}
 {"src": "muraglitazar", "dst": "PPARalpha/gamma", "rel": "failed_on", "etype": "fact", "year": 2006, "mode": "safety"}
-{"src": "mystic", "dst": "PD-L1", "rel": "failed_on", "etype": "fact", "year": 2017, "mode": "efficacy"}
 {"src": "natrecor", "dst": "natriuretic peptide receptor", "rel": "failed_on", "etype": "fact", "mode": "safety"}
 {"src": "navacaprant", "dst": "kappa opioid", "rel": "failed_on", "etype": "fact", "year": 2025, "mode": "efficacy"}
 {"src": "navoximod", "dst": "IDO1", "rel": "failed_on", "etype": "fact", "year": 2018, "mode": "strategic"}
@@ -3922,7 +3949,6 @@
 {"src": "torcetrapib", "dst": "CETP", "rel": "failed_on", "etype": "fact", "year": 2006, "mode": "safety"}
 {"src": "ulotaront", "dst": "TAAR1/5-HT1A", "rel": "failed_on", "etype": "fact", "year": 2023, "mode": "efficacy"}
 {"src": "umibecestat", "dst": "BACE1", "rel": "failed_on", "etype": "fact", "year": 2019, "mode": "safety-class"}
-{"src": "unnamed neurotrophic-factor programs", "dst": "ALS", "rel": "failed_on", "etype": "fact", "mode": "efficacy"}
 {"src": "verubecestat", "dst": "BACE1", "rel": "failed_on", "etype": "fact", "year": 2018, "mode": "safety-class"}
 {"src": "vibostolimab", "dst": "TIGIT", "rel": "failed_on", "etype": "fact", "year": 2024, "mode": "efficacy"}
 {"src": "vilaprisan", "dst": "progesterone receptor", "rel": "failed_on", "etype": "fact", "year": 2020, "mode": "safety"}
@@ -3934,12 +3960,12 @@
 {"src": "zagotenemab", "dst": "tau", "rel": "failed_on", "etype": "fact", "year": 2021, "mode": "efficacy"}
 {"src": "zaltrap", "dst": "VEGF-A", "rel": "failed_on", "etype": "fact", "year": 2012, "mode": "commercial"}
 {"src": "abatacept", "rel": "has_modality", "dst": "fusion-protein", "etype": "fact"}
-{"src": "abbv-400", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "abbv-400", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "abelacimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "abemaciclib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "abiraterone acetate", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "acalabrutinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "acapatamab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
+{"src": "acapatamab", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "acetaminophen", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "acetylsalicylic acid", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "acoramidis", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -3947,7 +3973,7 @@
 {"src": "adalimumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "adalimumab biosimilar", "rel": "has_modality", "dst": "biosimilar", "etype": "fact"}
 {"src": "adalimumab-adbm", "rel": "has_modality", "dst": "biosimilar", "etype": "fact"}
-{"src": "admilparant", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "admilparant", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "aducanumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "aduhelm", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "afimkibart", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -3958,7 +3984,7 @@
 {"src": "aleglitazar", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "alendronate", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "alirocumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
-{"src": "alofisel", "rel": "has_modality", "dst": "biologic-other", "etype": "fact"}
+{"src": "alofisel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "alteplase", "rel": "has_modality", "dst": "recombinant-protein", "etype": "fact"}
 {"src": "ambrisentan", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "ambroxol", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -3968,17 +3994,17 @@
 {"src": "amoxicillin/clavulanate", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "amprenavir", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "amx0035", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "an-1792", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "an-1792", "rel": "has_modality", "dst": "vaccine", "etype": "fact"}
 {"src": "anacetrapib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "anitocabtagene autoleucel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "anselamimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "antihemophilic factor", "rel": "has_modality", "dst": "clotting-factor", "etype": "fact"}
 {"src": "apalutamide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "apecotrep", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "apixaban", "rel": "has_modality", "dst": "clotting-factor", "etype": "fact"}
+{"src": "apixaban", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "apremilast", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "aripiprazole", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "arlo-cel", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "arlo-cel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "asciminib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "asundexian", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "atabecestat", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -3996,18 +4022,18 @@
 {"src": "avalglucosidase alfa", "rel": "has_modality", "dst": "enzyme", "etype": "fact"}
 {"src": "avandia", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "avapritinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "ave5530", "rel": "has_modality", "dst": "cytokine", "etype": "fact"}
+{"src": "ave5530", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "axicabtagene ciloleucel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
-{"src": "axokine", "rel": "has_modality", "dst": "hormone", "etype": "fact"}
-{"src": "azd0780", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
-{"src": "azd5004", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "axokine", "rel": "has_modality", "dst": "recombinant-protein", "etype": "fact"}
+{"src": "azd0780", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "azd5004", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "balinatunfib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bapineuzumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "baricitinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "baxdrostat", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "baxdrostat", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "belantamab mafodotin", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "belimumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
-{"src": "belrestotug", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "belrestotug", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "belumosudil", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "belzutifan", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bemdaneprocel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
@@ -4016,14 +4042,14 @@
 {"src": "bepirovirsen", "rel": "has_modality", "dst": "aso", "etype": "fact"}
 {"src": "bevacizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "bextra", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "bi 3720931", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "bi 3720931", "rel": "has_modality", "dst": "gene-therapy", "etype": "fact"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bimagrumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "bisacodyl", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bleximenib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "blinatumomab", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "bms-986094", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "bnt327", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "bnt327", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "bortezomib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bosentan", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "brentuximab vedotin", "rel": "has_modality", "dst": "adc", "etype": "fact"}
@@ -4045,7 +4071,6 @@
 {"src": "carfilzomib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "cariprazine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "casirivimab + imdevimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
-{"src": "cell-therapy platform", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "cemdisiran", "rel": "has_modality", "dst": "sirna", "etype": "fact"}
 {"src": "cemiplimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "cerivastatin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -4074,7 +4099,7 @@
 {"src": "delpacibart braxlosiran", "rel": "has_modality", "dst": "sirna", "etype": "fact"}
 {"src": "delpacibart etedesiran", "rel": "has_modality", "dst": "sirna", "etype": "fact"}
 {"src": "delpacibart zotadirsen", "rel": "has_modality", "dst": "aso", "etype": "fact"}
-{"src": "denecimig", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "denecimig", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "dengue tetravalent vaccine", "rel": "has_modality", "dst": "vaccine", "etype": "fact"}
 {"src": "dengvaxia", "rel": "has_modality", "dst": "vaccine", "etype": "fact"}
 {"src": "denosumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -4100,23 +4125,23 @@
 {"src": "durvalumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "duvakitug", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "eculizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
-{"src": "edoxaban", "rel": "has_modality", "dst": "clotting-factor", "etype": "fact"}
+{"src": "edoxaban", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "efanesoctocog alfa", "rel": "has_modality", "dst": "fusion-protein", "etype": "fact"}
-{"src": "efavaleukin alfa", "rel": "has_modality", "dst": "cytokine", "etype": "fact"}
+{"src": "efavaleukin alfa", "rel": "has_modality", "dst": "fusion-protein", "etype": "fact"}
 {"src": "efavirenz/tenofovir/emtricitabine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "efimosfermin alfa", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
-{"src": "efruxifermin", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "efimosfermin alfa", "rel": "has_modality", "dst": "fusion-protein", "etype": "fact"}
+{"src": "efruxifermin", "rel": "has_modality", "dst": "fusion-protein", "etype": "fact"}
 {"src": "efzimfotase alfa", "rel": "has_modality", "dst": "enzyme", "etype": "fact"}
 {"src": "elafibranor", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "elasomeran", "rel": "has_modality", "dst": "mrna", "etype": "fact"}
-{"src": "elecoglipron", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
+{"src": "elecoglipron", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "elenbecestat", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "elexacaftor/tezacaftor/ivacaftor", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "elinzanetant", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "eloralintide", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "elranatamab", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "elritercept", "rel": "has_modality", "dst": "fusion-protein", "etype": "fact"}
-{"src": "eltrombopag", "rel": "has_modality", "dst": "cytokine", "etype": "fact"}
+{"src": "eltrombopag", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "emicizumab", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "empagliflozin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -4129,7 +4154,7 @@
 {"src": "enfortumab vedotin", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "enicepatide", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "enlicitide", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
-{"src": "enoxaparin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "enoxaparin", "rel": "has_modality", "dst": "oligosaccharide", "etype": "fact"}
 {"src": "ensifentrine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "enzalutamide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "epacadostat", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -4150,11 +4175,11 @@
 {"src": "evinacumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "evolocumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "evuzamitide", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
-{"src": "exagamglogene autotemcel", "rel": "has_modality", "dst": "gene-therapy", "etype": "fact"}
+{"src": "exagamglogene autotemcel", "rel": "has_modality", "dst": "gene-editing", "etype": "fact"}
 {"src": "exanta", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "exenatide", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "exkivity", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "exubera", "rel": "has_modality", "dst": "formulation-smallmolecule", "etype": "fact"}
+{"src": "exubera", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "faricimab", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "fasiglifam", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "favezelimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -4163,7 +4188,7 @@
 {"src": "fenebrutinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "fenfluramine/dexfenfluramine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "fentanyl transdermal", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "ferric carboxymaltose", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "ferric carboxymaltose", "rel": "has_modality", "dst": "iron-carbohydrate-complex", "etype": "fact"}
 {"src": "fetrastobart vedotin", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "fexofenadine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "fianlimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -4173,15 +4198,15 @@
 {"src": "fingolimod", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "fluoxetine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "fluticasone furoate/umeclidinium/vilanterol", "rel": "has_modality", "dst": "formulation-smallmolecule", "etype": "fact"}
-{"src": "fluticasone/salmeterol", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "fluticasone/umeclidinium/vilanterol", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "fluticasone/salmeterol", "rel": "has_modality", "dst": "formulation-smallmolecule", "etype": "fact"}
+{"src": "fluticasone/umeclidinium/vilanterol", "rel": "has_modality", "dst": "formulation-smallmolecule", "etype": "fact"}
 {"src": "fosamprenavir", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "foscarbidopa/foslevodopa", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "foscarbidopa/foslevodopa", "rel": "has_modality", "dst": "formulation-smallmolecule", "etype": "fact"}
 {"src": "frexalimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "fruquintinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "fulranumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "gadobutrol", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "gadoquatrane", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "gadoquatrane", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "galcanezumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "gantenerumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "garetosmab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -4199,13 +4224,13 @@
 {"src": "gs-1720/gs-4182", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "guselkumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "hpv vaccine", "rel": "has_modality", "dst": "vaccine", "etype": "fact"}
-{"src": "hyaluronic acid fillers", "rel": "has_modality", "dst": "formulation-smallmolecule", "etype": "fact"}
+{"src": "hyaluronic acid fillers", "rel": "has_modality", "dst": "polysaccharide", "etype": "fact"}
 {"src": "hyoscine butylbromide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "ianalumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "iberdomide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "ibrutinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "iclepertin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "icotrokinra", "rel": "has_modality", "dst": "cytokine", "etype": "fact"}
+{"src": "icotrokinra", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "idalopirdine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "idarucizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "idecabtagene vicleucel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
@@ -4222,7 +4247,7 @@
 {"src": "infliximab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "infliximab biosimilar", "rel": "has_modality", "dst": "biosimilar", "etype": "fact"}
 {"src": "influenza vaccines", "rel": "has_modality", "dst": "vaccine", "etype": "fact"}
-{"src": "inhaled insulin", "rel": "has_modality", "dst": "formulation-smallmolecule", "etype": "fact"}
+{"src": "inhaled insulin", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "inotersen", "rel": "has_modality", "dst": "aso", "etype": "fact"}
 {"src": "insulin aspart", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "insulin degludec", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
@@ -4235,20 +4260,20 @@
 {"src": "intepirdine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "interferon beta-1a", "rel": "has_modality", "dst": "cytokine", "etype": "fact"}
 {"src": "interferon beta-1b", "rel": "has_modality", "dst": "cytokine", "etype": "fact"}
-{"src": "intismeran autogene", "rel": "has_modality", "dst": "gene-therapy", "etype": "fact"}
+{"src": "intismeran autogene", "rel": "has_modality", "dst": "mrna", "etype": "fact"}
 {"src": "iopromide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "ipilimumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "iptacopan", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "irbesartan", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "iressa", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "iron sucrose", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "iron sucrose", "rel": "has_modality", "dst": "iron-carbohydrate-complex", "etype": "fact"}
 {"src": "isatuximab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "itepekimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "ivacaftor", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "ivonescimab", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "ixazomib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "ixekizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
-{"src": "iza-bren", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "iza-bren", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "lampalizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "lanabecestat", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "lanadelumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -4264,8 +4289,8 @@
 {"src": "lepodisiran", "rel": "has_modality", "dst": "sirna", "etype": "fact"}
 {"src": "letermovir", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "levofloxacin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "levonorgestrel", "rel": "has_modality", "dst": "hormone", "etype": "fact"}
-{"src": "levonorgestrel ius", "rel": "has_modality", "dst": "hormone", "etype": "fact"}
+{"src": "levonorgestrel", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "levonorgestrel ius", "rel": "has_modality", "dst": "formulation-smallmolecule", "etype": "fact"}
 {"src": "ligelizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "linagliptin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "linerixibat", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -4300,14 +4325,14 @@
 {"src": "metformin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "mezagitamab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "mezigdomide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "milvexian", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "milvexian", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "mirikizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "mirogabalin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "mirvetuximab soravtansine", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "mk-0767", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "molnupiravir", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "momelotinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "mongersen", "rel": "has_modality", "dst": "mab", "etype": "fact"}
+{"src": "mongersen", "rel": "has_modality", "dst": "aso", "etype": "fact"}
 {"src": "montelukast", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "mosunetuzumab", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "mrna-1010", "rel": "has_modality", "dst": "mrna", "etype": "fact"}
@@ -4317,9 +4342,8 @@
 {"src": "mrna-1647", "rel": "has_modality", "dst": "mrna", "etype": "fact"}
 {"src": "muraglitazar", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "muvalaplin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "mystic", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "natalizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
-{"src": "natrecor", "rel": "has_modality", "dst": "recombinant-protein", "etype": "fact"}
+{"src": "natrecor", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "navacaprant", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "navoximod", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "neladalkib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -4358,7 +4382,7 @@
 {"src": "onabotulinumtoxina", "rel": "has_modality", "dst": "toxin", "etype": "fact"}
 {"src": "onasemnogene abeparvovec", "rel": "has_modality", "dst": "gene-therapy", "etype": "fact"}
 {"src": "ontamalimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
-{"src": "orforglipron", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "orforglipron", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "oseltamivir", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "osimertinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "oveporexton", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -4376,13 +4400,13 @@
 {"src": "panitumumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "pasritamig", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "patritumab deruxtecan", "rel": "has_modality", "dst": "adc", "etype": "fact"}
-{"src": "pavurutamab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
+{"src": "pavurutamab", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "pegcetacoplan", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "pegcetacoplan injection", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "pegfilgrastim", "rel": "has_modality", "dst": "cytokine", "etype": "fact"}
 {"src": "peginterferon beta-1a", "rel": "has_modality", "dst": "cytokine", "etype": "fact"}
 {"src": "pegloticase", "rel": "has_modality", "dst": "enzyme", "etype": "fact"}
-{"src": "pegozafermin", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "pegozafermin", "rel": "has_modality", "dst": "recombinant-protein", "etype": "fact"}
 {"src": "pelacarsen", "rel": "has_modality", "dst": "aso", "etype": "fact"}
 {"src": "pembrolizumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "pembrolizumab with berahyaluronidase alfa", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -4441,7 +4465,7 @@
 {"src": "risdiplam", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "risvutatug rezetecan", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "rituximab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
-{"src": "rivaroxaban", "rel": "has_modality", "dst": "clotting-factor", "etype": "fact"}
+{"src": "rivaroxaban", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "rocatinlimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "rofecoxib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "romiplostim", "rel": "has_modality", "dst": "fusion-protein", "etype": "fact"}
@@ -4453,7 +4477,7 @@
 {"src": "rsvpref3 oa", "rel": "has_modality", "dst": "vaccine", "etype": "fact"}
 {"src": "rusfertide", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "ruxolitinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "ryz101", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "ryz101", "rel": "has_modality", "dst": "radioligand", "etype": "fact"}
 {"src": "sabatolimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "sacituzumab govitecan", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "sacituzumab tirumotecan", "rel": "has_modality", "dst": "adc", "etype": "fact"}
@@ -4566,10 +4590,10 @@
 {"src": "volrustomig", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "vonoprazan", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "vortioxetine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "vx-264", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "vx-264", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "vx-814", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "vx-864", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "xaluritamig", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "xaluritamig", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "xanomeline-trospium", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "xigris", "rel": "has_modality", "dst": "recombinant-protein", "etype": "fact"}
 {"src": "zagotenemab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -4582,7 +4606,7 @@
 {"src": "ziltivekimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "zimislecel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "ziv-aflibercept", "rel": "has_modality", "dst": "fusion-protein", "etype": "fact"}
-{"src": "zola-cel", "rel": "has_modality", "dst": "unclassified", "etype": "fact"}
+{"src": "zola-cel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "zolpidem", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "zongertinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "zorevunersen", "rel": "has_modality", "dst": "aso", "etype": "fact"}
@@ -4598,8 +4622,10 @@
 {"src": "atopic-dermatitis", "rel": "in_area", "dst": "immunology", "etype": "fact"}
 {"src": "attr-amyloidosis", "rel": "in_area", "dst": "rare", "etype": "fact"}
 {"src": "axial-spondyloarthritis", "rel": "in_area", "dst": "immunology", "etype": "fact"}
+{"src": "bipolar-disorder", "rel": "in_area", "dst": "neuroscience", "etype": "fact"}
 {"src": "bladder-cancer", "rel": "in_area", "dst": "oncology", "etype": "fact"}
 {"src": "breast-cancer", "rel": "in_area", "dst": "oncology", "etype": "fact"}
+{"src": "bronchitis", "rel": "in_area", "dst": "respiratory", "etype": "fact"}
 {"src": "cardiomyopathy", "rel": "in_area", "dst": "cardiometabolic", "etype": "fact"}
 {"src": "chronic-kidney-disease", "rel": "in_area", "dst": "cardiometabolic", "etype": "fact"}
 {"src": "cml", "rel": "in_area", "dst": "oncology", "etype": "fact"}
@@ -5618,7 +5644,7 @@
 {"src": "alirocumab", "rel": "treats", "dst": "dyslipidemia", "etype": "fact"}
 {"src": "alteplase", "rel": "treats", "dst": "other", "etype": "fact"}
 {"src": "ambrisentan", "rel": "treats", "dst": "pulmonary-arterial-hypertension", "etype": "fact"}
-{"src": "ambroxol", "rel": "treats", "dst": "other", "etype": "fact"}
+{"src": "ambroxol", "rel": "treats", "dst": "bronchitis", "etype": "fact"}
 {"src": "amivantamab", "rel": "treats", "dst": "lung-cancer", "etype": "fact"}
 {"src": "amlitelimab", "rel": "treats", "dst": "other", "etype": "fact"}
 {"src": "amoxicillin/clavulanate", "rel": "treats", "dst": "infection-other", "etype": "fact"}
@@ -5630,6 +5656,7 @@
 {"src": "apecotrep", "rel": "treats", "dst": "other", "etype": "fact"}
 {"src": "apixaban", "rel": "treats", "dst": "anticoagulation", "etype": "fact"}
 {"src": "apremilast", "rel": "treats", "dst": "psoriasis", "etype": "fact"}
+{"src": "aripiprazole", "rel": "treats", "dst": "bipolar-disorder", "etype": "fact"}
 {"src": "aripiprazole", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "aripiprazole", "rel": "treats", "dst": "schizophrenia", "etype": "fact"}
 {"src": "arlo-cel", "rel": "treats", "dst": "gist", "etype": "fact"}
@@ -5676,7 +5703,7 @@
 {"src": "bortezomib", "rel": "treats", "dst": "multiple-myeloma", "etype": "fact"}
 {"src": "bosentan", "rel": "treats", "dst": "pulmonary-arterial-hypertension", "etype": "fact"}
 {"src": "brentuximab vedotin", "rel": "treats", "dst": "lymphoma", "etype": "fact"}
-{"src": "bretisilocin", "rel": "treats", "dst": "other", "etype": "fact"}
+{"src": "bretisilocin", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "brexucabtagene autoleucel", "rel": "treats", "dst": "all-leukemia", "etype": "fact"}
 {"src": "brexucabtagene autoleucel", "rel": "treats", "dst": "leukemia", "etype": "fact"}
 {"src": "brexucabtagene autoleucel", "rel": "treats", "dst": "lymphoma", "etype": "fact"}
@@ -5694,6 +5721,7 @@
 {"src": "camizestrant", "rel": "treats", "dst": "breast-cancer", "etype": "fact"}
 {"src": "candesartan", "rel": "treats", "dst": "other", "etype": "fact"}
 {"src": "carfilzomib", "rel": "treats", "dst": "multiple-myeloma", "etype": "fact"}
+{"src": "cariprazine", "rel": "treats", "dst": "bipolar-disorder", "etype": "fact"}
 {"src": "cariprazine", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "cariprazine", "rel": "treats", "dst": "schizophrenia", "etype": "fact"}
 {"src": "casirivimab + imdevimab", "rel": "treats", "dst": "covid", "etype": "fact"}
@@ -5751,6 +5779,7 @@
 {"src": "dostarlimab", "rel": "treats", "dst": "pan-tumor", "etype": "fact"}
 {"src": "drospirenone + ethinyl estradiol", "rel": "treats", "dst": "womens-health", "etype": "fact"}
 {"src": "dulaglutide", "rel": "treats", "dst": "type-2-diabetes", "etype": "fact"}
+{"src": "duloxetine", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "duloxetine", "rel": "treats", "dst": "pain", "etype": "fact"}
 {"src": "dupilumab", "rel": "treats", "dst": "allergy", "etype": "fact"}
 {"src": "dupilumab", "rel": "treats", "dst": "asthma", "etype": "fact"}
@@ -5831,7 +5860,7 @@
 {"src": "finerenone", "rel": "treats", "dst": "heart-failure", "etype": "fact"}
 {"src": "finerenone", "rel": "treats", "dst": "type-2-diabetes", "etype": "fact"}
 {"src": "fingolimod", "rel": "treats", "dst": "multiple-sclerosis", "etype": "fact"}
-{"src": "fluoxetine", "rel": "treats", "dst": "other", "etype": "fact"}
+{"src": "fluoxetine", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "fluticasone furoate/umeclidinium/vilanterol", "rel": "treats", "dst": "asthma", "etype": "fact"}
 {"src": "fluticasone furoate/umeclidinium/vilanterol", "rel": "treats", "dst": "copd", "etype": "fact"}
 {"src": "fluticasone/salmeterol", "rel": "treats", "dst": "asthma", "etype": "fact"}
@@ -5946,7 +5975,7 @@
 {"src": "lorlatinib", "rel": "treats", "dst": "lung-cancer", "etype": "fact"}
 {"src": "lubiprostone", "rel": "treats", "dst": "gi-other", "etype": "fact"}
 {"src": "lumacaftor/ivacaftor", "rel": "treats", "dst": "cystic-fibrosis", "etype": "fact"}
-{"src": "lumateperone", "rel": "treats", "dst": "depression", "etype": "fact"}
+{"src": "lumateperone", "rel": "treats", "dst": "bipolar-disorder", "etype": "fact"}
 {"src": "lumateperone", "rel": "treats", "dst": "schizophrenia", "etype": "fact"}
 {"src": "lunsekimig", "rel": "treats", "dst": "asthma", "etype": "fact"}
 {"src": "lunsekimig", "rel": "treats", "dst": "copd", "etype": "fact"}
@@ -6011,6 +6040,7 @@
 {"src": "octocog alfa / damoctocog alfa pegol", "rel": "treats", "dst": "hemophilia", "etype": "fact"}
 {"src": "odronextamab", "rel": "treats", "dst": "lymphoma", "etype": "fact"}
 {"src": "ofatumumab", "rel": "treats", "dst": "multiple-sclerosis", "etype": "fact"}
+{"src": "olanzapine", "rel": "treats", "dst": "bipolar-disorder", "etype": "fact"}
 {"src": "olanzapine", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "olanzapine", "rel": "treats", "dst": "schizophrenia", "etype": "fact"}
 {"src": "olaparib", "rel": "treats", "dst": "gi-cancer", "etype": "fact"}
@@ -6048,7 +6078,6 @@
 {"src": "paclitaxel nanoparticle", "rel": "treats", "dst": "lung-cancer", "etype": "fact"}
 {"src": "palbociclib", "rel": "treats", "dst": "breast-cancer", "etype": "fact"}
 {"src": "paliperidone", "rel": "treats", "dst": "schizophrenia", "etype": "fact"}
-{"src": "paliperidone palmitate", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "paliperidone palmitate", "rel": "treats", "dst": "schizophrenia", "etype": "fact"}
 {"src": "paltusotine", "rel": "treats", "dst": "other", "etype": "fact"}
 {"src": "panitumumab", "rel": "treats", "dst": "colorectal-cancer", "etype": "fact"}
@@ -6160,6 +6189,7 @@
 {"src": "sefaxersen", "rel": "treats", "dst": "other", "etype": "fact"}
 {"src": "seladelpar", "rel": "treats", "dst": "other", "etype": "fact"}
 {"src": "selexipag", "rel": "treats", "dst": "pulmonary-arterial-hypertension", "etype": "fact"}
+{"src": "seltorexant", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "seltorexant", "rel": "treats", "dst": "sleep", "etype": "fact"}
 {"src": "semaglutide", "rel": "treats", "dst": "chronic-kidney-disease", "etype": "fact"}
 {"src": "semaglutide", "rel": "treats", "dst": "dyslipidemia", "etype": "fact"}
@@ -6262,7 +6292,7 @@
 {"src": "volanesorsen", "rel": "treats", "dst": "other", "etype": "fact"}
 {"src": "volrustomig", "rel": "treats", "dst": "head-neck-cancer", "etype": "fact"}
 {"src": "vonoprazan", "rel": "treats", "dst": "other", "etype": "fact"}
-{"src": "vortioxetine", "rel": "treats", "dst": "other", "etype": "fact"}
+{"src": "vortioxetine", "rel": "treats", "dst": "depression", "etype": "fact"}
 {"src": "xaluritamig", "rel": "treats", "dst": "prostate-cancer", "etype": "fact"}
 {"src": "xanomeline-trospium", "rel": "treats", "dst": "schizophrenia", "etype": "fact"}
 {"src": "zasocitinib", "rel": "treats", "dst": "psoriasis", "etype": "fact"}

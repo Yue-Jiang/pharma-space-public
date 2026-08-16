@@ -65,7 +65,7 @@ status: generated
 | KRAS | 2: amgen, bristol-myers-squibb | adagrasib, sotorasib |  |  |
 | MET | 2: abbvie, johnson-and-johnson | amivantamab, telisotuzumab vedotin |  |  |
 | PDE4 | 2: amgen, merck | apremilast, ensifentrine |  |  |
-| PD-L1 | 2: astrazeneca, roche | atezolizumab, durvalumab | 1 |  |
+| PD-L1 | 2: astrazeneca, roche | atezolizumab, durvalumab |  |  |
 | KIT | 2: bayer, sanofi | avapritinib, regorafenib |  |  |
 | PDGFRA | 2: bayer, sanofi | avapritinib, regorafenib |  |  |
 | CTLA-4 | 2: akeso, bristol-myers-squibb | cadonilimab, ipilimumab |  |  |
