@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: gsk
-updated: 2026-08-14
+updated: 2026-08-16
 status: curated
 ---
 
@@ -82,7 +82,7 @@ Key bets for 2025–2026:
 - **HIV beyond dolutegravir.** ViiV's long-acting injectables (Cabenuva, Apretude — 30% of US HIV sales) plus ultra-long-acting regimens (Q4M dosing; CUATRO phase III) to bridge the LOE.
 - **MASH.** Efimosfermin (FGF21 analog) entered phase III in 2025.
 
-Setbacks temper the story: camlipixant (the $2B Bellus asset) was discontinued for refractory chronic cough in July 2026 after mixed CALM-1/CALM-2 results, and the belrestotug (TIGIT) program was terminated in 2025 with a £471M impairment.
+Setbacks temper the story: GSK discontinued camlipixant's refractory chronic cough program in July 2026 after mixed CALM-1/CALM-2 results, although the molecule continues in the Phase IIb BALANCE trial for irritable bowel syndrome. The belrestotug (TIGIT) program was terminated in 2025 with a £471M impairment.
 
 | Asset | Modality | Stage (mid-2026) |
 |---|---|---|
@@ -99,7 +99,7 @@ Setbacks temper the story: camlipixant (the $2B Bellus asset) was discontinued f
 - **Vaccine concentration and US policy:** Shingrix (£3.6B) has plateaued in the US ("harder-to-reach consumers"); Arexvy fell ~50% from its 2023 peak after ACIP narrowed RSV recommendations; further US vaccine-policy turbulence (ACIP overhaul) is a structural risk to a £9.2B segment.
 - **Trelegy LOE ~2030:** £3.0B at risk from the largest General Medicines product (US generic entry estimated 2030).
 - **IRA / pricing:** Medicare Part D redesign already pressuring US channel pricing (called out in 2025 results); potential Medicare negotiation exposure for mature brands; UK/EU pricing pressure.
-- **Pipeline execution:** camlipixant failure (2026) and belrestotug termination (2025) show conversion risk in the very pipeline expected to fill the 2031 gap; Blenrep returned with a narrower-than-hoped US label.
+- **Pipeline execution:** camlipixant's chronic cough failure (2026) and belrestotug termination (2025) show conversion risk in the very pipeline expected to fill the 2031 gap; camlipixant remains active in IBS, and Blenrep returned with a narrower-than-hoped US label.
 - **Residual litigation:** ~7% of Zantac state cases sat outside the 2024 settlement plus federal appeal risk (largely resolved economics, est.); ordinary-course IP challenges on Trelegy and HIV patents.
 
 ## Sources

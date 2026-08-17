@@ -40,20 +40,20 @@ DISPLAY = {
 def disp(s):
     return DISPLAY.get(s, s.replace("-", " ").title())
 
-owned_by = defaultdict(list)
+portfolio_by = defaultdict(list)
 acts, failed_on = defaultdict(set), defaultdict(set)
 for e in edges:
-    if e["rel"] == "owns":
-        owned_by[e["dst"]].append(e["src"])
+    if e["rel"] == "portfolio_includes":
+        portfolio_by[e["dst"]].append(e["src"])
     elif e["rel"] == "acts_on":
         acts[e["dst"]].add(e["src"])
-    elif e["rel"] == "failed_on":
+    elif e["rel"] == "failed_on" and e.get("scope") == "program-death":
         failed_on[e["dst"]].add(e["src"])
 
 tgt_cos = {}
 for t, gens in acts.items():
-    live = [g for g in gens if mol.get(g, {}).get("phase") != "failed"]
-    cos = {c for g in live for c in owned_by[g]}
+    live = [g for g in gens if mol.get(g, {}).get("phase") in {"marketed", "legacy"}]
+    cos = {c for g in live for c in portfolio_by[g]}
     if len(cos) >= MIN_COMPANIES:
         tgt_cos[t] = cos
 top = sorted(tgt_cos.items(), key=lambda kv: (len(kv[1]), kv[0]))[-TOP_N:]

@@ -1,0 +1,537 @@
+{
+  "version": 1,
+  "description": "Exact indication concepts whose multiword meaning must outrank generic keyword rules.",
+  "concepts": {
+    "carcinoid-syndrome": {
+      "aliases": [
+        "carcinoid syndrome"
+      ],
+      "area": "oncology"
+    },
+    "dravet-syndrome": {
+      "aliases": [
+        "dravet syndrome"
+      ],
+      "parent": "epilepsy",
+      "area": "neuroscience"
+    },
+    "facioscapulohumeral-muscular-dystrophy": {
+      "aliases": [
+        "facioscapulohumeral muscular dystrophy",
+        "fshd"
+      ],
+      "area": "rare"
+    },
+    "focal-segmental-glomerulosclerosis": {
+      "aliases": [
+        "focal segmental glomerulosclerosis",
+        "primary fsgs",
+        "fsgs"
+      ],
+      "area": "rare"
+    },
+    "polycythemia-vera": {
+      "aliases": [
+        "polycythemia vera"
+      ],
+      "parent": "mpn",
+      "area": "oncology"
+    },
+    "attr-amyloidosis": {
+      "aliases": [
+        "hereditary transthyretin-mediated amyloid polyneuropathy",
+        "transthyretin amyloid cardiomyopathy",
+        "transthyretin amyloidosis",
+        "attr amyloidosis"
+      ],
+      "parent": "amyloidosis",
+      "area": "rare"
+    },
+    "bipolar-disorder": {
+      "aliases": [
+        "bipolar i disorder",
+        "bipolar ii disorder",
+        "bipolar disorder",
+        "bipolar i depression",
+        "bipolar depression"
+      ],
+      "area": "neuroscience"
+    },
+    "beta-thalassemia": {
+      "aliases": [
+        "beta thalassemia",
+        "thalassemia"
+      ],
+      "parent": "hemoglobinopathy",
+      "area": "rare"
+    },
+    "al-amyloidosis": {
+      "aliases": [
+        "light chain amyloidosis",
+        "al amyloidosis"
+      ],
+      "parent": "amyloidosis",
+      "area": "rare"
+    },
+    "alpha-1-antitrypsin-deficiency-liver-disease": {
+      "aliases": [
+        "alpha-1 antitrypsin deficiency-associated liver disease",
+        "alpha-1 antitrypsin deficiency liver disease"
+      ],
+      "area": "rare"
+    },
+    "amyloidosis": {
+      "aliases": [
+        "cardiac amyloidosis",
+        "amyloidosis"
+      ],
+      "area": "rare"
+    },
+    "celiac-disease": {
+      "aliases": [
+        "celiac disease",
+        "coeliac disease"
+      ],
+      "area": "immunology"
+    },
+    "cardiovascular-events": {
+      "aliases": [
+        "cardiovascular event prevention",
+        "cardiovascular risk reduction",
+        "coronary artery disease prevention"
+      ],
+      "area": "cardiometabolic"
+    },
+    "cervical-cancer": {
+      "aliases": [
+        "cervical cancer"
+      ],
+      "area": "oncology"
+    },
+    "congenital-adrenal-hyperplasia": {
+      "aliases": [
+        "congenital adrenal hyperplasia"
+      ],
+      "area": "rare"
+    },
+    "crohns-disease": {
+      "aliases": [
+        "crohn's disease",
+        "crohn disease",
+        "crohn's",
+        "crohn"
+      ],
+      "parent": "ibd",
+      "area": "immunology"
+    },
+    "cushing-syndrome": {
+      "aliases": [
+        "cushing's syndrome",
+        "cushing syndrome"
+      ],
+      "area": "rare"
+    },
+    "cytomegalovirus-infection": {
+      "aliases": [
+        "cytomegalovirus prophylaxis in transplant patients",
+        "cmv prophylaxis in transplant patients",
+        "cmv prevention in transplant recipients",
+        "cytomegalovirus",
+        "cmv"
+      ],
+      "area": "vaccines-id"
+    },
+    "dengue": {
+      "aliases": [
+        "dengue fever",
+        "dengue"
+      ],
+      "area": "vaccines-id"
+    },
+    "depression": {
+      "aliases": [
+        "major depressive disorder",
+        "major depression",
+        "depression"
+      ],
+      "area": "neuroscience"
+    },
+    "diabetes-mellitus": {
+      "aliases": [
+        "diabetes mellitus",
+        "diabetes"
+      ],
+      "area": "cardiometabolic"
+    },
+    "hemoglobinopathy": {
+      "aliases": [],
+      "area": "rare"
+    },
+    "hereditary-angioedema": {
+      "aliases": [
+        "hereditary angioedema",
+        "hae"
+      ],
+      "area": "rare"
+    },
+    "hereditary-angioedema-attacks": {
+      "aliases": [
+        "hereditary angioedema attack prevention",
+        "prevention of hereditary angioedema attacks",
+        "hereditary angioedema attacks"
+      ],
+      "area": "rare"
+    },
+    "hemophilia-bleeding-episodes": {
+      "aliases": [
+        "prevention of bleeding episodes in hemophilia a",
+        "hemophilia a bleeding episode prevention",
+        "hemophilia bleeding episodes"
+      ],
+      "area": "rare"
+    },
+    "endometrial-cancer": {
+      "aliases": [
+        "endometrial cancer"
+      ],
+      "area": "oncology"
+    },
+    "ibd": {
+      "aliases": [
+        "inflammatory bowel disease",
+        "ibd"
+      ],
+      "area": "immunology"
+    },
+    "irritable-bowel-syndrome": {
+      "aliases": [
+        "irritable bowel syndrome",
+        "ibs-d",
+        "ibs-m",
+        "ibs"
+      ],
+      "area": "other"
+    },
+    "multifocal-motor-neuropathy": {
+      "aliases": [
+        "multifocal motor neuropathy"
+      ],
+      "area": "neuroscience"
+    },
+    "primary-immunodeficiency": {
+      "aliases": [
+        "primary immunodeficiency",
+        "primary humoral immunodeficiency"
+      ],
+      "area": "immunology"
+    },
+    "primary-biliary-cholangitis": {
+      "aliases": [
+        "primary biliary cholangitis",
+        "pbc"
+      ],
+      "area": "rare"
+    },
+    "ischemic-stroke": {
+      "aliases": [
+        "secondary stroke prevention",
+        "stroke prevention",
+        "non-cardioembolic ischemic stroke",
+        "ischemic stroke"
+      ],
+      "area": "cardiometabolic"
+    },
+    "inflammatory-arthritis": {
+      "aliases": [],
+      "area": "immunology"
+    },
+    "flea-tick-infestation": {
+      "aliases": [
+        "flea and tick",
+        "fleas and ticks"
+      ],
+      "area": "other"
+    },
+    "obstructive-sleep-apnea": {
+      "aliases": [
+        "obstructive sleep apnea",
+        "sleep apnea"
+      ],
+      "area": "respiratory"
+    },
+    "mash": {
+      "aliases": [
+        "metabolic dysfunction-associated steatohepatitis",
+        "nonalcoholic steatohepatitis",
+        "nash",
+        "mash"
+      ],
+      "area": "cardiometabolic"
+    },
+    "plaque-psoriasis": {
+      "aliases": [
+        "plaque psoriasis"
+      ],
+      "parent": "psoriasis",
+      "area": "immunology"
+    },
+    "psoriasis": {
+      "aliases": [
+        "generalized pustular psoriasis",
+        "pustular psoriasis",
+        "psoriasis"
+      ],
+      "area": "immunology"
+    },
+    "psoriatic-arthritis": {
+      "aliases": [
+        "psoriatic arthritis",
+        "psa"
+      ],
+      "parent": "inflammatory-arthritis",
+      "area": "immunology"
+    },
+    "schizoaffective-disorder": {
+      "aliases": [
+        "schizoaffective disorder"
+      ],
+      "area": "neuroscience"
+    },
+    "systemic-lupus-erythematosus": {
+      "aliases": [
+        "systemic lupus erythematosus",
+        "sle"
+      ],
+      "area": "immunology"
+    },
+    "systemic-sclerosis": {
+      "aliases": [
+        "systemic sclerosis",
+        "ssc"
+      ],
+      "area": "immunology"
+    },
+    "sickle-cell": {
+      "aliases": [
+        "sickle cell disease",
+        "sickle cell"
+      ],
+      "parent": "hemoglobinopathy",
+      "area": "rare"
+    },
+    "thyroid-eye-disease": {
+      "aliases": [
+        "thyroid eye disease",
+        "thyroid eye"
+      ],
+      "area": "immunology"
+    },
+    "type-1-diabetes": {
+      "aliases": [
+        "type 1 diabetes mellitus",
+        "type i diabetes mellitus",
+        "type 1 diabetes",
+        "type i diabetes",
+        "t1d"
+      ],
+      "parent": "diabetes-mellitus",
+      "area": "cardiometabolic"
+    },
+    "venous-thromboembolism": {
+      "aliases": [
+        "cancer-associated venous thromboembolism",
+        "venous thromboembolism",
+        "deep vein thrombosis",
+        "pulmonary embolism",
+        "blood clots",
+        "thrombosis",
+        "dvt",
+        "vte",
+        "pe"
+      ],
+      "area": "cardiometabolic"
+    },
+    "type-2-diabetes": {
+      "aliases": [
+        "type 2 diabetes mellitus",
+        "type ii diabetes mellitus",
+        "type 2 diabetes",
+        "type ii diabetes",
+        "t2d"
+      ],
+      "parent": "diabetes-mellitus",
+      "area": "cardiometabolic"
+    },
+    "hypertension": {
+      "aliases": [
+        "uncontrolled hypertension",
+        "resistant hypertension",
+        "hypertension"
+      ],
+      "area": "cardiometabolic"
+    },
+    "iga-nephropathy": {
+      "aliases": [
+        "iga nephropathy"
+      ],
+      "area": "rare"
+    },
+    "sjogrens-disease": {
+      "aliases": [
+        "sjogren's disease",
+        "sjogren disease",
+        "sjogrens disease",
+        "sjögren's disease",
+        "sjögren disease"
+      ],
+      "area": "immunology"
+    },
+    "recurrent-pericarditis": {
+      "aliases": [
+        "recurrent pericarditis"
+      ],
+      "area": "cardiometabolic"
+    },
+    "chronic-graft-versus-host-disease": {
+      "aliases": [
+        "chronic graft-versus-host disease",
+        "chronic graft versus host disease",
+        "chronic gvhd",
+        "gvhd"
+      ],
+      "area": "immunology"
+    },
+    "neuromuscular-blockade-reversal": {
+      "aliases": [
+        "reversal of neuromuscular blockade",
+        "neuromuscular blockade reversal"
+      ],
+      "area": "other"
+    },
+    "familial-chylomicronemia-syndrome": {
+      "aliases": [
+        "familial chylomicronemia syndrome",
+        "fcs"
+      ],
+      "area": "rare"
+    },
+    "anca-associated-vasculitis": {
+      "aliases": [
+        "granulomatosis with polyangiitis",
+        "microscopic polyangiitis",
+        "anca-associated vasculitis",
+        "anca vasculitis"
+      ],
+      "area": "immunology"
+    },
+    "myotonic-dystrophy-type-1": {
+      "aliases": [
+        "myotonic dystrophy type 1",
+        "dm1"
+      ],
+      "area": "rare"
+    },
+    "b-cell-acute-lymphoblastic-leukemia": {
+      "aliases": [
+        "adult relapsed/refractory b-cell precursor all",
+        "b-cell precursor acute lymphoblastic leukemia",
+        "b-cell acute lymphoblastic leukemia",
+        "b-cell all"
+      ],
+      "parent": "leukemia",
+      "area": "oncology"
+    },
+    "cancer-cachexia": {
+      "aliases": [
+        "cancer cachexia"
+      ],
+      "area": "oncology"
+    },
+    "bronchiectasis": {
+      "aliases": [
+        "bronchiectasis"
+      ],
+      "area": "respiratory"
+    },
+    "sod1-amyotrophic-lateral-sclerosis": {
+      "aliases": [
+        "sod1 amyotrophic lateral sclerosis",
+        "sod1-mutation als",
+        "sod1 als"
+      ],
+      "area": "neuroscience"
+    },
+    "elevated-lipoprotein-a": {
+      "aliases": [
+        "elevated lipoprotein(a)",
+        "elevated lp(a)"
+      ],
+      "area": "cardiometabolic"
+    },
+    "pompe-disease": {
+      "aliases": [
+        "pompe disease"
+      ],
+      "area": "rare"
+    },
+    "urinary-tract-infection": {
+      "aliases": [
+        "uncomplicated urinary tract infections",
+        "complicated urinary tract infection",
+        "urinary tract infection"
+      ],
+      "area": "vaccines-id"
+    },
+    "cardiovascular-inflammation": {
+      "aliases": [
+        "cardiovascular inflammation"
+      ],
+      "area": "cardiometabolic"
+    },
+    "acromegaly": {
+      "aliases": [
+        "acromegaly"
+      ],
+      "area": "rare"
+    },
+    "gastroenteropancreatic-neuroendocrine-tumors": {
+      "aliases": [
+        "gastroenteropancreatic neuroendocrine tumors",
+        "gastroenteropancreatic neuroendocrine tumours",
+        "gep-nets",
+        "gep nets"
+      ],
+      "area": "oncology"
+    },
+    "ebola-virus-disease": {
+      "aliases": [
+        "ebola virus (zaire) infection",
+        "ebola virus infection",
+        "ebola virus disease",
+        "ebola"
+      ],
+      "area": "vaccines-id"
+    },
+    "hidradenitis-suppurativa": {
+      "aliases": [
+        "hidradenitis suppurativa"
+      ],
+      "area": "immunology"
+    },
+    "chronic-inflammatory-demyelinating-polyneuropathy": {
+      "aliases": [
+        "chronic inflammatory demyelinating polyneuropathy",
+        "cidp"
+      ],
+      "area": "neuroscience"
+    },
+    "ulcerative-colitis": {
+      "aliases": [
+        "ulcerative colitis",
+        "uc"
+      ],
+      "parent": "ibd",
+      "area": "immunology"
+    }
+  }
+}

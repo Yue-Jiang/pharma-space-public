@@ -29,10 +29,24 @@ edges = [json.loads(l) for l in open(os.path.join(G, "edges.jsonl"))]
 by_id = {n["id"]: n for n in nodes}
 mol = {n["id"]: n for n in nodes if n["kind"] == "molecule"}
 
+claims_path = os.path.join(G, "claims.jsonl")
+claims = [json.loads(l) for l in open(claims_path)] if os.path.exists(claims_path) else []
+claims_by_id = {c["id"]: c for c in claims}
+indication_schema_path = os.path.join(G, "schema", "indications.json")
+indication_schema = json.load(open(indication_schema_path)) if os.path.exists(indication_schema_path) else {"concepts": {}}
+indication_concepts = indication_schema.get("concepts", {})
+
+HAS_PRIVATE_CACHE = os.path.isdir(os.path.join(G, "cache"))
 override_path = os.path.join(G, "cache", "modality_overrides.json")
 modality_overrides = json.load(open(override_path)) if os.path.exists(override_path) else {}
 graveyard_path = os.path.join(G, "cache", "graveyard.json")
 graveyard = json.load(open(graveyard_path)) if os.path.exists(graveyard_path) else {}
+targets_path = os.path.join(G, "cache", "targets.json")
+target_cache = json.load(open(targets_path)) if os.path.exists(targets_path) else {}
+sales_path = os.path.join(G, "cache", "sales.json")
+sales_cache = json.load(open(sales_path)) if os.path.exists(sales_path) else {}
+development_path = os.path.join(G, "cache", "development.json")
+development_cache = json.load(open(development_path)) if os.path.exists(development_path) else {}
 
 findings = []  # (level, check, message, ids)
 def add(level, check, msg, ids=()):
@@ -51,6 +65,125 @@ if dupe_ids:
 self_loops = {e["src"] for e in edges if e["src"] == e["dst"]}
 if self_loops:
     add("ERROR", "self-loops", "node related to itself", self_loops)
+
+# ---------------------------------------------------- source-backed indication claims
+dupe_claim_ids = [i for i, c in Counter(c["id"] for c in claims).items() if c > 1]
+if dupe_claim_ids:
+    add("ERROR", "duplicate-claim-ids", "same claim id appears more than once", dupe_claim_ids)
+
+INDICATION_RELATIONS = {"treats", "prevents", "studied_for"}
+indication_edges = [
+    e for e in edges if e.get("rel") in INDICATION_RELATIONS and e.get("etype") == "fact"
+]
+missing_claim_links = {
+    f"{e['src']} {e['rel']} {e['dst']}" for e in indication_edges if not e.get("claim_id")
+}
+unknown_claim_links = {
+    f"{e['src']} {e['rel']} {e['dst']} [{e.get('claim_id')}]" for e in indication_edges
+    if e.get("claim_id") and e["claim_id"] not in claims_by_id
+}
+claim_edge_mismatches = set()
+edge_claim_ids = set()
+for e in indication_edges:
+    claim_id = e.get("claim_id")
+    if not claim_id or claim_id not in claims_by_id:
+        continue
+    edge_claim_ids.add(claim_id)
+    c = claims_by_id[claim_id]
+    if (c.get("subject"), c.get("relation"), c.get("object")) != (e["src"], e["rel"], e["dst"]):
+        claim_edge_mismatches.add(
+            f"{claim_id} [claim={c.get('subject')}->{c.get('object')}; edge={e['src']}->{e['dst']}]"
+        )
+    if c.get("phase") != e.get("phase") or c.get("phase") != mol.get(e["src"], {}).get("phase"):
+        claim_edge_mismatches.add(
+            f"{claim_id} [claim phase={c.get('phase')}; edge phase={e.get('phase')}; "
+            f"node phase={mol.get(e['src'], {}).get('phase')}]"
+        )
+    if c.get("relation") == "studied_for" and c.get("intended_use") != e.get("intended_use"):
+        claim_edge_mismatches.add(
+            f"{claim_id} [claim intent={c.get('intended_use')}; edge intent={e.get('intended_use')}]"
+        )
+    if (c.get("development_stage"), c.get("study"), c.get("study_status"),
+            c.get("status_as_of")) != (
+            e.get("development_stage"), e.get("study"), e.get("study_status"),
+            e.get("status_as_of")):
+        claim_edge_mismatches.add(
+            f"{claim_id} [claim development={c.get('development_stage')}/{c.get('study')}; "
+            f"claim status={c.get('study_status')}/{c.get('status_as_of')}; "
+            f"edge development={e.get('development_stage')}/{e.get('study')}; "
+            f"edge status={e.get('study_status')}/{e.get('status_as_of')}]"
+        )
+orphan_claims = {
+    c["id"] for c in claims
+    if c.get("relation") in INDICATION_RELATIONS and c["id"] not in edge_claim_ids
+}
+bad_claim_provenance = set()
+claim_relation_conflicts = set()
+claim_phase_conflicts = set()
+prevention_language = re.compile(r"\bprevent(?:ion|ive)?\b|\bprophylaxis\b|\bprep\b", re.I)
+treatment_language = re.compile(r"\btreat(?:ment|s|ed|ing)?\b|\bacute\b", re.I)
+for c in claims:
+    source = c.get("source", "")
+    evidence = c.get("evidence")
+    if not source or not evidence:
+        bad_claim_provenance.add(c.get("id", "<missing-id>"))
+    elif not source.startswith(("http://", "https://")) and not os.path.exists(os.path.join(ROOT, source)):
+        bad_claim_provenance.add(f"{c.get('id')} [missing source: {source}]")
+    context = " ".join(c.get("context") or [])
+    class_text = mol.get(c.get("subject"), {}).get("class", "")
+    preventive_support = bool(prevention_language.search(context) or re.search(r"\bvaccine\b", class_text, re.I))
+    effective_relation = c.get("intended_use") if c.get("relation") == "studied_for" else c.get("relation")
+    if effective_relation == "prevents" and not preventive_support:
+        claim_relation_conflicts.add(f"{c.get('id')} [prevents lacks preventive evidence]")
+    if (effective_relation == "treats" and prevention_language.search(context)
+            and not treatment_language.search(context)):
+        claim_relation_conflicts.add(f"{c.get('id')} [preventive evidence labeled treats]")
+    subject_phase = mol.get(c.get("subject"), {}).get("phase")
+    if subject_phase == "pipeline" and c.get("relation") != "studied_for":
+        claim_phase_conflicts.add(f"{c.get('id')} [pipeline claim uses {c.get('relation')}]")
+    if (subject_phase != "pipeline" and c.get("relation") == "studied_for"
+            and not c.get("development_stage")):
+        claim_phase_conflicts.add(f"{c.get('id')} [non-pipeline claim uses studied_for]")
+    if c.get("relation") == "studied_for" and effective_relation not in {"treats", "prevents"}:
+        claim_phase_conflicts.add(f"{c.get('id')} [studied_for lacks intended_use]")
+if missing_claim_links:
+    add("ERROR", "indication-edge-missing-claim",
+        "every factual indication edge must link to a source-backed claim", missing_claim_links)
+if unknown_claim_links:
+    add("ERROR", "indication-edge-unknown-claim",
+        "indication edge references a claim id that does not exist", unknown_claim_links)
+if claim_edge_mismatches:
+    add("ERROR", "indication-claim-edge-mismatch",
+        "claim subject/relation/object disagrees with its graph edge", claim_edge_mismatches)
+if orphan_claims:
+    add("ERROR", "indication-claim-orphan",
+        "source-backed indication claim has no matching graph edge", orphan_claims)
+if bad_claim_provenance:
+    add("ERROR", "indication-claim-missing-provenance",
+        "indication claims require existing sources and non-empty evidence", bad_claim_provenance)
+if claim_relation_conflicts:
+    add("ERROR", "indication-use-relation-conflict",
+        "treatment versus prevention relation disagrees with source context", claim_relation_conflicts)
+if claim_phase_conflicts:
+    add("ERROR", "indication-phase-relation-conflict",
+        "pipeline uses must be studied_for and established uses must be treats/prevents",
+        claim_phase_conflicts)
+
+expected_subtypes = {
+    (child, record["parent"]) for child, record in indication_concepts.items()
+    if record.get("parent") and child in by_id
+}
+observed_subtypes = {
+    (e["src"], e["dst"]) for e in edges if e.get("rel") == "subtype_of"
+}
+missing_subtypes = {f"{a} -> {b}" for a, b in expected_subtypes - observed_subtypes}
+unexpected_subtypes = {f"{a} -> {b}" for a, b in observed_subtypes - expected_subtypes}
+if missing_subtypes:
+    add("ERROR", "indication-hierarchy-missing",
+        "exact indication concept is missing its declared parent edge", missing_subtypes)
+if unexpected_subtypes:
+    add("ERROR", "indication-hierarchy-unexpected",
+        "subtype edge is not declared in the indication schema", unexpected_subtypes)
 
 # ---------------------------------------------------------------- catch-all buckets (the point of this script)
 unclassified_mod = {g for g, n in mol.items() if n.get("modality") in (None, "unclassified")}
@@ -125,11 +258,11 @@ if non_molecule_graveyard_nodes:
         "trial, platform, or programme-family graveyard entry became a molecule node",
         non_molecule_graveyard_nodes)
 
-treats = defaultdict(set)
+uses = defaultdict(set)
 for e in edges:
-    if e["rel"] == "treats": treats[e["src"]].add(e["dst"])
-only_other = {g for g in mol if treats.get(g) == {"other"}}
-no_ind = {g for g in mol if g not in treats}
+    if e["rel"] in INDICATION_RELATIONS: uses[e["src"]].add(e["dst"])
+only_other = {g for g in mol if uses.get(g) == {"other"}}
+no_ind = {g for g in mol if g not in uses}
 if only_other:
     add("WARN", "indication-other-only",
         "molecules whose ONLY indication is the catch-all 'other' — add an IND_RULES pattern "
@@ -140,6 +273,381 @@ if no_ind:
 acts = defaultdict(set)
 for e in edges:
     if e["rel"] == "acts_on": acts[e["src"]].add(e["dst"])
+
+# Cycle-5 external audit: newer pipeline assets had explicit target language in
+# primary sources but stale/missing cache records, so the graph silently omitted
+# every one. Keep the 24 sampled assertions exact (including selective CDK4,
+# which must not be widened to CDK4/6), and require inspectable provenance.
+AUDITED_TARGETS_CYCLE_5 = {
+    ("abbv-400", "MET"),
+    ("arlo-cel", "GPRC5D"),
+    ("atirmociclib", "CDK4"),
+    ("bleximenib", "menin"),
+    ("brivekimig", "TNF-alpha"),
+    ("brivekimig", "OX40L"),
+    ("domvanalimab", "TIGIT"),
+    ("garetosmab", "activin-A"),
+    ("ifinatamab deruxtecan", "B7-H3"),
+    ("obrixtamig", "DLL3"),
+    ("obrixtamig", "CD3"),
+    ("pasritamig", "KLK2"),
+    ("pasritamig", "CD3"),
+    ("prifetrastat", "KAT6A"),
+    ("prifetrastat", "KAT6B"),
+    ("sigvotatug vedotin", "integrin beta-6"),
+    ("frexalimab", "CD40L"),
+    ("felzartamab", "CD38"),
+    ("inaxaplin", "APOL1"),
+    ("gocatamig", "DLL3"),
+    ("gocatamig", "CD3"),
+    ("bnt327", "PD-L1"),
+    ("bnt327", "VEGF-A"),
+    ("etentamig", "BCMA"),
+}
+audited_cache = []
+for generic, records in target_cache.items():
+    for record in records:
+        if record.get("audit_cycle") == 5:
+            audited_cache.append((generic, record))
+bad_audited_cache = {
+    f"{generic} -> {record.get('target', '<missing>')}"
+    for generic, record in audited_cache
+    if not record.get("source") or not record.get("evidence")
+}
+observed_audited_edges = {
+    (e["src"], e["dst"]): e for e in edges
+    if e.get("rel") == "acts_on" and (e["src"], e["dst"]) in AUDITED_TARGETS_CYCLE_5
+}
+missing_audited_targets = {
+    f"{generic} -> {target}"
+    for generic, target in AUDITED_TARGETS_CYCLE_5
+    if (generic, target) not in observed_audited_edges
+}
+unproven_audited_edges = {
+    f"{generic} -> {target}"
+    for (generic, target), edge in observed_audited_edges.items()
+    if not edge.get("source") or not edge.get("evidence")
+}
+if HAS_PRIVATE_CACHE and len(audited_cache) != 24:
+    bad_audited_cache.add(f"expected 24 cycle-5 target records, found {len(audited_cache)}")
+if bad_audited_cache:
+    add("ERROR", "audited-target-cache-provenance",
+        "cycle-5 externally audited target records require source and evidence",
+        bad_audited_cache)
+if missing_audited_targets or unproven_audited_edges:
+    add("ERROR", "audited-target-regression",
+        "cycle-5 target assertion is missing, widened, or lost generated provenance",
+        missing_audited_targets | unproven_audited_edges)
+
+# Cycle 9 returns to the largest remaining coverage gap, but audits action as
+# well as target identity. Exact selectivity matters: a PARP1-selective asset
+# must not be widened to the established PARP class, and both arms of a
+# bispecific or dual agonist must survive extraction with primary provenance.
+AUDITED_TARGET_ACTIONS_CYCLE_9 = {
+    ("amlitelimab", "OX40L"): "antagonist",
+    ("anitocabtagene autoleucel", "BCMA"): "engager",
+    ("bimagrumab", "ActRII"): "antagonist",
+    ("brigimadlin", "MDM2"): "inhibitor",
+    ("enicepatide", "GLP-1R"): "agonist",
+    ("enicepatide", "GIPR"): "agonist",
+    ("ianalumab", "BAFF-R"): "blocker",
+    ("itepekimab", "IL-33"): "antagonist",
+    ("iza-bren", "EGFR"): "binder",
+    ("iza-bren", "HER3"): "binder",
+    ("rilvegostomig", "PD-1"): "antagonist",
+    ("rilvegostomig", "TIGIT"): "antagonist",
+    ("volrustomig", "PD-1"): "antagonist",
+    ("volrustomig", "CTLA-4"): "antagonist",
+    ("fianlimab", "LAG-3"): "antagonist",
+    ("mezagitamab", "CD38"): "binder",
+    ("raludotatug deruxtecan", "CDH6"): "binder",
+    ("xaluritamig", "STEAP1"): "engager",
+    ("xaluritamig", "CD3"): "engager",
+    ("sasanlimab", "PD-1"): "antagonist",
+    ("saruparib", "PARP1"): "inhibitor",
+    ("zidesamtinib", "ROS1"): "inhibitor",
+    ("olatorepatide", "GLP-1R"): "agonist",
+    ("olatorepatide", "GIPR"): "agonist",
+}
+audited_target_actions = [
+    (generic, record) for generic, records in target_cache.items() for record in records
+    if record.get("audit_cycle") == 9
+]
+audited_target_action_cache = {
+    (generic, record.get("target")): record for generic, record in audited_target_actions
+}
+bad_target_action_cache = {
+    f"{generic} -> {record.get('target', '<missing>')}"
+    for generic, record in audited_target_actions
+    if generic not in mol or not record.get("source") or not record.get("evidence")
+    or record.get("action") not in {
+        "agonist", "antagonist", "inhibitor", "blocker", "degrader",
+        "silencer", "engager", "binder", "substitution",
+    }
+}
+if HAS_PRIVATE_CACHE and len(audited_target_actions) != 24:
+    bad_target_action_cache.add(
+        f"expected 24 cycle-9 target-action records, found {len(audited_target_actions)}"
+    )
+if HAS_PRIVATE_CACHE and set(audited_target_action_cache) != set(AUDITED_TARGET_ACTIONS_CYCLE_9):
+    bad_target_action_cache.add("cycle-9 audited molecule/target identity set changed")
+for key, expected_action in AUDITED_TARGET_ACTIONS_CYCLE_9.items():
+    record = audited_target_action_cache.get(key)
+    if record and record.get("action") != expected_action:
+        bad_target_action_cache.add(
+            f"{key[0]} -> {key[1]} action {record.get('action')} != {expected_action}"
+        )
+observed_target_action_edges = {
+    (edge.get("src"), edge.get("dst")): edge for edge in edges
+    if edge.get("rel") == "acts_on"
+    and (edge.get("src"), edge.get("dst")) in AUDITED_TARGET_ACTIONS_CYCLE_9
+}
+target_action_regressions = set()
+for key, expected_action in AUDITED_TARGET_ACTIONS_CYCLE_9.items():
+    edge = observed_target_action_edges.get(key)
+    record = audited_target_action_cache.get(key)
+    if (not edge or edge.get("action") != expected_action
+            or not edge.get("source") or not edge.get("evidence")
+            or (HAS_PRIVATE_CACHE and (
+                not record or edge.get("source") != record.get("source")
+                or edge.get("evidence") != record.get("evidence")
+            ))):
+        target_action_regressions.add(f"{key[0]} -> {key[1]} / {expected_action}")
+if bad_target_action_cache:
+    add("ERROR", "audited-target-action-cache-provenance",
+        "cycle-9 target-action records require exact identity, action, and primary evidence",
+        bad_target_action_cache)
+if target_action_regressions:
+    add("ERROR", "audited-target-action-regression",
+        "cycle-9 target identity, action, selectivity, or generated provenance was lost",
+        target_action_regressions)
+
+# Cycle 6 audited source-backed product sales. Exact component boundaries matter:
+# combined table rows must not be copied wholesale onto every molecule in the row.
+audited_sales = [
+    (generic, record) for generic, records in sales_cache.items() for record in records
+    if record.get("audit_cycle") == 6
+]
+bad_sales_cache = {
+    f"{generic} / {record.get('label', '<missing>')}"
+    for generic, record in audited_sales
+    if generic not in mol or not record.get("source") or not record.get("evidence")
+    or record.get("reported_currency") not in {"USD", "EUR", "GBP"}
+    or not isinstance(record.get("reported_bn"), (int, float))
+    or not isinstance(record.get("usd_bn"), (int, float))
+}
+sales_total_conflicts = {
+    generic for generic, records in sales_cache.items() if generic in mol
+    and abs((mol[generic].get("sales_2025_usd_bn") or 0)
+            - round(sum(r["usd_bn"] for r in records), 3)) > 0.0001
+}
+sales_component_conflicts = {
+    generic for generic, records in sales_cache.items() if generic in mol
+    and mol[generic].get("sales_2025_components") != records
+}
+if HAS_PRIVATE_CACHE and len(audited_sales) != 24:
+    bad_sales_cache.add(f"expected 24 cycle-6 sales records, found {len(audited_sales)}")
+if bad_sales_cache:
+    add("ERROR", "audited-sales-cache-provenance",
+        "cycle-6 externally audited sales require exact reported units and primary evidence",
+        bad_sales_cache)
+if sales_total_conflicts or sales_component_conflicts:
+    add("ERROR", "audited-sales-regression",
+        "source-backed sales components were lost, duplicated, or changed in the graph",
+        sales_total_conflicts | sales_component_conflicts)
+
+# Cycle 7 audited indication-specific development assertions. Portfolio status is
+# molecule-level, but clinical stage belongs to the molecule-indication claim. This
+# permits, for example, marketed remibrutinib for CSU to remain `marketed` while its
+# multiple-sclerosis program is represented as a sourced Phase 3 `studied_for` edge.
+audited_development = [
+    (generic, record) for generic, records in development_cache.items() for record in records
+    if record.get("audit_cycle") == 7
+]
+valid_development_stages = {"phase-1", "phase-1/2", "phase-2", "phase-2/3", "phase-3"}
+bad_development_cache = {
+    f"{generic} / {record.get('indication', '<missing>')}"
+    for generic, record in audited_development
+    if generic not in mol or by_id.get(record.get("indication"), {}).get("kind") != "indication"
+    or record.get("stage") not in valid_development_stages
+    or record.get("intended_use") not in {"treats", "prevents"}
+    or not re.fullmatch(r"NCT\d{8}", str(record.get("study", "")))
+    or record.get("source") != f"https://clinicaltrials.gov/study/{record.get('study')}"
+    or not record.get("evidence")
+}
+audited_development_keys = {
+    (generic, record["indication"]): record for generic, record in audited_development
+}
+observed_development_edges = {
+    (edge.get("src"), edge.get("dst")): edge for edge in indication_edges
+    if (edge.get("src"), edge.get("dst")) in audited_development_keys
+}
+development_regressions = set()
+for key, record in audited_development_keys.items():
+    edge = observed_development_edges.get(key)
+    if (not edge or edge.get("rel") != "studied_for"
+            or edge.get("intended_use") != record["intended_use"]
+            or edge.get("development_stage") != record["stage"]
+            or edge.get("study") != record["study"]
+            or edge.get("source") != record["source"]
+            or edge.get("evidence") != record["evidence"]):
+        development_regressions.add(f"{key[0]} -> {key[1]}")
+if HAS_PRIVATE_CACHE and len(audited_development) != 24:
+    bad_development_cache.add(
+        f"expected 24 cycle-7 development records, found {len(audited_development)}"
+    )
+if HAS_PRIVATE_CACHE and len(audited_development_keys) != len(audited_development):
+    bad_development_cache.add("duplicate cycle-7 molecule/indication development record")
+if bad_development_cache:
+    add("ERROR", "audited-development-cache-provenance",
+        "cycle-7 development records require exact stage, registered study, and primary evidence",
+        bad_development_cache)
+if development_regressions:
+    add("ERROR", "audited-development-regression",
+        "audited indication-specific development stage or investigational relation was lost",
+        development_regressions)
+
+# Cycle 8 audits the lifecycle state of a registered study. Phase alone cannot
+# distinguish active recruitment from a completed or terminated pivotal trial.
+# Preserve the registry's exact overall status and the date it was checked on the
+# indication-specific claim; an inactive study remains historical `studied_for`
+# evidence and must not silently look active.
+audited_study_status = [
+    (generic, record) for generic, records in development_cache.items() for record in records
+    if record.get("audit_cycle") == 8
+]
+valid_study_statuses = {
+    "not-yet-recruiting", "recruiting", "enrolling-by-invitation",
+    "active-not-recruiting", "suspended", "terminated", "completed", "withdrawn",
+}
+bad_study_status_cache = {
+    f"{generic} / {record.get('indication', '<missing>')}"
+    for generic, record in audited_study_status
+    if generic not in mol or by_id.get(record.get("indication"), {}).get("kind") != "indication"
+    or record.get("stage") not in valid_development_stages
+    or record.get("intended_use") not in {"treats", "prevents"}
+    or not re.fullmatch(r"NCT\d{8}", str(record.get("study", "")))
+    or record.get("source") != f"https://clinicaltrials.gov/study/{record.get('study')}"
+    or record.get("study_status") not in valid_study_statuses
+    or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(record.get("status_as_of", "")))
+    or not record.get("evidence")
+}
+audited_study_status_keys = {
+    (generic, record["indication"]): record for generic, record in audited_study_status
+}
+observed_study_status_edges = {
+    (edge.get("src"), edge.get("dst")): edge for edge in indication_edges
+    if (edge.get("src"), edge.get("dst")) in audited_study_status_keys
+}
+study_status_regressions = set()
+for key, record in audited_study_status_keys.items():
+    edge = observed_study_status_edges.get(key)
+    if (not edge or edge.get("rel") != "studied_for"
+            or edge.get("intended_use") != record["intended_use"]
+            or edge.get("development_stage") != record["stage"]
+            or edge.get("study") != record["study"]
+            or edge.get("study_status") != record["study_status"]
+            or edge.get("status_as_of") != record["status_as_of"]
+            or edge.get("source") != record["source"]
+            or edge.get("evidence") != record["evidence"]):
+        study_status_regressions.add(f"{key[0]} -> {key[1]}")
+if HAS_PRIVATE_CACHE and len(audited_study_status) != 24:
+    bad_study_status_cache.add(
+        f"expected 24 cycle-8 study-status records, found {len(audited_study_status)}"
+    )
+if HAS_PRIVATE_CACHE and len(audited_study_status_keys) != len(audited_study_status):
+    bad_study_status_cache.add("duplicate cycle-8 molecule/indication study-status record")
+if bad_study_status_cache:
+    add("ERROR", "audited-study-status-cache-provenance",
+        "cycle-8 development records require exact registered status, check date, and primary evidence",
+        bad_study_status_cache)
+if study_status_regressions:
+    add("ERROR", "audited-study-status-regression",
+        "audited registered study status or indication-specific development evidence was lost",
+        study_status_regressions)
+
+# Cycle 10 is a mixed capstone audit: for each fresh molecule it locks one
+# target/action assertion and three independent registered-development facts
+# (exact indication, phase, and lifecycle status). It also prevents the
+# elecoglipron/AZD5004 alias from splitting into contradictory molecule nodes.
+AUDITED_MIXED_TARGETS_CYCLE_10 = {
+    ("elecoglipron", "GLP-1R"): "agonist",
+    ("apecotrep", "TRPC6"): "inhibitor",
+    ("atumelnant", "MC2R"): "antagonist",
+    ("cemdisiran", "C5"): "silencer",
+    ("delpacibart braxlosiran", "DUX4"): "silencer",
+    ("gefurulimab", "C5"): "antagonist",
+    ("zorevunersen", "SCN1A"): "substitution",
+    ("paltusotine", "SST2"): "agonist",
+    ("patritumab deruxtecan", "HER3"): "binder",
+    ("pegozafermin", "FGF21R"): "agonist",
+    ("rusfertide", "ferroportin"): "blocker",
+    ("pelacarsen", "LPA"): "silencer",
+}
+audited_mixed_targets = [
+    (generic, record) for generic, records in target_cache.items() for record in records
+    if record.get("audit_cycle") == 10
+]
+audited_mixed_target_cache = {
+    (generic, record.get("target")): record for generic, record in audited_mixed_targets
+}
+audited_mixed_development = [
+    (generic, record) for generic, records in development_cache.items() for record in records
+    if record.get("audit_cycle") == 10
+]
+audited_mixed_development_cache = {
+    (generic, record.get("indication")): record
+    for generic, record in audited_mixed_development
+}
+mixed_regressions = set()
+if HAS_PRIVATE_CACHE and len(audited_mixed_targets) != 12:
+    mixed_regressions.add(
+        f"expected 12 cycle-10 target/action records, found {len(audited_mixed_targets)}"
+    )
+if HAS_PRIVATE_CACHE and set(audited_mixed_target_cache) != set(AUDITED_MIXED_TARGETS_CYCLE_10):
+    mixed_regressions.add("cycle-10 audited molecule/target identity set changed")
+for key, expected_action in AUDITED_MIXED_TARGETS_CYCLE_10.items():
+    record = audited_mixed_target_cache.get(key)
+    edge = next((e for e in edges if e.get("rel") == "acts_on"
+                 and (e.get("src"), e.get("dst")) == key), None)
+    if (not edge or edge.get("action") != expected_action
+            or not edge.get("source") or not edge.get("evidence")
+            or (HAS_PRIVATE_CACHE and (
+                not record or record.get("action") != expected_action
+                or not record.get("source") or not record.get("evidence")
+                or edge.get("source") != record.get("source")
+                or edge.get("evidence") != record.get("evidence")
+            ))):
+        mixed_regressions.add(f"{key[0]} -> {key[1]} / {expected_action}")
+if HAS_PRIVATE_CACHE and len(audited_mixed_development) != 12:
+    mixed_regressions.add(
+        f"expected 12 cycle-10 development records, found {len(audited_mixed_development)}"
+    )
+for key, record in audited_mixed_development_cache.items():
+    edge = next((e for e in indication_edges
+                 if (e.get("src"), e.get("dst")) == key), None)
+    if (not edge or edge.get("rel") != "studied_for"
+            or edge.get("intended_use") != record.get("intended_use")
+            or edge.get("development_stage") != record.get("stage")
+            or edge.get("study") != record.get("study")
+            or edge.get("study_status") != record.get("study_status")
+            or edge.get("status_as_of") != record.get("status_as_of")
+            or edge.get("source") != record.get("source")
+            or edge.get("evidence") != record.get("evidence")):
+        mixed_regressions.add(f"{key[0]} -> {key[1]} development bundle")
+if "azd5004" in mol:
+    mixed_regressions.add("AZD5004 duplicated as a molecule instead of an elecoglipron alias")
+elecoglipron = mol.get("elecoglipron", {})
+if (elecoglipron.get("phase") != "pipeline"
+        or not any("AZD5004" in brand for brand in elecoglipron.get("brands", []))):
+    mixed_regressions.add("elecoglipron/AZD5004 canonical identity or pipeline status changed")
+if mol.get("gefurulimab", {}).get("phase") != "pipeline":
+    mixed_regressions.add("gefurulimab investigational portfolio status changed")
+if mixed_regressions:
+    add("ERROR", "audited-cycle-10-mixed-regression",
+        "cycle-10 target, indication, phase, study status, provenance, or canonical identity was lost",
+        mixed_regressions)
+
 no_target = {g for g in mol if g not in acts and mol[g].get("modality") not in ("vaccine", "plasma-derived", "immunoglobulin")}
 if no_target:
     add("WARN", "target-missing",
@@ -256,6 +764,12 @@ if override_source_conflicts:
 # d) status vs graph membership: only marketed/legacy belong in the marketed graph
 idx_status = {}
 idx_used_for = defaultdict(set)
+investigational_status_conflicts = set()
+INVESTIGATIONAL_LANGUAGE = re.compile(
+    r"\binvestigational\b|\bpipeline candidate\b|\bclinical-stage candidate\b|"
+    r"\bcandidate in development\b",
+    re.I,
+)
 idx_path = os.path.join(ROOT, "reference", "02_drug_index.md")
 for line in open(idx_path):
     s = line.strip()
@@ -269,6 +783,15 @@ for line in open(idx_path):
         generic = re.sub(r"\s*\(.*?\)", "", c[1].lower()).strip()
         idx_status.setdefault(generic, set()).add(c[5])
         idx_used_for[generic].add(c[4].lower())
+        if c[5].lower() in {"marketed", "legacy"} and INVESTIGATIONAL_LANGUAGE.search(c[4]):
+            investigational_status_conflicts.add(
+                f"{generic} [{c[5].lower()}; source={c[4]}]"
+            )
+
+if investigational_status_conflicts:
+    add("ERROR", "investigational-status-conflict",
+        "source text describes an investigational pipeline candidate but status asserts approval",
+        investigational_status_conflicts)
 
 # d1) indication semantics that naive substring matching has previously broken.
 # A bipolar-depression phrase describes bipolar disorder, not unipolar
@@ -279,16 +802,83 @@ BIPOLAR_PHRASE = re.compile(
 )
 bipolar_as_depression = set()
 bronchitis_fallback = set()
+indication_phrase_conflicts = set()
+registry_aliases = []
+for concept, record in indication_concepts.items():
+    for alias in record.get("aliases", []):
+        tokens = [re.escape(t) for t in re.split(r"[\s-]+", alias.lower()) if t]
+        if tokens:
+            registry_aliases.append((len(alias), concept, re.compile(
+                r"(?<![a-z0-9])" + r"[\s-]+".join(tokens) + r"(?![a-z0-9])", re.I)))
+registry_aliases.sort(key=lambda item: (-item[0], item[1]))
 for generic, cells in idx_used_for.items():
+    if generic not in mol or mol[generic].get("phase") == "failed":
+        continue
     used_for = "; ".join(sorted(cells))
     without_bipolar = BIPOLAR_PHRASE.sub("", used_for)
-    if ("bipolar" in used_for and "depression" in treats.get(generic, set())
+    if ("bipolar" in used_for and "depression" in uses.get(generic, set())
             and "depress" not in without_bipolar):
         bipolar_as_depression.add(generic)
     if "bronchitis" in used_for and (
-            "bronchitis" not in treats.get(generic, set())
-            or "other" in treats.get(generic, set())):
+            "bronchitis" not in uses.get(generic, set())
+            or "other" in uses.get(generic, set())):
         bronchitis_fallback.add(generic)
+    observed = uses.get(generic, set())
+    normalized_used = re.sub(r"[\u2010-\u2015]", "-", used_for.lower())
+    remaining_exact = normalized_used
+    required_exact = set()
+    for _, concept, alias_pattern in registry_aliases:
+        if alias_pattern.search(remaining_exact):
+            required_exact.add(concept)
+            remaining_exact = alias_pattern.sub(" ", remaining_exact)
+    for concept in required_exact - observed:
+        indication_phrase_conflicts.add(f"{generic} [missing exact concept {concept}]")
+
+    without_psa = re.sub(r"\bpsoriatic arthritis\b|\bpsa\b", "", used_for, flags=re.I)
+    if re.search(r"\bpsoriatic arthritis\b|\bpsa\b", used_for, re.I):
+        if "psoriatic-arthritis" not in observed:
+            indication_phrase_conflicts.add(f"{generic} [missing psoriatic-arthritis]")
+        if "psoriasis" in observed and not re.search(r"\bpsoriasis\b", without_psa, re.I):
+            indication_phrase_conflicts.add(f"{generic} [psoriatic arthritis became psoriasis]")
+
+    without_uc = re.sub(r"\bulcerative colitis\b|\buc\b", "", used_for, flags=re.I)
+    if re.search(r"\bulcerative colitis\b|\buc\b", used_for, re.I):
+        if "ulcerative-colitis" not in observed:
+            indication_phrase_conflicts.add(f"{generic} [missing ulcerative-colitis]")
+        if "gi-other" in observed and not re.search(
+                r"\b(?:constipation|reflux|peptic ulcer|gastric ulcer|duodenal ulcer|irritable bowel)\b",
+                without_uc, re.I):
+            indication_phrase_conflicts.add(f"{generic} [ulcerative colitis became gi-other]")
+        if "ibd" in observed and not re.search(r"\binflammatory bowel disease\b|\bibd\b", without_uc, re.I):
+            indication_phrase_conflicts.add(f"{generic} [ulcerative colitis flattened to ibd]")
+
+    without_crohn = re.sub(r"\bcrohn(?:'s)?(?: disease)?\b", "", used_for, flags=re.I)
+    if re.search(r"\bcrohn(?:'s)?(?: disease)?\b", used_for, re.I):
+        if "crohns-disease" not in observed:
+            indication_phrase_conflicts.add(f"{generic} [missing crohns-disease]")
+        if "ibd" in observed and not re.search(r"\binflammatory bowel disease\b|\bibd\b", without_crohn, re.I):
+            indication_phrase_conflicts.add(f"{generic} [Crohn disease flattened to ibd]")
+
+    without_t1 = re.sub(r"\btype (?:1|i) diabetes(?: mellitus)?\b|\bt1d\b", "", used_for, flags=re.I)
+    if re.search(r"\btype (?:1|i) diabetes(?: mellitus)?\b|\bt1d\b", used_for, re.I):
+        if "type-1-diabetes" not in observed:
+            indication_phrase_conflicts.add(f"{generic} [missing type-1-diabetes]")
+        if "type-2-diabetes" in observed and not re.search(
+                r"\btype (?:2|ii) diabetes(?: mellitus)?\b|\bt2d\b", without_t1, re.I):
+            indication_phrase_conflicts.add(f"{generic} [type 1 diabetes became type 2]")
+
+    if "overactive bladder" in used_for:
+        if "urology-other" not in observed or "bladder-cancer" in observed:
+            indication_phrase_conflicts.add(f"{generic} [overactive bladder confused with bladder cancer]")
+    if "thyroid eye" in used_for:
+        if "thyroid-eye-disease" not in observed or "retinal-disease" in observed:
+            indication_phrase_conflicts.add(f"{generic} [thyroid eye disease confused with retinal disease]")
+    without_thal = re.sub(r"\b(?:beta )?thalassemia\b", "", used_for, flags=re.I)
+    if "thalassemia" in used_for:
+        if "beta-thalassemia" not in observed:
+            indication_phrase_conflicts.add(f"{generic} [missing beta-thalassemia]")
+        if "sickle-cell" in observed and "sickle" not in without_thal:
+            indication_phrase_conflicts.add(f"{generic} [thalassemia became sickle-cell]")
 if bipolar_as_depression:
     add("ERROR", "bipolar-collapsed-to-depression",
         "bipolar terminology without a separate depression indication generated a depression edge",
@@ -297,6 +887,10 @@ if bronchitis_fallback:
     add("ERROR", "bronchitis-mapped-to-other",
         "drug-index text explicitly names bronchitis but the graph omits bronchitis or retains other",
         bronchitis_fallback)
+if indication_phrase_conflicts:
+    add("ERROR", "indication-specific-phrase-conflict",
+        "specific source phrase was flattened, omitted, or mapped to an incompatible concept",
+        indication_phrase_conflicts)
 
 LIVE = {"marketed", "legacy", "pipeline"}
 wrong_tier = {g for g in mol if idx_status.get(g) and not (idx_status[g] & LIVE)
@@ -357,7 +951,14 @@ for _g, _n in mol.items():
     if _n.get("sales_2025_usd_bn"):
         for _b in (_n.get("brands") or [_g]):
             _graph_keys |= _brand_keys(_b)
-lost_sales = {k for k in _prose_sales if k not in _graph_keys}
+        for _component in _n.get("sales_2025_components") or []:
+            _graph_keys |= _brand_keys(_component.get("label", ""))
+def _sales_key_covered(key):
+    if key in _graph_keys:
+        return True
+    parts = {p.strip() for p in re.split(r"[/+]", key) if len(p.strip()) > 2}
+    return bool(parts) and parts <= _graph_keys
+lost_sales = {k for k in _prose_sales if not _sales_key_covered(k)}
 # only report the head of each multi-brand group to keep the list readable
 lost_sales = {k for k in lost_sales if not any(k != o and k in o for o in lost_sales)}
 if lost_sales:
@@ -391,11 +992,208 @@ failed_with_sales = {g for g, n in mol.items() if n.get("phase") == "failed" and
 if failed_with_sales:
     add("ERROR", "failed-with-sales", "graveyard molecule carries 2025 sales", failed_with_sales)
 
-# e) ownerless molecules
-owned = {e["dst"] for e in edges if e["rel"] == "owns"}
-orphan = {g for g in mol if g not in owned and mol[g].get("phase") != "failed"}
+valid_failure_scopes = {
+    "program-death", "indication-failure", "regional-failure", "trial-setback",
+    "launch-failure", "launch-event",
+}
+bad_failure_scope = set()
+for e in edges:
+    if e.get("rel") != "failed_on":
+        continue
+    scope = e.get("scope")
+    phase = mol.get(e["src"], {}).get("phase")
+    if scope not in valid_failure_scopes:
+        bad_failure_scope.add(f"{e['src']} -> {e['dst']} [scope={scope}]")
+    elif scope == "program-death" and phase != "failed":
+        bad_failure_scope.add(f"{e['src']} -> {e['dst']} [program-death but phase={phase}]")
+    elif scope != "program-death" and phase == "failed":
+        bad_failure_scope.add(
+            f"{e['src']} -> {e['dst']} [{scope}, phase={phase}, indication={e.get('failed_indication')}]"
+        )
+    elif scope == "indication-failure" and not e.get("failed_indication"):
+        bad_failure_scope.add(
+            f"{e['src']} -> {e['dst']} [{scope} missing failed_indication]"
+        )
+    elif scope == "regional-failure" and (not e.get("failed_indication") or not e.get("territory")):
+        bad_failure_scope.add(
+            f"{e['src']} -> {e['dst']} [{scope} requires failed_indication and territory]"
+        )
+    elif scope == "trial-setback" and not e.get("active_program"):
+        bad_failure_scope.add(
+            f"{e['src']} -> {e['dst']} [{scope} requires active_program context]"
+        )
+if bad_failure_scope:
+    add("ERROR", "failure-scope-conflict",
+        "failed_on must distinguish molecule death from indication or launch failure",
+        bad_failure_scope)
+
+# A graveyard row's target/mechanism must agree with independently curated
+# molecule targets when those targets are available. This catches copied
+# mechanisms that otherwise remain internally self-consistent in the failure
+# cache, as happened for olaratumab, voxelotor, and Opdualag.
+def normalized_target(value):
+    return re.sub(r"[^A-Za-z0-9]", "", str(value)).upper()
+
+
+failure_target_conflicts = set()
+for e in edges:
+    if e.get("rel") != "failed_on" or not acts.get(e["src"]):
+        continue
+    observed = {normalized_target(target) for target in acts[e["src"]]}
+    declared = {
+        normalized_target(part)
+        for part in re.split(r"\s+\+\s+", str(e.get("dst") or ""))
+        if part.strip()
+    }
+    if not declared or not declared.issubset(observed):
+        failure_target_conflicts.add(
+            f"{e['src']} -> {e.get('dst')} [acts_on={', '.join(sorted(acts[e['src']]))}]"
+        )
+if failure_target_conflicts:
+    add("ERROR", "failure-target-conflict",
+        "graveyard failure target disagrees with independently curated acts_on targets",
+        failure_target_conflicts)
+
+live_aliases = {}
+for generic, node in mol.items():
+    if node.get("phase") == "failed":
+        continue
+    live_aliases[generic.lower()] = generic
+    for brand in node.get("brands") or []:
+        live_aliases[re.sub(r"\s*\(.*?\)", "", brand).lower().strip()] = generic
+graveyard_live_deaths = set()
+for key, record in graveyard.items():
+    if record.get("entity_type", "molecule") != "molecule" or record.get("scope") != "program-death":
+        continue
+    label = re.sub(r"\s*\(.*?\)", "", str(record.get("molecule") or "")).lower().strip()
+    resolved = live_aliases.get(key.lower()) or live_aliases.get(label)
+    if resolved:
+        graveyard_live_deaths.add(f"{key} -> {resolved}")
+if graveyard_live_deaths:
+    add("ERROR", "graveyard-live-program-death",
+        "program-death record resolves to a marketed or pipeline molecule; narrow the failure scope",
+        graveyard_live_deaths)
+
+active_language_deaths = set()
+for key, record in graveyard.items():
+    if record.get("scope") != "program-death":
+        continue
+    note = str(record.get("note") or "")
+    if re.search(
+            r"\b(?:later approved|remains approved|remains active|continues? in|"
+            r"active,? not recruiting|eu/japan approved|approved for [^.;]+ instead)\b",
+            note, re.I):
+        active_language_deaths.add(f"{key}: {note[:120]}")
+if active_language_deaths:
+    add("ERROR", "program-death-active-language",
+        "program-death evidence itself describes an active or approved state; narrow the scope",
+        active_language_deaths)
+
+bad_competition_stage = set()
+for e in edges:
+    if e.get("rel") != "competes_with":
+        continue
+    expected = "+".join(sorted((mol.get(e["src"], {}).get("phase", "unknown"),
+                                mol.get(e["dst"], {}).get("phase", "unknown"))))
+    if e.get("stage_pair") != expected:
+        bad_competition_stage.add(f"{e['src']} -> {e['dst']} [{e.get('stage_pair')} != {expected}]")
+if bad_competition_stage:
+    add("ERROR", "competition-stage-mismatch",
+        "derived competition edges must preserve both molecules' current phases",
+        bad_competition_stage)
+
+# e) portfolio associations are broad provenance, never legal ownership claims
+legacy_owns = {f"{e['src']} -> {e['dst']}" for e in edges if e["rel"] == "owns"}
+if legacy_owns:
+    add("ERROR", "legacy-owns-edge",
+        "drug-index company cells must emit portfolio_includes, not unqualified legal ownership",
+        legacy_owns)
+portfolio_edges = [e for e in edges if e["rel"] == "portfolio_includes"]
+bad_portfolio_provenance = {
+    f"{e['src']} -> {e['dst']}" for e in portfolio_edges
+    if not e.get("source") or not e.get("evidence")
+    or not os.path.exists(os.path.join(ROOT, e["source"]))
+}
+if bad_portfolio_provenance:
+    add("ERROR", "portfolio-association-missing-provenance",
+        "portfolio associations require an existing source and exact company-cell evidence",
+        bad_portfolio_provenance)
+associated = {e["dst"] for e in portfolio_edges}
+orphan = {g for g in mol if g not in associated and mol[g].get("phase") != "failed"}
 if orphan:
-    add("ERROR", "molecule-without-owner", "marketed molecule has no owning company", orphan)
+    add("ERROR", "molecule-without-portfolio", "live molecule has no portfolio association", orphan)
+
+typed_role_map = {
+    "acquired_asset": "acquirer",
+    "inherited_asset": "successor",
+    "divested_asset": "seller",
+    "licensed_asset": "licensee",
+    "licensed_out": "licensor",
+    "partnered_on": "partner",
+}
+typed_deal_types = {
+    "acquired_asset": {"acquisition", "divestiture"},
+    "inherited_asset": {"merger"},
+    "divested_asset": {"divestiture", "acquisition"},
+    "licensed_asset": {"license", "partnership"},
+    "licensed_out": {"license", "partnership"},
+    "partnered_on": {"partnership", "license"},
+}
+deal_parties = {(e["src"], e["dst"], e.get("role")) for e in edges if e["rel"] == "party_to"}
+bad_typed_roles = set()
+for e in edges:
+    if e.get("rel") not in typed_role_map:
+        continue
+    did = e.get("via_deal")
+    source = e.get("source", "")
+    expected_role = typed_role_map[e["rel"]]
+    if (not did or by_id.get(did, {}).get("kind") != "deal"
+            or (e["src"], did, expected_role) not in deal_parties
+            or by_id.get(did, {}).get("type") not in typed_deal_types[e["rel"]]
+            or not source or not os.path.exists(os.path.join(ROOT, source))):
+        bad_typed_roles.add(f"{e['src']} {e['rel']} {e['dst']} via {did}")
+if bad_typed_roles:
+    add("ERROR", "typed-asset-role-missing-provenance",
+        "typed company-asset roles must agree with a sourced deal and party role",
+        bad_typed_roles)
+
+divested_pairs = {
+    (e["src"], e["dst"]) for e in edges if e.get("rel") == "divested_asset"
+}
+bad_historical_portfolio = {
+    f"{e['src']} -> {e['dst']}" for e in portfolio_edges
+    if (e["src"], e["dst"]) in divested_pairs
+    and (e.get("association_status") != "historical-divested" or not e.get("status_year"))
+}
+if bad_historical_portfolio:
+    add("ERROR", "divested-portfolio-missing-history",
+        "a divested portfolio association must be explicitly historical and dated",
+        bad_historical_portfolio)
+
+bad_deal_status = {
+    n["id"] for n in nodes if n.get("kind") == "deal" and n.get("status")
+    and n["status"] not in {"announced-pending", "closed"}
+}
+if bad_deal_status:
+    add("ERROR", "invalid-deal-status", "deal status must use the controlled vocabulary", bad_deal_status)
+
+explicit_deal_chronology = {
+    n["id"]: n for n in nodes if n.get("kind") == "deal"
+    and any(n.get(k) is not None for k in ("announced_year", "closed_year", "announcement_source"))
+}
+bad_deal_chronology = set()
+for did, deal in explicit_deal_chronology.items():
+    announced = deal.get("announced_year")
+    closed = deal.get("closed_year")
+    source = deal.get("announcement_source")
+    if (not isinstance(announced, int) or deal.get("year") != announced
+            or (closed is not None and (not isinstance(closed, int) or closed < announced))
+            or not isinstance(source, str) or not source.startswith("https://")):
+        bad_deal_chronology.add(did)
+if bad_deal_chronology:
+    add("ERROR", "deal-announcement-chronology-conflict",
+        "explicit deal chronology must use the sourced announcement year; closing year is separate and cannot precede it",
+        bad_deal_chronology)
 
 # f) target symbol hygiene: near-duplicate symbols suggest an un-merged alias
 targets = sorted({n["id"] for n in nodes if n["kind"] == "target"})
@@ -417,10 +1215,10 @@ if cryptic:
 
 # g) tier discipline: cited companies should not look researched
 cited = {n["id"] for n in nodes if n["kind"] == "company" and n.get("tier") == "cited"}
-cited_rich = {c for c in cited if sum(1 for e in edges if e["rel"] == "owns" and e["src"] == c) >= 3}
+cited_rich = {c for c in cited if sum(1 for e in edges if e["rel"] == "portfolio_includes" and e["src"] == c) >= 3}
 if cited_rich:
     add("WARN", "cited-company-with-assets",
-        "company has no KB file but owns 3+ assets in the graph — promote to players/", cited_rich)
+        "company has no KB file but is associated with 3+ portfolio assets — promote to players/", cited_rich)
 
 # ---------------------------------------------------------------- coverage info
 add("INFO", "counts", "node/edge census", ())
@@ -432,7 +1230,7 @@ add("INFO", "completeness", "share of molecules with each attribute", ())
 findings[-1]["detail"] = {
     "with_modality": round(sum(1 for n in mol.values() if n.get("modality") not in (None, "unclassified")) / n_mol, 3),
     "with_target": round(sum(1 for g in mol if g in acts) / n_mol, 3),
-    "with_real_indication": round(sum(1 for g in mol if treats.get(g, set()) - {"other"}) / n_mol, 3),
+    "with_real_indication": round(sum(1 for g in mol if uses.get(g, set()) - {"other"}) / n_mol, 3),
     "with_sales": round(sum(1 for n in mol.values() if n.get("sales_2025_usd_bn")) / n_mol, 3),
 }
 

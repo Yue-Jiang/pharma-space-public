@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-15
+updated: 2026-08-16
 status: generated
 ---
 # Target convergence — where the industry piles up
@@ -11,25 +11,27 @@ status: generated
 
 | Target | Companies | Assets (generic names) | Dead | Notes |
 |---|---|---|---|---|
-| CD3 | 7: abbvie, amgen, johnson-and-johnson, pfizer, regeneron, roche, sanofi | blinatumomab, elranatamab, epcoritamab, glofitamab, linvoseltamab, mosunetuzumab, odronextamab, talquetamab, teclistamab, teplizumab |  |  |
+| CD3 | 10: abbvie, amgen, boehringer-ingelheim, daiichi-sankyo, johnson-and-johnson, merck, pfizer, regeneron, roche, sanofi | blinatumomab, elranatamab, epcoritamab, etentamig, glofitamab, gocatamig, linvoseltamab, mosunetuzumab, obrixtamig, odronextamab, pasritamig, talquetamab, teclistamab, teplizumab, xaluritamig |  |  |
+| PD-1 | 8: akeso, astrazeneca, bristol-myers-squibb, gsk, merck, pfizer, regeneron, summit | cadonilimab, cemiplimab, dostarlimab, ivonescimab, nivolumab, nivolumab + relatlimab, pembrolizumab, pembrolizumab with berahyaluronidase alfa, penpulimab, rilvegostomig, sasanlimab, volrustomig |  |  |
+| BCMA | 8: abbvie, bristol-myers-squibb, gilead, gsk, johnson-and-johnson, legend, pfizer, regeneron | anitocabtagene autoleucel, belantamab mafodotin, ciltacabtagene autoleucel, elranatamab, etentamig, idecabtagene vicleucel, linvoseltamab, teclistamab | 2 |  |
+| TNF-alpha | 7: 3sbio, abbvie, amgen, biogen, boehringer-ingelheim, johnson-and-johnson, sanofi | adalimumab, adalimumab biosimilar, adalimumab-adbm, brivekimig, etanercept, etanercept biosimilar, etanercept-ykro, golimumab, infliximab, infliximab biosimilar |  |  |
 | Factor-Xa | 7: bayer, bristol-myers-squibb, daiichi-sankyo, johnson-and-johnson, pfizer, roche, sanofi | apixaban, edoxaban, emicizumab, enoxaparin, rivaroxaban | 1 |  |
-| TNF-alpha | 6: 3sbio, abbvie, amgen, biogen, boehringer-ingelheim, johnson-and-johnson | adalimumab, adalimumab biosimilar, adalimumab-adbm, etanercept, etanercept biosimilar, etanercept-ykro, golimumab, infliximab, infliximab biosimilar |  |  |
-| PD-1 | 6: akeso, bristol-myers-squibb, gsk, merck, regeneron, summit | cadonilimab, cemiplimab, dostarlimab, ivonescimab, nivolumab, nivolumab + relatlimab, pembrolizumab, pembrolizumab with berahyaluronidase alfa, penpulimab |  |  |
 | HER2 | 6: 3sbio, astrazeneca, bayer, boehringer-ingelheim, daiichi-sankyo, roche | inetetamab, pertuzumab, pertuzumab + trastuzumab + hyaluronidase, sevabertinib, trastuzumab, trastuzumab deruxtecan, trastuzumab emtansine, zongertinib |  |  |
-| BCMA | 6: bristol-myers-squibb, gsk, johnson-and-johnson, legend, pfizer, regeneron | belantamab mafodotin, ciltacabtagene autoleucel, elranatamab, idecabtagene vicleucel, linvoseltamab, teclistamab | 2 |  |
+| VEGF-A | 6: akeso, bayer, bristol-myers-squibb, regeneron, roche, summit | aflibercept, bevacizumab, bnt327, faricimab, ivonescimab, ranibizumab, ziv-aflibercept |  |  |
 | BTK | 6: abbvie, astrazeneca, eli-lilly, johnson-and-johnson, novartis, sanofi | acalabrutinib, ibrutinib, pirtobrutinib, remibrutinib, rilzabrutinib |  |  |
-| VEGF-A | 5: akeso, bayer, regeneron, roche, summit | aflibercept, bevacizumab, faricimab, ivonescimab, ranibizumab, ziv-aflibercept | 2 |  |
-| EGFR | 5: amgen, astrazeneca, bristol-myers-squibb, hansoh-pharma, johnson-and-johnson | amivantamab, aumolertinib, cetuximab, gefitinib, osimertinib, panitumumab | 1 |  |
+| GLP-1R | 5: astrazeneca, eli-lilly, novo-nordisk, regeneron, roche | dulaglutide, elecoglipron, enicepatide, exenatide, liraglutide, olatorepatide, orforglipron, semaglutide, tirzepatide | 3 |  |
+| EGFR | 5: amgen, astrazeneca, bristol-myers-squibb, hansoh-pharma, johnson-and-johnson | amivantamab, aumolertinib, cetuximab, gefitinib, iza-bren, osimertinib, panitumumab |  |  |
 | DRD2 | 5: abbvie, boehringer-ingelheim, bristol-myers-squibb, eli-lilly, johnson-and-johnson | aripiprazole, cariprazine, olanzapine, paliperidone, paliperidone palmitate, pramipexole |  |  |
 | CD19 | 5: amgen, autolus, bristol-myers-squibb, gilead, novartis | axicabtagene ciloleucel, blinatumomab, brexucabtagene autoleucel, lisocabtagene maraleucel, obecabtagene autoleucel, tisagenlecleucel |  |  |
 | AT1R | 5: boehringer-ingelheim, bristol-myers-squibb, daiichi-sankyo, novartis, takeda | candesartan, irbesartan, olmesartan, sacubitril/valsartan, telmisartan, valsartan |  |  |
-| HMGCR | 5: astrazeneca, bayer, daiichi-sankyo, merck, pfizer | atorvastatin, cerivastatin, pravastatin, rosuvastatin, simvastatin |  |  |
-| JAK1 | 5: abbvie, eli-lilly, gsk, novartis, pfizer | baricitinib, momelotinib, ruxolitinib, tofacitinib, upadacitinib | 1 |  |
+| JAK1 | 5: abbvie, eli-lilly, gsk, novartis, pfizer | baricitinib, momelotinib, ruxolitinib, tofacitinib, upadacitinib |  |  |
 | TROP2 | 5: astrazeneca, daiichi-sankyo, gilead, kelun-biotech, merck | datopotamab deruxtecan, sacituzumab govitecan, sacituzumab tirumotecan |  |  |
 | CD20 | 4: abbvie, novartis, regeneron, roche | epcoritamab, glofitamab, mosunetuzumab, obinutuzumab, ocrelizumab, odronextamab, ofatumumab, rituximab |  |  |
 | TTR | 4: astrazeneca, bayer, ionis, pfizer | acoramidis, eplontersen, inotersen, tafamidis |  |  |
 | PCSK9 | 4: amgen, merck, novartis, regeneron | alirocumab, enlicitide, evolocumab, inclisiran |  |  |
+| HMGCR | 4: astrazeneca, daiichi-sankyo, merck, pfizer | atorvastatin, pravastatin, rosuvastatin, simvastatin | 1 |  |
 | SARS-CoV-2 spike protein | 4: astrazeneca, moderna, pfizer, regeneron | casirivimab + imdevimab, elasomeran, oxford covid-19 vaccine, tozinameran |  |  |
+| CD38 | 4: biogen, johnson-and-johnson, sanofi, takeda | daratumumab, felzartamab, isatuximab, mezagitamab |  |  |
 | HIV integrase | 3: gilead, gsk, merck | bictegravir/emtricitabine/tenofovir alafenamide, cabotegravir extended-release, cabotegravir/rilpivirine, dolutegravir, dolutegravir/abacavir/lamivudine, dolutegravir/lamivudine, elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide, raltegravir |  |  |
 | INSR | 3: eli-lilly, novo-nordisk, sanofi | insulin aspart, insulin degludec, insulin glargine, insulin glargine u300, insulin icodec, insulin lispro, insulin lispro etc. | 1 |  |
 | EDNRA | 3: gilead, johnson-and-johnson, novartis | ambrisentan, atrasentan, bosentan, macitentan | 1 |  |
@@ -38,17 +40,22 @@ status: generated
 | IL-23p19 | 3: abbvie, eli-lilly, johnson-and-johnson | guselkumab, mirikizumab, risankizumab, ustekinumab |  |  |
 | CDK4/6 | 3: eli-lilly, novartis, pfizer | abemaciclib, palbociclib, ribociclib |  |  |
 | ALK | 3: pfizer, roche, takeda | alectinib, brigatinib, lorlatinib |  |  |
+| PD-L1 | 3: astrazeneca, bristol-myers-squibb, roche | atezolizumab, bnt327, durvalumab |  |  |
 | JAK2 | 3: eli-lilly, gsk, novartis | baricitinib, momelotinib, ruxolitinib |  |  |
+| CTLA-4 | 3: akeso, astrazeneca, bristol-myers-squibb | cadonilimab, ipilimumab, volrustomig |  |  |
 | RSV F | 3: astrazeneca, merck, pfizer | clesrovimab, nirsevimab, rsv prefusion f vaccine |  |  |
 | BRAF | 3: novartis, pfizer, roche | dabrafenib, encorafenib, vemurafenib |  |  |
 | TPOR | 3: 3sbio, amgen, novartis | eltrombopag, recombinant human thrombopoietin, romiplostim |  |  |
 | SGLT2 | 3: astrazeneca, boehringer-ingelheim, eli-lilly | dapagliflozin, empagliflozin |  |  |
+| DLL3 | 3: boehringer-ingelheim, daiichi-sankyo, merck | gocatamig, obrixtamig | 1 |  |
+| HER3 | 3: bristol-myers-squibb, daiichi-sankyo, merck | iza-bren, patritumab deruxtecan |  |  |
 | HIV reverse transcriptase | 2: gilead, gsk | bictegravir/emtricitabine/tenofovir alafenamide, cabotegravir/rilpivirine, dolutegravir/abacavir/lamivudine, dolutegravir/lamivudine, efavirenz/tenofovir/emtricitabine, elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide, emtricitabine, emtricitabine/tenofovir alafenamide, rilpivirine/emtricitabine/tenofovir alafenamide, tenofovir alafenamide, zidovudine |  |  |
-| GLP-1R | 2: eli-lilly, novo-nordisk | dulaglutide, exenatide, liraglutide, orforglipron, semaglutide, tirzepatide | 3 |  |
 | GR | 2: astrazeneca, gsk | budesonide/formoterol, budesonide/glycopyrronium/formoterol, fluticasone furoate/umeclidinium/vilanterol, fluticasone/salmeterol, fluticasone/umeclidinium/vilanterol |  |  |
 | ADRB2 | 2: astrazeneca, gsk | budesonide/formoterol, budesonide/glycopyrronium/formoterol, fluticasone furoate/umeclidinium/vilanterol, fluticasone/salmeterol, fluticasone/umeclidinium/vilanterol |  |  |
+| C5 | 2: astrazeneca, regeneron | cemdisiran, eculizumab, gefurulimab, pozelimab, ravulizumab |  |  |
 | ESR1 | 2: astrazeneca, eli-lilly | camizestrant, imlunestrant, raloxifene, tamoxifen |  |  |
 | H+/K+-ATPase | 2: astrazeneca, takeda | esomeprazole, lansoprazole, omeprazole, vonoprazan |  |  |
+| MET | 2: abbvie, johnson-and-johnson | abbv-400, amivantamab, telisotuzumab vedotin |  |  |
 | Factor-VIII | 2: bayer, sanofi | antihemophilic factor, efanesoctocog alfa, octocog alfa / damoctocog alfa pegol |  |  |
 | ABL1 | 2: bristol-myers-squibb, novartis | asciminib, dasatinib, imatinib |  |  |
 | CGRP receptor | 2: abbvie, pfizer | atogepant, rimegepant, ubrogepant |  |  |
@@ -56,21 +63,15 @@ status: generated
 | Factor IIa | 2: boehringer-ingelheim, sanofi | dabigatran etexilate, enoxaparin, idarucizumab |  |  |
 | EPOR | 2: 3sbio, amgen | darbepoetin alfa, epoetin alfa, recombinant human erythropoietin |  |  |
 | TUBB | 2: bristol-myers-squibb, sanofi | docetaxel, paclitaxel, paclitaxel nanoparticle |  |  |
-| C5 | 2: astrazeneca, regeneron | eculizumab, pozelimab, ravulizumab |  |  |
 | IFNAR1 | 2: bayer, biogen | interferon beta-1a, interferon beta-1b, peginterferon beta-1a |  |  |
 | DPP-4 | 2: boehringer-ingelheim, merck | linagliptin, sitagliptin, sitagliptin/metformin |  |  |
 | 5-HT2A | 2: eli-lilly, johnson-and-johnson | olanzapine, paliperidone, paliperidone palmitate |  |  |
 | pneumococcal polysaccharide antigens | 2: merck, pfizer | pneumococcal 15-valent conjugate vaccine, pneumococcal 20-valent conjugate vaccine, pneumococcal 21-valent conjugate vaccine |  |  |
-| COX2 | 2: bayer, merck | acetylsalicylic acid, rofecoxib | 2 |  |
 | KRAS | 2: amgen, bristol-myers-squibb | adagrasib, sotorasib |  |  |
-| MET | 2: abbvie, johnson-and-johnson | amivantamab, telisotuzumab vedotin |  |  |
 | PDE4 | 2: amgen, merck | apremilast, ensifentrine |  |  |
-| PD-L1 | 2: astrazeneca, roche | atezolizumab, durvalumab |  |  |
 | KIT | 2: bayer, sanofi | avapritinib, regorafenib |  |  |
-| PDGFRA | 2: bayer, sanofi | avapritinib, regorafenib |  |  |
-| CTLA-4 | 2: akeso, bristol-myers-squibb | cadonilimab, ipilimumab |  |  |
-| CD38 | 2: johnson-and-johnson, sanofi | daratumumab, isatuximab |  |  |
-| amyloid-beta | 2: biogen, eli-lilly | donanemab, lecanemab | 7 |  |
+| PDGFRA | 2: bayer, sanofi | avapritinib, regorafenib | 1 |  |
+| amyloid-beta | 2: biogen, eli-lilly | donanemab, lecanemab | 6 |  |
 | plasma kallikrein | 2: ionis, takeda | donidalorsen, lanadelumab |  |  |
 | NET | 2: eli-lilly, takeda | duloxetine, lisdexamfetamine | 1 |  |
 | CYP3A4 | 2: gilead, pfizer | elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide, nirmatrelvir/ritonavir |  |  |
@@ -87,13 +88,21 @@ status: generated
 | cardiac myosin | 2: boehringer-ingelheim, bristol-myers-squibb | mavacamten, pimobendan |  |  |
 | BCR-ABL | 2: novartis, takeda | nilotinib, ponatinib |  |  |
 | PARP | 2: gsk, merck | niraparib, olaparib |  |  |
+| LAG-3 | 2: bristol-myers-squibb, regeneron | fianlimab, nivolumab + relatlimab | 1 |  |
 | SMN2 | 2: biogen, roche | nusinersen, risdiplam |  |  |
+| ROS1 | 2: bristol-myers-squibb, gsk | repotrectinib, zidesamtinib |  |  |
 | IL6R | 2: regeneron, roche | sarilumab, tocilizumab |  |  |
 | PDE5A | 2: eli-lilly, pfizer | sildenafil, tadalafil |  |  |
+| activin-A | 2: merck, regeneron | garetosmab, sotatercept |  |  |
+| GPRC5D | 2: bristol-myers-squibb, johnson-and-johnson | arlo-cel, talquetamab |  |  |
 | GABA-A receptor | 2: biogen, sanofi | zolpidem, zuranolone |  |  |
+| GIPR | 2: regeneron, roche | enicepatide, olatorepatide |  |  |
 | VEGFC | 2: bayer, regeneron | aflibercept |  |  |
 | TSLP | 2: amgen, astrazeneca | tezepelumab |  |  |
 | F3 | 2: genmab, pfizer | tisotumab vedotin |  |  |
+| B7-H3 | 2: daiichi-sankyo, merck | ifinatamab deruxtecan |  |  |
+| IL-33 | 2: regeneron, sanofi | itepekimab |  |  |
+| CDH6 | 2: daiichi-sankyo, merck | raludotatug deruxtecan |  |  |
 | CFTR | 1: vertex | elexacaftor/tezacaftor/ivacaftor, ivacaftor, lumacaftor/ivacaftor, tezacaftor/ivacaftor, vanzacaftor/tezacaftor/deutivacaftor |  |  |
 | CRBN | 1: bristol-myers-squibb | golcadomide, iberdomide, lenalidomide, mezigdomide, pomalidomide |  |  |
 | SLC6A4 | 1: eli-lilly | atomoxetine, duloxetine, fluoxetine |  |  |
@@ -108,16 +117,16 @@ status: generated
 | SARS-CoV-2 antigens | 1: moderna | mrna-1083, mrna-1283 |  |  |
 | APOC3 | 1: ionis | olezarsen, volanesorsen |  |  |
 | C3 | 1: biogen | pegcetacoplan, pegcetacoplan injection |  |  |
-| soluble guanylate cyclase | 1: bayer | riociguat, vericiguat | 1 |  |
+| soluble guanylate cyclase | 1: bayer | riociguat, vericiguat |  |  |
 | HCV NS5A | 1: gilead | sofosbuvir/ledipasvir, sofosbuvir/velpatasvir |  |  |
 | GHR | 1: novo-nordisk | somapacitan, somatropin |  |  |
+| OX40L | 1: sanofi | amlitelimab, brivekimig |  |  |
 
 **Graveyard-only targets (2+ program deaths, zero marketed assets among covered companies)** — mechanisms the industry tried and abandoned:
 
 | Target | Dead | Failed molecules |
 |---|---|---|
 | BACE1 | 5 | atabecestat, elenbecestat, lanabecestat, umibecestat, verubecestat |
-| TIGIT | 5 | belrestotug, domvanalimab, ociperlimab, tiragolumab, vibostolimab |
 | tau | 5 | gosuranemab, lmtm, semorinemab, tilavonemab, zagotenemab |
 | PPARalpha/gamma | 4 | aleglitazar, mk-0767, muraglitazar, tesaglitazar |
 | CETP | 4 | anacetrapib, dalcetrapib, evacetrapib, torcetrapib |
@@ -128,4 +137,4 @@ status: generated
 | CB1 | 2 | rimonabant, taranabant |
 | alpha-1 antitrypsin deficiency corrector | 2 | vx-814, vx-864 |
 
-*Marketed assets only — pipeline extraction pending. Molecules: 545 | targets: 231 | deals: 353 | rebuilt 2026-08-15.*
+*Marketed assets only — pipeline extraction pending. Molecules: 546 | targets: 261 | deals: 353 | rebuilt 2026-08-16.*

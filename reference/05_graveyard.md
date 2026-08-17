@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-15
+updated: 2026-08-16
 status: curated
 ---
 # The graveyard — clinical-stage failures registry
@@ -96,7 +96,7 @@ status: curated
 | Molecule | Target | Modality | Company | Phase | Died | Mode | What happened | Lesson |
 |---|---|---|---|---|---|---|---|---|
 | Semaglutide (EVOKE program) | GLP-1R | small molecule | novo-nordisk | Ph3 | 2025 | efficacy | Failed in Alzheimer's disease (EVOKE, late 2025) and closed off the moonshot indication. Alzheimer's expansion failed; drug is a mega-blockbuster. | — |
-| Cobenfy (KarXT) | M1/M4 muscarinic | small molecule | bristol-myers-squibb | Ph3 | 2025 | efficacy | ARISE adjunctive-schizophrenia trial missed primary endpoint in April 2025 despite September 2024 approval for monotherapy. | — |
+| Cobenfy (KarXT) | CHRM1 + M4 muscarinic | small molecule | bristol-myers-squibb | Ph3 | 2025 | efficacy | ARISE adjunctive-schizophrenia trial missed primary endpoint in April 2025 despite September 2024 approval for monotherapy. | — |
 | Zolgensma | SMN1 (spinal muscular atrophy) | gene therapy | novartis | marketed | 2019 | unknown | Approved 2019 at USD 2.1M/dose but quickly embroiled in data-manipulation scandal involving pre-submission animal data. data-manipulation scandal + safety warnings; drug remains marketed — NOT withdrawn. | — |
 | Trodelvy | Trop-2 | ADC | gilead | approved-indication-withdrawn | 2024 | efficacy | Accelerated bladder-cancer approval withdrawn in 2024; lung-cancer trials disappointed. bladder AA withdrawn; drug marketed in breast. | — |
 
@@ -109,7 +109,7 @@ status: curated
 | dalcetrapib | CETP | small molecule | Roche | Ph3 | 2012 | efficacy | dal-OUTCOMES stopped May 2012 for futility; weak CETP inhibition raised HDL but no CV benefit. | Raising HDL-C per se does not reduce cardiovascular events. |
 | evacetrapib | CETP | small molecule | Eli Lilly | Ph3 | 2015 | efficacy | ACCELERATE stopped Oct 2015 for futility despite potent HDL raising and LDL lowering. | Potent target engagement plus biomarker movement still failed outcomes; HDL hypothesis broken. |
 | anacetrapib | CETP | small molecule | Merck | Ph3 | 2017 | strategic | REVEAL met endpoint (9% MACE reduction, LDL-driven) but Merck declined to file Oct 2017; adipose accumulation, 550-day half-life. | A statistically positive Ph3 can still be commercially unfilable if effect is marginal. |
-| obeticholic acid (in NASH) | FXR agonist | small molecule | Intercept | Ph3 | 2023 | efficacy | REGENERATE hit fibrosis at highest dose only; FDA CRLs 2020 and 2023 on risk-benefit (pruritus, DILI concern); NASH program abandoned 2023. Remains approved in PBC. | Marginal efficacy plus tolerability liabilities fails regulatory risk-benefit even with a completed Ph3. |
+| obeticholic acid | FXR agonist | small molecule | Intercept | Ph3 | 2025 | regulatory | NASH/MASH development ended after FDA CRLs in 2020 and 2023; the separate US PBC approval was withdrawn effective November 2025. | Marginal efficacy plus tolerability liabilities fails regulatory risk-benefit even with a completed Ph3. |
 | Exanta | Factor Xa | small molecule | astrazeneca | approved-withdrawn | — | safety | Anticoagulant withdrawn on liver safety grounds. | — |
 | taspoglutide | GLP-1R agonist (once-weekly) | peptide | Roche (licensed from Ipsen) | Ph3 | 2010 | safety | Ph3 dosing stopped Sep 2010: hypersensitivity reactions, anti-drug antibodies (~50%), severe GI intolerance; returned to Ipsen 2011. | Peptide immunogenicity and formulation tolerability can kill despite validated mechanism. |
 | danuglipron (PF-06882961) | GLP-1R agonist (oral) | small molecule | Pfizer | Ph2 | 2025 | safety | BID form dropped Dec 2023 (>50% discontinuation, GI); QD form killed Apr 2025 after one potential drug-induced liver injury case. | In a crowded class, tolerability parity is the bar; single safety cases kill laggards. |
@@ -125,7 +125,7 @@ status: curated
 | inhaled insulin (Exubera) | insulin | peptide (inhaled human insulin) | Pfizer/Nektar | Marketed (withdrawn) | 2007 | commercial | 'Marketing of this product will be discontinued' across 5 Ph3 terminations; ~$2.8B write-off | Device inconvenience + payer indifference kill even approved biologics; Novo's AERx followed in 2008 |
 | Exubera (inhaled human insulin) | insulin receptor | peptide (inhaled human insulin) | Pfizer (with Nektar) | approved-withdrawn | 2007 | commercial | Approved 2006; Pfizer pulled it Oct 2007 for commercial failure (~$2.8B charge); bulky device, spirometry burden, payer resistance. | Delivery convenience must beat incumbent workflow; device friction sank an approved drug. |
 | Natrecor | natriuretic peptide receptor | recombinant natriuretic peptide | johnson-and-johnson | approved-withdrawn | — | safety | Partial failure after safety questions crushed sales following 2003 Scios acquisition. | — |
-| Axokine | neurotrophy/obesity | recombinant CNTF protein | regeneron | — | 2003 | efficacy | Neurotrophic-factor obesity program collapsed in clinical development in 2003. | — |
+| Axokine | neurotrophy/obesity | recombinant CNTF protein | regeneron | — | 2003 | limited-clinical-benefit | Phase III met statistical endpoints but produced modest weight loss and high neutralizing-antibody incidence; the obesity program was discontinued in 2003. | Statistical significance did not translate into sufficient clinical or commercial benefit. |
 | VX-264 | type 1 diabetes (encapsulated islet) | cell therapy | vertex | — | 2025 | strategic | Encapsulated-islet program discontinued in 2025. | — |
 
 **Indication/launch-level failures of drugs that remain marketed** (not program deaths — the failed expansion carries the lesson):
@@ -156,7 +156,7 @@ status: curated
 | Belrestotug | TIGIT (oncology) | mAb | gsk | — | 2025 | unknown | Program terminated 2025 with £471M impairment. | — |
 | sabatolimab (MBG453) | TIM-3 | mAb | Novartis | Ph3 | 2023 | efficacy | STIMULUS-MDS2 miss ended the TIM-3 MDS/AML program; 9 terminations across both names | Second-wave checkpoint targets (TIM-3, TIGIT, LAG-3 beyond melanoma) mostly failed to repeat PD-1 |
 | Zaltrap | VEGF | VEGF-trap fusion protein | regeneron | approved-withdrawn | 2012 | commercial | Ziv-aflibercept approved in 2012 for colorectal cancer but flopped amid pricing controversy. | — |
-| Lartruvo | VEGF-A | mAb | eli-lilly | approved-withdrawn | 2019 | efficacy | Withdrawn in 2019 after the ANNOUNCE Phase 3 trial failed. | — |
+| Lartruvo | PDGFRA | mAb | eli-lilly | approved-withdrawn | 2019 | efficacy | Withdrawn in 2019 after the ANNOUNCE Phase 3 trial failed. | — |
 | giredestrant | estrogen receptor (SERD) | small molecule | roche | Ph3 | — | efficacy | Failed in first-line metastatic breast cancer; repositioned to adjuvant setting with Priority Review. | — |
 | sigvotatug vedotin | integrin beta-6 ADC | ADC | pfizer | Ph3 | 2026 | efficacy | Phase 3 SigVie-002 second-line NSCLC trial missed overall survival in June 2026. | — |
 
@@ -167,20 +167,20 @@ status: curated
 | Kymriah (tisagenlecleucel) — 2L LBCL | CD19 | CAR-T | novartis | Ph3 | 2021 | efficacy | BELINDA missed in second-line large B-cell lymphoma (Aug 2021) where Yescarta (ZUMA-7) and Breyanzi succeeded on the same target. | Same target, different construct/logistics: CD19 was not the variable. |
 | Blenrep | BCMA (multiple myeloma) | ADC | gsk | approved-withdrawn-relaunched | 2022 | efficacy | Won accelerated US approval 2020 but withdrawn from US market late 2022 after confirmatory DREAMM-3 trial failed. US withdrawal 2022 after DREAMM-3; relaunched 2025-26 on DREAMM-7/8. | — |
 | Opdivo (nivolumab) | PD-1 | mAb | bristol-myers-squibb | Ph3 | 2016 | efficacy | CheckMate-026 trial failed in August 2016: Opdivo monotherapy did not beat chemotherapy in first-line NSCLC with broad PD-L1 cutoff, ceding market leadership to Keytruda. | — |
-| Opdualag (nivolumab + ipilimumab) | PD-1 + CTLA-4 | mAb | bristol-myers-squibb | Ph3 | 2025 | efficacy | Adjuvant melanoma trial missed in 2025; limits expansion of combination checkpoint inhibitor franchise. | — |
+| Opdualag (nivolumab + relatlimab) | PD-1 + LAG-3 | mAb | bristol-myers-squibb | Ph3 | 2025 | efficacy | Adjuvant melanoma trial missed in 2025; limits expansion of combination checkpoint inhibitor franchise. | — |
 | Imfinzi ± tremelimumab (MYSTIC trial) | PD-L1 ± CTLA-4 | mAb combination | astrazeneca | Ph3 | 2018 | efficacy | MYSTIC was a trial, not a molecule. It missed its first-line metastatic NSCLC progression-free-survival endpoint in 2017 and overall-survival endpoints in 2018; both drugs continued in other settings. | Corrected 2026-08-15: model the failed indication/trial, not MYSTIC as a drug. |
 
 ### Immunology & inflammation  (10 entries)
 
 | Molecule | Target | Modality | Company | Phase | Died | Mode | What happened | Lesson |
 |---|---|---|---|---|---|---|---|---|
-| tabalumab (LY2127399) | BAFF | mAb | Eli Lilly | Ph3 | 2015 | efficacy | Insufficient efficacy in lupus (ILLUMINATE) and MM; 9 terminations across drug+device clusters | Belimumab worked on the same target — dose, population and endpoint choice decide BAFF outcomes |
+| tabalumab (LY2127399) | BAFF | mAb | Eli Lilly | Ph3 | 2014 | efficacy | Insufficient efficacy in lupus (ILLUMINATE) and MM; 9 terminations across drug+device clusters | Belimumab worked on the same target — dose, population and endpoint choice decide BAFF outcomes |
 | tolebrutinib | BTK (brain-penetrant) | small molecule | sanofi | Ph3 | 2025 | efficacy | Failed primary progressive MS trial; despite positive HERCULES data in non-relapsing secondary progressive MS and breakthrough designation, FDA issued complete response letter in December 2025. | — |
 | Alofisel | Cell therapy, Crohn's disease | cell therapy | takeda | Ph3 | 2023 | efficacy | Failed Phase 3 trial in 2023. | — |
 | efavaleukin alfa | IL-2 mutein (Treg-biased) | fusion protein | Amgen | Ph2b | 2023 | efficacy | Lupus futility ended program; 5 linked terminations | Treg-expansion biomarkers did not translate to clinical endpoints in lupus |
 | rocatinlimab | IL-4 receptor alpha | mAb | amgen | Ph2 | 2026 | strategic | Collaboration with Kyowa Kirin terminated in early 2026; portfolio deprioritization in favor of higher-conviction assets. | — |
 | filgotinib (US) | JAK1 | small molecule | Gilead/Galapagos | approved-withdrawn | 2020 | safety-class | FDA CRL (Aug 2020) over testicular toxicity and 200-mg benefit/risk; Gilead abandoned US RA path Dec 2020; EU/Japan approved (Jyseleca). | Regulatory geography splits a launch: class-level safety scrutiny (JAK) can kill one market while another approves. |
-| Camlipixant | P2X3 (chronic cough) | small molecule | gsk | Ph3 | 2026 | efficacy | Discontinued July 2026 for refractory chronic cough after mixed CALM-1/CALM-2 phase III results. | — |
+| Camlipixant | P2X3 (chronic cough) | small molecule | gsk | Ph3 | 2026 | efficacy | Refractory chronic cough indication discontinued July 2026 after mixed CALM-1/CALM-2 phase III results. The molecule remains active in the BALANCE Phase IIb IBS trial. | Indication failure only; do not classify the molecule as dead. |
 | lampalizumab | complement factor D | Fab | Roche | Ph3 | 2017 | efficacy | SPECTRI/CHROMA geographic-atrophy misses; 4 terminations | GA endpoints later worked for pegcetacoplan — target choice within complement mattered |
 | BI 3720931 | cystic fibrosis gene therapy | gene therapy | boehringer-ingelheim | — | 2026 | strategic | Inhaled cystic fibrosis gene therapy program halted in 2026 as part of portfolio pruning. | — |
 | vilaprisan | progesterone receptor (SPRM) | small molecule | Bayer | Ph3 | 2020 | safety | Uterine fibroids; program stopped on long-term rodent tox findings after ulipristal's hepatotox scare; 7 terminations | Preclinical tox re-reads can kill a Ph3 asset when a sister drug poisons the class's risk-benefit |
@@ -190,7 +190,7 @@ status: curated
 | Molecule | Target | Modality | Company | Phase | Died | Mode | What happened | Lesson |
 |---|---|---|---|---|---|---|---|---|
 | mRNA-1647 | Cytomegalovirus (CMV) | mRNA vaccine | moderna | Ph3 | 2025 | efficacy | Failed Phase 3 CMVictory trial in October 2025 with 6–23% efficacy; discontinued for congenital CMV indication. | — |
-| GS-1720/GS-4182 | HIV capsid/integrase | small molecule | gilead | Ph2 | 2026 | regulatory | Weekly oral lenacapavir combination hit FDA clinical hold in early 2026. | — |
+| GS-1720/GS-4182 | HIV capsid/integrase | small molecule | gilead | Ph2 | 2026 | regulatory | WONDERS-2 terminated after the clinical hold; WONDERS-1 with renamed agents remains active, not recruiting. This is a trial-level setback, not global program death. | Preserve active parallel studies when one trial terminates. |
 | BMS-986094 | Hepatitis C NS5B polymerase | small molecule | bristol-myers-squibb | Ph2 | 2012 | safety | Nucleotide polymerase inhibitor halted after patient death in clinical trial; triggered $1.8B writedown from Inhibitex acquisition. | — |
 | COVID-19 vaccine (J&J) | SARS-CoV-2 | viral vector | johnson-and-johnson | approved-withdrawn | 2023 | safety | Discontinued in 2023 after rare thrombosis with thrombocytopenia (TTS) events triggered April 2021 pause. | — |
 | Dengvaxia | dengue | vaccine | sanofi | approved-withdrawn | 2017 | safety | Philippine school program suspended in 2017 after Sanofi disclosed increased risk in previously uninfected children; became reputational crisis. | — |
@@ -199,7 +199,7 @@ status: curated
 
 | Molecule | Target | Modality | Company | Phase | Died | Mode | What happened | Lesson |
 |---|---|---|---|---|---|---|---|---|
-| Qdenga (dengue vaccine) | Dengue virus vaccine | — | takeda | approved-exUS | 2023 | strategic | US application withdrawn in 2023. US filing withdrawn; marketed ex-US. | — |
+| Qdenga (dengue vaccine) | dengue virus | — | takeda | approved-exUS | 2023 | strategic | US application withdrawn in 2023. US filing withdrawn; marketed ex-US. | — |
 | mRESVIA | Respiratory Syncytial Virus (RSV) | mRNA vaccine | moderna | marketed | 2025 | commercial | FDA approved May 2024 but commercially failed; booked only $25M in 2024 and $8M in 2025 due to late market entry behind GSK Arexvy and Pfizer Abrysvo. approved and marketed; commercial failure only. | — |
 
 ### Rare disease  (2 entries)
@@ -217,7 +217,7 @@ status: curated
 | ranitidine (Zantac) | H2 receptor antagonist | small molecule | sanofi | approved-withdrawn | 2019 | manufacturing | Pulled from market in 2019 over NDMA contamination; spawned mass litigation and ~$300-350M in settlements by 2024-2026. | — |
 | Propulsid | gastric motility | small molecule | johnson-and-johnson | approved-withdrawn | 2000 | safety | Withdrawn from US market in 2000 after fatal arrhythmias. | — |
 | Xigris | sepsis | recombinant activated protein C | eli-lilly | approved-withdrawn | 2011 | efficacy | Sepsis drug withdrawn in 2011 after a failed confirmatory trial. | — |
-| Oxbryta | soluble guanylate cyclase activator | small molecule | pfizer | approved-withdrawn | 2024 | strategic | Sickle-cell drug (voxelotor, core of GBT acquisition) withdrawn worldwide in 2024. | — |
+| Oxbryta | HbS | small molecule | pfizer | approved-withdrawn | 2024 | safety | Sickle-cell drug (voxelotor, core of GBT acquisition) withdrawn worldwide in 2024 after an imbalance in vaso-occlusive crises and deaths. | — |
 
 ---
 

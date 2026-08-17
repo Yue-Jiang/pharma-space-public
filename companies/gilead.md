@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: gilead
-updated: 2026-08-14
+updated: 2026-08-16
 status: curated
 ---
 
@@ -44,7 +44,7 @@ Gilead faces no major loss of exclusivity until 2036, and it is spending that un
 | ISL/LEN | islatravir/lenacapavir | NRTTI + capsid inhibitor, once-weekly oral | HIV-1 treatment (virologically suppressed adults) | Ph3 | Positive ISLEND-1/-2 at AIDS 2026; would be the first weekly oral regimen, launch targeted 2027; with Merck |
 | Hepcludex | bulevirtide | Injectable entry inhibitor | Chronic hepatitis D | Approved 2026 | First and only FDA-approved HDV treatment; US launch began Q2 2026 (EU-approved since 2020) |
 | GS-8824 | — | NaPi2b-directed antibody-drug conjugate | Platinum-resistant ovarian cancer | Ph1 | 61% confirmed response rate in Ph1 (ASCO 2026); lead asset of the $3.15B Tubulis deal, registrational Ph3 planned |
-| Emvistagrast | emvistagrast | Oral α4β7 integrin inhibitor | Ulcerative colitis | Ph2 | Gilead's most advanced inflammation bet; Ph2 SWIFT completed but data still undisclosed as of Q2 2026 |
+| Emvistegrast | emvistegrast | Oral α4β7 integrin inhibitor | Ulcerative colitis | Ph2 | Gilead's most advanced inflammation bet; Ph2 SWIFT completed but data still undisclosed as of Q2 2026 |
 
 ## History: 1995-2025
 
