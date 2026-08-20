@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: astrazeneca
-updated: 2026-08-14
+updated: 2026-08-18
 status: curated
 ---
 # AstraZeneca
@@ -54,8 +54,12 @@ AstraZeneca's $80B-by-2030 ambition depends on a pipeline broad enough to outrun
 | Tozorakimab | tozorakimab | Anti-IL-33 ligand mAb | COPD, viral lower respiratory tract disease | Ph3 | Three Phase III COPD trials plus TILIA; the largest Respiratory & Immunology bet |
 | Volrustomig | volrustomig | PD-1/CTLA-4 bispecific mAb | Cervical, lung, head and neck cancers | Ph3 | Positioned to succeed Imfinzi as AZ's immunotherapy backbone |
 | Rilvegostomig | rilvegostomig | PD-1/TIGIT bispecific mAb | Biliary tract, lung, gastric cancers | Ph3 | Being combined with AZ's ADCs across multiple Phase III trials |
+| Oleclumab | oleclumab (MEDI9447) | Anti-CD73 monoclonal antibody | Unresectable stage III NSCLC and other solid tumours | Ph3 | Active PACIFIC-9 development with durvalumab |
+| Monalizumab | monalizumab (IPH2201) | Anti-NKG2A monoclonal antibody | Unresectable stage III NSCLC and other solid tumours | Ph3 | Innate Pharma-originated programme in active PACIFIC-9 development |
 | Saruparib | saruparib | Selective PARP1 inhibitor | HR+ breast, prostate cancer (BRCA/HRR) | Ph3 | Cleaner-profile successor to Lynparza ahead of its ~2028 LOE (est.) |
 | Sonesitatug vedotin | sonesitatug vedotin (AZD0901) | CLDN18.2-directed ADC | Gastric/GEJ cancer | Ph3 | China-originated (KYM Biosciences); pivotal CLARITY-Gastric01 |
+| Ceralasertib | ceralasertib (AZD6738) | Oral ATR kinase inhibitor | NSCLC and other solid tumours | Ph2 | Active company-sponsored combination studies |
+| AZD7789 | AZD7789 | PD-1/TIM-3 bispecific monoclonal antibody | NSCLC and other solid tumours | Ph2 | Active company-sponsored early clinical development |
 
 ## History: 1995-2025
 
@@ -105,3 +109,4 @@ AstraZeneca's stated ambition is $80B in total revenue by 2030, with roughly hal
 - Yahoo Finance / Zacks on $50B US manufacturing plan and oral GLP-1 strategy (21-22 Jul 2025); BioSpace on $80B 2030 ambition (29 Apr 2026) and China commitments (Mar 2025).
 - SEC filings: Alexion acquisition note (20-F FY2021); MedImmune tender offer 6-K (May 2007); pharmaphorum "A history of AstraZeneca" (2020).
 - Pharmaceutical Technology, FY2025 oncology coverage (10 Feb 2026); IJPS/DrugPatentWatch on Farxiga US generic approvals (Apr 2026).
+- AstraZeneca clinical-trial appendices and current ClinicalTrials.gov sponsor records for oleclumab, monalizumab, ceralasertib, and AZD7789 identity and active development.

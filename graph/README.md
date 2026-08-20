@@ -69,7 +69,17 @@ for e in edges:
         print(e["src"], "->", portfolio.get(e["src"]))
 ```
 
-`competes_with` dominates the edge count (~2,100 of 4,795) because it is combinatorial within an indication; filter it out for most traversals.
+`competes_with` dominates the edge count (5,862 of 10,094) because it is combinatorial within an indication; filter it out for most traversals.
+
+## Explorer layers
+
+The explorer opens in **Commercial**, a less crowded company and product view containing only marketed and legacy assets. Drug dot size reflects approximate 2025 sales.
+
+Switch to **Bets** to start with an all-fields portfolio overview, then select one field to see its active pipeline assets. In the overview, proximity reflects weighted overlap across company portfolios and the companies backing each field. Company dot size is categorical: leader, challenger, material, or exploratory, using the strongest visible commitment when multiple fields are shown. Companies in the same category have exactly the same size because the public evidence supports broad tiers, not a precise rank within a tier. Click a company to inspect the active assets, registered work, graph coverage, and separately disclosed capital context behind its category.
+
+Targets, modalities, indications, and disease areas use the same underlying graph. They can be added with the node controls without changing the asset layer.
+
+Commercial and single-field Bets views use one blended relationship layout. Each selected type adds its own relationship forces, so company, modality, indication, and target structure can influence the graph together. The all-fields Bets overview instead uses weighted portfolio similarity across companies and fields. Degree normalization prevents highly connected hubs from pulling everything into one cluster. Fixed starting geometry and cached filter combinations keep the result stable between visits. An optional advanced spacing control adjusts density without changing the underlying evidence.
 
 ## Caveats
 

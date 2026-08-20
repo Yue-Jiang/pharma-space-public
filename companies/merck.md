@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: merck
-updated: 2026-08-14
+updated: 2026-08-18
 status: curated
 ---
 
@@ -43,6 +43,7 @@ Everything in Merck's pipeline is measured against one date. Keytruda loses US e
 | Lipfendra | enlicitide | Oral macrocyclic-peptide PCSK9 inhibitor | Hypercholesterolemia, including heterozygous familial hypercholesterolemia | Approved 2026 | The first and only oral PCSK9 inhibitor; 56-59% placebo-adjusted LDL-C reduction at week 24; a 14,500-patient outcomes trial is still running |
 | Idvynso | doravirine/islatravir | Two-drug NNRTI + nucleoside analogue single tablet | HIV-1, switch in virologically suppressed adults | Approved 2026 | Approved Apr 21, 2026; first non-INSTI, tenofovir-free complete two-drug regimen |
 | Sac-TMT | sacituzumab tirumotecan | TROP2-directed ADC | Lung, breast, endometrial and gastroesophageal cancers | Ph3 | Licensed from Kelun-Biotech and already approved in China; positive TroFuse-005 endometrial data in 2026 and an FDA national priority voucher |
+| Calderasib | calderasib (MK-1084) | Oral selective KRAS G12C inhibitor | NSCLC, colorectal cancer and other solid tumours | Ph3 | Taiho and Astex/Otsuka collaboration; active pivotal and combination development |
 | Islatravir + lenacapavir | islatravir / lenacapavir | Once-weekly oral nucleoside analogue + capsid inhibitor | HIV-1 maintenance | Ph3 | Positive Ph3 with Gilead reported in 2026 — would be the first once-weekly oral HIV regimen |
 | Intismeran autogene | intismeran autogene | Individualised mRNA neoantigen therapy | Resected melanoma and other solid tumours | Ph3 | Co-developed with Moderna; the largest and most novel of Merck's post-Keytruda oncology bets |
 | Tulisokibart | tulisokibart | Anti-TL1A mAb | Ulcerative colitis, Crohn's disease | Ph3 | Merck's push into large-market immunology, acquired with Prometheus Biosciences |
@@ -97,4 +98,5 @@ Third, commercial diversification: Ohtuvayre (analyst peak estimates $3-4B), Cap
 - Merck Q4/FY2025 earnings release (Feb 3, 2026); Q2 and Q3 2025 releases (Jul 29 / Oct 30, 2025); Q2 2026 release (Jul 2026)
 - Merck 10-K for FY2025 (filed Feb 2026) — employee counts
 - Merck press releases: Verona Pharma acquisition completion (Oct 2025), Cidara agreement (Nov 14, 2025), Hengrui HRS-5346 license (Mar 25, 2025), LaNova LM-299 license close (Dec 2024), CORALreef Phase 3 results (2025), Welireg PPGL approval (May 2025)
+- Merck research pipeline (accessed Aug 18, 2026) for calderasib/MK-1084 identity, KRAS G12C mechanism, collaboration, and current development stage.
 - Fierce Pharma FY2025 earnings coverage (Feb 2026); BioPharma Dive on Keytruda Qlex launch (Oct 2025) and Cidara deal (Nov 2025); CNBC Q4 2025 coverage (Feb 3, 2026)

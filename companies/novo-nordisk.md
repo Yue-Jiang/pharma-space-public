@@ -44,7 +44,7 @@ Novo Nordisk's pipeline is essentially an attempt to build the next semaglutide 
 
 | Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
 |---|---|---|---|---|---|
-| CagriSema | cagrilintide/semaglutide | Long-acting amylin analogue + GLP-1 receptor agonist | Obesity | Filed | US decision expected end-2026, launch 2027; missed non-inferiority vs tirzepatide in REDEFINE-4 |
+| CagriSema | cagrilintide + semaglutide | Long-acting amylin analogue + GLP-1 receptor agonist | Obesity | Filed | US decision expected end-2026, launch 2027; missed non-inferiority vs tirzepatide in REDEFINE-4 |
 | Amycretin | zenagamtide | Unimolecular GLP-1/amylin receptor co-agonist | Obesity | Ph3 | Ph3 started 2026 in both subcutaneous and oral forms; Novo's most important internal asset |
 | Cagrilintide | cagrilintide | Long-acting amylin analogue (monotherapy) | Obesity | Ph3 | High-dose Ph3 initiation in 2026; tests amylin without a GLP-1 partner |
 | Efruxifermin | efruxifermin | FGF21 analogue | MASH with fibrosis | Ph3 | Basis of the $4.7B Akero acquisition (Dec 2025); Ph3 F1–F4 results due 2026 |

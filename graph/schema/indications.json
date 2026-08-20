@@ -2,6 +2,18 @@
   "version": 1,
   "description": "Exact indication concepts whose multiword meaning must outrank generic keyword rules.",
   "concepts": {
+    "dermatomyositis": {
+      "aliases": [
+        "dermatomyositis"
+      ],
+      "area": "immunology"
+    },
+    "polymyositis": {
+      "aliases": [
+        "polymyositis"
+      ],
+      "area": "immunology"
+    },
     "carcinoid-syndrome": {
       "aliases": [
         "carcinoid syndrome"

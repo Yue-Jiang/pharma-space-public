@@ -47,6 +47,12 @@ sales_path = os.path.join(G, "cache", "sales.json")
 sales_cache = json.load(open(sales_path)) if os.path.exists(sales_path) else {}
 development_path = os.path.join(G, "cache", "development.json")
 development_cache = json.load(open(development_path)) if os.path.exists(development_path) else {}
+field_bets_path = os.path.join(G, "cache", "field_bets.json")
+field_bets = json.load(open(field_bets_path)) if os.path.exists(field_bets_path) else None
+bet_assets_path = os.path.join(G, "cache", "bet_assets.json")
+bet_assets = json.load(open(bet_assets_path)) if os.path.exists(bet_assets_path) else None
+oncology_vocab_path = os.path.join(G, "cache", "oncology_vocabulary.json")
+oncology_vocab = json.load(open(oncology_vocab_path)) if os.path.exists(oncology_vocab_path) else None
 
 findings = []  # (level, check, message, ids)
 def add(level, check, msg, ids=()):
@@ -65,6 +71,370 @@ if dupe_ids:
 self_loops = {e["src"] for e in edges if e["src"] == e["dst"]}
 if self_loops:
     add("ERROR", "self-loops", "node related to itself", self_loops)
+
+# Field-bet records are a private display layer over the shared graph. They may
+# only point at existing companies, field nodes, and curated pipeline assets.
+# The visible categorical tier is deliberately validated separately from the
+# underlying numeric audit fields so the UI cannot invent a precise ranking.
+if field_bets is not None:
+    bad_field_bets = set()
+    allowed_tiers = {"leader", "challenger", "material", "exploratory"}
+    portfolio_pairs = {
+        (e["src"], e["dst"]) for e in edges if e.get("rel") == "portfolio_includes"
+    }
+    if field_bets.get("schema_version") != 1 or not isinstance(field_bets.get("fields"), dict):
+        bad_field_bets.add("root [schema_version must be 1 and fields must be an object]")
+    for source in field_bets.get("sources", []):
+        if not isinstance(source, str) or not os.path.exists(os.path.join(ROOT, source)):
+            bad_field_bets.add(f"source [{source} does not exist]")
+    for field_slug, field in (field_bets.get("fields") or {}).items():
+        if not isinstance(field, dict):
+            bad_field_bets.add(f"{field_slug} [field record must be an object]")
+            continue
+        field_node = field.get("node_id")
+        field_kind = by_id.get(field_node, {}).get("kind")
+        if field_kind not in {"indication", "disease_area"} and not (
+            field.get("composite") is True and field_node not in by_id
+        ):
+            bad_field_bets.add(f"{field_slug} [invalid field node {field_node}]")
+        companies = field.get("companies")
+        if not field.get("label") or not field.get("metric") or not isinstance(companies, dict) or not companies:
+            bad_field_bets.add(f"{field_slug} [label, metric, and companies are required]")
+            continue
+        for company_id, record in companies.items():
+            prefix = f"{field_slug}/{company_id}"
+            if by_id.get(company_id, {}).get("kind") != "company":
+                bad_field_bets.add(f"{prefix} [company node missing]")
+            if not isinstance(record, dict) or record.get("tier") not in allowed_tiers:
+                bad_field_bets.add(f"{prefix} [invalid categorical tier]")
+                continue
+            asset_ids = record.get("graph_asset_ids")
+            active_assets = record.get("active_assets")
+            coverage = record.get("graph_asset_coverage")
+            studies = record.get("active_studies")
+            if not isinstance(asset_ids, list) or len(asset_ids) != len(set(asset_ids)):
+                bad_field_bets.add(f"{prefix} [graph_asset_ids must be a unique list]")
+                asset_ids = []
+            if not isinstance(active_assets, list) or not active_assets:
+                bad_field_bets.add(f"{prefix} [active_assets must be a non-empty list]")
+                active_assets = []
+            if (not isinstance(coverage, dict)
+                    or coverage.get("shown") != len(asset_ids)
+                    or coverage.get("active") != len(active_assets)
+                    or coverage.get("shown", 0) > coverage.get("active", 0)):
+                bad_field_bets.add(f"{prefix} [graph asset coverage is inconsistent]")
+            if (not isinstance(studies, dict)
+                    or any(not isinstance(studies.get(k), int) or studies.get(k) < 0
+                           for k in ("efficacy", "support"))
+                    or not isinstance(record.get("planned_studies"), int)
+                    or record.get("planned_studies") < 0):
+                bad_field_bets.add(f"{prefix} [study counts must be non-negative integers]")
+            for asset_id in asset_ids:
+                if by_id.get(asset_id, {}).get("kind") != "molecule" or mol.get(asset_id, {}).get("phase") != "pipeline":
+                    bad_field_bets.add(f"{prefix}/{asset_id} [must be a pipeline molecule node]")
+                if (company_id, asset_id) not in portfolio_pairs:
+                    bad_field_bets.add(f"{prefix}/{asset_id} [missing portfolio association]")
+    if bad_field_bets:
+        add("ERROR", "field-bet-contract-invalid",
+            "field-bet display records must resolve to curated graph nodes and preserve categorical evidence invariants",
+            bad_field_bets)
+
+# The Bets reconciliation cache is the canonical boundary between registry
+# intervention labels and graph molecule nodes. Every active asset used by the
+# field layer must resolve here, even when it remains in the explicit review
+# queue and therefore has no graph node yet.
+if bet_assets is not None:
+    bad_bet_assets = set()
+    portfolio_pairs = {
+        (e["src"], e["dst"]) for e in edges if e.get("rel") == "portfolio_includes"
+    }
+    records = bet_assets.get("assets")
+    lookup = bet_assets.get("field_company_lookup")
+    metrics = bet_assets.get("metrics")
+    field_sources = bet_assets.get("fields")
+    if (bet_assets.get("schema_version") != 1 or not isinstance(records, list)
+            or not isinstance(lookup, dict) or not isinstance(field_sources, dict)):
+        bad_bet_assets.add("root [schema_version must be 1; assets, fields, and field_company_lookup are required]")
+        records, lookup, field_sources = [], {}, {}
+    for source in bet_assets.get("sources", []):
+        if not isinstance(source, str) or not os.path.exists(os.path.join(ROOT, source)):
+            bad_bet_assets.add(f"source [{source} does not exist]")
+    asset_ids = [record.get("asset_id") for record in records if isinstance(record, dict)]
+    if len(asset_ids) != len(set(asset_ids)):
+        bad_bet_assets.add("assets [asset_id values must be unique]")
+    allowed_dispositions = {
+        "existing_pipeline_node", "needs_identity_and_market_status_review",
+        "ambiguous_graph_match", "status_conflict_review", "phase4_market_status_review",
+        "reviewed_but_public_identity_opaque",
+    }
+    resolved_unique = 0
+    awaiting_curation = set()
+    reviewed_opaque = set()
+    nct_ids = set()
+    entry_count = 0
+    resolved_entry_count = 0
+    bet_phase_rank = {
+        "NA": 0, "EARLY_PHASE1": 1, "PHASE1": 1, "PHASE1|PHASE2": 2,
+        "PHASE2": 2, "PHASE2|PHASE3": 3, "PHASE3": 3, "PHASE4": 4,
+    }
+    for record in records:
+        if not isinstance(record, dict):
+            bad_bet_assets.add("assets [every asset record must be an object]")
+            continue
+        asset_id = record.get("asset_id", "<missing>")
+        graph_id = record.get("graph_id")
+        disposition = record.get("disposition")
+        appearances = record.get("appearances")
+        studies = record.get("active_studies")
+        if disposition not in allowed_dispositions:
+            bad_bet_assets.add(f"{asset_id} [invalid disposition]")
+        if not isinstance(appearances, list) or not appearances:
+            bad_bet_assets.add(f"{asset_id} [appearances must be a non-empty list]")
+            appearances = []
+        if not isinstance(studies, list) or not studies:
+            bad_bet_assets.add(f"{asset_id} [active_studies must be a non-empty list]")
+            studies = []
+        curation_evidence = record.get("curation_evidence")
+        if not isinstance(curation_evidence, list):
+            bad_bet_assets.add(f"{asset_id} [curation_evidence must be a list]")
+            curation_evidence = []
+        for evidence in curation_evidence:
+            if (not isinstance(evidence, dict) or not evidence.get("evidence")
+                    or not evidence.get("sources")
+                    or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", evidence.get("reviewed_as_of", ""))):
+                bad_bet_assets.add(f"{asset_id} [invalid reviewed curation evidence]")
+        entry_count += len(appearances)
+        if graph_id is not None:
+            resolved_unique += 1
+            resolved_entry_count += len(appearances)
+            if by_id.get(graph_id, {}).get("kind") != "molecule" or mol.get(graph_id, {}).get("phase") != "pipeline":
+                bad_bet_assets.add(f"{asset_id}/{graph_id} [graph match must be a pipeline molecule]")
+            if disposition != "existing_pipeline_node":
+                bad_bet_assets.add(f"{asset_id}/{graph_id} [resolved pipeline node has wrong disposition]")
+            for owner_id in record.get("current_owner_ids", []):
+                if (owner_id, graph_id) not in portfolio_pairs:
+                    bad_bet_assets.add(f"{asset_id}/{owner_id} [owner lacks portfolio edge]")
+        else:
+            if disposition == "reviewed_but_public_identity_opaque":
+                reviewed_opaque.add(asset_id)
+                if not curation_evidence:
+                    bad_bet_assets.add(f"{asset_id} [reviewed opaque asset must retain curation evidence]")
+            else:
+                awaiting_curation.add(asset_id)
+            if record.get("global_market_status") != "unverified":
+                bad_bet_assets.add(f"{asset_id} [unresolved asset must retain unverified market status]")
+        appearance_keys = {
+            (appearance.get("field_id"), appearance.get("company_id"), appearance.get("display_name"))
+            for appearance in appearances
+        }
+        if len(appearance_keys) != len(appearances):
+            bad_bet_assets.add(f"{asset_id} [duplicate field/company/display appearance]")
+        for study in studies:
+            nct_id = study.get("nct_id")
+            if (study.get("status") not in {"RECRUITING", "ACTIVE_NOT_RECRUITING", "ENROLLING_BY_INVITATION"}
+                    or not isinstance(nct_id, str) or not re.fullmatch(r"NCT\d{8}", nct_id)
+                    or study.get("source") != f"https://clinicaltrials.gov/study/{nct_id}"):
+                bad_bet_assets.add(f"{asset_id}/{nct_id} [invalid active ClinicalTrials.gov evidence]")
+            else:
+                nct_ids.add(nct_id)
+            if "PHASE4" in study.get("phases", []):
+                bad_bet_assets.add(
+                    f"{asset_id}/{nct_id} [Phase 4 intervention cannot remain in unmarketed Bets without adjudication]"
+                )
+        if record.get("phase4_registry_flag") != any(
+                "PHASE4" in study.get("phases", []) for study in studies):
+            bad_bet_assets.add(f"{asset_id} [Phase 4 registry flag is inconsistent]")
+        observed_phases = sorted(
+            {phase for study in studies for phase in study.get("phases", [])},
+            key=lambda phase: (bet_phase_rank.get(phase, -1), phase),
+        )
+        expected_max_phase = max(
+            observed_phases, key=lambda phase: (bet_phase_rank.get(phase, -1), phase), default="NA"
+        )
+        if (record.get("registered_phases") != observed_phases
+                or record.get("max_registered_phase") != expected_max_phase
+                or record.get("active_nct_count") != len({study.get("nct_id") for study in studies})):
+            bad_bet_assets.add(f"{asset_id} [registered phase or active-NCT summary is inconsistent]")
+    if isinstance(metrics, dict):
+        expected_metrics = {
+            "company_field_asset_entries": entry_count,
+            "unique_reconciled_assets": len(records),
+            "unique_active_nct_records": len(nct_ids),
+            "graph_resolved_company_field_asset_entries": resolved_entry_count,
+            "unique_graph_resolved_assets": resolved_unique,
+        }
+        for key, expected in expected_metrics.items():
+            if metrics.get(key) != expected:
+                bad_bet_assets.add(f"metrics/{key} [expected {expected}, found {metrics.get(key)}]")
+    else:
+        bad_bet_assets.add("metrics [required object missing]")
+    if field_bets is not None:
+        if set(field_sources) != set(field_bets.get("fields", {})):
+            bad_bet_assets.add("fields [source map must cover the field-bet fields exactly]")
+        for field_id, source in field_sources.items():
+            if (not isinstance(source, dict) or source.get("registry") != "ClinicalTrials.gov API v2"
+                    or not source.get("condition_query")):
+                bad_bet_assets.add(f"{field_id} [missing registry or condition-query provenance]")
+        for field_id, field in field_bets.get("fields", {}).items():
+            for company_id, company in field.get("companies", {}).items():
+                company_lookup = lookup.get(field_id, {}).get(company_id, {})
+                if set(company_lookup) != set(company.get("active_assets", [])):
+                    bad_bet_assets.add(f"{field_id}/{company_id} [lookup does not cover active assets exactly]")
+                resolved_entries = [
+                    company_lookup[name].get("graph_id") for name in company.get("active_assets", [])
+                    if name in company_lookup and company_lookup[name].get("graph_id")
+                ]
+                if len(resolved_entries) != len(set(resolved_entries)):
+                    bad_bet_assets.add(
+                        f"{field_id}/{company_id} [multiple active labels resolve to one graph asset]"
+                    )
+                resolved = list(dict.fromkeys(resolved_entries))
+                if resolved != company.get("graph_asset_ids"):
+                    bad_bet_assets.add(f"{field_id}/{company_id} [field display is stale versus reconciliation]")
+    if bad_bet_assets:
+        add("ERROR", "bet-asset-reconciliation-invalid",
+            "registry assets must have reproducible aliases, active NCT evidence, and consistent graph resolution",
+            bad_bet_assets)
+    if awaiting_curation:
+        add("WARN", "bet-assets-awaiting-curation",
+            "registry-backed active assets awaiting canonical identity, ownership, and global market-status review",
+            awaiting_curation)
+    if reviewed_opaque:
+        add("INFO", "bet-assets-reviewed-publicly-opaque",
+            "reviewed registry-backed programs whose public evidence does not disclose a defensible canonical molecular identity or mechanism",
+            reviewed_opaque)
+
+# Oncology intervention normalization is kept separate from the published Bets
+# fields until its identity and disposition gates pass. The cache must account
+# for every frozen intervention occurrence and may never infer ownership from a
+# vocabulary identity alone.
+if oncology_vocab is not None:
+    bad_oncology_vocab = set()
+    fields = oncology_vocab.get("fields")
+    if oncology_vocab.get("schema_version") != 1 or not isinstance(fields, dict) or not fields:
+        bad_oncology_vocab.add("root [schema_version 1 and non-empty fields object are required]")
+        fields = {}
+    for source in oncology_vocab.get("sources", []):
+        if not isinstance(source, str) or not os.path.exists(os.path.join(ROOT, source)):
+            bad_oncology_vocab.add(f"source [{source} does not exist]")
+    portfolio_pairs = {
+        (edge["src"], edge["dst"]) for edge in edges if edge.get("rel") == "portfolio_includes"
+    }
+    allowed_statuses = {
+        "graph_exact", "vocabulary_alias_to_graph", "ncit_exact", "rxnorm_exact",
+        "combination_resolved", "non_specific_control_or_regimen", "unresolved",
+        "ambiguous_graph_match", "ambiguous_vocabulary_match", "reviewed_override",
+    }
+    allowed_roles = {
+        "investigational_asset", "marketed_or_legacy_drug", "marketed_drug", "regimen",
+        "diagnostic_or_support", "non_specific_control_or_regimen", "combination_regimen",
+        "drug_market_status_review", "other_concept_review", "review",
+        "inactive_investigational", "biosimilar_candidate",
+    }
+    ready_roles = {
+        "investigational_asset", "marketed_or_legacy_drug", "marketed_drug", "regimen",
+        "diagnostic_or_support", "non_specific_control_or_regimen", "combination_regimen",
+        "inactive_investigational", "biosimilar_candidate",
+    }
+    identity_unresolved_statuses = {
+        "unresolved", "ambiguous_graph_match", "ambiguous_vocabulary_match",
+    }
+    below_identity_gate = set()
+    below_disposition_gate = set()
+    for field_id, field in fields.items():
+        labels = field.get("labels") if isinstance(field, dict) else None
+        if not isinstance(labels, list) or not labels:
+            bad_oncology_vocab.add(f"{field_id} [labels must be a non-empty list]")
+            continue
+        label_names = [record.get("label") for record in labels if isinstance(record, dict)]
+        if len(label_names) != len(labels) or len(label_names) != len(set(label_names)):
+            bad_oncology_vocab.add(f"{field_id} [labels must be unique named objects]")
+        status_counts = Counter()
+        role_counts = Counter()
+        total = 0
+        for record in labels:
+            if not isinstance(record, dict):
+                continue
+            label = record.get("label", "<missing>")
+            occurrences = record.get("occurrences")
+            status = record.get("status")
+            role = record.get("role")
+            if not isinstance(occurrences, int) or occurrences < 1:
+                bad_oncology_vocab.add(f"{field_id}/{label} [occurrences must be a positive integer]")
+                continue
+            total += occurrences
+            status_counts[status] += occurrences
+            role_counts[role] += occurrences
+            if status not in allowed_statuses or role not in allowed_roles or not record.get("basis"):
+                bad_oncology_vocab.add(f"{field_id}/{label} [invalid or silent status, role, or basis]")
+            if not isinstance(record.get("company_ids"), list) or not record.get("company_ids"):
+                bad_oncology_vocab.add(f"{field_id}/{label} [company context is required]")
+            nct_ids = record.get("nct_ids")
+            if (not isinstance(nct_ids, list) or not nct_ids
+                    or any(not isinstance(nct_id, str) or not re.fullmatch(r"NCT\d{8}", nct_id) for nct_id in nct_ids)):
+                bad_oncology_vocab.add(f"{field_id}/{label} [valid NCT context is required]")
+            graph_ids = record.get("graph_ids")
+            if not isinstance(graph_ids, list) or len(graph_ids) != len(set(graph_ids)):
+                bad_oncology_vocab.add(f"{field_id}/{label} [graph_ids must be a unique list]")
+                graph_ids = []
+            for graph_id in graph_ids:
+                if by_id.get(graph_id, {}).get("kind") != "molecule":
+                    bad_oncology_vocab.add(f"{field_id}/{label}/{graph_id} [unknown molecule node]")
+            if role == "investigational_asset":
+                if not graph_ids:
+                    bad_oncology_vocab.add(f"{field_id}/{label} [investigational role requires a canonical graph node]")
+                for graph_id in graph_ids:
+                    if mol.get(graph_id, {}).get("phase") != "pipeline":
+                        bad_oncology_vocab.add(f"{field_id}/{label}/{graph_id} [investigational role requires pipeline status]")
+                for owner_id in record.get("current_owner_ids", []):
+                    if not any((owner_id, graph_id) in portfolio_pairs for graph_id in graph_ids):
+                        bad_oncology_vocab.add(f"{field_id}/{label}/{owner_id} [owner lacks portfolio association]")
+            if role == "marketed_or_legacy_drug" and any(
+                    mol.get(graph_id, {}).get("phase") == "pipeline" for graph_id in graph_ids):
+                bad_oncology_vocab.add(f"{field_id}/{label} [marketed role points to pipeline graph node]")
+            if role in {"marketed_or_legacy_drug", "marketed_drug"} and record.get("market_status") not in {"marketed", "legacy"}:
+                bad_oncology_vocab.add(f"{field_id}/{label} [marketed role requires marketed or legacy status]")
+            if role == "inactive_investigational" and record.get("market_status") not in {
+                    "failed", "withdrawn", "discontinued", "inactive_or_deprioritized"}:
+                bad_oncology_vocab.add(f"{field_id}/{label} [inactive role requires an inactive status]")
+            if role == "biosimilar_candidate" and record.get("market_status") != "pipeline":
+                bad_oncology_vocab.add(f"{field_id}/{label} [biosimilar candidate requires pipeline status]")
+            components = record.get("components")
+            if role == "combination_regimen" and (not isinstance(components, list) or not components):
+                bad_oncology_vocab.add(f"{field_id}/{label} [resolved combination requires components]")
+        resolved_identity = total - sum(status_counts[status] for status in identity_unresolved_statuses)
+        resolved_disposition = sum(role_counts[role] for role in ready_roles)
+        expected_identity = {
+            "resolved": resolved_identity, "total": total,
+            "fraction": round(resolved_identity / total, 4) if total else 0,
+        }
+        expected_disposition = {
+            "resolved": resolved_disposition, "total": total,
+            "fraction": round(resolved_disposition / total, 4) if total else 0,
+        }
+        if (field.get("identity_resolution") != expected_identity
+                or field.get("publication_disposition") != expected_disposition
+                or field.get("status_occurrences") != dict(sorted(status_counts.items()))
+                or field.get("role_occurrences") != dict(sorted(role_counts.items()))
+                or field.get("intervention_occurrences") != total
+                or field.get("unique_intervention_labels") != len(labels)):
+            bad_oncology_vocab.add(f"{field_id} [coverage summaries disagree with label records]")
+        if expected_identity["fraction"] < 0.9:
+            below_identity_gate.add(field_id)
+        if expected_disposition["fraction"] < 0.9:
+            below_disposition_gate.add(field_id)
+    if bad_oncology_vocab:
+        add("ERROR", "oncology-vocabulary-reconciliation-invalid",
+            "oncology labels require complete occurrence accounting, provenance, graph-safe identity, and reproducible summaries",
+            bad_oncology_vocab)
+    if below_identity_gate:
+        add("WARN", "oncology-identity-gate-not-met",
+            "oncology fields below the 90 percent occurrence-weighted identity-resolution gate",
+            below_identity_gate)
+    if below_disposition_gate:
+        add("WARN", "oncology-publication-gate-not-met",
+            "oncology fields below the 90 percent occurrence-weighted role, market-status, and ownership disposition gate",
+            below_disposition_gate)
 
 # ---------------------------------------------------- source-backed indication claims
 dupe_claim_ids = [i for i, c in Counter(c["id"] for c in claims).items() if c > 1]
@@ -726,7 +1096,7 @@ SOURCE_MODALITY_ASSERTIONS = [
      {"clotting-factor"}),
     (r"\b(?:inhaled protein|recombinant(?:\s+\w+){0,4}\s+protein|protein analogue)",
      {"recombinant-protein"}),
-    (r"\b(?:peptide|insulin|amylin|natriuretic)", {"peptide"}),
+    (r"(?<!non-)\bpeptide\b|\b(?:insulins?|amylin|natriuretic)\b", {"peptide"}),
     (r"\bsmall[- ]molecule\b", {"small-molecule", "formulation-smallmolecule"}),
 ]
 
@@ -929,7 +1299,16 @@ def _brand_keys(s):
     keys = {s, flat} | {p.strip() for p in re.split(r"[/+]", flat) if len(p.strip()) > 2}
     return {k for k in keys if k}
 
+def _brand_group_key(s):
+    s = re.sub(r"\s*\(.*?\)", "", str(s)).strip().strip("*").lower()
+    s = re.sub(r"\s+franchise$", "", s)
+    return re.sub(r"\s*([/+])\s*", r"\1", s)
+
+def _brand_group_parts(s):
+    return {p.strip() for p in re.split(r"[/+]", _brand_group_key(s)) if len(p.strip()) > 2}
+
 _prose_sales = {}
+_prose_sales_groups = set()
 for _p in _glob.glob(os.path.join(ROOT, "companies", "*.md")):
     _sec = re.search(r"## Major marketed assets(.*?)## (?:Pipeline|History)", open(_p).read(), re.S)
     if not _sec:
@@ -943,8 +1322,33 @@ for _p in _glob.glob(os.path.join(ROOT, "companies", "*.md")):
             continue
         if not re.search(r"[\d.]+\s*[BM]\b", _c[3]):
             continue          # genuinely undisclosed — not a defect
-        for _k in _brand_keys(re.match(r"([^(]+)", _c[0]).group(1) if re.match(r"([^(]+)", _c[0]) else _c[0]):
+        _brand_cell = re.match(r"([^(]+)", _c[0]).group(1) if re.match(r"([^(]+)", _c[0]) else _c[0]
+        _prose_sales_groups.add(_brand_group_key(_brand_cell))
+        for _k in _brand_keys(_brand_cell):
             _prose_sales[_k] = _c[3]
+
+# A combined franchise row is not component-level evidence. The fallback extractor may
+# attach it to the one exact normalized brand group, but it must never copy the same
+# aggregate onto multiple overlapping molecule nodes. Audited component records carry
+# their own source boundaries and are intentionally excluded here.
+duplicated_aggregate_sales = set()
+for _group in _prose_sales_groups:
+    _source_parts = _brand_group_parts(_group)
+    if len(_source_parts) < 2:
+        continue
+    _matches = set()
+    for _generic, _node in mol.items():
+        if not _node.get("sales_2025_usd_bn") or _node.get("sales_2025_components"):
+            continue
+        if any(_brand_group_parts(_brand) <= _source_parts
+               for _brand in (_node.get("brands") or [_generic])):
+            _matches.add(_generic)
+    if len(_matches) > 1:
+        duplicated_aggregate_sales.add(f"{_group}: {', '.join(sorted(_matches))}")
+if duplicated_aggregate_sales:
+    add("ERROR", "aggregate-sales-copied-to-components",
+        "one combined franchise sales row was copied onto multiple molecule nodes",
+        duplicated_aggregate_sales)
 
 _graph_keys = set()
 for _g, _n in mol.items():

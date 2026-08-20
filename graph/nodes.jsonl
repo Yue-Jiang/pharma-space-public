@@ -16,11 +16,14 @@
 {"id": "gilead", "kind": "company", "covered": true, "tier": "core"}
 {"id": "gsk", "kind": "company", "covered": true, "tier": "core"}
 {"id": "hansoh-pharma", "kind": "company", "covered": false, "tier": "partner"}
+{"id": "innate-pharma", "kind": "company", "covered": false, "tier": "cited"}
+{"id": "innovent", "kind": "company", "covered": false, "tier": "cited"}
 {"id": "ionis", "kind": "company", "covered": false, "tier": "partner"}
 {"id": "ipsen", "kind": "company", "covered": false, "tier": "cited"}
 {"id": "johnson-and-johnson", "kind": "company", "covered": true, "tier": "core"}
 {"id": "kelun-biotech", "kind": "company", "covered": false, "tier": "partner"}
 {"id": "legend", "kind": "company", "covered": false, "tier": "partner"}
+{"id": "medilink", "kind": "company", "covered": false, "tier": "cited"}
 {"id": "merck", "kind": "company", "covered": true, "tier": "core"}
 {"id": "moderna", "kind": "company", "covered": true, "tier": "core"}
 {"id": "novartis", "kind": "company", "covered": true, "tier": "core"}
@@ -33,6 +36,7 @@
 {"id": "takeda", "kind": "company", "covered": true, "tier": "core"}
 {"id": "teva", "kind": "company", "covered": false, "tier": "cited"}
 {"id": "vertex", "kind": "company", "covered": true, "tier": "core"}
+{"id": "zai-lab", "kind": "company", "covered": false, "tier": "cited"}
 {"id": "deal-abbvie-2014-0", "kind": "deal", "type": "acquisition", "year": 2014, "value_usd_bn": 54.0, "counterparty": "Shire", "role": "acquirer"}
 {"id": "deal-abbvie-2015-1", "kind": "deal", "type": "acquisition", "year": 2015, "value_usd_bn": 21.0, "counterparty": "Pharmacyclics", "assets": ["Imbruvica"], "role": "acquirer"}
 {"id": "deal-abbvie-2016-2", "kind": "deal", "type": "acquisition", "year": 2016, "value_usd_bn": 5.8, "counterparty": "Stemcentrx", "assets": ["rovalpituzumab tesirine"], "role": "acquirer"}
@@ -437,6 +441,7 @@
 {"id": "cytomegalovirus-infection", "kind": "indication"}
 {"id": "dengue", "kind": "indication"}
 {"id": "depression", "kind": "indication"}
+{"id": "dermatomyositis", "kind": "indication"}
 {"id": "diabetes-mellitus", "kind": "indication"}
 {"id": "dravet-syndrome", "kind": "indication"}
 {"id": "dyslipidemia", "kind": "indication"}
@@ -508,6 +513,7 @@
 {"id": "pneumococcal", "kind": "indication"}
 {"id": "pnh", "kind": "indication"}
 {"id": "polycythemia-vera", "kind": "indication"}
+{"id": "polymyositis", "kind": "indication"}
 {"id": "pompe-disease", "kind": "indication"}
 {"id": "primary-biliary-cholangitis", "kind": "indication"}
 {"id": "primary-immunodeficiency", "kind": "indication"}
@@ -569,11 +575,18 @@
 {"id": "small-molecule", "kind": "modality"}
 {"id": "toxin", "kind": "modality"}
 {"id": "vaccine", "kind": "modality"}
+{"id": "ab-1005", "kind": "molecule", "brands": ["AB-1005"], "class": "AAV gene therapy delivering GDNF", "modality": "gene-therapy", "phase": "pipeline"}
 {"id": "abatacept", "kind": "molecule", "brands": ["Orencia"], "class": "T-cell costimulation blocker", "modality": "fusion-protein", "sales_2025_usd_bn": 3.7, "phase": "marketed"}
+{"id": "abbv-142", "kind": "molecule", "brands": ["ABBV-142"], "class": "Monoclonal antibody antagonist of LPAR1", "modality": "mab", "phase": "pipeline"}
+{"id": "abbv-1758", "kind": "molecule", "brands": ["ABBV-1758"], "class": "Transferrin-receptor-enabled antibody targeting pyroglutamate-modified amyloid beta", "modality": "mab", "phase": "pipeline"}
+{"id": "abbv-319", "kind": "molecule", "brands": ["ABBV-319"], "class": "CD19-targeted glucocorticoid-receptor-modulator antibody-drug conjugate", "modality": "adc", "phase": "pipeline"}
 {"id": "abbv-400", "kind": "molecule", "brands": ["Temab-A"], "class": "c-Met antibody-drug conjugate", "modality": "adc", "phase": "pipeline"}
+{"id": "abbv-519", "kind": "molecule", "brands": ["ABBV-519"], "class": "Anti-CD19 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "abbv-8736", "kind": "molecule", "brands": ["ABBV-8736"], "class": "Anti-TREM1 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "abelacimab", "kind": "molecule", "brands": ["Abelacimab"], "class": "Anti-factor XI/XIa mAb", "modality": "mab", "phase": "pipeline"}
 {"id": "abemaciclib", "kind": "molecule", "brands": ["Verzenio"], "class": "CDK4/6 inhibitor (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 5.72, "loe_year": 2029, "phase": "marketed"}
 {"id": "abiraterone acetate", "kind": "molecule", "brands": ["Zytiga"], "class": "CYP17A1 inhibitor", "modality": "small-molecule", "phase": "legacy"}
+{"id": "abp 692", "kind": "molecule", "brands": ["ABP 692"], "class": "CD20 mAb (ocrelizumab biosimilar)", "modality": "biosimilar", "phase": "pipeline"}
 {"id": "acalabrutinib", "kind": "molecule", "brands": ["Calquence"], "class": "Small molecule, BTK inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 3.5, "loe_year": 2032, "phase": "marketed"}
 {"id": "acapatamab", "kind": "molecule", "phase": "failed", "modality": "bispecific-ab", "modality_note": "bispecific (HLE BiTE)", "year_died": 2022, "failure_mode": "strategic"}
 {"id": "acetaminophen", "kind": "molecule", "brands": ["Tylenol"], "class": "Analgesic/antipyretic (TRPV1 modulator)", "modality": "small-molecule", "phase": "marketed"}
@@ -581,7 +594,7 @@
 {"id": "acoramidis", "kind": "molecule", "brands": ["Beyonttra"], "class": "Oral transthyretin (TTR) stabilizer", "modality": "small-molecule", "loe_year": 2030, "phase": "marketed"}
 {"id": "adagrasib", "kind": "molecule", "brands": ["Krazati"], "class": "KRAS G12C inhibitor (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 0.2, "phase": "marketed"}
 {"id": "adalimumab", "kind": "molecule", "brands": ["Humira"], "class": "Anti-TNF monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 4.54, "loe_year": 2023, "phase": "marketed"}
-{"id": "adalimumab biosimilar", "kind": "molecule", "brands": ["Imraldi"], "class": "Anti-TNF monoclonal antibody biosimilar (w/ Samsung Bioepis)", "modality": "biosimilar", "sales_2025_usd_bn": 0.7, "phase": "marketed"}
+{"id": "adalimumab biosimilar", "kind": "molecule", "brands": ["Imraldi"], "class": "Anti-TNF monoclonal antibody biosimilar (w/ Samsung Bioepis)", "modality": "biosimilar", "phase": "marketed"}
 {"id": "adalimumab-adbm", "kind": "molecule", "brands": ["Cyltezo"], "class": "TNF-\u03b1 inhibitor biosimilar", "modality": "biosimilar", "phase": "legacy"}
 {"id": "admilparant", "kind": "molecule", "brands": ["Admilparant"], "class": "Oral small-molecule LPA1 antagonist", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "aducanumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2024, "failure_mode": "commercial"}
@@ -593,8 +606,15 @@
 {"id": "aleglitazar", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2013, "failure_mode": "efficacy"}
 {"id": "alendronate", "kind": "molecule", "brands": ["Fosamax"], "class": "Bisphosphonate", "modality": "small-molecule", "phase": "marketed"}
 {"id": "alirocumab", "kind": "molecule", "brands": ["Praluent"], "class": "Monoclonal antibody (PCSK9 inhibitor)", "modality": "mab", "sales_2025_usd_bn": 0.2, "loe_year": 2030, "phase": "marketed"}
+{"id": "aln-5288", "kind": "molecule", "brands": ["ALN-5288"], "class": "C16-conjugated MAPT-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "aln-ang3", "kind": "molecule", "brands": ["ALN-ANG3"], "class": "Liver-directed ANGPTL3-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "aln-cfb", "kind": "molecule", "brands": ["ALN-CFB"], "class": "Liver-directed complement-factor-B-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "aln-cideb", "kind": "molecule", "brands": ["ALN-CIDEB"], "class": "Liver-directed CIDEB-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "aln-pnp", "kind": "molecule", "brands": ["ALN-PNP"], "class": "Liver-directed PNPLA3-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "aln-snca", "kind": "molecule", "brands": ["ALN-SNCA"], "class": "SNCA-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
 {"id": "alofisel", "kind": "molecule", "phase": "failed", "modality": "cell-therapy", "modality_note": "cell therapy", "year_died": 2023, "failure_mode": "efficacy"}
 {"id": "alteplase", "kind": "molecule", "brands": ["Actilyse"], "class": "Recombinant tPA fibrinolytic (biologic)", "modality": "recombinant-protein", "sales_2025_usd_bn": 0.76, "phase": "marketed"}
+{"id": "alxn2030", "kind": "molecule", "brands": ["ALXN2030"], "class": "Liver-directed complement-C3-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
 {"id": "ambrisentan", "kind": "molecule", "brands": ["Letairis"], "class": "Endothelin receptor antagonist", "modality": "small-molecule", "phase": "marketed"}
 {"id": "ambroxol", "kind": "molecule", "brands": ["Mucosolvan"], "class": "Mucoactive agent", "modality": "small-molecule", "phase": "marketed"}
 {"id": "amcenestrant", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2022, "failure_mode": "efficacy"}
@@ -615,6 +635,7 @@
 {"id": "aripiprazole", "kind": "molecule", "brands": ["Abilify"], "class": "Atypical antipsychotic (dopamine D2 antagonist)", "modality": "small-molecule", "phase": "legacy"}
 {"id": "arlo-cel", "kind": "molecule", "brands": ["Arlo-cel"], "class": "GPRC5D-directed CAR-T cell therapy", "modality": "cell-therapy", "phase": "pipeline"}
 {"id": "asciminib", "kind": "molecule", "brands": ["Scemblix"], "class": "Small molecule (STAMP/allosteric ABL inhibitor)", "modality": "small-molecule", "sales_2025_usd_bn": 1.3, "loe_year": 2030, "phase": "marketed"}
+{"id": "astegolimab", "kind": "molecule", "brands": ["Astegolimab"], "class": "Anti-ST2 monoclonal antibody blocking IL-33 signaling", "modality": "mab", "phase": "pipeline"}
 {"id": "asundexian", "kind": "molecule", "brands": ["Asundexian"], "class": "Oral Factor XIa inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "atabecestat", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2018, "failure_mode": "safety"}
 {"id": "atezolizumab", "kind": "molecule", "brands": ["Tecentriq"], "class": "Anti-PD-L1 checkpoint inhibitor antibody", "modality": "mab", "sales_2025_usd_bn": 4.03, "loe_year": 2028, "phase": "marketed"}
@@ -633,7 +654,20 @@
 {"id": "ave5530", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2009, "failure_mode": "efficacy"}
 {"id": "axicabtagene ciloleucel", "kind": "molecule", "brands": ["Yescarta"], "class": "CD19 CAR T-cell therapy", "modality": "cell-therapy", "sales_2025_usd_bn": 1.5, "phase": "marketed"}
 {"id": "axokine", "kind": "molecule", "phase": "failed", "modality": "recombinant-protein", "modality_note": "recombinant CNTF protein", "year_died": 2003, "failure_mode": "limited-clinical-benefit"}
+{"id": "azd0120", "kind": "molecule", "brands": ["AZD0120"], "class": "Autologous dual BCMA/CD19 CAR-T cell therapy", "modality": "cell-therapy", "phase": "pipeline"}
 {"id": "azd0780", "kind": "molecule", "brands": ["AZD0780"], "class": "Oral small-molecule PCSK9 inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "azd1043", "kind": "molecule", "brands": ["AZD1043"], "class": "ActRII monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "azd1163", "kind": "molecule", "brands": ["AZD1163"], "class": "Effector-null PAD2/PAD4-targeting bispecific antibody", "modality": "bispecific-ab", "phase": "pipeline"}
+{"id": "azd1705", "kind": "molecule", "brands": ["AZD1705"], "class": "GalNAc-conjugated ANGPTL3-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "azd4248", "kind": "molecule", "brands": ["AZD4248"], "class": "Oral small-molecule NNMT inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "azd4954", "kind": "molecule", "brands": ["AZD4954"], "class": "Oral small-molecule lipoprotein(a) inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "azd5492", "kind": "molecule", "brands": ["AZD5492"], "class": "CD20\u00d7CD3\u00d7CD8 trispecific T-cell engager", "modality": "bispecific-ab", "phase": "pipeline"}
+{"id": "azd6234", "kind": "molecule", "brands": ["AZD6234"], "class": "Long-acting amylin receptor agonist peptide", "modality": "peptide", "phase": "pipeline"}
+{"id": "azd6793", "kind": "molecule", "brands": ["AZD6793"], "class": "Oral small-molecule IRAK4 inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "azd7789", "kind": "molecule", "brands": ["AZD7789"], "class": "PD-1 x TIM-3 bispecific monoclonal antibody", "modality": "bispecific-ab", "phase": "pipeline"}
+{"id": "azd7798", "kind": "molecule", "brands": ["AZD7798"], "class": "CCR9-depleting monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "azd8965", "kind": "molecule", "brands": ["AZD8965"], "class": "Oral small-molecule arginase inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "azd9550", "kind": "molecule", "brands": ["AZD9550"], "class": "Long-acting dual GLP-1/glucagon receptor agonist peptide", "modality": "peptide", "phase": "pipeline"}
 {"id": "balinatunfib", "kind": "molecule", "brands": ["Balinatunfib"], "class": "Oral TNFR1 signalling inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "bapineuzumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2012, "failure_mode": "efficacy"}
 {"id": "baricitinib", "kind": "molecule", "brands": ["Olumiant"], "class": "JAK inhibitor (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 1.0, "loe_year": 2029, "phase": "marketed"}
@@ -647,17 +681,24 @@
 {"id": "bempedoic acid", "kind": "molecule", "brands": ["Nilemdo / Nustendi"], "class": "Oral ATP-citrate lyase inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.15, "loe_year": 2030, "phase": "marketed"}
 {"id": "benralizumab", "kind": "molecule", "brands": ["Fasenra"], "class": "Anti-IL-5 receptor alpha monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 1.8, "loe_year": 2030, "phase": "marketed"}
 {"id": "bepirovirsen", "kind": "molecule", "brands": ["Bepirovirsen"], "class": "Antisense oligonucleotide against HBsAg", "modality": "aso", "phase": "pipeline"}
+{"id": "berobenatide", "kind": "molecule", "brands": ["PF-08653944"], "class": "Ultra-long-acting GLP-1 receptor agonist", "modality": "peptide", "phase": "pipeline"}
 {"id": "bevacizumab", "kind": "molecule", "brands": ["Avastin"], "class": "Anti-VEGF monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 3.92, "loe_year": 2017, "phase": "marketed"}
+{"id": "bi 3034701", "kind": "molecule", "brands": ["BI 3034701"], "class": "GLP-1/GIP/NPY2 triple receptor agonist", "modality": "peptide", "phase": "pipeline"}
 {"id": "bi 3720931", "kind": "molecule", "phase": "failed", "modality": "gene-therapy", "modality_note": "gene therapy", "year_died": 2026, "failure_mode": "strategic"}
+{"id": "bi-765423", "kind": "molecule", "brands": ["BI 765423"], "class": "Anti-IL-11 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "bictegravir/emtricitabine/tenofovir alafenamide", "kind": "molecule", "brands": ["Biktarvy"], "class": "Oral single-tablet HIV regimen (INSTI + 2 NRTIs)", "modality": "small-molecule", "sales_2025_usd_bn": 14.3, "loe_year": 2036, "phase": "marketed"}
+{"id": "biib122", "kind": "molecule", "brands": ["BIIB122"], "class": "CNS-penetrant small-molecule LRRK2 kinase inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "bimagrumab", "kind": "molecule", "brands": ["Bimagrumab"], "class": "Anti-activin type II receptor mAb", "modality": "mab", "phase": "pipeline"}
 {"id": "bisacodyl", "kind": "molecule", "brands": ["Dulcolax"], "class": "Osmotic laxative", "modality": "small-molecule", "phase": "marketed"}
 {"id": "bleximenib", "kind": "molecule", "brands": ["Bleximenib"], "class": "Menin-MLL inhibitor (oral)", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "blinatumomab", "kind": "molecule", "brands": ["Blincyto"], "class": "Bispecific T-cell engager (BiTE)", "modality": "bispecific-ab", "sales_2025_usd_bn": 1.56, "phase": "marketed"}
 {"id": "bms-986094", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2012, "failure_mode": "safety"}
+{"id": "bms-986446", "kind": "molecule", "brands": ["BMS-986446"], "class": "Anti-MTBR-tau monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "bms-986454", "kind": "molecule", "brands": ["BMS-986454"], "class": "Anti-PAD4 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "bnt327", "kind": "molecule", "brands": ["Pumitamig"], "class": "PD-L1\u00d7VEGF-A bispecific antibody", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "bortezomib", "kind": "molecule", "brands": ["Velcade"], "class": "Proteasome inhibitor", "modality": "small-molecule", "phase": "legacy"}
 {"id": "bosentan", "kind": "molecule", "brands": ["Tracleer"], "class": "Endothelin-1 receptor antagonist", "modality": "small-molecule", "phase": "legacy"}
+{"id": "brenipatide", "kind": "molecule", "brands": ["Brenipatide"], "class": "GIP/GLP-1 receptor co-agonist peptide", "modality": "peptide", "phase": "pipeline"}
 {"id": "brentuximab vedotin", "kind": "molecule", "brands": ["Adcetris"], "class": "CD30-directed antibody-drug conjugate", "modality": "adc", "sales_2025_usd_bn": 0.55, "loe_year": 2030, "phase": "marketed"}
 {"id": "bretisilocin", "kind": "molecule", "brands": ["Bretisilocin"], "class": "Psychedelic-derived serotonin 5-HT2A agonist", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "brexucabtagene autoleucel", "kind": "molecule", "brands": ["Tecartus"], "class": "CD19 CAR T-cell therapy", "modality": "cell-therapy", "sales_2025_usd_bn": 0.34, "phase": "marketed"}
@@ -666,11 +707,14 @@
 {"id": "brivekimig", "kind": "molecule", "brands": ["Brivekimig"], "class": "Anti-TNF/OX40L bispecific nanobody", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "budesonide/formoterol", "kind": "molecule", "brands": ["Symbicort"], "class": "ICS/LABA combination inhaler", "modality": "formulation-smallmolecule", "sales_2025_usd_bn": 2.5, "loe_year": 2022, "phase": "marketed"}
 {"id": "budesonide/glycopyrronium/formoterol", "kind": "molecule", "brands": ["Breztri (Trixeo in EU)"], "class": "Triple ICS/LAMA/LABA combination inhaler", "modality": "formulation-smallmolecule", "sales_2025_usd_bn": 1.3, "loe_year": 2030, "phase": "marketed"}
+{"id": "budigalimab", "kind": "molecule", "brands": ["Budigalimab"], "class": "Anti-PD-1 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "bulevirtide", "kind": "molecule", "brands": ["Hepcludex"], "class": "Injectable entry inhibitor (lipopeptide)", "modality": "peptide", "loe_year": 2030, "phase": "marketed"}
 {"id": "cabotegravir extended-release", "kind": "molecule", "brands": ["Apretude"], "class": "Long-acting injectable integrase inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.44, "loe_year": 2030, "phase": "marketed"}
 {"id": "cabotegravir/rilpivirine", "kind": "molecule", "brands": ["Cabenuva"], "class": "Long-acting injectable INSTI + NNRTI", "modality": "formulation-smallmolecule", "sales_2025_usd_bn": 1.4, "loe_year": 2030, "phase": "marketed"}
 {"id": "cadonilimab", "kind": "molecule", "brands": ["\u2014 (cadonilimab, China brand not confirmed)"], "class": "PD-1xCTLA-4 bispecific antibody", "modality": "bispecific-ab", "phase": "marketed"}
 {"id": "cagrilintide", "kind": "molecule", "brands": ["Cagrilintide"], "class": "Long-acting amylin analogue (monotherapy)", "modality": "peptide", "phase": "pipeline"}
+{"id": "cagrilintide + semaglutide", "kind": "molecule", "brands": ["CagriSema"], "class": "Long-acting amylin analogue + GLP-1 receptor agonist combination", "modality": "peptide", "phase": "pipeline"}
+{"id": "calderasib", "kind": "molecule", "brands": ["Calderasib"], "class": "Oral selective KRAS G12C inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "camizestrant", "kind": "molecule", "brands": ["Camizestrant"], "class": "Estrogen receptor degrader", "modality": "small-molecule", "phase": "marketed"}
 {"id": "camlipixant", "kind": "molecule", "brands": ["Camlipixant"], "class": "Oral P2X3 receptor antagonist", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "candesartan", "kind": "molecule", "brands": ["Blopress"], "class": "Angiotensin II receptor antagonist", "modality": "small-molecule", "phase": "marketed"}
@@ -679,8 +723,10 @@
 {"id": "casirivimab + imdevimab", "kind": "molecule", "brands": ["REGEN-COV"], "class": "\u2014", "modality": "mab", "phase": "marketed"}
 {"id": "cemdisiran", "kind": "molecule", "brands": ["Cemdisiran"], "class": "C5 siRNA (Alnylam collaboration)", "modality": "sirna", "phase": "pipeline"}
 {"id": "cemiplimab", "kind": "molecule", "brands": ["Libtayo"], "class": "Monoclonal antibody (PD-1 checkpoint inhibitor)", "modality": "mab", "sales_2025_usd_bn": 1.5, "loe_year": 2030, "phase": "marketed"}
+{"id": "ceralasertib", "kind": "molecule", "brands": ["Ceralasertib"], "class": "Oral ATR kinase inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "cerivastatin", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2001, "failure_mode": "safety"}
 {"id": "cetuximab", "kind": "molecule", "brands": ["Erbitux"], "class": "EGFR monoclonal antibody", "modality": "mab", "phase": "marketed"}
+{"id": "cevostamab", "kind": "molecule", "brands": ["Cevostamab"], "class": "FcRH5\u00d7CD3 bispecific T-cell-engaging antibody", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "cidofovir", "kind": "molecule", "brands": ["Vistide"], "class": "Nucleotide analog DNA polymerase inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "ciltacabtagene autoleucel", "kind": "molecule", "brands": ["Carvykti"], "class": "CAR-T cell therapy", "modality": "cell-therapy", "sales_2025_usd_bn": 1.0, "phase": "marketed"}
 {"id": "cisapride", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2000, "failure_mode": "safety"}
@@ -689,8 +735,9 @@
 {"id": "concizumab", "kind": "molecule", "brands": ["Alhemo"], "class": "Anti-TFPI monoclonal antibody", "modality": "mab", "loe_year": 2030, "phase": "marketed"}
 {"id": "covid-19 vaccine", "kind": "molecule", "phase": "failed", "modality": "vaccine", "modality_note": "viral vector", "year_died": 2023, "failure_mode": "safety"}
 {"id": "crenezumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2022, "failure_mode": "efficacy"}
+{"id": "ct-996", "kind": "molecule", "brands": ["CT-996"], "class": "Oral non-peptide small-molecule GLP-1 receptor agonist", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "dabigatran etexilate", "kind": "molecule", "brands": ["Pradaxa"], "class": "Direct thrombin inhibitor (oral anticoagulant)", "modality": "small-molecule", "phase": "marketed"}
-{"id": "dabrafenib", "kind": "molecule", "brands": ["Tafinlar"], "class": "Small molecule (BRAF inhibitor)", "modality": "small-molecule", "sales_2025_usd_bn": 2.2, "loe_year": 2026, "phase": "marketed"}
+{"id": "dabrafenib", "kind": "molecule", "brands": ["Tafinlar"], "class": "Small molecule (BRAF inhibitor)", "modality": "small-molecule", "phase": "marketed"}
 {"id": "dalcetrapib", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2012, "failure_mode": "efficacy"}
 {"id": "danuglipron", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2025, "failure_mode": "safety"}
 {"id": "dapagliflozin", "kind": "molecule", "brands": ["Farxiga"], "class": "Small molecule, SGLT2 inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 8.4, "loe_year": 2026, "phase": "marketed"}
@@ -703,6 +750,7 @@
 {"id": "datopotamab deruxtecan", "kind": "molecule", "brands": ["Datroway"], "class": "TROP2-directed antibody-drug conjugate (Daiichi Sankyo partnership)", "modality": "adc", "sales_2025_usd_bn": 0.34, "loe_year": 2030, "phase": "marketed"}
 {"id": "daxdilimab", "kind": "molecule", "brands": ["Daxdilimab"], "class": "ILT7-targeted plasmacytoid dendritic cell-depleting mAb", "modality": "mab", "phase": "pipeline"}
 {"id": "dazodalibep", "kind": "molecule", "brands": ["Dazodalibep"], "class": "CD40L-blocking fusion protein", "modality": "fusion-protein", "phase": "pipeline"}
+{"id": "dazukibart", "kind": "molecule", "brands": ["Dazukibart"], "class": "Anti-interferon-beta monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "delpacibart braxlosiran", "kind": "molecule", "brands": ["Del-brax"], "class": "Antibody-siRNA conjugate targeting DUX4", "modality": "sirna", "phase": "pipeline"}
 {"id": "delpacibart etedesiran", "kind": "molecule", "brands": ["Del-desiran"], "class": "Antibody-siRNA conjugate targeting DMPK", "modality": "sirna", "phase": "pipeline"}
 {"id": "delpacibart zotadirsen", "kind": "molecule", "brands": ["Del-zota"], "class": "Antibody-PMO oligonucleotide conjugate, exon-44 skipping", "modality": "aso", "phase": "pipeline"}
@@ -712,13 +760,14 @@
 {"id": "denosumab", "kind": "molecule", "brands": ["Prolia", "Xgeva"], "class": "RANKL antibody", "modality": "mab", "sales_2025_usd_bn": 6.49, "loe_year": 2025, "phase": "marketed"}
 {"id": "depemokimab", "kind": "molecule", "brands": ["Exdensur"], "class": "Ultra-long-acting anti-IL-5 monoclonal antibody (twice-yearly)", "modality": "mab", "loe_year": 2025, "phase": "marketed"}
 {"id": "deucravacitinib", "kind": "molecule", "brands": ["Sotyktu"], "class": "TYK2 inhibitor (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 0.29, "loe_year": 2026, "phase": "marketed"}
+{"id": "dii235", "kind": "molecule", "brands": ["DII235"], "class": "LPA-mRNA-targeting siRNA", "modality": "mrna", "phase": "pipeline"}
 {"id": "dimethyl fumarate", "kind": "molecule", "brands": ["Tecfidera"], "class": "Oral small molecule (fumarate)", "modality": "small-molecule", "sales_2025_usd_bn": 0.68, "loe_year": 2020, "phase": "marketed"}
 {"id": "diranersen", "kind": "molecule", "brands": ["Diranersen"], "class": "Anti-tau antisense oligonucleotide (with Ionis)", "modality": "aso", "phase": "pipeline"}
 {"id": "diroximel fumarate", "kind": "molecule", "brands": ["Vumerity"], "class": "Oral small molecule (fumarate prodrug)", "modality": "small-molecule", "sales_2025_usd_bn": 0.73, "loe_year": 2030, "phase": "marketed"}
 {"id": "divarasib", "kind": "molecule", "brands": ["Divarasib"], "class": "Oral KRAS G12C inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "docetaxel", "kind": "molecule", "brands": ["Taxotere"], "class": "Mitotic spindle poison (taxane)", "modality": "small-molecule", "phase": "marketed"}
-{"id": "dolutegravir", "kind": "molecule", "brands": ["Tivicay"], "class": "Oral integrase strand transfer inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 1.693, "sales_2025_components": [{"label": "Tivicay", "reported_currency": "GBP", "reported_bn": 1.323, "usd_bn": 1.693, "source": "https://www.gsk.com/en-gb/media/press-releases/gsk-delivers-strong-2025-performance-and-re-affirms-long-term-outlooks/", "evidence": "GSK reports 2025 Tivicay sales of GBP 1.323 billion.", "audit_cycle": 6}], "loe_year": 2027, "phase": "marketed"}
-{"id": "dolutegravir/abacavir/lamivudine", "kind": "molecule", "brands": ["Triumeq"], "class": "Oral integrase inhibitor triple regimen", "modality": "small-molecule", "sales_2025_usd_bn": 1.268, "sales_2025_components": [{"label": "Triumeq", "reported_currency": "GBP", "reported_bn": 0.991, "usd_bn": 1.268, "source": "https://www.gsk.com/en-gb/media/press-releases/gsk-delivers-strong-2025-performance-and-re-affirms-long-term-outlooks/", "evidence": "GSK reports 2025 Triumeq sales of GBP 991 million.", "audit_cycle": 6}], "loe_year": 2027, "phase": "marketed"}
+{"id": "dolutegravir", "kind": "molecule", "brands": ["Tivicay"], "class": "Oral integrase strand transfer inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 1.693, "sales_2025_components": [{"label": "Tivicay", "reported_currency": "GBP", "reported_bn": 1.323, "usd_bn": 1.693, "source": "https://www.gsk.com/en-gb/media/press-releases/gsk-delivers-strong-2025-performance-and-re-affirms-long-term-outlooks/", "evidence": "GSK reports 2025 Tivicay sales of GBP 1.323 billion.", "audit_cycle": 6}], "phase": "marketed"}
+{"id": "dolutegravir/abacavir/lamivudine", "kind": "molecule", "brands": ["Triumeq"], "class": "Oral integrase inhibitor triple regimen", "modality": "small-molecule", "sales_2025_usd_bn": 1.268, "sales_2025_components": [{"label": "Triumeq", "reported_currency": "GBP", "reported_bn": 0.991, "usd_bn": 1.268, "source": "https://www.gsk.com/en-gb/media/press-releases/gsk-delivers-strong-2025-performance-and-re-affirms-long-term-outlooks/", "evidence": "GSK reports 2025 Triumeq sales of GBP 991 million.", "audit_cycle": 6}], "phase": "marketed"}
 {"id": "dolutegravir/lamivudine", "kind": "molecule", "brands": ["Dovato"], "class": "Oral integrase inhibitor two-drug regimen", "modality": "small-molecule", "sales_2025_usd_bn": 2.7, "loe_year": 2027, "phase": "marketed"}
 {"id": "domvanalimab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb (Fc-silent)", "year_died": 2026, "failure_mode": "efficacy"}
 {"id": "donanemab", "kind": "molecule", "brands": ["Kisunla"], "class": "Anti-amyloid antibody", "modality": "mab", "sales_2025_usd_bn": 0.25, "loe_year": 2030, "phase": "marketed"}
@@ -732,12 +781,14 @@
 {"id": "dupilumab", "kind": "molecule", "brands": ["Dupixent"], "class": "Anti-IL-4R alpha monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 17.8, "loe_year": 2031, "phase": "marketed"}
 {"id": "durvalumab", "kind": "molecule", "brands": ["Imfinzi"], "class": "Anti-PD-L1 monoclonal antibody (immunotherapy)", "modality": "mab", "sales_2025_usd_bn": 6.06, "loe_year": 2030, "phase": "marketed"}
 {"id": "duvakitug", "kind": "molecule", "brands": ["Duvakitug"], "class": "Anti-TL1A mAb", "modality": "mab", "phase": "pipeline"}
+{"id": "eclitasertib", "kind": "molecule", "brands": ["Eclitasertib"], "class": "Oral small-molecule RIPK1 kinase inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "eculizumab", "kind": "molecule", "brands": ["Soliris"], "class": "Anti-C5 complement monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 2.0, "loe_year": 2024, "phase": "marketed"}
 {"id": "edoxaban", "kind": "molecule", "brands": ["Lixiana / Savaysa"], "class": "Oral factor Xa inhibitor anticoagulant", "modality": "small-molecule", "sales_2025_usd_bn": 2.35, "loe_year": 2028, "phase": "marketed"}
 {"id": "efanesoctocog alfa", "kind": "molecule", "brands": ["Altuviiio"], "class": "Factor VIII-Fc-VWF-XTEN fusion protein", "modality": "fusion-protein", "sales_2025_usd_bn": 1.26, "loe_year": 2030, "phase": "marketed"}
 {"id": "efavaleukin alfa", "kind": "molecule", "phase": "failed", "modality": "fusion-protein", "modality_note": "fusion protein", "year_died": 2023, "failure_mode": "efficacy"}
 {"id": "efavirenz/tenofovir/emtricitabine", "kind": "molecule", "brands": ["Atripla"], "class": "Non-nucleoside reverse transcriptase inhibitor + nucleoside reverse transcriptase inhibitors", "modality": "small-molecule", "phase": "marketed"}
 {"id": "efimosfermin alfa", "kind": "molecule", "brands": ["Efimosfermin"], "class": "Fc-FGF21 fusion protein", "modality": "fusion-protein", "phase": "pipeline"}
+{"id": "efinopegdutide", "kind": "molecule", "brands": ["Efinopegdutide"], "class": "GLP-1/glucagon receptor co-agonist peptide", "modality": "peptide", "phase": "pipeline"}
 {"id": "efruxifermin", "kind": "molecule", "brands": ["Efruxifermin"], "class": "Fc-FGF21 fusion protein", "modality": "fusion-protein", "phase": "pipeline"}
 {"id": "efzimfotase alfa", "kind": "molecule", "brands": ["Efzimfotase alfa"], "class": "TNSALP enzyme replacement", "modality": "enzyme", "phase": "legacy"}
 {"id": "elafibranor", "kind": "molecule", "brands": ["Iqirvo"], "class": "Oral PPAR-alpha/delta agonist", "modality": "small-molecule", "phase": "marketed"}
@@ -749,6 +800,7 @@
 {"id": "eloralintide", "kind": "molecule", "brands": ["Eloralintide"], "class": "Amylin receptor agonist", "modality": "peptide", "phase": "pipeline"}
 {"id": "elranatamab", "kind": "molecule", "brands": ["Elrexfio"], "class": "BCMA-CD3 bispecific antibody", "modality": "bispecific-ab", "sales_2025_usd_bn": 0.5, "loe_year": 2030, "phase": "marketed"}
 {"id": "elritercept", "kind": "molecule", "brands": ["Elritercept"], "class": "Modified activin receptor IIA ligand trap", "modality": "fusion-protein", "phase": "pipeline"}
+{"id": "eltrekibart", "kind": "molecule", "brands": ["Eltrekibart"], "class": "Monoclonal antibody neutralizing ELR-positive CXC chemokines", "modality": "mab", "phase": "pipeline"}
 {"id": "eltrombopag", "kind": "molecule", "brands": ["Promacta/Revolade"], "class": "Small molecule (thrombopoietin receptor agonist)", "modality": "small-molecule", "sales_2025_usd_bn": 1.6, "loe_year": 2025, "phase": "marketed"}
 {"id": "elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide", "kind": "molecule", "brands": ["Genvoya"], "class": "Oral single-tablet HIV regimen", "modality": "small-molecule", "sales_2025_usd_bn": 1.5, "loe_year": 2032, "phase": "marketed"}
 {"id": "emicizumab", "kind": "molecule", "brands": ["Hemlibra"], "class": "Bispecific antibody (factor IXa/X mimetic)", "modality": "bispecific-ab", "sales_2025_usd_bn": 5.38, "loe_year": 2030, "phase": "marketed"}
@@ -776,7 +828,7 @@
 {"id": "esreboxetine", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2009, "failure_mode": "efficacy"}
 {"id": "etanercept", "kind": "molecule", "brands": ["Enbrel"], "class": "TNF-blocker fusion protein", "modality": "fusion-protein", "sales_2025_usd_bn": 2.23, "loe_year": 2029, "phase": "marketed"}
 {"id": "etanercept biosimilar", "kind": "molecule", "brands": ["Yisaipu"], "class": "TNF-alpha receptor fusion protein", "modality": "fusion-protein", "phase": "marketed"}
-{"id": "etanercept-ykro", "kind": "molecule", "brands": ["Benepali"], "class": "TNF receptor fusion protein biosimilar (w/ Samsung Bioepis)", "modality": "biosimilar", "sales_2025_usd_bn": 0.7, "phase": "marketed"}
+{"id": "etanercept-ykro", "kind": "molecule", "brands": ["Benepali"], "class": "TNF receptor fusion protein biosimilar (w/ Samsung Bioepis)", "modality": "biosimilar", "phase": "marketed"}
 {"id": "etavopivat", "kind": "molecule", "brands": ["Etavopivat"], "class": "Oral pyruvate kinase-R activator", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "etentamig", "kind": "molecule", "brands": ["Etentamig"], "class": "BCMAxCD3 bispecific T-cell engager", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "evacetrapib", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2015, "failure_mode": "efficacy"}
@@ -808,6 +860,7 @@
 {"id": "fluticasone/umeclidinium/vilanterol", "kind": "molecule", "brands": ["Trelegy"], "class": "Inhaled corticosteroid/long-acting muscarinic antagonist/long-acting beta-2 agonist", "modality": "formulation-smallmolecule", "phase": "legacy"}
 {"id": "fosamprenavir", "kind": "molecule", "brands": ["Lexiva"], "class": "HIV protease inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "foscarbidopa/foslevodopa", "kind": "molecule", "brands": ["Vyalev"], "class": "Subcutaneous 24-hr infusion (levodopa/carbidopa prodrugs)", "modality": "formulation-smallmolecule", "sales_2025_usd_bn": 0.4, "loe_year": 2035, "phase": "marketed"}
+{"id": "frespaciguat", "kind": "molecule", "brands": ["Frespaciguat"], "class": "Inhaled small-molecule soluble guanylate cyclase stimulator", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "frexalimab", "kind": "molecule", "brands": ["Frexalimab"], "class": "Anti-CD40L mAb", "modality": "mab", "phase": "pipeline"}
 {"id": "fruquintinib", "kind": "molecule", "brands": ["Fruzaqla"], "class": "Oral VEGFR-1/2/3 tyrosine kinase inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.35, "loe_year": 2030, "phase": "marketed"}
 {"id": "fulranumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2016, "failure_mode": "strategic"}
@@ -816,10 +869,12 @@
 {"id": "galcanezumab", "kind": "molecule", "brands": ["Emgality"], "class": "CGRP antibody", "modality": "mab", "sales_2025_usd_bn": 1.0, "loe_year": 2033, "phase": "marketed"}
 {"id": "gantenerumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2022, "failure_mode": "efficacy"}
 {"id": "garetosmab", "kind": "molecule", "brands": ["Garetosmab"], "class": "Anti-Activin A monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "gdc-6988", "kind": "molecule", "brands": ["GDC-6988"], "class": "Inhaled small-molecule TMEM16A potentiator", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "gefitinib", "kind": "molecule", "brands": ["Iressa"], "class": "EGFR tyrosine kinase inhibitor", "modality": "small-molecule", "phase": "legacy"}
 {"id": "gefurulimab", "kind": "molecule", "brands": ["Gefurulimab"], "class": "Dual-binding anti-C5 nanobody", "modality": "mab", "phase": "pipeline"}
 {"id": "gemcitabine", "kind": "molecule", "brands": ["Gemzar"], "class": "Nucleoside antimetabolite", "modality": "small-molecule", "phase": "marketed"}
 {"id": "gepotidacin", "kind": "molecule", "brands": ["Blujepa"], "class": "First-in-class oral triazaacenaphthylene antibiotic", "modality": "small-molecule", "phase": "marketed"}
+{"id": "gia632", "kind": "molecule", "brands": ["GIA632"], "class": "Anti-IL-15 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "giredestrant", "kind": "molecule", "brands": ["Giredestrant"], "class": "Oral selective estrogen receptor degrader (SERD)", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "glofitamab", "kind": "molecule", "brands": ["Columvi"], "class": "CD20xCD3 bispecific T-cell engager", "modality": "bispecific-ab", "sales_2025_usd_bn": 0.56, "loe_year": 2030, "phase": "marketed"}
 {"id": "gocatamig", "kind": "molecule", "brands": ["Gocatamig"], "class": "DLL3 \u00d7 CD3 T-cell engager", "modality": "bispecific-ab", "phase": "pipeline"}
@@ -828,7 +883,14 @@
 {"id": "goserelin", "kind": "molecule", "brands": ["Zoladex"], "class": "GnRH agonist", "modality": "peptide", "phase": "marketed"}
 {"id": "gosuranemab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2021, "failure_mode": "efficacy"}
 {"id": "gs-1720/gs-4182", "kind": "molecule", "brands": ["GS-1720/GS-4182"], "class": "Oral small-molecule HIV integrase/capsid-inhibitor combination", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "gs-4571", "kind": "molecule", "brands": ["GS-4571"], "class": "Oral small-molecule GLP-1 receptor agonist", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "gsk3862995b", "kind": "molecule", "brands": ["GSK3862995B"], "class": "Anti-IL-33 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "gsk4528287", "kind": "molecule", "brands": ["GSK4528287"], "class": "IL-23/IL-18 bispecific antibody", "modality": "bispecific-ab", "phase": "pipeline"}
+{"id": "gsk4532990", "kind": "molecule", "brands": ["GSK4532990"], "class": "HSD17B13-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "gsk5784283", "kind": "molecule", "brands": ["GSK5784283"], "class": "Ultra-long-acting anti-TSLP mAb", "modality": "mab", "phase": "pipeline"}
+{"id": "gsk5926371", "kind": "molecule", "brands": ["GSK5926371"], "class": "CD19\u00d7CD20\u00d7CD3 trispecific T-cell engager", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "guselkumab", "kind": "molecule", "brands": ["Tremfya"], "class": "IL-23 antibody", "modality": "mab", "sales_2025_usd_bn": 5.0, "loe_year": 2030, "phase": "marketed"}
+{"id": "gym329", "kind": "molecule", "brands": ["GYM329"], "class": "Recycling monoclonal antibody against latent myostatin", "modality": "mab", "phase": "pipeline"}
 {"id": "hpv vaccine", "kind": "molecule", "brands": ["Gardasil / Gardasil 9"], "class": "Recombinant virus-like-particle vaccine", "modality": "vaccine", "sales_2025_usd_bn": 5.2, "loe_year": 2028, "phase": "marketed"}
 {"id": "hyaluronic acid fillers", "kind": "molecule", "brands": ["Juvederm"], "class": "Injectable dermal filler", "modality": "polysaccharide", "sales_2025_usd_bn": 0.99, "phase": "marketed"}
 {"id": "hyoscine butylbromide", "kind": "molecule", "brands": ["Buscopan"], "class": "Anticholinergic antispasmodic", "modality": "small-molecule", "phase": "marketed"}
@@ -851,7 +913,7 @@
 {"id": "inebilizumab", "kind": "molecule", "brands": ["Uplizna"], "class": "CD19 B-cell-targeting monoclonal antibody", "modality": "mab", "phase": "legacy"}
 {"id": "inetetamab", "kind": "molecule", "brands": ["Cipterbin"], "class": "Anti-HER2 monoclonal antibody", "modality": "mab", "phase": "marketed"}
 {"id": "infliximab", "kind": "molecule", "brands": ["Remicade"], "class": "TNF-\u03b1 inhibitor", "modality": "mab", "phase": "legacy"}
-{"id": "infliximab biosimilar", "kind": "molecule", "brands": ["Flixabi"], "class": "Anti-TNF monoclonal antibody biosimilar (w/ Samsung Bioepis)", "modality": "biosimilar", "sales_2025_usd_bn": 0.7, "phase": "marketed"}
+{"id": "infliximab biosimilar", "kind": "molecule", "brands": ["Flixabi"], "class": "Anti-TNF monoclonal antibody biosimilar (w/ Samsung Bioepis)", "modality": "biosimilar", "phase": "marketed"}
 {"id": "influenza vaccines", "kind": "molecule", "brands": ["Fluzone HD / Flublok / Vaxigrip"], "class": "Vaccines (inactivated/recombinant)", "modality": "vaccine", "phase": "marketed"}
 {"id": "inhaled insulin", "kind": "molecule", "phase": "failed", "modality": "peptide", "modality_note": "peptide (inhaled human insulin)", "year_died": 2007, "failure_mode": "commercial"}
 {"id": "inotersen", "kind": "molecule", "brands": ["Tegsedi"], "class": "TTR-targeting antisense oligonucleotide", "modality": "aso", "phase": "marketed"}
@@ -861,8 +923,8 @@
 {"id": "insulin glargine u300", "kind": "molecule", "brands": ["Toujeo"], "class": "Concentrated long-acting insulin", "modality": "peptide", "sales_2025_usd_bn": 1.47, "phase": "marketed"}
 {"id": "insulin icodec", "kind": "molecule", "brands": ["Awiqli"], "class": "Once-weekly basal insulin", "modality": "peptide", "loe_year": 2026, "phase": "marketed"}
 {"id": "insulin icodec/semaglutide", "kind": "molecule", "brands": ["Icosema"], "class": "Once-weekly basal insulin + GLP-1 fixed-dose combination", "modality": "peptide", "loe_year": 2026, "phase": "marketed"}
-{"id": "insulin lispro", "kind": "molecule", "brands": ["Humalog"], "class": "Rapid-acting insulin analog", "modality": "peptide", "sales_2025_usd_bn": 3.0, "phase": "legacy"}
-{"id": "insulin lispro etc.", "kind": "molecule", "brands": ["Humalog / Humulin / Basaglar"], "class": "Insulins", "modality": "peptide", "sales_2025_usd_bn": 3.0, "phase": "marketed"}
+{"id": "insulin lispro", "kind": "molecule", "brands": ["Humalog"], "class": "Rapid-acting insulin analog", "modality": "peptide", "phase": "legacy"}
+{"id": "insulin lispro etc.", "kind": "molecule", "brands": ["Humalog / Humulin / Basaglar"], "class": "Insulins", "modality": "peptide", "phase": "marketed"}
 {"id": "intepirdine", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2017, "failure_mode": "efficacy"}
 {"id": "interferon beta-1a", "kind": "molecule", "brands": ["Avonex"], "class": "Recombinant interferon, intramuscular", "modality": "cytokine", "sales_2025_usd_bn": 0.68, "phase": "marketed"}
 {"id": "interferon beta-1b", "kind": "molecule", "brands": ["Betaferon"], "class": "Interferon beta-1b", "modality": "cytokine", "phase": "marketed"}
@@ -879,6 +941,8 @@
 {"id": "ixazomib", "kind": "molecule", "brands": ["Ninlaro"], "class": "Oral proteasome inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.3, "loe_year": 2020, "phase": "marketed"}
 {"id": "ixekizumab", "kind": "molecule", "brands": ["Taltz"], "class": "IL-17A antibody", "modality": "mab", "sales_2025_usd_bn": 3.4, "loe_year": 2030, "phase": "marketed"}
 {"id": "iza-bren", "kind": "molecule", "brands": ["Iza-bren"], "class": "EGFR\u00d7HER3 bispecific antibody-drug conjugate", "modality": "adc", "phase": "pipeline"}
+{"id": "jnj-64042056", "kind": "molecule", "brands": ["JNJ-64042056"], "class": "Active vaccine targeting phosphorylated tau", "modality": "vaccine", "phase": "pipeline"}
+{"id": "jnj-78934804", "kind": "molecule", "brands": ["JNJ-4804"], "class": "Fixed-dose guselkumab + golimumab co-antibody blocking IL-23 and TNF-alpha", "modality": "mab", "phase": "pipeline"}
 {"id": "lampalizumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "Fab", "year_died": 2017, "failure_mode": "efficacy"}
 {"id": "lanabecestat", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2018, "failure_mode": "efficacy"}
 {"id": "lanadelumab", "kind": "molecule", "brands": ["Takhzyro"], "class": "Anti-plasma-kallikrein monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 1.5, "loe_year": 2030, "phase": "marketed"}
@@ -887,21 +951,22 @@
 {"id": "lebrikizumab", "kind": "molecule", "brands": ["Ebglyss"], "class": "IL-13 antibody", "modality": "mab", "sales_2025_usd_bn": 0.4, "loe_year": 2030, "phase": "marketed"}
 {"id": "lecanemab", "kind": "molecule", "brands": ["Leqembi"], "class": "Monoclonal antibody (anti-amyloid-beta protofibril), IV/SC; with Eisai", "modality": "mab", "sales_2025_usd_bn": 0.51, "loe_year": 2030, "phase": "marketed"}
 {"id": "lecanemab-irmb", "kind": "molecule", "brands": ["Leqembi Iqlik"], "class": "Anti-amyloid-beta protofibril mAb, subcutaneous autoinjector", "modality": "mab", "loe_year": 2025, "phase": "marketed"}
-{"id": "lenacapavir", "kind": "molecule", "brands": ["Sunlenca", "Yeztugo"], "class": "Twice-yearly injectable HIV capsid inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.3, "loe_year": 2030, "phase": "marketed"}
+{"id": "lenacapavir", "kind": "molecule", "brands": ["Sunlenca", "Yeztugo"], "class": "Twice-yearly injectable HIV capsid inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.15, "loe_year": 2030, "phase": "marketed"}
 {"id": "lenalidomide", "kind": "molecule", "brands": ["Revlimid"], "class": "Immunomodulatory imide (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 3.0, "loe_year": 2022, "phase": "marketed"}
 {"id": "lenvatinib", "kind": "molecule", "brands": ["Lenvima"], "class": "Oral multikinase inhibitor (Eisai alliance)", "modality": "small-molecule", "sales_2025_usd_bn": 1.0, "loe_year": 2026, "phase": "marketed"}
 {"id": "lepodisiran", "kind": "molecule", "brands": ["Lepodisiran"], "class": "siRNA against LPA", "modality": "sirna", "phase": "pipeline"}
 {"id": "letermovir", "kind": "molecule", "brands": ["Prevymis"], "class": "Oral/IV CMV terminase inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.9, "loe_year": 2029, "phase": "marketed"}
 {"id": "levofloxacin", "kind": "molecule", "brands": ["Cravit"], "class": "Fluoroquinolone antibiotic", "modality": "small-molecule", "phase": "marketed"}
 {"id": "levonorgestrel", "kind": "molecule", "brands": ["Mirena / Kyleena / Jaydess"], "class": "Hormonal intrauterine system", "modality": "small-molecule", "sales_2025_usd_bn": 1.53, "phase": "marketed"}
-{"id": "levonorgestrel ius", "kind": "molecule", "brands": ["Mirena"], "class": "Progestin-releasing intrauterine system", "modality": "formulation-smallmolecule", "sales_2025_usd_bn": 1.53, "phase": "legacy"}
+{"id": "levonorgestrel ius", "kind": "molecule", "brands": ["Mirena"], "class": "Progestin-releasing intrauterine system", "modality": "formulation-smallmolecule", "phase": "legacy"}
+{"id": "lifonebart", "kind": "molecule", "brands": ["Lifonebart"], "class": "TREM2-stabilizing agonist monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "ligelizumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2021, "failure_mode": "efficacy"}
 {"id": "linagliptin", "kind": "molecule", "brands": ["Trajenta"], "class": "DPP-4 inhibitor (oral)", "modality": "small-molecule", "loe_year": 2027, "phase": "marketed"}
 {"id": "linerixibat", "kind": "molecule", "brands": ["Lynavoy"], "class": "IBAT (ileal bile acid transporter) inhibitor", "modality": "small-molecule", "loe_year": 2026, "phase": "marketed"}
 {"id": "linrodostat", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2019, "failure_mode": "efficacy"}
 {"id": "linvoseltamab", "kind": "molecule", "brands": ["Lynozyfic"], "class": "Bispecific antibody (BCMA x CD3)", "modality": "bispecific-ab", "loe_year": 2040, "phase": "marketed"}
 {"id": "liposomal amphotericin b", "kind": "molecule", "brands": ["AmBisome"], "class": "Liposomal IV antifungal", "modality": "formulation-smallmolecule", "sales_2025_usd_bn": 0.5, "phase": "marketed"}
-{"id": "liraglutide", "kind": "molecule", "brands": ["Saxenda", "Victoza"], "class": "Daily GLP-1 receptor agonist (3.0 mg)", "modality": "peptide", "sales_2025_usd_bn": 0.9, "loe_year": 2025, "phase": "marketed"}
+{"id": "liraglutide", "kind": "molecule", "brands": ["Saxenda", "Victoza"], "class": "Daily GLP-1 receptor agonist (3.0 mg)", "modality": "peptide", "sales_2025_usd_bn": 0.9, "loe_year": 2024, "phase": "marketed"}
 {"id": "lisdexamfetamine", "kind": "molecule", "brands": ["Vyvanse"], "class": "Oral prodrug stimulant (amphetamine)", "modality": "small-molecule", "sales_2025_usd_bn": 1.0, "loe_year": 2023, "phase": "marketed"}
 {"id": "lisocabtagene maraleucel", "kind": "molecule", "brands": ["Breyanzi"], "class": "CAR-T cell therapy", "modality": "cell-therapy", "sales_2025_usd_bn": 1.4, "loe_year": 2034, "phase": "marketed"}
 {"id": "litifilimab", "kind": "molecule", "brands": ["Litifilimab"], "class": "Anti-BDCA2 mAb", "modality": "mab", "phase": "pipeline"}
@@ -909,6 +974,7 @@
 {"id": "lorcaserin", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2020, "failure_mode": "safety"}
 {"id": "lorlatinib", "kind": "molecule", "brands": ["Lorbrena"], "class": "Small molecule, ALK inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 1.0, "loe_year": 2030, "phase": "marketed"}
 {"id": "lotiglipron", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2023, "failure_mode": "safety"}
+{"id": "ltp001", "kind": "molecule", "brands": ["LTP001"], "class": "SMURF1 inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "lubiprostone", "kind": "molecule", "brands": ["Amitiza"], "class": "Chloride channel activator", "modality": "small-molecule", "phase": "legacy"}
 {"id": "lumacaftor/ivacaftor", "kind": "molecule", "brands": ["Orkambi"], "class": "Small-molecule CFTR corrector+potentiator combo", "modality": "small-molecule", "sales_2025_usd_bn": 0.3, "loe_year": 2020, "phase": "marketed"}
 {"id": "lumateperone", "kind": "molecule", "brands": ["Caplyta"], "class": "Atypical antipsychotic (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 0.9, "loe_year": 2030, "phase": "marketed"}
@@ -918,25 +984,42 @@
 {"id": "lutetium lu-177 dotatate", "kind": "molecule", "brands": ["Lutathera"], "class": "Radioligand therapy (somatostatin-targeted)", "modality": "radioligand", "sales_2025_usd_bn": 0.8, "phase": "marketed"}
 {"id": "lutetium lu-177 vipivotide tetraxetan", "kind": "molecule", "brands": ["Pluvicto"], "class": "Radioligand therapy (PSMA-targeted)", "modality": "radioligand", "sales_2025_usd_bn": 2.0, "loe_year": 2030, "phase": "marketed"}
 {"id": "lutikizumab", "kind": "molecule", "brands": ["Lutikizumab"], "class": "Dual anti-IL-1\u03b1/IL-1\u03b2 antibody", "modality": "mab", "phase": "pipeline"}
-{"id": "macitentan", "kind": "molecule", "brands": ["Opsumit"], "class": "Endothelin blocker (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 2.325, "sales_2025_components": [{"label": "Opsumit/Opsynvi", "reported_currency": "USD", "reported_bn": 2.325, "usd_bn": 2.325, "source": "https://www.jnj.com/download/johnson-johnson-2025-annual-report", "evidence": "Johnson & Johnson reports 2025 Opsumit/Opsynvi sales of USD 2.325 billion.", "audit_cycle": 6}], "loe_year": 2020, "phase": "marketed"}
+{"id": "ly3541860", "kind": "molecule", "brands": ["LY3541860"], "class": "Nondepleting anti-CD19 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "ly3884961", "kind": "molecule", "brands": ["LY3884961"], "class": "AAV9 gene therapy delivering GBA1", "modality": "gene-therapy", "phase": "pipeline"}
+{"id": "ly3938577", "kind": "molecule", "brands": ["LY3938577"], "class": "Glucose-sensitive insulin-receptor agonist", "modality": "peptide", "phase": "pipeline"}
+{"id": "ly3954068", "kind": "molecule", "brands": ["LY3954068"], "class": "Intrathecal MAPT-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "ly3962681", "kind": "molecule", "brands": ["LY3962681"], "class": "Intrathecal SNCA-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "ly3971297", "kind": "molecule", "brands": ["LY3971297"], "class": "Long-acting atrial natriuretic peptide; NPR1 agonist", "modality": "peptide", "phase": "pipeline"}
+{"id": "ly4006896", "kind": "molecule", "brands": ["LY4006896"], "class": "Antibody-siRNA conjugate targeting SNCA", "modality": "sirna", "phase": "pipeline"}
+{"id": "ly4395089", "kind": "molecule", "brands": ["LY4395089"], "class": "Oral small-molecule FXR agonist", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "macitentan", "kind": "molecule", "brands": ["Opsumit"], "class": "Endothelin blocker (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 2.325, "sales_2025_components": [{"label": "Opsumit/Opsynvi", "reported_currency": "USD", "reported_bn": 2.325, "usd_bn": 2.325, "source": "https://www.jnj.com/download/johnson-johnson-2025-annual-report", "evidence": "Johnson & Johnson reports 2025 Opsumit/Opsynvi sales of USD 2.325 billion.", "audit_cycle": 6}], "phase": "marketed"}
+{"id": "macupatide", "kind": "molecule", "brands": ["Macupatide"], "class": "Long-acting GIP receptor agonist peptide", "modality": "peptide", "phase": "pipeline"}
 {"id": "magrolimab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2024, "failure_mode": "safety"}
 {"id": "maribavir", "kind": "molecule", "brands": ["Livtencity"], "class": "Oral UL97 kinase inhibitor antiviral", "modality": "small-molecule", "sales_2025_usd_bn": 0.25, "loe_year": 2030, "phase": "marketed"}
 {"id": "maridebart cafraglutide", "kind": "molecule", "brands": ["MariTide"], "class": "\u2014", "modality": "peptide", "phase": "pipeline"}
 {"id": "mavacamten", "kind": "molecule", "brands": ["Camzyos"], "class": "Cardiac myosin inhibitor (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 1.1, "loe_year": 2036, "phase": "marketed"}
+{"id": "mazdutide", "kind": "molecule", "brands": ["Mazdutide"], "class": "Dual GLP-1/glucagon receptor agonist peptide", "modality": "peptide", "phase": "marketed"}
 {"id": "menabcwy vaccine", "kind": "molecule", "brands": ["Penmenvy"], "class": "Meningococcal conjugate vaccine", "modality": "vaccine", "phase": "marketed"}
 {"id": "meningococcal group b vaccine", "kind": "molecule", "brands": ["Bexsero"], "class": "Protein-based vaccine", "modality": "vaccine", "sales_2025_usd_bn": 1.1, "phase": "marketed"}
 {"id": "mepolizumab", "kind": "molecule", "brands": ["Nucala"], "class": "Anti-IL-5 monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 2.0, "loe_year": 2020, "phase": "marketed"}
 {"id": "metformin", "kind": "molecule", "brands": ["Glucophage"], "class": "Biguanide", "modality": "small-molecule", "phase": "marketed"}
 {"id": "mezagitamab", "kind": "molecule", "brands": ["Mezagitamab"], "class": "Anti-CD38 mAb (subcutaneous)", "modality": "mab", "phase": "pipeline"}
 {"id": "mezigdomide", "kind": "molecule", "brands": ["Mezigdomide"], "class": "Oral small-molecule CELMoD", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "mibavademab", "kind": "molecule", "brands": ["Mibavademab"], "class": "Leptin-receptor agonist monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "milvexian", "kind": "molecule", "brands": ["Milvexian"], "class": "Oral small-molecule Factor XIa inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "mirikizumab", "kind": "molecule", "brands": ["Omvoh"], "class": "IL-23 antibody", "modality": "mab", "sales_2025_usd_bn": 0.3, "loe_year": 2030, "phase": "marketed"}
 {"id": "mirogabalin", "kind": "molecule", "brands": ["Tarlige"], "class": "Oral gabapentinoid", "modality": "small-molecule", "sales_2025_usd_bn": 0.07, "loe_year": 2030, "phase": "marketed"}
 {"id": "mirvetuximab soravtansine", "kind": "molecule", "brands": ["Elahere"], "class": "Antibody-drug conjugate (anti-FR\u03b1)", "modality": "adc", "sales_2025_usd_bn": 0.69, "loe_year": 2035, "phase": "marketed"}
+{"id": "mivelsiran", "kind": "molecule", "brands": ["Mivelsiran"], "class": "Intrathecal APP-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
 {"id": "mk-0767", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2003, "failure_mode": "safety"}
+{"id": "mk-1045", "kind": "molecule", "brands": ["MK-1045"], "class": "CD19\u00d7CD3 bispecific T-cell engager", "modality": "bispecific-ab", "phase": "pipeline"}
+{"id": "mk-2214", "kind": "molecule", "brands": ["MK-2214"], "class": "Monoclonal antibody targeting tau phosphorylated at serine 413", "modality": "mab", "phase": "pipeline"}
+{"id": "mk-7262", "kind": "molecule", "brands": ["MK-7262"], "class": "Oral small-molecule inhibitor of lipoprotein(a) assembly", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "mk-8690", "kind": "molecule", "brands": ["MK-8690"], "class": "Anti-CD30L monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "mobocertinib", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2023, "failure_mode": "efficacy"}
 {"id": "molnupiravir", "kind": "molecule", "brands": ["Lagevrio"], "class": "Oral antiviral (ribonucleoside analog)", "modality": "small-molecule", "phase": "marketed"}
 {"id": "momelotinib", "kind": "molecule", "brands": ["Ojjaara"], "class": "Oral JAK1/2 and ACVR1 inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.709, "sales_2025_components": [{"label": "Ojjaara/Omjjara", "reported_currency": "GBP", "reported_bn": 0.554, "usd_bn": 0.709, "source": "https://www.gsk.com/en-gb/media/press-releases/gsk-delivers-strong-2025-performance-and-re-affirms-long-term-outlooks/", "evidence": "GSK reports 2025 Ojjaara/Omjjara sales of GBP 554 million.", "audit_cycle": 6}], "loe_year": 2030, "phase": "marketed"}
+{"id": "monalizumab", "kind": "molecule", "brands": ["Monalizumab"], "class": "Anti-NKG2A monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "mongersen", "kind": "molecule", "phase": "failed", "modality": "aso", "modality_note": "antisense oligo", "year_died": 2017, "failure_mode": "efficacy"}
 {"id": "montelukast", "kind": "molecule", "brands": ["Singulair"], "class": "Cysteinyl leukotriene receptor antagonist", "modality": "small-molecule", "phase": "marketed"}
 {"id": "mosunetuzumab", "kind": "molecule", "brands": ["Lunsumio"], "class": "CD20xCD3 bispecific T-cell engager", "modality": "bispecific-ab", "phase": "marketed"}
@@ -947,6 +1030,7 @@
 {"id": "mrna-1647", "kind": "molecule", "phase": "failed", "modality": "mrna", "modality_note": "mRNA vaccine", "year_died": 2025, "failure_mode": "efficacy"}
 {"id": "muraglitazar", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2006, "failure_mode": "safety"}
 {"id": "muvalaplin", "kind": "molecule", "brands": ["Muvalaplin"], "class": "Oral small-molecule Lp(a) disruptor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "naperiglipron", "kind": "molecule", "brands": ["Naperiglipron"], "class": "Oral non-peptide small-molecule GLP-1 receptor agonist", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "natalizumab", "kind": "molecule", "brands": ["Tysabri"], "class": "Monoclonal antibody (anti-alpha-4 integrin), IV", "modality": "mab", "sales_2025_usd_bn": 1.65, "loe_year": 2023, "phase": "marketed"}
 {"id": "navacaprant", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2025, "failure_mode": "efficacy"}
 {"id": "navoximod", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2018, "failure_mode": "strategic"}
@@ -955,12 +1039,23 @@
 {"id": "nesiritide", "kind": "molecule", "brands": ["Natrecor"], "class": "B-type natriuretic peptide", "modality": "peptide", "phase": "legacy"}
 {"id": "nilotinib", "kind": "molecule", "brands": ["Tasigna"], "class": "Small molecule (BCR-ABL TKI)", "modality": "small-molecule", "sales_2025_usd_bn": 1.1, "phase": "marketed"}
 {"id": "nintedanib", "kind": "molecule", "brands": ["Ofev"], "class": "Triple tyrosine kinase inhibitor (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 4.14, "loe_year": 2029, "phase": "marketed"}
+{"id": "nio752", "kind": "molecule", "brands": ["NIO752"], "class": "Tau-targeting antisense oligonucleotide", "modality": "aso", "phase": "pipeline"}
 {"id": "nipocalimab", "kind": "molecule", "brands": ["Imaavy"], "class": "FcRn antagonist", "modality": "mab", "phase": "marketed"}
 {"id": "niraparib", "kind": "molecule", "brands": ["Zejula"], "class": "Oral PARP inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.4, "loe_year": 2027, "phase": "marketed"}
 {"id": "nirmatrelvir/ritonavir", "kind": "molecule", "brands": ["Paxlovid"], "class": "Small molecule, protease inhibitor antiviral", "modality": "small-molecule", "sales_2025_usd_bn": 2.4, "loe_year": 2030, "phase": "marketed"}
 {"id": "nirsevimab", "kind": "molecule", "brands": ["Beyfortus"], "class": "Long-acting monoclonal antibody (Sanofi partnership)", "modality": "mab", "sales_2025_usd_bn": 0.42, "phase": "marketed"}
+{"id": "nisotirostide", "kind": "molecule", "brands": ["Nisotirostide"], "class": "Long-acting NPY2-receptor agonist peptide", "modality": "peptide", "phase": "pipeline"}
+{"id": "nivegacetor", "kind": "molecule", "brands": ["Nivegacetor"], "class": "Oral selective gamma-secretase modulator", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "nivisnebart", "kind": "molecule", "brands": ["Nivisnebart"], "class": "Progranulin-elevating anti-sortilin monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "nivolumab", "kind": "molecule", "brands": ["Opdivo"], "class": "PD-1 checkpoint inhibitor (IV)", "modality": "mab", "sales_2025_usd_bn": 10.287, "sales_2025_components": [{"label": "Opdivo", "reported_currency": "USD", "reported_bn": 10.049, "usd_bn": 10.049, "source": "https://www.bms.com/assets/bms/us/en-us/pdf/investor-info/doc_financials/quarterly_reports/2025/BMY-Q4-2025-Earnings-Press-Release.pdf", "evidence": "BMS reports 2025 worldwide Opdivo sales of USD 10.049 billion."}, {"label": "Opdivo Qvantig", "reported_currency": "USD", "reported_bn": 0.238, "usd_bn": 0.238, "source": "https://www.bms.com/assets/bms/us/en-us/pdf/investor-info/doc_financials/quarterly_reports/2025/BMY-Q4-2025-Earnings-Press-Release.pdf", "evidence": "BMS reports 2025 worldwide Opdivo Qvantig sales of USD 238 million.", "audit_cycle": 6}], "loe_year": 2028, "phase": "marketed"}
 {"id": "nivolumab + relatlimab", "kind": "molecule", "brands": ["Opdualag"], "class": "PD-1 + LAG-3 combo", "modality": "mab", "sales_2025_usd_bn": 1.2, "phase": "marketed"}
+{"id": "nnc0113-5840", "kind": "molecule", "brands": ["NNC0113-5840"], "class": "GLP-1 analogue peptide", "modality": "peptide", "phase": "pipeline"}
+{"id": "nnc0519-0130", "kind": "molecule", "brands": ["NNC0519-0130"], "class": "Once-weekly dual GIP/GLP-1 receptor agonist peptide", "modality": "peptide", "phase": "pipeline"}
+{"id": "nnc0638-0355", "kind": "molecule", "brands": ["NNC0638-0355"], "class": "Long-acting amylin-receptor agonist peptide", "modality": "peptide", "phase": "pipeline"}
+{"id": "nnc0662-0419", "kind": "molecule", "brands": ["NNC0662-0419"], "class": "Unimolecular GLP-1/GIP/amylin triple receptor agonist peptide", "modality": "peptide", "phase": "pipeline"}
+{"id": "nnc4005-0001", "kind": "molecule", "brands": ["NNC4005-0001"], "class": "Liver-directed SLC25A5/ANT2-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "nnc6989-0001", "kind": "molecule", "brands": ["NNC6989-0001"], "class": "Oral small-molecule ACSL5 inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "nnc9733-0001", "kind": "molecule", "brands": ["NNC9733-0001"], "class": "Liver-targeted GYS2 siRNA", "modality": "sirna", "phase": "pipeline"}
 {"id": "nusinersen", "kind": "molecule", "brands": ["Spinraza"], "class": "Antisense oligonucleotide, intrathecal", "modality": "aso", "sales_2025_usd_bn": 1.55, "loe_year": 2026, "phase": "marketed"}
 {"id": "nxy-059", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2006, "failure_mode": "efficacy"}
 {"id": "obecabtagene autoleucel", "kind": "molecule", "brands": ["Aucatzyl"], "class": "CD19 CAR T-cell therapy", "modality": "cell-therapy", "phase": "marketed"}
@@ -976,6 +1071,7 @@
 {"id": "olaparib", "kind": "molecule", "brands": ["Lynparza"], "class": "Oral PARP inhibitor (AstraZeneca alliance)", "modality": "small-molecule", "sales_2025_usd_bn": 3.28, "loe_year": 2028, "phase": "marketed"}
 {"id": "olaratumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2019, "failure_mode": "efficacy"}
 {"id": "olatorepatide", "kind": "molecule", "brands": ["Olatorepatide"], "class": "GLP-1/GIP receptor dual agonist (Hansoh-licensed)", "modality": "peptide", "phase": "pipeline"}
+{"id": "oleclumab", "kind": "molecule", "brands": ["Oleclumab"], "class": "Anti-CD73 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "olezarsen", "kind": "molecule", "brands": ["Tryngolza"], "class": "APOC3-targeting antisense oligonucleotide", "modality": "aso", "phase": "marketed"}
 {"id": "olmesartan", "kind": "molecule", "brands": ["Benicar"], "class": "Angiotensin II receptor antagonist", "modality": "small-molecule", "phase": "legacy"}
 {"id": "olomorasib", "kind": "molecule", "brands": ["Olomorasib"], "class": "Second-generation KRAS G12C inhibitor", "modality": "small-molecule", "phase": "pipeline"}
@@ -984,6 +1080,7 @@
 {"id": "omalizumab", "kind": "molecule", "brands": ["Xolair"], "class": "Anti-IgE monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 1.8, "loe_year": 2025, "phase": "marketed"}
 {"id": "omaveloxolone", "kind": "molecule", "brands": ["Skyclarys"], "class": "Oral small molecule (Nrf2 activator)", "modality": "small-molecule", "sales_2025_usd_bn": 0.52, "loe_year": 2030, "phase": "marketed"}
 {"id": "omeprazole", "kind": "molecule", "brands": ["Losec"], "class": "Proton-pump inhibitor", "modality": "small-molecule", "phase": "marketed"}
+{"id": "ompekimig", "kind": "molecule", "brands": ["Ompekimig"], "class": "Trispecific antibody neutralizing IL-4, IL-13, and IL-33", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "onabotulinumtoxina", "kind": "molecule", "brands": ["Botox"], "class": "Botulinum neurotoxin", "modality": "toxin", "sales_2025_usd_bn": 6.371, "sales_2025_components": [{"label": "Botox Therapeutic", "reported_currency": "USD", "reported_bn": 3.769, "usd_bn": 3.769, "source": "https://news.abbvie.com/2026-02-04-AbbVie-Reports-Full-Year-and-Fourth-Quarter-2025-Financial-Results", "evidence": "AbbVie reports 2025 Botox Therapeutic net revenue of USD 3.769 billion.", "audit_cycle": 6}, {"label": "Botox Cosmetic", "reported_currency": "USD", "reported_bn": 2.602, "usd_bn": 2.602, "source": "https://news.abbvie.com/2026-02-04-AbbVie-Reports-Full-Year-and-Fourth-Quarter-2025-Financial-Results", "evidence": "AbbVie reports 2025 Botox Cosmetic net revenue of USD 2.602 billion.", "audit_cycle": 6}], "phase": "marketed"}
 {"id": "onasemnogene abeparvovec", "kind": "molecule", "brands": ["Zolgensma"], "class": "AAV9 gene therapy", "modality": "gene-therapy", "sales_2025_usd_bn": 1.2, "phase": "marketed"}
 {"id": "ontamalimab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2020, "failure_mode": "strategic"}
@@ -993,6 +1090,7 @@
 {"id": "oveporexton", "kind": "molecule", "brands": ["Orzeyful"], "class": "Oral orexin receptor 2 (OX2R) agonist", "modality": "small-molecule", "loe_year": 2026, "phase": "marketed"}
 {"id": "oxford covid-19 vaccine", "kind": "molecule", "brands": ["Vaxzevria"], "class": "Inactivated viral vector vaccine", "modality": "vaccine", "phase": "marketed"}
 {"id": "ozanimod", "kind": "molecule", "brands": ["Zeposia"], "class": "S1P modulator (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 0.58, "phase": "marketed"}
+{"id": "p-cd19cd20-allo1", "kind": "molecule", "brands": ["P-CD19CD20-ALLO1"], "class": "Allogeneic dual CD19/CD20 CAR-T cell therapy", "modality": "cell-therapy", "phase": "pipeline"}
 {"id": "pacanalotamab", "kind": "molecule", "phase": "failed", "modality": "bispecific-ab", "modality_note": "bispecific (canonical BiTE, continuous IV)", "year_died": 2021, "failure_mode": "strategic"}
 {"id": "pacibekitug", "kind": "molecule", "brands": ["Pacibekitug"], "class": "Anti-IL-6 mAb", "modality": "mab", "phase": "pipeline"}
 {"id": "paclitaxel", "kind": "molecule", "brands": ["Taxol"], "class": "Mitotic spindle poison (taxane)", "modality": "small-molecule", "phase": "marketed"}
@@ -1013,17 +1111,24 @@
 {"id": "pegozafermin", "kind": "molecule", "brands": ["Pegozafermin"], "class": "GlycoPEGylated FGF21 protein analogue", "modality": "recombinant-protein", "phase": "pipeline"}
 {"id": "pelacarsen", "kind": "molecule", "brands": ["Pelacarsen"], "class": "Antisense oligonucleotide against Lp(a)", "modality": "aso", "phase": "pipeline"}
 {"id": "pembrolizumab", "kind": "molecule", "brands": ["Keytruda / Keytruda Qlex"], "class": "Anti-PD-1 monoclonal antibody (IV; Qlex = subcutaneous with berahyaluronidase alfa)", "modality": "mab", "sales_2025_usd_bn": 31.7, "loe_year": 2028, "phase": "marketed"}
-{"id": "pembrolizumab with berahyaluronidase alfa", "kind": "molecule", "brands": ["Keytruda Qlex"], "class": "PD-1 inhibitor", "modality": "mab", "sales_2025_usd_bn": 31.7, "loe_year": 2028, "phase": "legacy"}
+{"id": "pembrolizumab with berahyaluronidase alfa", "kind": "molecule", "brands": ["Keytruda Qlex"], "class": "PD-1 inhibitor", "modality": "mab", "phase": "legacy"}
 {"id": "pemetrexed", "kind": "molecule", "brands": ["Alimta"], "class": "Antimetabolite (antifolate)", "modality": "small-molecule", "phase": "marketed"}
 {"id": "penpulimab", "kind": "molecule", "brands": ["\u2014 (penpulimab, brand not confirmed)"], "class": "Anti-PD-1 monoclonal antibody", "modality": "mab", "phase": "marketed"}
 {"id": "pertuzumab", "kind": "molecule", "brands": ["Perjeta"], "class": "Anti-HER2 monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 3.36, "loe_year": 2026, "phase": "marketed"}
 {"id": "pertuzumab + trastuzumab + hyaluronidase", "kind": "molecule", "brands": ["Phesgo"], "class": "Fixed-dose subcutaneous HER2 antibody combo", "modality": "mab", "sales_2025_usd_bn": 2.69, "loe_year": 2030, "phase": "marketed"}
 {"id": "petrelintide", "kind": "molecule", "brands": ["Petrelintide"], "class": "Amylin analogue", "modality": "peptide", "phase": "pipeline"}
 {"id": "pexidartinib", "kind": "molecule", "brands": ["Turalio"], "class": "Oral CSF1R inhibitor", "modality": "small-molecule", "loe_year": 2030, "phase": "marketed"}
+{"id": "pf-06835375", "kind": "molecule", "brands": ["PF-06835375"], "class": "Anti-CXCR5 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "pf-07868489", "kind": "molecule", "brands": ["PF-07868489"], "class": "Anti-BMP9 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "pf-08046050", "kind": "molecule", "brands": ["PF-08046050"], "class": "CEACAM5-directed antibody-drug conjugate with topoisomerase-I payload", "modality": "adc", "phase": "pipeline"}
+{"id": "pf-08049820", "kind": "molecule", "brands": ["PF-08049820"], "class": "Oral small-molecule STAT6 inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "pf-08634404", "kind": "molecule", "brands": ["PF-08634404"], "class": "PD-1 x VEGF bispecific antibody", "modality": "bispecific-ab", "phase": "pipeline"}
+{"id": "pf-08653945", "kind": "molecule", "brands": ["PF-08653945"], "class": "Ultra-long-acting dual amylin/calcitonin receptor agonist peptide", "modality": "peptide", "phase": "pipeline"}
 {"id": "pimobendan", "kind": "molecule", "brands": ["Vetmedin"], "class": "Inodilator (animal health, oral)", "modality": "small-molecule", "phase": "marketed"}
 {"id": "pioglitazone", "kind": "molecule", "brands": ["Actos"], "class": "Thiazolidinedione (peroxisome proliferator-activated receptor gamma agonist)", "modality": "small-molecule", "phase": "legacy"}
 {"id": "pirfenidone", "kind": "molecule", "brands": ["Esbriet"], "class": "Antifibrotic agent", "modality": "small-molecule", "phase": "marketed"}
 {"id": "pirtobrutinib", "kind": "molecule", "brands": ["Jaypirca"], "class": "Non-covalent BTK inhibitor (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 0.5, "loe_year": 2030, "phase": "marketed"}
+{"id": "pit565", "kind": "molecule", "brands": ["PIT565"], "class": "CD19\u00d7CD3\u00d7CD2 trispecific T-cell engager", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "pivekimab sunirine", "kind": "molecule", "brands": ["Decnupaz"], "class": "CD123-directed antibody-drug conjugate", "modality": "adc", "loe_year": 2026, "phase": "marketed"}
 {"id": "pneumococcal 15-valent conjugate vaccine", "kind": "molecule", "brands": ["Vaxneuvance"], "class": "Conjugate vaccine", "modality": "vaccine", "sales_2025_usd_bn": 0.95, "phase": "marketed"}
 {"id": "pneumococcal 20-valent conjugate vaccine", "kind": "molecule", "brands": ["Prevnar 20"], "class": "Conjugate vaccine", "modality": "vaccine", "phase": "marketed"}
@@ -1036,6 +1141,7 @@
 {"id": "povetacicept", "kind": "molecule", "brands": ["Povetacicept"], "class": "Dual BAFF/APRIL antagonist (engineered fusion protein)", "modality": "fusion-protein", "phase": "pipeline"}
 {"id": "pozelimab", "kind": "molecule", "brands": ["Veopoz"], "class": "Monoclonal antibody (complement C5 inhibitor)", "modality": "mab", "loe_year": 2030, "phase": "marketed"}
 {"id": "pramipexole", "kind": "molecule", "brands": ["Mirapex"], "class": "Dopamine agonist", "modality": "small-molecule", "phase": "marketed"}
+{"id": "prasinezumab", "kind": "molecule", "brands": ["Prasinezumab"], "class": "Anti-aggregated-alpha-synuclein monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "pravastatin", "kind": "molecule", "brands": ["Mevalotin"], "class": "HMG-CoA reductase inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "prifetrastat", "kind": "molecule", "brands": ["Prifetrastat"], "class": "KAT6A/B inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "quizartinib", "kind": "molecule", "brands": ["Vanflyta"], "class": "Oral FLT3 inhibitor", "modality": "small-molecule", "loe_year": 2030, "phase": "marketed"}
@@ -1045,10 +1151,16 @@
 {"id": "ranibizumab", "kind": "molecule", "brands": ["Lucentis"], "class": "Anti-VEGF monoclonal antibody", "modality": "mab", "phase": "marketed"}
 {"id": "ranitidine", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2019, "failure_mode": "manufacturing"}
 {"id": "ranolazine", "kind": "molecule", "brands": ["Ranexa"], "class": "Piperazine derivative (metabolic modulator)", "modality": "small-molecule", "phase": "marketed"}
+{"id": "rapcabtagene autoleucel", "kind": "molecule", "brands": ["Rapcabtagene autoleucel"], "class": "Rapidly manufactured autologous CD19-directed CAR-T cell therapy", "modality": "cell-therapy", "phase": "pipeline"}
+{"id": "rapirosiran", "kind": "molecule", "brands": ["Rapirosiran"], "class": "Liver-directed HSD17B13-targeting siRNA", "modality": "sirna", "phase": "pipeline"}
+{"id": "ravagalimab", "kind": "molecule", "brands": ["Ravagalimab"], "class": "Antagonist anti-CD40 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "ravulizumab", "kind": "molecule", "brands": ["Ultomiris"], "class": "Long-acting anti-C5 complement monoclonal antibody", "modality": "mab", "sales_2025_usd_bn": 4.6, "loe_year": 2030, "phase": "marketed"}
 {"id": "recombinant human erythropoietin", "kind": "molecule", "brands": ["EPIAO", "SEPO"], "class": "Recombinant human erythropoietin (rhEPO)", "modality": "biologic-other", "phase": "marketed"}
 {"id": "recombinant human thrombopoietin", "kind": "molecule", "brands": ["TPIAO"], "class": "Recombinant human thrombopoietin (rhTPO)", "modality": "cytokine", "phase": "marketed"}
 {"id": "recombinant zoster vaccine", "kind": "molecule", "brands": ["Shingrix"], "class": "Adjuvanted recombinant protein vaccine", "modality": "vaccine", "sales_2025_usd_bn": 3.6, "loe_year": 2030, "phase": "marketed"}
+{"id": "regn13335", "kind": "molecule", "brands": ["REGN13335"], "class": "PDGF-B-antagonist monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "regn20423", "kind": "molecule", "brands": ["REGN20423"], "class": "Anti-IL-13 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "regn20934", "kind": "molecule", "brands": ["REGN20934"], "class": "ActRIIA/ActRIIB monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "regorafenib", "kind": "molecule", "brands": ["Stivarga"], "class": "Oral multikinase inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.368, "sales_2025_components": [{"label": "Stivarga", "reported_currency": "EUR", "reported_bn": 0.338, "usd_bn": 0.368, "source": "https://reports.bayer.com/annual-report-2025/en/report-on-economic-position/earnings-asset-and-financial-position/business-development-by-division/pharmaceuticals.html", "evidence": "Bayer reports 2025 Stivarga sales of EUR 338 million.", "audit_cycle": 6}], "loe_year": 2031, "phase": "marketed"}
 {"id": "remdesivir", "kind": "molecule", "brands": ["Veklury"], "class": "IV nucleotide antiviral", "modality": "small-molecule", "sales_2025_usd_bn": 0.91, "phase": "marketed"}
 {"id": "remibrutinib", "kind": "molecule", "brands": ["Rhapsido"], "class": "Bruton tyrosine kinase inhibitor", "modality": "small-molecule", "loe_year": 2025, "phase": "marketed"}
@@ -1069,6 +1181,10 @@
 {"id": "risvutatug rezetecan", "kind": "molecule", "brands": ["Risvutatug rezetecan"], "class": "B7-H3 antibody-drug conjugate", "modality": "adc", "phase": "pipeline"}
 {"id": "rituximab", "kind": "molecule", "brands": ["Rituxan"], "class": "Anti-CD20 monoclonal antibody", "modality": "mab", "phase": "marketed"}
 {"id": "rivaroxaban", "kind": "molecule", "brands": ["Xarelto"], "class": "Factor Xa anticoagulant (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 2.55, "loe_year": 2024, "phase": "marketed"}
+{"id": "ro7268489", "kind": "molecule", "brands": ["RO7268489"], "class": "Oral small-molecule monoacylglycerol-lipase inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "ro7507062", "kind": "molecule", "brands": ["RO7507062"], "class": "CD19\u00d7CD3 bispecific T-cell-engaging antibody", "modality": "bispecific-ab", "phase": "pipeline"}
+{"id": "ro7812653", "kind": "molecule", "brands": ["RO7812653"], "class": "APOE-targeting antisense oligonucleotide", "modality": "aso", "phase": "pipeline"}
+{"id": "ro7837195", "kind": "molecule", "brands": ["RO7837195"], "class": "Bispecific antibody targeting IL-12/IL-23 p40 and TL1A", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "rocatinlimab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2026, "failure_mode": "strategic"}
 {"id": "rofecoxib", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2004, "failure_mode": "safety"}
 {"id": "romiplostim", "kind": "molecule", "brands": ["Nplate"], "class": "Thrombopoietin peptibody", "modality": "fusion-protein", "sales_2025_usd_bn": 1.52, "phase": "marketed"}
@@ -1087,13 +1203,17 @@
 {"id": "sacituzumab tirumotecan", "kind": "molecule", "brands": ["Jiatailai (sac-TMT)"], "class": "TROP2-directed antibody-drug conjugate", "modality": "adc", "phase": "marketed"}
 {"id": "sacubitril/valsartan", "kind": "molecule", "brands": ["Entresto"], "class": "Small molecule combo (neprilysin inhibitor + ARB)", "modality": "small-molecule", "sales_2025_usd_bn": 7.7, "loe_year": 2025, "phase": "marketed"}
 {"id": "salanersen", "kind": "molecule", "brands": ["Salanersen"], "class": "Antisense oligonucleotide correcting SMN2 splicing", "modality": "aso", "phase": "pipeline"}
+{"id": "sar445399", "kind": "molecule", "brands": ["SAR445399"], "class": "Anti-IL-1RAP monoclonal antibody blocking IL-1, IL-33, and IL-36-family signaling", "modality": "mab", "phase": "pipeline"}
+{"id": "sar447971", "kind": "molecule", "brands": ["SAR447971"], "class": "Oral small-molecule IRAK4 targeted degrader", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "sar448501", "kind": "molecule", "brands": ["SAR448501"], "class": "CD20-directed bispecific myeloid-cell engager", "modality": "bispecific-ab", "phase": "pipeline"}
+{"id": "sar448851", "kind": "molecule", "brands": ["SAR448851"], "class": "Oral small-molecule TREM2 agonist", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "sarilumab", "kind": "molecule", "brands": ["Kevzara"], "class": "Monoclonal antibody (IL-6 receptor blocker)", "modality": "mab", "sales_2025_usd_bn": 0.4, "loe_year": 2020, "phase": "marketed"}
 {"id": "saruparib", "kind": "molecule", "brands": ["Saruparib"], "class": "Selective PARP1 inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "sasanlimab", "kind": "molecule", "brands": ["Sasanlimab"], "class": "Subcutaneous anti-PD-1 mAb", "modality": "mab", "phase": "pipeline"}
 {"id": "secukinumab", "kind": "molecule", "brands": ["Cosentyx"], "class": "Monoclonal antibody (anti-IL-17A)", "modality": "mab", "sales_2025_usd_bn": 6.7, "loe_year": 2029, "phase": "marketed"}
 {"id": "sefaxersen", "kind": "molecule", "brands": ["Sefaxersen"], "class": "Antisense oligonucleotide against complement factor B", "modality": "aso", "phase": "pipeline"}
 {"id": "seladelpar", "kind": "molecule", "brands": ["Livdelzi"], "class": "Oral PPAR-delta agonist", "modality": "small-molecule", "sales_2025_usd_bn": 3.2, "loe_year": 2040, "phase": "marketed"}
-{"id": "selexipag", "kind": "molecule", "brands": ["Uptravi"], "class": "Prostacyclin agonist (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 1.902, "sales_2025_components": [{"label": "Uptravi", "reported_currency": "USD", "reported_bn": 1.902, "usd_bn": 1.902, "source": "https://www.jnj.com/download/johnson-johnson-2025-annual-report", "evidence": "Johnson & Johnson reports 2025 Uptravi sales of USD 1.902 billion.", "audit_cycle": 6}], "loe_year": 2020, "phase": "marketed"}
+{"id": "selexipag", "kind": "molecule", "brands": ["Uptravi"], "class": "Prostacyclin agonist (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 1.902, "sales_2025_components": [{"label": "Uptravi", "reported_currency": "USD", "reported_bn": 1.902, "usd_bn": 1.902, "source": "https://www.jnj.com/download/johnson-johnson-2025-annual-report", "evidence": "Johnson & Johnson reports 2025 Uptravi sales of USD 1.902 billion.", "audit_cycle": 6}], "phase": "marketed"}
 {"id": "selonsertib", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2019, "failure_mode": "efficacy"}
 {"id": "seltorexant", "kind": "molecule", "brands": ["Seltorexant"], "class": "Orexin-2 receptor antagonist (oral)", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "semagacestat", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2010, "failure_mode": "safety"}
@@ -1105,12 +1225,13 @@
 {"id": "sildenafil", "kind": "molecule", "brands": ["Viagra"], "class": "Phosphodiesterase-5 inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "simvastatin", "kind": "molecule", "brands": ["Zocor"], "class": "HMG-CoA reductase inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "sitagliptin", "kind": "molecule", "brands": ["Januvia / Janumet"], "class": "Oral DPP-4 inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 2.7, "loe_year": 2026, "phase": "marketed"}
-{"id": "sitagliptin/metformin", "kind": "molecule", "brands": ["Janumet"], "class": "DPP-4 inhibitor/biguanide", "modality": "small-molecule", "sales_2025_usd_bn": 2.7, "loe_year": 2026, "phase": "legacy"}
+{"id": "sitagliptin/metformin", "kind": "molecule", "brands": ["Janumet"], "class": "DPP-4 inhibitor/biguanide", "modality": "small-molecule", "phase": "legacy"}
 {"id": "sitaxsentan", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2010, "failure_mode": "safety"}
 {"id": "sofosbuvir", "kind": "molecule", "brands": ["Sovaldi"], "class": "Nucleotide hepatitis C virus polymerase inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "sofosbuvir/ledipasvir", "kind": "molecule", "brands": ["Harvoni"], "class": "Nucleoside polymerase inhibitor/NS5A inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "sofosbuvir/velpatasvir", "kind": "molecule", "brands": ["Epclusa"], "class": "Oral pan-genotypic direct-acting antiviral", "modality": "small-molecule", "sales_2025_usd_bn": 1.2, "phase": "marketed"}
 {"id": "solanezumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2023, "failure_mode": "efficacy"}
+{"id": "solbinsiran", "kind": "molecule", "brands": ["Solbinsiran"], "class": "Liver-directed ANGPTL3-targeting GalNAc siRNA", "modality": "sirna", "phase": "pipeline"}
 {"id": "somapacitan", "kind": "molecule", "brands": ["Sogroya"], "class": "Once-weekly growth hormone", "modality": "hormone", "sales_2025_usd_bn": 0.89, "loe_year": 2030, "phase": "marketed"}
 {"id": "somatropin", "kind": "molecule", "brands": ["Norditropin"], "class": "Daily recombinant growth hormone", "modality": "hormone", "phase": "marketed"}
 {"id": "sonesitatug vedotin", "kind": "molecule", "brands": ["Sonesitatug vedotin"], "class": "CLDN18.2-directed ADC", "modality": "adc", "phase": "pipeline"}
@@ -1119,12 +1240,16 @@
 {"id": "sotorasib", "kind": "molecule", "brands": ["Lumakras"], "class": "KRAS G12C inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "spesolimab", "kind": "molecule", "brands": ["Spevigo"], "class": "Anti-IL-36 receptor monoclonal antibody", "modality": "mab", "phase": "marketed"}
 {"id": "sugammadex", "kind": "molecule", "brands": ["Bridion"], "class": "Small molecule (modified gamma-cyclodextrin, IV)", "modality": "small-molecule", "sales_2025_usd_bn": 1.8, "loe_year": 2026, "phase": "marketed"}
+{"id": "surovatamig", "kind": "molecule", "brands": ["Surovatamig"], "class": "CD19\u00d7CD3 bispecific T-cell engager", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "survodutide", "kind": "molecule", "brands": ["Survodutide"], "class": "Glucagon/GLP-1 receptor dual agonist (injectable)", "modality": "peptide", "phase": "pipeline"}
 {"id": "suzetrigine", "kind": "molecule", "brands": ["Journavx"], "class": "Oral NaV1.8 sodium-channel inhibitor (non-opioid)", "modality": "small-molecule", "sales_2025_usd_bn": 0.07, "loe_year": 2040, "phase": "marketed"}
 {"id": "tabalumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2014, "failure_mode": "efficacy"}
 {"id": "tadalafil", "kind": "molecule", "brands": ["Cialis"], "class": "Phosphodiesterase-5 inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "tafamidis", "kind": "molecule", "brands": ["Vyndaqel / Vyndamax"], "class": "Small molecule, TTR stabilizer", "modality": "small-molecule", "sales_2025_usd_bn": 6.4, "loe_year": 2028, "phase": "marketed"}
+{"id": "tak-411", "kind": "molecule", "brands": ["TAK-411"], "class": "Intravenous hypersialylated human immunoglobulin G", "modality": "immunoglobulin", "phase": "pipeline"}
+{"id": "tak-881", "kind": "molecule", "brands": ["TAK-881"], "class": "Plasma-derived 20% human subcutaneous immunoglobulin co-administered with recombinant hyaluronidase", "modality": "immunoglobulin", "phase": "pipeline"}
 {"id": "talquetamab", "kind": "molecule", "brands": ["Talvey"], "class": "GPRC5D bispecific antibody", "modality": "bispecific-ab", "sales_2025_usd_bn": 0.463, "sales_2025_components": [{"label": "Talvey", "reported_currency": "USD", "reported_bn": 0.463, "usd_bn": 0.463, "source": "https://www.jnj.com/download/johnson-johnson-2025-annual-report", "evidence": "Johnson & Johnson reports 2025 Talvey sales of USD 463 million.", "audit_cycle": 6}], "phase": "marketed"}
+{"id": "tambotatug pelitecan", "kind": "molecule", "brands": ["YL201"], "class": "B7-H3-directed antibody-drug conjugate with topoisomerase-I payload", "modality": "adc", "phase": "pipeline"}
 {"id": "tamoxifen", "kind": "molecule", "brands": ["Nolvadex"], "class": "Estrogen receptor antagonist", "modality": "small-molecule", "phase": "marketed"}
 {"id": "tamsulosin", "kind": "molecule", "brands": ["Flomax"], "class": "Alpha-1 adrenergic receptor antagonist", "modality": "small-molecule", "phase": "marketed"}
 {"id": "tanezumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2021, "failure_mode": "safety"}
@@ -1147,6 +1272,8 @@
 {"id": "tezacaftor/ivacaftor", "kind": "molecule", "brands": ["Symdeko / Symkevi"], "class": "Small-molecule CFTR corrector+potentiator combo", "modality": "small-molecule", "sales_2025_usd_bn": 0.1, "loe_year": 2027, "phase": "marketed"}
 {"id": "tezepelumab", "kind": "molecule", "brands": ["Tezspire"], "class": "TSLP antibody", "modality": "mab", "sales_2025_usd_bn": 1.48, "phase": "marketed"}
 {"id": "tilavonemab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2021, "failure_mode": "efficacy"}
+{"id": "tilpisertib fosmecarbil", "kind": "molecule", "brands": ["Tilpisertib fosmecarbil"], "class": "Oral prodrug of a TPL2/MAP3K8 kinase inhibitor", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "tilrekimig", "kind": "molecule", "brands": ["Tilrekimig"], "class": "IL-4/IL-13/TSLP trispecific monoclonal antibody", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "tiotropium", "kind": "molecule", "brands": ["Spiriva"], "class": "Inhaled LAMA bronchodilator", "modality": "small-molecule", "loe_year": 2023, "phase": "marketed"}
 {"id": "tiragolumab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2024, "failure_mode": "efficacy"}
 {"id": "tirzepatide", "kind": "molecule", "brands": ["Mounjaro", "Zepbound"], "class": "GIP/GLP-1 dual agonist peptide", "modality": "peptide", "sales_2025_usd_bn": 36.5, "loe_year": 2036, "phase": "marketed"}
@@ -1161,15 +1288,18 @@
 {"id": "torcetrapib", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2006, "failure_mode": "safety"}
 {"id": "tozinameran", "kind": "molecule", "brands": ["Comirnaty"], "class": "mRNA vaccine (with BioNTech)", "modality": "mrna", "sales_2025_usd_bn": 4.4, "phase": "marketed"}
 {"id": "tozorakimab", "kind": "molecule", "brands": ["Tozorakimab"], "class": "Anti-IL-33 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
-{"id": "trametinib", "kind": "molecule", "brands": ["Mekinist"], "class": "Small molecule (MEK inhibitor)", "modality": "small-molecule", "sales_2025_usd_bn": 2.2, "loe_year": 2026, "phase": "marketed"}
+{"id": "trametinib", "kind": "molecule", "brands": ["Mekinist"], "class": "Small molecule (MEK inhibitor)", "modality": "small-molecule", "phase": "marketed"}
 {"id": "trastuzumab", "kind": "molecule", "brands": ["Herceptin"], "class": "Anti-HER2 monoclonal antibody", "modality": "mab", "phase": "marketed"}
 {"id": "trastuzumab deruxtecan", "kind": "molecule", "brands": ["Enhertu"], "class": "HER2-directed antibody-drug conjugate (Daiichi Sankyo partnership)", "modality": "adc", "sales_2025_usd_bn": 2.78, "loe_year": 2030, "phase": "marketed"}
 {"id": "trastuzumab emtansine", "kind": "molecule", "brands": ["Kadcyla"], "class": "HER2-targeted antibody-drug conjugate", "modality": "adc", "phase": "marketed"}
 {"id": "trenibotulinumtoxine", "kind": "molecule", "brands": ["Boey"], "class": "Botulinum neurotoxin type E (fast-onset, short-acting)", "modality": "toxin", "loe_year": 2026, "phase": "marketed"}
 {"id": "trevogrumab", "kind": "molecule", "brands": ["Trevogrumab"], "class": "Anti-GDF8 (myostatin) monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "trontinemab", "kind": "molecule", "brands": ["Trontinemab"], "class": "Brain Shuttle anti-amyloid antibody (transferrin-receptor transport)", "modality": "mab", "phase": "pipeline"}
+{"id": "trosunilimab", "kind": "molecule", "brands": ["Trosunilimab"], "class": "Anti-integrin-beta7 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "tulisokibart", "kind": "molecule", "brands": ["Tulisokibart"], "class": "Anti-TL1A monoclonal antibody", "modality": "mab", "phase": "pipeline"}
+{"id": "turmetabart adizutecan", "kind": "molecule", "brands": ["ABBV-706"], "class": "SEZ6-directed antibody-drug conjugate with topoisomerase-I payload", "modality": "adc", "phase": "pipeline"}
 {"id": "ubrogepant", "kind": "molecule", "brands": ["Ubrelvy"], "class": "Oral CGRP receptor antagonist", "modality": "small-molecule", "sales_2025_usd_bn": 1.3, "loe_year": 2033, "phase": "marketed"}
+{"id": "ubt251", "kind": "molecule", "brands": ["UBT251"], "class": "GLP-1/GIP/glucagon triple agonist", "modality": "peptide", "phase": "pipeline"}
 {"id": "ulotaront", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2023, "failure_mode": "efficacy"}
 {"id": "umibecestat", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2019, "failure_mode": "safety-class"}
 {"id": "upadacitinib", "kind": "molecule", "brands": ["Rinvoq"], "class": "Oral JAK1 inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 8.3, "loe_year": 2037, "phase": "marketed"}
@@ -1190,6 +1320,7 @@
 {"id": "vibostolimab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb (pembrolizumab coformulation)", "year_died": 2024, "failure_mode": "efficacy"}
 {"id": "vicadrostat", "kind": "molecule", "brands": ["Vicadrostat"], "class": "Aldosterone synthase inhibitor (oral); given with empagliflozin", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "vilaprisan", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2020, "failure_mode": "safety"}
+{"id": "vixarelimab", "kind": "molecule", "brands": ["Vixarelimab"], "class": "Anti-OSMR-beta monoclonal antibody blocking IL-31 and type-II oncostatin-M signaling", "modality": "mab", "phase": "pipeline"}
 {"id": "volanesorsen", "kind": "molecule", "brands": ["Waylivra"], "class": "APOC3-targeting antisense oligonucleotide", "modality": "aso", "phase": "marketed"}
 {"id": "volrustomig", "kind": "molecule", "brands": ["Volrustomig"], "class": "PD-1/CTLA-4 bispecific mAb", "modality": "bispecific-ab", "phase": "pipeline"}
 {"id": "vonoprazan", "kind": "molecule", "brands": ["Takecab"], "class": "Potassium-competitive acid blocker (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 0.7, "loe_year": 2031, "phase": "marketed"}
@@ -1202,18 +1333,23 @@
 {"id": "xanomeline-trospium", "kind": "molecule", "brands": ["Cobenfy"], "class": "Muscarinic agonist combo (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 0.15, "loe_year": 2030, "phase": "marketed"}
 {"id": "ximelagatran", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "failure_mode": "safety"}
 {"id": "zagotenemab", "kind": "molecule", "phase": "failed", "modality": "mab", "modality_note": "mAb", "year_died": 2021, "failure_mode": "efficacy"}
+{"id": "zalfermin", "kind": "molecule", "brands": ["Zalfermin"], "class": "Long-acting lipidated FGF21 protein analogue", "modality": "recombinant-protein", "phase": "pipeline"}
+{"id": "zareprumig", "kind": "molecule", "brands": ["Zareprumig"], "class": "Type II anti-CD20 antibody with transferrin-receptor-1 Brain Shuttle", "modality": "mab", "phase": "pipeline"}
 {"id": "zasocitinib", "kind": "molecule", "brands": ["Zasocitinib"], "class": "Oral allosteric TYK2 inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "zenagamtide", "kind": "molecule", "brands": ["Amycretin"], "class": "\u2014", "modality": "peptide", "phase": "pipeline"}
+{"id": "zibotentan", "kind": "molecule", "brands": ["Zibotentan"], "class": "Oral small-molecule selective endothelin-A receptor antagonist", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "zidesamtinib", "kind": "molecule", "brands": ["Jideytro"], "class": "ROS1 inhibitor", "modality": "small-molecule", "loe_year": 2026, "phase": "marketed"}
 {"id": "zidovudine", "kind": "molecule", "brands": ["AZT"], "class": "Nucleoside reverse transcriptase inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "zigakibart", "kind": "molecule", "brands": ["Zigakibart"], "class": "Anti-APRIL mAb", "modality": "mab", "phase": "pipeline"}
 {"id": "ziltivekimab", "kind": "molecule", "brands": ["Ziltivekimab"], "class": "Anti-IL-6 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "zimislecel", "kind": "molecule", "brands": ["Zimislecel"], "class": "Stem-cell-derived islet cell therapy (one-time)", "modality": "cell-therapy", "phase": "pipeline"}
 {"id": "ziv-aflibercept", "kind": "molecule", "brands": ["Zaltrap"], "class": "VEGF trap fusion protein", "modality": "fusion-protein", "phase": "marketed"}
+{"id": "zocilurtatug pelitecan", "kind": "molecule", "brands": ["ZL-1310"], "class": "DLL3-directed antibody-drug conjugate", "modality": "adc", "phase": "pipeline"}
 {"id": "zola-cel", "kind": "molecule", "brands": ["Zola-cel"], "class": "CD19-directed CAR-T cell therapy", "modality": "cell-therapy", "phase": "pipeline"}
 {"id": "zolpidem", "kind": "molecule", "brands": ["Ambien"], "class": "Non-benzodiazepine hypnotic (GABA-A agonist)", "modality": "small-molecule", "phase": "marketed"}
 {"id": "zongertinib", "kind": "molecule", "brands": ["Hernexeos"], "class": "HER2-selective tyrosine kinase inhibitor (oral)", "modality": "small-molecule", "loe_year": 2040, "phase": "marketed"}
 {"id": "zorevunersen", "kind": "molecule", "brands": ["Zorevunersen"], "class": "Antisense oligonucleotide raising SCN1A expression", "modality": "aso", "phase": "pipeline"}
+{"id": "zotemtegrast", "kind": "molecule", "brands": ["Zotemtegrast"], "class": "Oral small-molecule alpha4beta7-integrin inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "zumilokibart", "kind": "molecule", "brands": ["Zumilokibart"], "class": "Half-life-extended anti-IL-13 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "zuranolone", "kind": "molecule", "brands": ["Zurzuvae"], "class": "Oral neuroactive steroid (GABA-A receptor modulator); with Sage (US)", "modality": "small-molecule", "sales_2025_usd_bn": 0.2, "loe_year": 2030, "phase": "marketed"}
 {"id": "5-HT2A", "kind": "target"}
@@ -1223,20 +1359,27 @@
 {"id": "AADC", "kind": "target"}
 {"id": "ABL1", "kind": "target"}
 {"id": "ACLY", "kind": "target"}
+{"id": "ACSL5", "kind": "target"}
 {"id": "ACVR1", "kind": "target"}
 {"id": "ACVR2A", "kind": "target"}
+{"id": "ACVR2B", "kind": "target"}
 {"id": "ADRA1A", "kind": "target"}
 {"id": "ADRB2", "kind": "target"}
 {"id": "ALK", "kind": "target"}
+{"id": "AMYR", "kind": "target"}
 {"id": "ANG2", "kind": "target"}
 {"id": "ANGPTL3", "kind": "target"}
 {"id": "APOB", "kind": "target"}
 {"id": "APOC3", "kind": "target"}
+{"id": "APOE", "kind": "target"}
 {"id": "APOL1", "kind": "target"}
+{"id": "APP", "kind": "target"}
+{"id": "APRIL", "kind": "target"}
 {"id": "AQUP4", "kind": "target"}
 {"id": "AR", "kind": "target"}
 {"id": "ASK1", "kind": "target"}
 {"id": "AT1R", "kind": "target"}
+{"id": "ATR", "kind": "target"}
 {"id": "ActRII", "kind": "target"}
 {"id": "B7-H3", "kind": "target"}
 {"id": "BACE1", "kind": "target"}
@@ -1246,26 +1389,39 @@
 {"id": "BCL11A", "kind": "target"}
 {"id": "BCMA", "kind": "target"}
 {"id": "BCR-ABL", "kind": "target"}
+{"id": "BCR-ABL1", "kind": "target"}
+{"id": "BDCA2", "kind": "target"}
+{"id": "BMP9", "kind": "target"}
 {"id": "BRAF", "kind": "target"}
 {"id": "BTK", "kind": "target"}
+{"id": "C1s", "kind": "target"}
 {"id": "C3", "kind": "target"}
 {"id": "C5", "kind": "target"}
 {"id": "C5a", "kind": "target"}
 {"id": "CACNA2D1", "kind": "target"}
+{"id": "CALCR", "kind": "target"}
 {"id": "CB1", "kind": "target"}
+{"id": "CCR9", "kind": "target"}
+{"id": "CD123", "kind": "target"}
 {"id": "CD19", "kind": "target"}
+{"id": "CD2", "kind": "target"}
 {"id": "CD20", "kind": "target"}
 {"id": "CD3", "kind": "target"}
 {"id": "CD30", "kind": "target"}
+{"id": "CD30L", "kind": "target"}
 {"id": "CD38", "kind": "target"}
+{"id": "CD40", "kind": "target"}
 {"id": "CD40L", "kind": "target"}
 {"id": "CD47", "kind": "target"}
+{"id": "CD73", "kind": "target"}
 {"id": "CD79b", "kind": "target"}
+{"id": "CD8", "kind": "target"}
 {"id": "CD80", "kind": "target"}
 {"id": "CD86", "kind": "target"}
 {"id": "CDH6", "kind": "target"}
 {"id": "CDK4", "kind": "target"}
 {"id": "CDK4/6", "kind": "target"}
+{"id": "CEACAM5", "kind": "target"}
 {"id": "CETP", "kind": "target"}
 {"id": "CFB", "kind": "target"}
 {"id": "CFTR", "kind": "target"}
@@ -1275,7 +1431,9 @@
 {"id": "CHRM1", "kind": "target"}
 {"id": "CHRM1 + M4 muscarinic", "kind": "target"}
 {"id": "CHRM3", "kind": "target"}
+{"id": "CIDEB", "kind": "target"}
 {"id": "CLCN2", "kind": "target"}
+{"id": "CLDN18.2", "kind": "target"}
 {"id": "CMV UL97", "kind": "target"}
 {"id": "CMV-terminase", "kind": "target"}
 {"id": "COX1", "kind": "target"}
@@ -1284,6 +1442,15 @@
 {"id": "CSF1R", "kind": "target"}
 {"id": "CSF3R", "kind": "target"}
 {"id": "CTLA-4", "kind": "target"}
+{"id": "CXCL1", "kind": "target"}
+{"id": "CXCL2", "kind": "target"}
+{"id": "CXCL3", "kind": "target"}
+{"id": "CXCL5", "kind": "target"}
+{"id": "CXCL6", "kind": "target"}
+{"id": "CXCL7", "kind": "target"}
+{"id": "CXCL8", "kind": "target"}
+{"id": "CXCR5", "kind": "target"}
+{"id": "CYP11B2", "kind": "target"}
 {"id": "CYP17A1", "kind": "target"}
 {"id": "CYP3A4", "kind": "target"}
 {"id": "Cell therapy, Crohn's disease", "kind": "target"}
@@ -1292,8 +1459,13 @@
 {"id": "D3", "kind": "target"}
 {"id": "DHFR", "kind": "target"}
 {"id": "DLL3", "kind": "target"}
+{"id": "DMD", "kind": "target"}
+{"id": "DMPK", "kind": "target"}
 {"id": "DPP-4", "kind": "target"}
+{"id": "DPP1", "kind": "target"}
+{"id": "DRD1", "kind": "target"}
 {"id": "DRD2", "kind": "target"}
+{"id": "DRD5", "kind": "target"}
 {"id": "DUX4", "kind": "target"}
 {"id": "EDNRA", "kind": "target"}
 {"id": "EDNRB", "kind": "target"}
@@ -1307,11 +1479,16 @@
 {"id": "EZH1", "kind": "target"}
 {"id": "EZH2", "kind": "target"}
 {"id": "F3", "kind": "target"}
+{"id": "FCRL5", "kind": "target"}
 {"id": "FGF21R", "kind": "target"}
 {"id": "FGFR", "kind": "target"}
 {"id": "FGFR1", "kind": "target"}
+{"id": "FGFR1/2/3/4", "kind": "target"}
+{"id": "FIXa", "kind": "target"}
 {"id": "FLT3", "kind": "target"}
 {"id": "FSHR", "kind": "target"}
+{"id": "FX", "kind": "target"}
+{"id": "FXI/XIa", "kind": "target"}
 {"id": "FXR", "kind": "target"}
 {"id": "Factor IIa", "kind": "target"}
 {"id": "Factor XIa", "kind": "target"}
@@ -1319,6 +1496,12 @@
 {"id": "Factor-Xa", "kind": "target"}
 {"id": "FcRn", "kind": "target"}
 {"id": "GABA-A receptor", "kind": "target"}
+{"id": "GBA1", "kind": "target"}
+{"id": "GCGR", "kind": "target"}
+{"id": "GDF11", "kind": "target"}
+{"id": "GDF15", "kind": "target"}
+{"id": "GDF8", "kind": "target"}
+{"id": "GDNF", "kind": "target"}
 {"id": "GHR", "kind": "target"}
 {"id": "GIP-1R", "kind": "target"}
 {"id": "GIPR", "kind": "target"}
@@ -1327,9 +1510,11 @@
 {"id": "GPR40/FFAR1", "kind": "target"}
 {"id": "GPRC5D", "kind": "target"}
 {"id": "GR", "kind": "target"}
+{"id": "GYS2", "kind": "target"}
 {"id": "GlyT1", "kind": "target"}
 {"id": "H+/K+-ATPase", "kind": "target"}
 {"id": "H2", "kind": "target"}
+{"id": "HBsAg", "kind": "target"}
 {"id": "HCV NS5A", "kind": "target"}
 {"id": "HCV NS5B", "kind": "target"}
 {"id": "HER2", "kind": "target"}
@@ -1339,32 +1524,48 @@
 {"id": "HIV capsid/integrase", "kind": "target"}
 {"id": "HIV integrase", "kind": "target"}
 {"id": "HIV reverse transcriptase", "kind": "target"}
+{"id": "HIV-1 RT", "kind": "target"}
 {"id": "HIV-protease", "kind": "target"}
 {"id": "HMGCR", "kind": "target"}
 {"id": "HPV16", "kind": "target"}
 {"id": "HPV18", "kind": "target"}
 {"id": "HRH1", "kind": "target"}
+{"id": "HSD17B13", "kind": "target"}
 {"id": "HbS", "kind": "target"}
+{"id": "IBAT", "kind": "target"}
 {"id": "IDO1", "kind": "target"}
+{"id": "IFN-beta", "kind": "target"}
 {"id": "IFNAR1", "kind": "target"}
 {"id": "IGF-1R", "kind": "target"}
 {"id": "IL-1", "kind": "target"}
+{"id": "IL-11", "kind": "target"}
+{"id": "IL-12/23 p40", "kind": "target"}
 {"id": "IL-12p40", "kind": "target"}
 {"id": "IL-13", "kind": "target"}
+{"id": "IL-15", "kind": "target"}
 {"id": "IL-17A", "kind": "target"}
+{"id": "IL-18", "kind": "target"}
+{"id": "IL-1RAP", "kind": "target"}
+{"id": "IL-1alpha", "kind": "target"}
+{"id": "IL-1beta", "kind": "target"}
 {"id": "IL-2 mutein", "kind": "target"}
 {"id": "IL-23p19", "kind": "target"}
 {"id": "IL-33", "kind": "target"}
 {"id": "IL-36 receptor", "kind": "target"}
+{"id": "IL-4", "kind": "target"}
 {"id": "IL-4 receptor alpha", "kind": "target"}
 {"id": "IL-5", "kind": "target"}
 {"id": "IL-5RA", "kind": "target"}
+{"id": "IL-6", "kind": "target"}
 {"id": "IL1R1", "kind": "target"}
 {"id": "IL6R", "kind": "target"}
+{"id": "ILT7", "kind": "target"}
 {"id": "INSR", "kind": "target"}
 {"id": "IP-receptor", "kind": "target"}
+{"id": "IRAK4", "kind": "target"}
 {"id": "ITGA4", "kind": "target"}
 {"id": "IgE", "kind": "target"}
+{"id": "IgG", "kind": "target"}
 {"id": "JAK1", "kind": "target"}
 {"id": "JAK2", "kind": "target"}
 {"id": "JAK3", "kind": "target"}
@@ -1373,11 +1574,17 @@
 {"id": "KIT", "kind": "target"}
 {"id": "KLK2", "kind": "target"}
 {"id": "KRAS", "kind": "target"}
+{"id": "KRAS-G12C", "kind": "target"}
 {"id": "LAG-3", "kind": "target"}
+{"id": "LEPR", "kind": "target"}
 {"id": "LHCGR", "kind": "target"}
 {"id": "LPA", "kind": "target"}
+{"id": "LPAR1", "kind": "target"}
+{"id": "LRRK2", "kind": "target"}
 {"id": "Lp-PLA2", "kind": "target"}
 {"id": "M4 muscarinic", "kind": "target"}
+{"id": "MAGL", "kind": "target"}
+{"id": "MAPT", "kind": "target"}
 {"id": "MAdCAM-1", "kind": "target"}
 {"id": "MC2R", "kind": "target"}
 {"id": "MDM2", "kind": "target"}
@@ -1388,17 +1595,26 @@
 {"id": "NET", "kind": "target"}
 {"id": "NFE2L2", "kind": "target"}
 {"id": "NGF", "kind": "target"}
+{"id": "NKG2A", "kind": "target"}
 {"id": "NMDAR", "kind": "target"}
+{"id": "NNMT", "kind": "target"}
+{"id": "NPR1", "kind": "target"}
+{"id": "NPY2R", "kind": "target"}
 {"id": "NTCP", "kind": "target"}
 {"id": "NTRK1", "kind": "target"}
 {"id": "OPRM1", "kind": "target"}
+{"id": "OSMRB", "kind": "target"}
+{"id": "OTOF", "kind": "target"}
 {"id": "OX2R", "kind": "target"}
 {"id": "OX40L", "kind": "target"}
 {"id": "P2X3", "kind": "target"}
 {"id": "P2Y12", "kind": "target"}
+{"id": "PAD2", "kind": "target"}
+{"id": "PAD4", "kind": "target"}
 {"id": "PARP", "kind": "target"}
 {"id": "PARP1", "kind": "target"}
 {"id": "PARP2", "kind": "target"}
+{"id": "PBP", "kind": "target"}
 {"id": "PCSK9", "kind": "target"}
 {"id": "PD-1", "kind": "target"}
 {"id": "PD-1 + LAG-3", "kind": "target"}
@@ -1407,10 +1623,13 @@
 {"id": "PDE4", "kind": "target"}
 {"id": "PDE4B", "kind": "target"}
 {"id": "PDE5A", "kind": "target"}
+{"id": "PDGF-B", "kind": "target"}
 {"id": "PDGFR", "kind": "target"}
 {"id": "PDGFRA", "kind": "target"}
 {"id": "PDGFRB", "kind": "target"}
 {"id": "PIK3CA", "kind": "target"}
+{"id": "PKR", "kind": "target"}
+{"id": "PNPLA3", "kind": "target"}
 {"id": "PPAR-delta", "kind": "target"}
 {"id": "PPARG", "kind": "target"}
 {"id": "PPARalpha/delta", "kind": "target"}
@@ -1421,6 +1640,7 @@
 {"id": "RAF1", "kind": "target"}
 {"id": "RANKL", "kind": "target"}
 {"id": "RET", "kind": "target"}
+{"id": "RIPK1", "kind": "target"}
 {"id": "ROCK2", "kind": "target"}
 {"id": "ROS1", "kind": "target"}
 {"id": "RSV F", "kind": "target"}
@@ -1433,17 +1653,26 @@
 {"id": "SARS-CoV-2 spike protein", "kind": "target"}
 {"id": "SCN10A", "kind": "target"}
 {"id": "SCN1A", "kind": "target"}
+{"id": "SERPINA1", "kind": "target"}
+{"id": "SEZ6", "kind": "target"}
 {"id": "SGLT2", "kind": "target"}
+{"id": "SLC25A5", "kind": "target"}
 {"id": "SLC6A4", "kind": "target"}
 {"id": "SMAD7", "kind": "target"}
 {"id": "SMN1", "kind": "target"}
 {"id": "SMN2", "kind": "target"}
+{"id": "SMURF1", "kind": "target"}
+{"id": "SNAP-25", "kind": "target"}
 {"id": "SNARE complex", "kind": "target"}
+{"id": "SNCA", "kind": "target"}
 {"id": "SOD1", "kind": "target"}
+{"id": "SORT1", "kind": "target"}
 {"id": "SOST", "kind": "target"}
 {"id": "SRC", "kind": "target"}
 {"id": "SST2", "kind": "target"}
 {"id": "SSTR2", "kind": "target"}
+{"id": "ST2", "kind": "target"}
+{"id": "STAT6", "kind": "target"}
 {"id": "STEAP1", "kind": "target"}
 {"id": "TAAR1/5-HT1A", "kind": "target"}
 {"id": "TACR1", "kind": "target"}
@@ -1451,8 +1680,14 @@
 {"id": "TFPI", "kind": "target"}
 {"id": "TIGIT", "kind": "target"}
 {"id": "TIM-3", "kind": "target"}
+{"id": "TL1A", "kind": "target"}
+{"id": "TMEM16A", "kind": "target"}
 {"id": "TNF-alpha", "kind": "target"}
+{"id": "TNFR1", "kind": "target"}
+{"id": "TPL2", "kind": "target"}
 {"id": "TPOR", "kind": "target"}
+{"id": "TREM1", "kind": "target"}
+{"id": "TREM2", "kind": "target"}
 {"id": "TROP2", "kind": "target"}
 {"id": "TRPC6", "kind": "target"}
 {"id": "TSLP", "kind": "target"}
@@ -1460,6 +1695,8 @@
 {"id": "TUBB", "kind": "target"}
 {"id": "TYK2", "kind": "target"}
 {"id": "TYMS", "kind": "target"}
+{"id": "TfR1", "kind": "target"}
+{"id": "UGCG", "kind": "target"}
 {"id": "VEGF-A", "kind": "target"}
 {"id": "VEGFC", "kind": "target"}
 {"id": "VEGFR", "kind": "target"}
@@ -1471,7 +1708,10 @@
 {"id": "aldosterone synthase", "kind": "target"}
 {"id": "alpha-1 antitrypsin deficiency corrector", "kind": "target"}
 {"id": "alpha-galactosidase A", "kind": "target"}
+{"id": "alpha-synuclein", "kind": "target"}
+{"id": "amyloid", "kind": "target"}
 {"id": "amyloid-beta", "kind": "target"}
+{"id": "arginase", "kind": "target"}
 {"id": "bacterial DNA gyrase", "kind": "target"}
 {"id": "beta-lactamase", "kind": "target"}
 {"id": "cardiac myosin", "kind": "target"}
@@ -1481,7 +1721,6 @@
 {"id": "dengue virus", "kind": "target"}
 {"id": "dopamine receptor", "kind": "target"}
 {"id": "dopamine transporter", "kind": "target"}
-{"id": "estrogen receptor", "kind": "target"}
 {"id": "extracellular matrix", "kind": "target"}
 {"id": "factor IXa", "kind": "target"}
 {"id": "factor VIIa", "kind": "target"}
@@ -1499,21 +1738,28 @@
 {"id": "insect sodium channel", "kind": "target"}
 {"id": "insulin", "kind": "target"}
 {"id": "integrin beta-6", "kind": "target"}
+{"id": "integrin beta7", "kind": "target"}
+{"id": "integrin-alpha4beta7", "kind": "target"}
 {"id": "kappa opioid", "kind": "target"}
+{"id": "lipoprotein(a) assembly", "kind": "target"}
 {"id": "menin", "kind": "target"}
 {"id": "meningococcal group B polysaccharide", "kind": "target"}
 {"id": "mitochondrial/antihistamine", "kind": "target"}
+{"id": "myostatin", "kind": "target"}
 {"id": "natriuretic peptide receptor", "kind": "target"}
 {"id": "neprilysin", "kind": "target"}
 {"id": "neurotrophy/obesity", "kind": "target"}
+{"id": "pancreatic islet cells", "kind": "target"}
 {"id": "pathogenic antigens", "kind": "target"}
 {"id": "penicillin-binding protein", "kind": "target"}
+{"id": "phospho-tau", "kind": "target"}
 {"id": "plasma kallikrein", "kind": "target"}
 {"id": "pneumococcal polysaccharide antigens", "kind": "target"}
 {"id": "potassium channel", "kind": "target"}
 {"id": "progesterone receptor", "kind": "target"}
 {"id": "protease", "kind": "target"}
 {"id": "proteasome", "kind": "target"}
+{"id": "pyroglutamate amyloid-beta", "kind": "target"}
 {"id": "respiratory syncytial virus", "kind": "target"}
 {"id": "rocuronium", "kind": "target"}
 {"id": "sepsis", "kind": "target"}
@@ -1522,6 +1768,7 @@
 {"id": "serotonin-norepinephrine reuptake", "kind": "target"}
 {"id": "soluble guanylate cyclase", "kind": "target"}
 {"id": "tau", "kind": "target"}
+{"id": "transferrin receptor", "kind": "target"}
 {"id": "type 1 diabetes", "kind": "target"}
 {"id": "urate", "kind": "target"}
 {"id": "varicella-zoster virus", "kind": "target"}

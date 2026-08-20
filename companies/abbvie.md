@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: abbvie
-updated: 2026-08-14
+updated: 2026-08-18
 status: curated
 ---
 
@@ -47,7 +47,9 @@ AbbVie's problem is arithmetic: Skyrizi and Rinvoq now carry the company, and al
 | Lutikizumab | lutikizumab | Dual anti-IL-1α/IL-1β antibody | Hidradenitis suppurativa | Ph3 | Ph3 readout is one of AbbVie's headline 2026 immunology catalysts, in patients who failed anti-TNF therapy |
 | Temab-A | telisotuzumab adizutecan | c-Met-directed ADC (topoisomerase-1 payload) | Colorectal cancer (c-Met-overexpressing) | Ph3 | Breakthrough designation; a second Ph3, in combination with bevacizumab, started Jun 2026 |
 | Etentamig | etentamig | BCMAxCD3 bispecific T-cell engager | Relapsed/refractory multiple myeloma | Ph3 | Ph3 CERVINO monotherapy in third-line-plus disease, on monthly dosing |
+| ABBV-706 | turmetabart adizutecan | SEZ6-directed ADC with topoisomerase-I payload | Small-cell lung cancer and other solid tumours | Ph3 | Investigational, not approved worldwide; pivotal SCLC development continues |
 | ABBV-RGX-314 | — | AAV8 gene therapy encoding an anti-VEGF antibody fragment | Wet age-related macular degeneration | Ph3 | One-time subretinal dose as an alternative to repeat eye injections (Regenxbio partnership) |
+| Budigalimab | budigalimab (ABBV-181) | Anti-PD-1 monoclonal antibody | NSCLC and other solid tumours | Ph2 | Investigational checkpoint inhibitor; not approved by any health authority worldwide |
 | Bretisilocin | bretisilocin | Psychedelic-derived serotonin 5-HT2A agonist | Major depressive disorder | Ph2 | Acquired with Gilgamesh Pharmaceuticals for ~$1.2B (Aug 2025) — AbbVie's re-entry into psychiatry |
 | ABBV-295 | — | Long-acting amylin/calcitonin receptor agonist | Obesity | Ph1 | 7.7-9.8% weight loss at 12 weeks in Ph1; a Ph2 dose-finding study was registered in 2026; licensed from Gubra |
 | CPTX2309 | — | In vivo anti-CD19 CAR-T via targeted lipid nanoparticles | Autoimmune disease (immune reset) | Ph1 | Lead asset of the $2.1B Capstan acquisition; no cell manufacturing or lymphodepletion required |
@@ -108,6 +110,7 @@ AbbVie guided 2026 revenue to ~$67B (+9.5%) and is spending heavily to build gro
 - AbbVie FY2025 Form 10-K (filed Feb 2026; ~57,000 employees; Gubra/Aliada deal terms).
 - Fierce Pharma coverage of Q3/Q4 2025 earnings (Oct 31, 2025; Feb 4, 2026).
 - AbbVie press releases: Gubra license (Mar 3, 2025), Capstan acquisition (Jun 30, 2025), Apogee acquisition (Jun 22, 2026), White House agreement (Jan 12, 2026), emraclidine Phase 2 update (Nov 11, 2024).
+- AbbVie ASCO pipeline releases, May 27, 2025 and May 21, 2026, for budigalimab and ABBV-706 identity, mechanism, stage, and unapproved status.
 - BioPharma Dive: Vyalev approval (Oct 17, 2024), emraclidine failure (Nov 11, 2024), White House pricing deal (Jan 13, 2026).
 - Fierce Biotech / STAT / BioSpace on the Cerevel impairment (Jan 2025).
 - TechCrunch (Apr 2016) on Stemcentrx; Zacks/Yahoo Finance on oncology and 2025 BD activity.
