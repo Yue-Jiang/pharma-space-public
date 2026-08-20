@@ -72,7 +72,7 @@
  <div class="control-title">Relationship filters</div>
  <div id="rels"></div>
  <div id="zoomrow" style="margin:8px 0"><button id="zin" style="width:32px">+</button> <button id="zout" style="width:32px">&minus;</button> <button id="zfit">fit</button></div>
- <div class="hint" id="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = focus its neighborhood &middot; <b>shift/&#8984;-click (or long-press) = pin</b>: the graph stays full so you can pin a second node; two or more pins show only what connects to <em>all</em> of them &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br><b>fit</b> includes peripheral and disconnected satellites.</div>
+ <div class="hint" id="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = focus its neighborhood &middot; <b>shift/&#8984;-click (or long-press) = pin</b>: the graph stays full so you can pin a second node; two or more pins show only what connects to <em>all</em> of them &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br><b>dashed edge</b> = relationship through one hidden node &middot; <b>fit</b> includes peripheral and disconnected satellites.</div>
 </div>
 <div id="info"></div>
 <svg id="g" width="100%" height="100%"></svg>
@@ -124,6 +124,46 @@ const REL_UI={
 };
 function relationUi(rel){return REL_UI[rel]||{name:rel.replaceAll("_"," "),types:"Graph relationship"};}
 
+// Project a two-edge path across one hidden node. Filters decide which vertices are
+// drawn, but hiding molecules should not make Company -> Molecule -> Indication
+// evidence disappear. Shortcuts only join DIFFERENT visible kinds, so hiding a company
+// cannot turn its portfolio into a misleading molecule-to-molecule clique.
+function projectVisibleLinks(vn, links, respectRelationFilters=true){
+  const active=links.filter(l=>!respectRelationFilters||relOn[l.rel]);
+  const direct=active.filter(l=>vn.has(l.s)&&vn.has(l.t));
+  const directKeys=new Set(direct.map(l=>`${Math.min(l.s,l.t)}|${Math.max(l.s,l.t)}`));
+  const hidden=new Map();
+  active.forEach(l=>{
+    if(vn.has(l.s)&&!vn.has(l.t)){
+      if(!hidden.has(l.t))hidden.set(l.t,[]);hidden.get(l.t).push({node:l.s,rel:l.rel});
+    } else if(vn.has(l.t)&&!vn.has(l.s)){
+      if(!hidden.has(l.s))hidden.set(l.s,[]);hidden.get(l.s).push({node:l.t,rel:l.rel});
+    }
+  });
+  const projected=new Map();
+  hidden.forEach((neighbours,via)=>{
+    for(let a=0;a<neighbours.length;a++)for(let b=a+1;b<neighbours.length;b++){
+      const left=neighbours[a],right=neighbours[b];
+      if(left.node===right.node||NODES[left.node].kind===NODES[right.node].kind)continue;
+      const s=Math.min(left.node,right.node),t=Math.max(left.node,right.node),key=`${s}|${t}`;
+      if(directKeys.has(key))continue;
+      if(!projected.has(key))projected.set(key,{s,t,rel:"projected",projected:true,vias:[],pathRels:new Set()});
+      const p=projected.get(key);p.vias.push(via);p.pathRels.add(left.rel);p.pathRels.add(right.rel);
+    }
+  });
+  const shortcuts=[...projected.values()].map(p=>{
+    p.vias=[...new Set(p.vias)].sort((a,b)=>NODES[a].label.localeCompare(NODES[b].label));
+    p.pathRels=[...p.pathRels].sort();
+    p.layoutWeight=Math.min(4,.8+Math.log2(p.vias.length+1)*.45);
+    const labels=p.vias.map(i=>NODES[i].label),shown=labels.slice(0,12).join(', ');
+    const more=labels.length>12?`, and ${labels.length-12} more`:'';
+    const kinds=[...new Set(p.vias.map(i=>NODES[i].kind))].join('/');
+    p.title=`Derived two-edge connection through ${labels.length} hidden ${kinds} node${labels.length===1?'':'s'}: ${shown}${more}. Underlying relationships: ${p.pathRels.join(' + ')}.`;
+    return p;
+  });
+  return direct.concat(shortcuts);
+}
+
 const svg=document.getElementById('g');
 window.addEventListener('error',e=>{const s=document.getElementById('layout-status');if(s)s.textContent=`Layout error: ${e.message}`;});
 const W=1800, H=1400;
@@ -157,6 +197,7 @@ function nodeSize(n){
 const BASE_LAYOUT_WEIGHT={portfolio_includes:3,acts_on:1.6,treats:.9,prevents:.9,studied_for:.9,has_modality:.5,subtype_of:.9,in_area:1.2,bets_on:1,supports_bet:2};
 function blendedRelationWeight(rel){
   const base=BASE_LAYOUT_WEIGHT[rel]||0;
+  if(rel==="projected")return 1;
   if(rel==="bets_on")return kindOn.company&&kindOn.indication?4.5:0;
   if(rel==="supports_bet")return kindOn.molecule&&kindOn.indication?3.5:0;
   if(rel==="portfolio_includes")return kindOn.company&&kindOn.molecule?base:0;
@@ -306,7 +347,8 @@ function applyBlendedLayout(){
       x[area]=best[0];y[area]=best[1];semanticCore.add(area);fixed.set(area,best);placedAreas.push(area);
     });
   }
-  const rawEdges=layer.links.map(l=>({a:local.get(l.s),b:local.get(l.t),w:blendedRelationWeight(l.rel),rel:l.rel}))
+  const layoutLinks=projectVisibleLinks(new Set(ids),layer.links,false);
+  const rawEdges=layoutLinks.map(l=>({a:local.get(l.s),b:local.get(l.t),w:l.projected?l.layoutWeight:blendedRelationWeight(l.rel),rel:l.rel}))
     .filter(e=>e.a!==undefined&&e.b!==undefined&&e.a!==e.b&&e.w>0);
   const degree=Array(ids.length).fill(0);
   rawEdges.forEach(e=>{degree[e.a]++;degree[e.b]++;});
@@ -377,7 +419,7 @@ function transitionAutoLayout(){
 function visible(){
   const layer=layerGraph();
   const vn=new Set(); layer.allowed.forEach(i=>{if(kindOn[NODES[i].kind])vn.add(i);});
-  const vl=layer.links.filter(l=>relOn[l.rel]&&vn.has(l.s)&&vn.has(l.t));
+  const vl=projectVisibleLinks(vn,layer.links);
   return {vn,vl};
 }
 function info(html){const el=document.getElementById('info');
@@ -416,6 +458,9 @@ function focusLayout(f, showN){
   }
 }
 let focusDepth=1;
+function companyPortfolioFocus(){
+  return anchors.length===1&&focusDepth===1&&NODES[anchors[0]].kind==="company";
+}
 // Multi-anchor query. One anchor: its d-hop neighbourhood (unchanged behaviour).
 // Several anchors: nodes reachable within d hops of EVERY anchor — the intersection —
 // so selecting a company + a modality answers "that company's assets of that kind".
@@ -439,6 +484,37 @@ function hood(i, vl, depth){
     add.forEach(x=>nb.add(x));
   }
   return nb;
+}
+// A company focus is a portfolio view, not a literal one-edge query. Its direct
+// neighbours are molecules, while the selected target, modality, indication, and
+// disease-area nodes describe those molecules. Include those descriptors without
+// walking back out through shared biology to unrelated portfolios. A generic 3-hop
+// neighbourhood would make an Amgen focus balloon to hundreds of other molecules.
+function focusedNodes(vn, vl){
+  const nb=hoodMulti(anchors, vl, focusDepth);
+  if(companyPortfolioFocus()){
+    const company=anchors[0],portfolio=new Set();
+    vl.forEach(l=>{
+      if(l.rel!=="portfolio_includes")return;
+      const other=l.s===company?l.t:(l.t===company?l.s:null);
+      if(other!==null&&NODES[other].kind==="molecule")portfolio.add(other);
+    });
+    portfolio.forEach(m=>{
+      nb.add(m);
+      vl.forEach(l=>{
+        const other=l.s===m?l.t:(l.t===m?l.s:null);
+        if(other!==null&&NODES[other].kind!=="company")nb.add(other);
+      });
+    });
+    // Disease areas sit behind indication nodes. Add the indication hierarchy only
+    // in the outward direction, then its area, so shared indications cannot pull in
+    // other companies' molecules.
+    const indications=new Set([...nb].filter(i=>NODES[i].kind==="indication"));
+    vl.forEach(l=>{if(l.rel==="subtype_of"&&indications.has(l.s))indications.add(l.t);});
+    indications.forEach(i=>nb.add(i));
+    vl.forEach(l=>{if(l.rel==="in_area"&&indications.has(l.s))nb.add(l.t);});
+  }
+  return new Set([...vn].filter(i=>nb.has(i)));
 }
 function nodeDetail(n){
   if(assetLayer!=="bets") return n.detail||n.title;
@@ -478,9 +554,10 @@ function anchorInfo(clicked){
   const nm=j=>`<b>${NODES[j].label}</b>`;
   if(anchors.length===1){
     const n=NODES[anchors[0]];
+    const scope=companyPortfolioFocus()?"portfolio focus":`${focusDepth}-hop`;
     const state = pinMode
       ? `<span style="color:#e8c766">pinned</span> <span style="color:#888">— graph still full; shift-click another node to intersect, or press space to focus this one</span>`
-      : `<span style="color:#888">(${n.kind}${n.failed?', failed':''}, ${focusDepth}-hop)</span>`;
+      : `<span style="color:#888">(${n.kind}${n.failed?', failed':''}, ${scope})</span>`;
     return `${nm(anchors[0])} ${state}\n${nodeDetail(n)}`;
   }
   const {vn,vl}=visible();
@@ -505,8 +582,7 @@ function setAnchors(list, depth, pin){
   const i=focusPrimary();
   if(i!==null && collapsed()){
     const {vn,vl}=visible();
-    const nb=hoodMulti(anchors, vl, focusDepth);
-    const show=new Set([...vn].filter(j=>nb.has(j)));
+    const show=focusedNodes(vn,vl);
     focusLayout(i, show);
     fitTo(show);
   }
@@ -547,8 +623,7 @@ function refocusInPlace(){
   const f=focusPrimary();
   if(f===null || !collapsed()){NODES.forEach(n=>{delete n.fx; delete n.fy;}); return;}
   const {vn,vl}=visible();
-  const nb=hoodMulti(anchors, vl, focusDepth);
-  focusLayout(f, new Set([...vn].filter(j=>nb.has(j))));
+  focusLayout(f, focusedNodes(vn,vl));
 }
 
 // ---- label placement ----
@@ -655,8 +730,8 @@ function render(){
   if(!anchors.length&&!NODES.some(n=>n.fx!==undefined))applyAutoLayout();
   const {vn,vl}=visible();
   let showN=vn, showL=vl;
-  if(collapsed()){const nb=hoodMulti(anchors, vl, focusDepth);
-    showN=new Set([...vn].filter(i=>nb.has(i)));
+  if(collapsed()){
+    showN=focusedNodes(vn,vl);
     showL=vl.filter(l=>showN.has(l.s)&&showN.has(l.t));}
   gE.innerHTML='';gN.innerHTML='';gL.innerHTML='';
   const zoom = W/vb[2];
@@ -712,15 +787,17 @@ function render(){
     const overviewBet=assetLayer==="bets"&&currentField===ALL_FIELDS&&l.rel==="bets_on";
     const betEvidence=assetLayer==="bets"&&l.rel==="supports_bet";
     ln.setAttribute('stroke', l===selEdge?'#e8c766':(betEvidence?'#628867':(overviewBet?'#64779b':(l.rel==='failed_on'?'#8a4444':(l.rel==='deal'?'#7a6a3a':'#33333d')))));
-    const force=blendedRelationWeight(l.rel),intensity=Math.min(1,force/3);
+    const force=l.projected?l.layoutWeight:blendedRelationWeight(l.rel),intensity=Math.min(1,force/3);
     ln.setAttribute('opacity',l===selEdge?1:(overviewBet?.34:(.14+intensity*.62)));
     ln.setAttribute('stroke-width', (overviewBet?.78:(.5+intensity*.65)+(l===selEdge?1.4:0))/zoom);
+    if(l.projected)ln.setAttribute('stroke-dasharray',`${5/zoom} ${4/zoom}`);
     // invisible fat hit-area so thin edges are clickable
     const hit=document.createElementNS('http://www.w3.org/2000/svg','line');
     hit.setAttribute('x1',px(a));hit.setAttribute('y1',py(a));hit.setAttribute('x2',px(b));hit.setAttribute('y2',py(b));
     hit.setAttribute('stroke','rgba(0,0,0,0)');hit.setAttribute('stroke-width',(isTouch?16:7)/zoom);hit.style.cursor='pointer';
     hit.onclick=ev=>{ev.stopPropagation();selEdge=l;
-      info(`<b>${NODES[l.s].label}</b> &rarr;&larr; <b>${NODES[l.t].label}</b> <span style="color:#888">(${l.rel})</span>\n${l.title}`);render();};
+      const relation=l.projected?`via hidden ${[...new Set(l.vias.map(i=>NODES[i].kind))].join('/')}`:l.rel;
+      info(`<b>${NODES[l.s].label}</b> &rarr;&larr; <b>${NODES[l.t].label}</b> <span style="color:#888">(${relation})</span>\n${l.title}`);render();};
     gE.append(ln,hit);});
   const pending=[];
   showN.forEach(i=>{const n=NODES[i];
@@ -822,7 +899,9 @@ RELS.forEach(r=>{const l=document.createElement('label');
   l.innerHTML=`<input type="checkbox" ${relOn[r]?'checked':''}><span class="rel-copy"><span class="rel-name">${ui.name}</span><span class="rel-types">${ui.types}</span></span>`;
   l.querySelector('input').onchange=e=>{relOn[r]=e.target.checked;refocusInPlace();render();};rd.appendChild(l);});
 function syncRelationControls(){
-  const active=new Set(layerGraph().links.filter(l=>kindOn[NODES[l.s].kind]&&kindOn[NODES[l.t].kind]).map(l=>l.rel));
+  const layer=layerGraph(),vn=new Set();
+  layer.allowed.forEach(i=>{if(kindOn[NODES[i].kind])vn.add(i);});
+  const active=new Set();projectVisibleLinks(vn,layer.links,false).forEach(l=>(l.projected?l.pathRels:[l.rel]).forEach(r=>active.add(r)));
   rd.querySelectorAll('label').forEach(l=>l.hidden=!active.has(l.dataset.rel));
 }
 syncRelationControls();
