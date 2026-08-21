@@ -26,6 +26,9 @@
  #search{width:100%;box-sizing:border-box;margin:8px 0;padding:5px 8px;border-radius:6px;border:1px solid #444;background:#222;color:#eee}
  #info{position:fixed;bottom:10px;left:340px;right:10px;background:rgba(20,20,25,.95);padding:12px 16px;border-radius:10px;max-width:520px;max-height:40vh;overflow-y:auto;box-sizing:border-box;font-size:13px;line-height:1.5;z-index:10;display:none;white-space:pre-line}
  #info .close{float:right;cursor:pointer;color:#888;font-size:15px;margin-left:10px}
+ #info details.method{margin-top:4px;color:#aab0bd;white-space:normal}
+ #info details.method summary{cursor:pointer;color:#9fb4d5;font-weight:600}
+ #info details.method[open] summary{margin-bottom:5px}
  #info-toggle{position:fixed;left:340px;bottom:10px;z-index:11;padding:7px 11px;background:rgba(20,20,25,.95);border-color:#68758d;box-shadow:0 2px 12px rgba(0,0,0,.35)}
  .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
  [hidden]{display:none!important}
@@ -92,6 +95,12 @@ let assetLayer="commercial";
 const ALL_FIELDS="__all__";
 let currentField=ALL_FIELDS;
 const BET_SIZE={leader:48,challenger:34,material:22,exploratory:14};
+const TIER_UI={
+  leader:{label:"Leader",definition:"Stable leader in this field."},
+  challenger:{label:"Challenger",definition:"Substantial challenger in this field."},
+  material:{label:"Material",definition:"Material active participation in this field."},
+  exploratory:{label:"Exploratory",definition:"Exploratory participation in this field."}
+};
 function fieldBet(){return currentField?(FIELD_BETS.fields||{})[currentField]:null;}
 function selectedFields(){
   const fields=FIELD_BETS.fields||{};
@@ -189,32 +198,48 @@ let anchors=[], selEdge=null;
 let pinMode=false;
 function collapsed(){return anchors.length>=2 || (anchors.length===1 && !pinMode);}
 function focusPrimary(){return anchors.length?anchors[0]:null;}  // layout centre
-function focusedBetCompanyId(){
-  if(assetLayer!=="bets"||currentField!==ALL_FIELDS||anchors.length!==1||!collapsed())return null;
-  const n=NODES[anchors[0]];
-  return n&&n.kind==="company"?n.id:null;
+function betFieldEntryForNode(i){return i===null||i===undefined?null:selectedFields().find(([,f])=>f.node_id===NODES[i].id)||null;}
+// The graph can produce many subgraphs, but the interaction grammar is finite.
+// Derive it once so sizing, legends, and detail copy cannot disagree about context.
+function viewContext(){
+  const primary=focusPrimary(),selected=primary===null?null:NODES[primary];
+  const scopedField=currentField!==ALL_FIELDS&&fieldBet()? [currentField,fieldBet()] : null;
+  let interaction="overview";
+  if(pinMode&&anchors.length===1)interaction="pinned-browse";
+  else if(anchors.length>=2)interaction="intersection";
+  else if(anchors.length===1&&collapsed()){
+    const selectedField=assetLayer==="bets"&&currentField===ALL_FIELDS?betFieldEntryForNode(primary):null;
+    if(assetLayer==="bets"&&currentField===ALL_FIELDS&&selected&&selected.kind==="company"&&companyFieldBets(selected.id).length)interaction="company-fields";
+    else if(selectedField)interaction="field-companies";
+    else interaction="evidence-neighborhood";
+  }
+  let sizeMetric=assetLayer==="commercial"?"commercial-sales":"breadth";
+  let subjectCompany=null,subjectField=scopedField;
+  if(assetLayer==="bets"&&interaction==="company-fields"){
+    sizeMetric="field-tier";subjectCompany=selected.id;
+  } else if(assetLayer==="bets"&&(interaction==="field-companies"||scopedField)){
+    sizeMetric="company-tier";subjectField=interaction==="field-companies"?betFieldEntryForNode(primary):scopedField;
+  }
+  return {layer:assetLayer,interaction,sizeMetric,primary,selected,subjectCompany,subjectField,scope:currentField===ALL_FIELDS?"all-fields":"single-field"};
 }
-function focusedBetFieldEntry(){
-  if(assetLayer!=="bets"||currentField!==ALL_FIELDS||anchors.length!==1||!collapsed())return null;
-  return selectedFields().find(([,f])=>f.node_id===NODES[anchors[0]].id)||null;
-}
+function focusedBetCompanyId(){const c=viewContext();return c.interaction==="company-fields"?c.subjectCompany:null;}
+function focusedBetFieldEntry(){const c=viewContext();return c.interaction==="field-companies"?c.subjectField:null;}
 // In the many-to-many overview, dot AREA is proportional to bipartite degree.
 // The same scale applies on both sides: fields covered for a company and companies
 // participating in a field. Clamp only the extremes so the graph remains usable.
 function betBreadthSize(count){return Math.min(50,Math.max(14,12.5*Math.sqrt(Math.max(1,count))));}
 function nodeSize(n){
   if(assetLayer==="bets"){
-    const bets=companyFieldBets(n.id),focusedField=focusedBetFieldEntry();
+    const bets=companyFieldBets(n.id),context=viewContext();
     if(n.kind==="company"&&bets.length){
-      const selectedBet=focusedField&&(focusedField[1].companies||{})[n.id];
+      const selectedBet=context.sizeMetric==="company-tier"&&context.subjectField&&(context.subjectField[1].companies||{})[n.id];
       if(selectedBet)return BET_SIZE[selectedBet.tier]||BET_SIZE.exploratory;
       if(currentField===ALL_FIELDS)return betBreadthSize(bets.length);
       return BET_SIZE[bets[0][1].companies[n.id].tier]||BET_SIZE.exploratory;
     }
-    const focusedCompany=focusedBetCompanyId();
-    if(focusedCompany&&n.kind==="indication"){
+    if(context.sizeMetric==="field-tier"&&context.subjectCompany&&n.kind==="indication"){
       const field=selectedFields().find(([,f])=>n.id===f.node_id);
-      const companyBet=field&&(field[1].companies||{})[focusedCompany];
+      const companyBet=field&&(field[1].companies||{})[context.subjectCompany];
       if(companyBet)return BET_SIZE[companyBet.tier]||BET_SIZE.exploratory;
     }
     const nodeField=selectedFields().find(([,f])=>n.id===f.node_id);
@@ -459,7 +484,7 @@ function info(html){const el=document.getElementById('info');
   el.style.display='block';}
 function updateInfo(html){lastInfoHtml=html;if(infoMinimized){infoToggle.hidden=false;return;}info(html);}
 function minimizeInfo(){document.getElementById('info').style.display='none';infoMinimized=true;infoToggle.hidden=false;}
-function clearInfo(){document.getElementById('info').style.display='none';infoToggle.hidden=true;infoMinimized=false;lastInfoHtml='';}
+function clearInfo(){const info=document.getElementById('info');info.style.display='none';info.innerHTML='';infoToggle.hidden=true;infoMinimized=false;lastInfoHtml='';}
 infoToggle.onclick=()=>{if(lastInfoHtml)info(lastInfoHtml);};
 function px(n){return n.fx!==undefined?n.fx:n.x;}
 function py(n){return n.fy!==undefined?n.fy:n.y;}
@@ -620,36 +645,54 @@ function focusedNodes(vn, vl){
   }
   return new Set([...vn].filter(i=>nb.has(i)));
 }
+function tierInfo(tier){return TIER_UI[tier]||{label:String(tier),definition:"Field-specific commitment category."};}
+function tierMethodDetails(comparePeers=false){return `<details class="method"><summary>How commitment tiers work</summary>`+
+  `Tiers summarize publicly observable active, unmarketed development within one field. They do not estimate hidden R&amp;D spending or create a precise league table.`+
+  (comparePeers?` Companies in the same tier are peers, not ranked.`:``)+
+  `</details>`;}
+function companyNoteForView(note){
+  if(!note)return "";
+  return note.split(";").map(x=>x.trim()).filter(x=>x&&!/defensible order|internal\s+\w*\s*order/i.test(x)).join("; ").replace(/([^.!?])$/,"$1.");
+}
 function nodeDetail(n){
   if(assetLayer!=="bets") return n.detail||n.title;
   const nodeField=selectedFields().find(([,f])=>n.id===f.node_id);
   if(nodeField){
     const [,f]=nodeField;
-    const counts={}; Object.values(f.companies||{}).forEach(c=>counts[c.tier]=(counts[c.tier]||0)+1);
-    return `<b>${f.label} bets</b>\nDot size shows categorical ${f.metric}. Companies in the same tier are intentionally the same size.`+
-      (f.boundary?`\n\n${f.boundary}`:'')+`\n\n`+
-      Object.entries(FIELD_BETS.tier_contract||{}).filter(([tier])=>counts[tier]).map(([tier,desc])=>`<b>${counts[tier]} ${tier}</b>: ${desc}`).join('\n');
+    const groups=["leader","challenger","material","exploratory"].map(tier=>{
+      const members=Object.entries(f.companies||{}).filter(([,c])=>c.tier===tier).map(([cid])=>idx[cid]!==undefined?NODES[idx[cid]].label:cid).sort();
+      return {tier,members};
+    }).filter(g=>g.members.length);
+    const comparison=groups.map(({tier,members})=>{const ui=tierInfo(tier);
+      return `<b>${ui.label} (${members.length})</b>: ${members.join(', ')}\n${ui.definition}`;}).join("\n\n");
+    return `<b>${f.label}: company comparison</b>\nCompany dot size reflects each company's commitment tier in this field. Same-tier companies are peers, not ranked.`+
+      (f.boundary?`\n\n<b>Scope</b>: ${f.boundary}`:'')+`\n\n${comparison}\n\n${tierMethodDetails(true)}`;
   }
   const bets=companyFieldBets(n.id);
   if(!bets.length) return n.detail||n.title;
+  const context=viewContext(),viewIntro=context.interaction==="company-fields"
+    ? `<b>Showing ${n.label} across ${bets.length} evaluated field${bets.length===1?'':'s'}.</b> Indication dot size reflects ${n.label}'s commitment tier in each field.`
+    : context.subjectField
+      ? `<b>Showing ${n.label} in ${context.subjectField[1].label}.</b> Company dot size reflects commitment tier in this field.`
+      : `<b>Showing ${n.label}'s evaluated Bets evidence.</b>`;
   const activeNames=new Set(),graphIds=new Set();
   bets.forEach(([,f])=>{const c=f.companies[n.id];
     (c.active_assets||[]).forEach(name=>activeNames.add(name));
     (c.graph_asset_ids||[]).forEach(id=>graphIds.add(id));
   });
-  const coverage=`<b>Coverage in this view</b>: ${graphIds.size} graph molecule node${graphIds.size===1?'':'s'} represent ${activeNames.size} distinct active program name${activeNames.size===1?'':'s'} across ${bets.length} evaluated field${bets.length===1?'':'s'}. Bets is not a full-company pipeline census; unmapped programs and aliases are identified in the field details below.`;
-  return coverage+'\n\n'+bets.map(([,f])=>{
-    const c=f.companies[n.id],tier=(FIELD_BETS.tier_contract||{})[c.tier]||c.tier;
+  const coverage=`<b>Coverage</b>: ${graphIds.size} graph molecule node${graphIds.size===1?'':'s'} represent ${activeNames.size} distinct active program name${activeNames.size===1?'':'s'}. Bets is not a full-company pipeline census; unmapped programs and aliases are identified below.`;
+  return viewIntro+'\n\n'+coverage+'\n\n'+bets.map(([,f])=>{
+    const c=f.companies[n.id],tier=tierInfo(c.tier);
     const studies=c.active_studies||{},coverage=c.graph_asset_coverage||{};
-    const parts=[`<b>${f.label} commitment: ${c.tier}</b>\n${tier}`,
+    const parts=[`<b>${f.label}: ${tier.label}</b>\n${tier.definition}`,
       `<b>Active assets (${(c.active_assets||[]).length})</b>: ${(c.active_assets||[]).join(', ')||'None listed'}`,
       `<b>Registered active work</b>: ${studies.efficacy||0} efficacy and ${studies.support||0} support studies`+
         (c.planned_studies?`; ${c.planned_studies} planned shown separately`:''),
       `<b>Capital context</b>: ${c.capital_context||'No separately disclosed field-specific amount'}`];
     if((coverage.shown||0)<(coverage.active||0)) parts.push(`<span style="color:#aab0bd">Graph coverage: ${coverage.shown||0} of ${coverage.active||0} active assets have curated graph nodes. The tier uses the full registry-backed census.</span>`);
-    if(c.note) parts.push(c.note);
+    const note=companyNoteForView(c.note);if(note)parts.push(`<b>Field evidence</b>: ${note}`);
     return parts.join('\n\n');
-  }).join('\n\n<hr style="border-color:#444">\n\n');
+  }).join('\n\n<hr style="border-color:#444">\n\n')+'\n\n'+tierMethodDetails();
 }
 // Describe the current selection. For an intersection this is the answer to the query,
 // so it leads with what was found rather than with one node's detail sheet.
@@ -658,9 +701,10 @@ function anchorInfo(clicked){
   const nm=j=>`<b>${NODES[j].label}</b>`;
   if(anchors.length===1){
     const n=NODES[anchors[0]];
-    const scope=companyPortfolioFocus()?"portfolio focus":`${focusDepth}-hop`;
+    const context=viewContext(),scope=context.interaction==="company-fields"?"company across fields":
+      context.interaction==="field-companies"?"field across companies":`${focusDepth}-hop`;
     const state = pinMode
-      ? `<span style="color:#e8c766">pinned</span> <span style="color:#888">— graph still full; shift-click another node to intersect, or press space to focus this one</span>`
+      ? `<span style="color:#e8c766">pinned</span> <span style="color:#888">; graph still full. Shift-click another node to intersect, or press space to focus this one</span>`
       : `<span style="color:#888">(${n.kind}${n.failed?', failed':''}, ${scope})</span>`;
     return `${nm(anchors[0])} ${state}\n${nodeDetail(n)}`;
   }
@@ -959,18 +1003,23 @@ const fieldSelect=document.getElementById('field-select');
 Object.entries(FIELD_BETS.fields||{}).sort((a,b)=>(a[1].order||99)-(b[1].order||99)||a[1].label.localeCompare(b[1].label)).forEach(([slug,f])=>{const o=document.createElement('option');o.value=slug;o.textContent=f.label;fieldSelect.appendChild(o);});
 if(currentField) fieldSelect.value=currentField;
 function layerLegend(){
-  if(assetLayer==="commercial") return `<b>Commercialized assets only.</b><br>Drug dot size reflects 2025 sales. Pipeline and failed assets are hidden.`;
-  const focusedCompany=focusedBetCompanyId(),focusedField=focusedBetFieldEntry();
-  if(currentField===ALL_FIELDS&&!focusedCompany&&!focusedField)return `<b>All ${selectedFields().length} fields.</b><br>`+
-    `Company area shows the number of covered fields. Indication area shows the number of participating companies. Equal area means equal count across both node types.<br>`+
-    `Proximity reflects weighted portfolio overlap. Select a company or indication to size the other side by commitment tier.`;
-  const color=focusedCompany?KIND_COLOR.indication:KIND_COLOR.company;
-  const subject=focusedCompany
-    ? `Indication dot size reflects ${NODES[idx[focusedCompany]].label}'s bet category.`
-    : `Company dot size reflects ${focusedField?focusedField[1].label+' ':''}bet category.`;
-  const guidance=focusedCompany
-    ? `This company view uses the same categorical scale across its visible fields, making relative portfolio commitment directly comparable.`
-    : `Companies in the same tier are intentionally the same size; internal order within a tier is not implied.`;
+  const context=viewContext();
+  if(context.layer==="commercial") return `<b>${context.interaction==="overview"?'Commercial overview':'Commercial evidence focus'}.</b><br>Drug dot size reflects 2025 sales. Pipeline and failed assets are hidden.`;
+  if(context.sizeMetric==="breadth"){
+    const state=context.interaction==="evidence-neighborhood"&&context.selected?`Evidence focus: ${context.selected.label}. `:
+      context.interaction==="intersection"?`Intersection of ${anchors.length} selected nodes. `:
+      context.interaction==="pinned-browse"?`Pinned selection; overview remains visible. `:"";
+    return `<b>${state}All ${selectedFields().length} fields.</b><br>`+
+      `Company area shows the number of covered fields. Indication area shows the number of participating companies. Equal area means equal count across both node types.<br>`+
+      `Proximity reflects weighted portfolio overlap. Select a company or indication to size the other side by commitment tier.`;
+  }
+  const companyMode=context.sizeMetric==="company-tier",color=companyMode?KIND_COLOR.company:KIND_COLOR.indication;
+  const subject=companyMode
+    ? `Company dot size reflects commitment tier in ${context.subjectField[1].label}.`
+    : `Indication dot size reflects ${NODES[idx[context.subjectCompany]].label}'s commitment tier in each field.`;
+  const guidance=companyMode
+    ? `Companies in the same tier are peers, not ranked.`
+    : `The same four commitment categories are used across the selected company's evaluated fields.`;
   return `<b>${subject}</b><br>`+
     `<span class="sw" style="width:15px;height:15px;background:${color}"></span>leader &nbsp; `+
     `<span class="sw" style="width:11px;height:11px;background:${color}"></span>challenger &nbsp; `+
