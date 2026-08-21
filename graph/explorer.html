@@ -98,6 +98,10 @@ function selectedFields(){
   return currentField===ALL_FIELDS?Object.entries(fields):(fields[currentField]?[[currentField,fields[currentField]]]:[]);
 }
 function companyFieldBets(companyId){return selectedFields().filter(([,f])=>(f.companies||{})[companyId]);}
+function inCurrentNodeScope(i){
+  if(assetLayer!=="bets"||currentField!==ALL_FIELDS||NODES[i].kind!=="indication")return true;
+  return selectedFields().some(([,f])=>f.node_id===NODES[i].id);
+}
 function betLinks(){
   return selectedFields().flatMap(([slug,f])=>{
     if(idx[f.node_id]===undefined)return [];
@@ -190,12 +194,22 @@ function focusedBetCompanyId(){
   const n=NODES[anchors[0]];
   return n&&n.kind==="company"?n.id:null;
 }
+function focusedBetFieldEntry(){
+  if(assetLayer!=="bets"||currentField!==ALL_FIELDS||anchors.length!==1||!collapsed())return null;
+  return selectedFields().find(([,f])=>f.node_id===NODES[anchors[0]].id)||null;
+}
+// In the many-to-many overview, dot AREA is proportional to bipartite degree.
+// The same scale applies on both sides: fields covered for a company and companies
+// participating in a field. Clamp only the extremes so the graph remains usable.
+function betBreadthSize(count){return Math.min(50,Math.max(14,12.5*Math.sqrt(Math.max(1,count))));}
 function nodeSize(n){
   if(assetLayer==="bets"){
-    const bets=companyFieldBets(n.id),tierOrder={exploratory:0,material:1,challenger:2,leader:3};
+    const bets=companyFieldBets(n.id),focusedField=focusedBetFieldEntry();
     if(n.kind==="company"&&bets.length){
-      const strongest=bets.map(([,f])=>f.companies[n.id].tier).sort((a,b)=>(tierOrder[b]||0)-(tierOrder[a]||0))[0];
-      return BET_SIZE[strongest]||BET_SIZE.exploratory;
+      const selectedBet=focusedField&&(focusedField[1].companies||{})[n.id];
+      if(selectedBet)return BET_SIZE[selectedBet.tier]||BET_SIZE.exploratory;
+      if(currentField===ALL_FIELDS)return betBreadthSize(bets.length);
+      return BET_SIZE[bets[0][1].companies[n.id].tier]||BET_SIZE.exploratory;
     }
     const focusedCompany=focusedBetCompanyId();
     if(focusedCompany&&n.kind==="indication"){
@@ -203,7 +217,8 @@ function nodeSize(n){
       const companyBet=field&&(field[1].companies||{})[focusedCompany];
       if(companyBet)return BET_SIZE[companyBet.tier]||BET_SIZE.exploratory;
     }
-    if(selectedFields().some(([,f])=>n.id===f.node_id))return 28;
+    const nodeField=selectedFields().find(([,f])=>n.id===f.node_id);
+    if(nodeField)return currentField===ALL_FIELDS?betBreadthSize(Object.keys(nodeField[1].companies||{}).length):28;
     if(n.kind==="molecule")return 10;
   }
   return n.size;
@@ -266,7 +281,7 @@ function layoutKey(){return `${assetLayer}|${currentField||""}|${selectedKindKey
 function applyBlendedLayout(){
   clearLayout();
   const layer=layerGraph();
-  const ids=[...layer.allowed].filter(i=>kindOn[NODES[i].kind]).sort((a,b)=>a-b);
+  const ids=[...layer.allowed].filter(i=>kindOn[NODES[i].kind]&&inCurrentNodeScope(i)).sort((a,b)=>a-b);
   if(!ids.length)return;
   const local=new Map(ids.map((id,i)=>[id,i]));
   const x=ids.map(i=>NODES[i].x),y=ids.map(i=>NODES[i].y);
@@ -432,7 +447,7 @@ function transitionAutoLayout(){
 }
 function visible(){
   const layer=layerGraph();
-  const vn=new Set(); layer.allowed.forEach(i=>{if(kindOn[NODES[i].kind])vn.add(i);});
+  const vn=new Set(); layer.allowed.forEach(i=>{if(kindOn[NODES[i].kind]&&inCurrentNodeScope(i))vn.add(i);});
   const vl=projectVisibleLinks(vn,layer.links);
   return {vn,vl};
 }
@@ -945,13 +960,17 @@ Object.entries(FIELD_BETS.fields||{}).sort((a,b)=>(a[1].order||99)-(b[1].order||
 if(currentField) fieldSelect.value=currentField;
 function layerLegend(){
   if(assetLayer==="commercial") return `<b>Commercialized assets only.</b><br>Drug dot size reflects 2025 sales. Pipeline and failed assets are hidden.`;
-  const focusedCompany=focusedBetCompanyId(),color=focusedCompany?KIND_COLOR.indication:KIND_COLOR.company;
+  const focusedCompany=focusedBetCompanyId(),focusedField=focusedBetFieldEntry();
+  if(currentField===ALL_FIELDS&&!focusedCompany&&!focusedField)return `<b>All ${selectedFields().length} fields.</b><br>`+
+    `Company area shows the number of covered fields. Indication area shows the number of participating companies. Equal area means equal count across both node types.<br>`+
+    `Proximity reflects weighted portfolio overlap. Select a company or indication to size the other side by commitment tier.`;
+  const color=focusedCompany?KIND_COLOR.indication:KIND_COLOR.company;
   const subject=focusedCompany
     ? `Indication dot size reflects ${NODES[idx[focusedCompany]].label}'s bet category.`
-    : `Company dot size reflects bet category.`;
+    : `Company dot size reflects ${focusedField?focusedField[1].label+' ':''}bet category.`;
   const guidance=focusedCompany
     ? `This company view uses the same categorical scale across its visible fields, making relative portfolio commitment directly comparable.`
-    : `In All fields, proximity reflects weighted overlap in company portfolios and in the companies backing each field. Company size reflects its strongest visible commitment. Enable molecules for pipeline detail, select a company to compare its bets across fields, or select one field to drill down.`;
+    : `Companies in the same tier are intentionally the same size; internal order within a tier is not implied.`;
   return `<b>${subject}</b><br>`+
     `<span class="sw" style="width:15px;height:15px;background:${color}"></span>leader &nbsp; `+
     `<span class="sw" style="width:11px;height:11px;background:${color}"></span>challenger &nbsp; `+
@@ -1001,7 +1020,7 @@ RELS.forEach(r=>{const l=document.createElement('label');
   l.querySelector('input').onchange=e=>{relOn[r]=e.target.checked;refocusInPlace();render();};rd.appendChild(l);});
 function syncRelationControls(){
   const layer=layerGraph(),vn=new Set();
-  layer.allowed.forEach(i=>{if(kindOn[NODES[i].kind])vn.add(i);});
+  layer.allowed.forEach(i=>{if(kindOn[NODES[i].kind]&&inCurrentNodeScope(i))vn.add(i);});
   const active=new Set();projectVisibleLinks(vn,layer.links,false).forEach(l=>(l.projected?l.pathRels:[l.rel]).forEach(r=>active.add(r)));
   rd.querySelectorAll('label').forEach(l=>l.hidden=!active.has(l.dataset.rel));
 }
