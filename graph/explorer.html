@@ -26,6 +26,7 @@
  #search{width:100%;box-sizing:border-box;margin:8px 0;padding:5px 8px;border-radius:6px;border:1px solid #444;background:#222;color:#eee}
  #info{position:fixed;bottom:10px;left:340px;right:10px;background:rgba(20,20,25,.95);padding:12px 16px;border-radius:10px;max-width:520px;max-height:40vh;overflow-y:auto;box-sizing:border-box;font-size:13px;line-height:1.5;z-index:10;display:none;white-space:pre-line}
  #info .close{float:right;cursor:pointer;color:#888;font-size:15px;margin-left:10px}
+ #info-toggle{position:fixed;left:340px;bottom:10px;z-index:11;padding:7px 11px;background:rgba(20,20,25,.95);border-color:#68758d;box-shadow:0 2px 12px rgba(0,0,0,.35)}
  .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
  [hidden]{display:none!important}
  svg{position:fixed;inset:0;width:100%;height:100%;cursor:grab} .hint{color:#888;font-size:11px;margin-top:6px}
@@ -51,6 +52,7 @@
    /* details as a bottom sheet, not a floating box that covers the network */
    #info{left:0;right:0;bottom:0;max-width:none;max-height:46vh;border-radius:14px 14px 0 0;
          padding:14px 16px 20px;font-size:14px;line-height:1.55}
+   #info-toggle{left:auto;right:12px;bottom:12px;min-width:44px;min-height:44px}
    #hint{display:none}          /* keyboard hints are meaningless without a keyboard */
    #zoomrow{display:flex;gap:8px}
    #zoomrow button{width:44px;height:44px;font-size:18px}   /* 44px = min touch target */
@@ -74,6 +76,7 @@
  <div id="zoomrow" style="margin:8px 0"><button id="zin" style="width:32px">+</button> <button id="zout" style="width:32px">&minus;</button> <button id="zfit">fit</button></div>
  <div class="hint" id="hint">two-finger scroll = pan &middot; pinch (or ctrl/cmd+scroll) = zoom &middot; drag = pan.<br>click node = focus its neighborhood &middot; <b>shift/&#8984;-click (or long-press) = pin</b>: the graph stays full so you can pin a second node; two or more pins show only what connects to <em>all</em> of them &middot; <b>space = expand one hop</b> &middot; <b>shift+space = retract</b> &middot; esc/click bg = reset &middot; click edge = relationship details.<br><b>dashed edge</b> = relationship through one hidden node &middot; <b>fit</b> includes peripheral and disconnected satellites.</div>
 </div>
+<button id="info-toggle" hidden aria-label="show details">Details</button>
 <div id="info"></div>
 <svg id="g" width="100%" height="100%"></svg>
 <script>
@@ -433,9 +436,16 @@ function visible(){
   const vl=projectVisibleLinks(vn,layer.links);
   return {vn,vl};
 }
+let infoMinimized=false,lastInfoHtml='';
+const infoToggle=document.getElementById('info-toggle');
 function info(html){const el=document.getElementById('info');
-  el.innerHTML='<span class="close" title="Close details. Click the selected node to reopen." aria-label="close details" onclick="this.parentElement.style.display=\'none\'">&times;</span>'+html;
+  lastInfoHtml=html;infoMinimized=false;infoToggle.hidden=true;
+  el.innerHTML='<span class="close" title="Minimize details" aria-label="minimize details" onclick="minimizeInfo()">&times;</span>'+html;
   el.style.display='block';}
+function updateInfo(html){lastInfoHtml=html;if(infoMinimized){infoToggle.hidden=false;return;}info(html);}
+function minimizeInfo(){document.getElementById('info').style.display='none';infoMinimized=true;infoToggle.hidden=false;}
+function clearInfo(){document.getElementById('info').style.display='none';infoToggle.hidden=true;infoMinimized=false;lastInfoHtml='';}
+infoToggle.onclick=()=>{if(lastInfoHtml)info(lastInfoHtml);};
 function px(n){return n.fx!==undefined?n.fx:n.x;}
 function py(n){return n.fy!==undefined?n.fy:n.y;}
 function focusLayout(f, showN){
@@ -469,23 +479,46 @@ function focusLayout(f, showN){
   }
 }
 function betCompanyFocusLayout(f, showN){
+  // Keep the overview's portfolio-similarity geometry, but compress its long tail
+  // around the selected company. A bounded force pass then restores breathing room
+  // without flattening the portfolio into an evenly spaced wheel.
+  const origins=layoutTargets(),ids=[...showN];
   NODES.forEach(n=>{delete n.fx; delete n.fy;});
-  const companyId=NODES[f].id,fields=[...showN]
-    .filter(i=>NODES[i].kind==="indication")
-    .map(i=>{
-      const entry=selectedFields().find(([,field])=>field.node_id===NODES[i].id);
-      return {i,field:entry&&entry[1]};
-    })
-    .filter(x=>x.field&&(x.field.companies||{})[companyId])
-    .sort((a,b)=>(a.field.order||99)-(b.field.order||99)||a.field.label.localeCompare(b.field.label));
-  if(!fields.length)return focusLayout(f,showN);
-  const cx=W/2,cy=H/2,radius=Math.min(280,Math.max(150,130+fields.length*10));
-  NODES[f].fx=cx;NODES[f].fy=cy;
-  fields.forEach(({i},order)=>{
-    const angle=-Math.PI/2+order*2*Math.PI/fields.length;
-    NODES[i].fx=cx+Math.cos(angle)*radius;
-    NODES[i].fy=cy+Math.sin(angle)*radius;
+  if(ids.length<2)return;
+  const cx=W/2,cy=H/2,origin=origins[f]||[NODES[f].x,NODES[f].y];
+  const raw=new Map();let farthest=1;
+  ids.filter(i=>i!==f).forEach((i,order)=>{
+    const p=origins[i]||[NODES[i].x,NODES[i].y];let dx=p[0]-origin[0],dy=p[1]-origin[1];
+    let d=Math.sqrt(dx*dx+dy*dy);
+    if(d<1){const seed=[...NODES[i].id].reduce((v,c)=>(v*33+c.charCodeAt(0))>>>0,5381);
+      const angle=2*Math.PI*((seed%1009)/1009+order/Math.max(1,ids.length));dx=Math.cos(angle);dy=Math.sin(angle);d=1;}
+    raw.set(i,[dx,dy,d]);farthest=Math.max(farthest,d);
   });
+  const minR=75,maxR=Math.min(410,245+Math.sqrt(ids.length)*30),targets=new Map();
+  ids.forEach(i=>{
+    if(i===f){targets.set(i,[cx,cy]);NODES[i].fx=cx;NODES[i].fy=cy;return;}
+    const [dx,dy,d]=raw.get(i),r=minR+(maxR-minR)*Math.pow(d/farthest,.72);
+    const target=[cx+dx/d*r,cy+dy/d*r];targets.set(i,target);NODES[i].fx=target[0];NODES[i].fy=target[1];
+  });
+  const inView=new Set(ids),springs=visible().vl.filter(l=>inView.has(l.s)&&inView.has(l.t)&&l.rel!=="bets_on");
+  const rad=i=>nodeSize(NODES[i])*.55+10+Math.min(42,String(NODES[i].label).length*1.65);
+  for(let pass=0;pass<90;pass++){
+    // Weak springs preserve the small molecule, target, modality, and field clusters.
+    springs.forEach(l=>{const a=NODES[l.s],b=NODES[l.t],dx=b.fx-a.fx,dy=b.fy-a.fy,d=Math.max(1,Math.sqrt(dx*dx+dy*dy));
+      const desired=l.projected?125:105,pull=(d-desired)*.018/d;
+      if(l.s!==f){a.fx+=dx*pull;a.fy+=dy*pull;}if(l.t!==f){b.fx-=dx*pull;b.fy-=dy*pull;}});
+    for(let a=0;a<ids.length;a++)for(let b=a+1;b<ids.length;b++){
+      const ia=ids[a],ib=ids[b],na=NODES[ia],nb=NODES[ib];let dx=nb.fx-na.fx,dy=nb.fy-na.fy,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<1){dx=a-b;dy=1;d=Math.sqrt(dx*dx+dy*dy);}
+      const min=(rad(ia)+rad(ib))*.72*Math.sqrt(nodeRepulsion),overlap=Math.max(0,min-d);
+      const charge=Math.min(3.2,520*nodeRepulsion/(d*d)),push=(overlap*.24+charge)/d;
+      if(ia!==f){na.fx-=dx*push;na.fy-=dy*push;}if(ib!==f){nb.fx+=dx*push;nb.fy+=dy*push;}
+    }
+    ids.forEach(i=>{if(i===f)return;const n=NODES[i],t=targets.get(i);
+      n.fx+=(t[0]-n.fx)*.055;n.fy+=(t[1]-n.fy)*.055;
+      const dx=n.fx-cx,dy=n.fy-cy,d=Math.sqrt(dx*dx+dy*dy),bound=maxR+45;
+      if(d>bound){n.fx=cx+dx/d*bound;n.fy=cy+dy/d*bound;}});
+  }
 }
 function applyFocusLayout(f,showN){
   if(assetLayer==="bets"&&currentField===ALL_FIELDS&&companyPortfolioFocus())betCompanyFocusLayout(f,showN);
@@ -525,15 +558,26 @@ function hood(i, vl, depth){
 // walking back out through shared biology to unrelated portfolios. A generic 3-hop
 // neighbourhood would make an Amgen focus balloon to hundreds of other molecules.
 function focusedNodes(vn, vl){
-  // In the Bets overview, a company click is a direct comparison of its evaluated
-  // fields. Projected molecule paths and parent indications would add unsized nodes
-  // that look like extra bets, so the depth-one focus comes only from field contracts.
+  // In the Bets overview, keep the focus scoped to this company's evaluated fields
+  // and their own evidence graph. The final intersection with vn makes every node
+  // checkbox effective without letting shared biology pull in another portfolio.
   if(companyPortfolioFocus()&&assetLayer==="bets"&&currentField===ALL_FIELDS){
-    const company=anchors[0],companyId=NODES[company].id;
-    const compared=new Set([company]);
-    selectedFields().forEach(([,f])=>{
-      if((f.companies||{})[companyId]&&idx[f.node_id]!==undefined)compared.add(idx[f.node_id]);
+    const company=anchors[0],companyId=NODES[company].id,compared=new Set([company]),assets=new Set(),fields=new Set();
+    selectedFields().forEach(([,field])=>{
+      const record=(field.companies||{})[companyId];if(!record)return;
+      if(idx[field.node_id]!==undefined){fields.add(idx[field.node_id]);compared.add(idx[field.node_id]);}
+      (record.graph_asset_ids||[]).forEach(id=>{if(idx[id]!==undefined){assets.add(idx[id]);compared.add(idx[id]);}});
     });
+    const raw=layerGraph().links;
+    raw.forEach(l=>{
+      if(!assets.has(l.s)&&!assets.has(l.t))return;
+      const other=assets.has(l.s)?l.t:l.s;
+      if(l.rel==="acts_on"||l.rel==="has_modality")compared.add(other);
+    });
+    // Walk only outward from the contracted fields to their parents and areas.
+    const indications=new Set(fields);let added=true;
+    while(added){added=false;raw.forEach(l=>{if(l.rel==="subtype_of"&&indications.has(l.s)&&!indications.has(l.t)){indications.add(l.t);added=true;}});}
+    raw.forEach(l=>{if(l.rel==="in_area"&&indications.has(l.s))compared.add(l.t);});
     return new Set([...vn].filter(i=>compared.has(i)));
   }
   const nb=hoodMulti(anchors, vl, focusDepth);
@@ -893,7 +937,7 @@ function render(){
 
   placeLabels(pending, showN, zoom);
 }
-svg.onclick=()=>{if(moved)return; setAnchors([]);selEdge=null;document.getElementById('info').style.display='none';render();};
+svg.onclick=()=>{if(moved)return; setAnchors([]);selEdge=null;clearInfo();render();};
 
 const fieldSelect=document.getElementById('field-select');
 {const o=document.createElement('option');o.value=ALL_FIELDS;o.textContent=`All fields (${Object.keys(FIELD_BETS.fields||{}).length})`;fieldSelect.appendChild(o);}
@@ -922,7 +966,7 @@ function activateLayer(layer){
   document.getElementById('bet-controls').hidden=layer!=="bets";
   document.getElementById('layer-legend').innerHTML=layerLegend();
   document.getElementById('search').placeholder=layer==="bets"?'search visible bet nodes + Enter':'search visible commercial nodes + Enter';
-  anchors=[];pinMode=false;focusDepth=1;selEdge=null;document.getElementById('info').style.display='none';
+  anchors=[];pinMode=false;focusDepth=1;selEdge=null;clearInfo();
   syncRelationControls();
   transitionAutoLayout();
 }
@@ -938,9 +982,9 @@ KINDS.forEach(k=>{const l=document.createElement('label');
     const layer=layerGraph(),anchorsStillVisible=anchors.every(i=>layer.allowed.has(i)&&kindOn[NODES[i].kind]);
     if(anchors.length&&anchorsStillVisible){
       setAnchors(anchors,focusDepth,pinMode);
-      info(anchorInfo(focusPrimary()));render();
+      updateInfo(anchorInfo(focusPrimary()));render();
     } else {
-      if(anchors.length){anchors=[];pinMode=false;focusDepth=1;document.getElementById('info').style.display='none';}
+      if(anchors.length){anchors=[];pinMode=false;focusDepth=1;clearInfo();}
       transitionAutoLayout();
     }
   };kd.appendChild(l);});
@@ -1011,7 +1055,7 @@ document.addEventListener('keydown',e=>{
     if(pinMode && anchors.length===1){ setAnchors(anchors, focusDepth, false); }
     else { setAnchors(anchors, e.shiftKey ? Math.max(1, focusDepth-1) : focusDepth+1, false); }
     render(); info(anchorInfo(anchors[0]));}
-  if(e.key==='Escape'){setAnchors([]);document.getElementById('info').style.display='none';render();}});
+  if(e.key==='Escape'){setAnchors([]);clearInfo();render();}});
 
 // the fit depends on the element's aspect, so redo it when the window changes shape
 let rzT=null;
