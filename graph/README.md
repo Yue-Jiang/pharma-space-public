@@ -77,7 +77,7 @@ for e in edges:
 
 The explorer opens in **Commercial**, a less crowded company and product view containing only marketed and legacy assets. Drug dot size reflects approximate 2025 sales.
 
-Switch to **Bets** to start with an all-fields portfolio overview, then select one field to see its active pipeline assets. In the overview, proximity reflects weighted overlap across company portfolios and the companies backing each field. Company dot size is categorical: leader, challenger, material, or exploratory, using the strongest visible commitment when multiple fields are shown. Companies in the same category have exactly the same size because the public evidence supports broad tiers, not a precise rank within a tier. Click a company to inspect the active assets, registered work, graph coverage, and separately disclosed capital context behind its category.
+Switch to **Bets** to start with a portfolio overview across twenty validated fields, including lung cancer, then select one field to see its active pipeline assets. In the overview, proximity reflects weighted overlap across company portfolios and the companies backing each field. Company dot size is categorical: leader, challenger, material, or exploratory, using the strongest visible commitment when multiple fields are shown. Companies in the same category have exactly the same size because the public evidence supports broad tiers, not a precise rank within a tier. Click a company to inspect the active assets, registered work, graph coverage, and separately disclosed capital context behind its category.
 
 Targets, modalities, indications, and disease areas use the same underlying graph. They can be added with the node controls without changing the asset layer.
 

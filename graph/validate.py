@@ -304,10 +304,10 @@ if bet_assets is not None:
             "reviewed registry-backed programs whose public evidence does not disclose a defensible canonical molecular identity or mechanism",
             reviewed_opaque)
 
-# Oncology intervention normalization is kept separate from the published Bets
-# fields until its identity and disposition gates pass. The cache must account
-# for every frozen intervention occurrence and may never infer ownership from a
-# vocabulary identity alone.
+# Oncology intervention normalization must account for every frozen
+# intervention occurrence and may never infer ownership from a vocabulary
+# identity alone. Any published oncology field must continue to clear both
+# occurrence-weighted publication gates.
 if oncology_vocab is not None:
     bad_oncology_vocab = set()
     fields = oncology_vocab.get("fields")
@@ -427,6 +427,16 @@ if oncology_vocab is not None:
         add("ERROR", "oncology-vocabulary-reconciliation-invalid",
             "oncology labels require complete occurrence accounting, provenance, graph-safe identity, and reproducible summaries",
             bad_oncology_vocab)
+    published_oncology_fields = (
+        set((field_bets or {}).get("fields", {})) & set(fields)
+    )
+    published_below_gate = published_oncology_fields & (
+        below_identity_gate | below_disposition_gate
+    )
+    if published_below_gate:
+        add("ERROR", "published-oncology-field-below-gate",
+            "published oncology fields must retain at least 90 percent occurrence-weighted identity and lifecycle disposition",
+            published_below_gate)
     if below_identity_gate:
         add("WARN", "oncology-identity-gate-not-met",
             "oncology fields below the 90 percent occurrence-weighted identity-resolution gate",
