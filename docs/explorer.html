@@ -182,12 +182,23 @@ let anchors=[], selEdge=null;
 let pinMode=false;
 function collapsed(){return anchors.length>=2 || (anchors.length===1 && !pinMode);}
 function focusPrimary(){return anchors.length?anchors[0]:null;}  // layout centre
+function focusedBetCompanyId(){
+  if(assetLayer!=="bets"||currentField!==ALL_FIELDS||anchors.length!==1||!collapsed())return null;
+  const n=NODES[anchors[0]];
+  return n&&n.kind==="company"?n.id:null;
+}
 function nodeSize(n){
   if(assetLayer==="bets"){
     const bets=companyFieldBets(n.id),tierOrder={exploratory:0,material:1,challenger:2,leader:3};
     if(n.kind==="company"&&bets.length){
       const strongest=bets.map(([,f])=>f.companies[n.id].tier).sort((a,b)=>(tierOrder[b]||0)-(tierOrder[a]||0))[0];
       return BET_SIZE[strongest]||BET_SIZE.exploratory;
+    }
+    const focusedCompany=focusedBetCompanyId();
+    if(focusedCompany&&n.kind==="indication"){
+      const field=selectedFields().find(([,f])=>n.id===f.node_id);
+      const companyBet=field&&(field[1].companies||{})[focusedCompany];
+      if(companyBet)return BET_SIZE[companyBet.tier]||BET_SIZE.exploratory;
     }
     if(selectedFields().some(([,f])=>n.id===f.node_id))return 28;
     if(n.kind==="molecule")return 10;
@@ -491,6 +502,17 @@ function hood(i, vl, depth){
 // walking back out through shared biology to unrelated portfolios. A generic 3-hop
 // neighbourhood would make an Amgen focus balloon to hundreds of other molecules.
 function focusedNodes(vn, vl){
+  // In the Bets overview, a company click is a direct comparison of its evaluated
+  // fields. Projected molecule paths and parent indications would add unsized nodes
+  // that look like extra bets, so the depth-one focus comes only from field contracts.
+  if(companyPortfolioFocus()&&assetLayer==="bets"&&currentField===ALL_FIELDS){
+    const company=anchors[0],companyId=NODES[company].id;
+    const compared=new Set([company]);
+    selectedFields().forEach(([,f])=>{
+      if((f.companies||{})[companyId]&&idx[f.node_id]!==undefined)compared.add(idx[f.node_id]);
+    });
+    return new Set([...vn].filter(i=>compared.has(i)));
+  }
   const nb=hoodMulti(anchors, vl, focusDepth);
   if(companyPortfolioFocus()){
     const company=anchors[0],portfolio=new Set();
@@ -728,6 +750,7 @@ function placeLabels(pending, showN, zoom){
 }
 function render(){
   if(!anchors.length&&!NODES.some(n=>n.fx!==undefined))applyAutoLayout();
+  document.getElementById('layer-legend').innerHTML=layerLegend();
   const {vn,vl}=visible();
   let showN=vn, showL=vl;
   if(collapsed()){
@@ -851,12 +874,19 @@ Object.entries(FIELD_BETS.fields||{}).sort((a,b)=>(a[1].order||99)-(b[1].order||
 if(currentField) fieldSelect.value=currentField;
 function layerLegend(){
   if(assetLayer==="commercial") return `<b>Commercialized assets only.</b><br>Drug dot size reflects 2025 sales. Pipeline and failed assets are hidden.`;
-  return `<b>Company dot size reflects bet category.</b><br>`+
-    `<span class="sw" style="width:15px;height:15px;background:#1f77b4"></span>leader &nbsp; `+
-    `<span class="sw" style="width:11px;height:11px;background:#1f77b4"></span>challenger &nbsp; `+
-    `<span class="sw" style="width:7px;height:7px;background:#1f77b4"></span>material &nbsp; `+
-    `<span class="sw" style="width:5px;height:5px;background:#1f77b4"></span>exploratory<br>`+
-    `In All fields, proximity reflects weighted overlap in company portfolios and in the companies backing each field. Company size reflects its strongest visible commitment. Enable molecules for pipeline detail, or select one field to drill down.`;
+  const focusedCompany=focusedBetCompanyId(),color=focusedCompany?KIND_COLOR.indication:KIND_COLOR.company;
+  const subject=focusedCompany
+    ? `Indication dot size reflects ${NODES[idx[focusedCompany]].label}'s bet category.`
+    : `Company dot size reflects bet category.`;
+  const guidance=focusedCompany
+    ? `This company view uses the same categorical scale across its visible fields, making relative portfolio commitment directly comparable.`
+    : `In All fields, proximity reflects weighted overlap in company portfolios and in the companies backing each field. Company size reflects its strongest visible commitment. Enable molecules for pipeline detail, select a company to compare its bets across fields, or select one field to drill down.`;
+  return `<b>${subject}</b><br>`+
+    `<span class="sw" style="width:15px;height:15px;background:${color}"></span>leader &nbsp; `+
+    `<span class="sw" style="width:11px;height:11px;background:${color}"></span>challenger &nbsp; `+
+    `<span class="sw" style="width:7px;height:7px;background:${color}"></span>material &nbsp; `+
+    `<span class="sw" style="width:5px;height:5px;background:${color}"></span>exploratory<br>`+
+    guidance;
 }
 function activateLayer(layer){
   assetLayer=layer;
