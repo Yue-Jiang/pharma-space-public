@@ -1,7 +1,7 @@
 ---
 type: audio-script
 company: merck
-updated: 2026-08-12
+updated: 2026-08-20
 status: generated
 ---
 
@@ -19,7 +19,7 @@ Since 2021, under chief executive Rob Davis, the company has been engineered aro
 
 Notably, Merck has become one of the biggest buyers of Chinese-origin science. Its lead cancer pipeline asset, sacituzumab tirumotecan — an antibody-drug conjugate against the target TROP-2, licensed from Kelun-Biotech — is in numerous phase three trials with positive lung and endometrial cancer results already in hand. A bispecific antibody hitting both P-D-1 and V-E-G-F, licensed from LaNova Medicines for five hundred eighty-eight million dollars upfront, is Merck's hedge against a new drug class that threatens to leapfrog Keytruda. And an oral pill against lipoprotein little-a, a stubborn inherited cholesterol risk factor, was licensed from Jiangsu Hengrui Pharma in 2025.
 
-The internal pipeline is delivering too. Lipfendra, generic name enlicitide, became the first oral P-C-S-K-9 inhibitor approved by the Food and Drug Administration in 2026 — a daily pill that cuts bad cholesterol by more than half, doing what previously required injections. Merck is also developing a personalized messenger-R-N-A cancer vaccine with Moderna, and once-weekly oral H-I-V regimens, including one partnered with Gilead. Management says the pipeline could generate over seventy billion dollars in annual revenue by the mid twenty-thirties, and in 2026 it reorganized into two commercial units — oncology, and specialty medicines with infectious disease — while cutting three billion dollars in annual costs to reinvest.
+The internal pipeline is delivering too. Lipfendra, generic name enlicitide, became the first oral P-C-S-K-9 inhibitor approved by the Food and Drug Administration in 2026, a daily pill that cuts bad cholesterol by more than half and does what previously required injections. Merck is also developing intismeran autogene with Moderna, a personalized messenger-R-N-A neoantigen therapy. In August twenty twenty-six, its Phase three melanoma trial met both recurrence-free-survival and distant-metastasis-free-survival endpoints compared with Keytruda alone. That is a positive topline result, not a complete dataset: effect sizes were not disclosed, overall-survival follow-up continues, and regulators have not yet approved the therapy. Merck is also developing once-weekly oral H-I-V regimens, including one partnered with Gilead. Management says the pipeline could generate over seventy billion dollars in annual revenue by the mid twenty-thirties, and in 2026 it reorganized into two commercial units, oncology and specialty medicines with infectious disease, while cutting three billion dollars in annual costs to reinvest.
 
 The risks are concentrated and well known. Keytruda's 2028 patent cliff puts nearly half of revenue in play, and biosimilar competitors are preparing. The 2026 expirations of Januvia, Janumet, and Bridion drain roughly four billion dollars more. Gardasil's China problem looks structural, with local competitors multiplying. Medicare price negotiation under the Inflation Reduction Act has already hit Januvia and could reach Keytruda later this decade. And the pipeline, while broad, leans heavily on oncology and on partnered assets whose data are still maturing.
 

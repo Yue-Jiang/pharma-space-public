@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: merck
-updated: 2026-08-18
+updated: 2026-08-20
 status: curated
 ---
 
@@ -45,7 +45,7 @@ Everything in Merck's pipeline is measured against one date. Keytruda loses US e
 | Sac-TMT | sacituzumab tirumotecan | TROP2-directed ADC | Lung, breast, endometrial and gastroesophageal cancers | Ph3 | Licensed from Kelun-Biotech and already approved in China; positive TroFuse-005 endometrial data in 2026 and an FDA national priority voucher |
 | Calderasib | calderasib (MK-1084) | Oral selective KRAS G12C inhibitor | NSCLC, colorectal cancer and other solid tumours | Ph3 | Taiho and Astex/Otsuka collaboration; active pivotal and combination development |
 | Islatravir + lenacapavir | islatravir / lenacapavir | Once-weekly oral nucleoside analogue + capsid inhibitor | HIV-1 maintenance | Ph3 | Positive Ph3 with Gilead reported in 2026 — would be the first once-weekly oral HIV regimen |
-| Intismeran autogene | intismeran autogene | Individualised mRNA neoantigen therapy | Resected melanoma and other solid tumours | Ph3 | Co-developed with Moderna; the largest and most novel of Merck's post-Keytruda oncology bets |
+| Intismeran autogene | intismeran autogene | Individualised mRNA neoantigen therapy | Resected melanoma and other solid tumours | Ph3 | INTerpath-001 met RFS and DMFS endpoints in resected melanoma; effect sizes remain undisclosed and overall-survival follow-up continues |
 | Tulisokibart | tulisokibart | Anti-TL1A mAb | Ulcerative colitis, Crohn's disease | Ph3 | Merck's push into large-market immunology, acquired with Prometheus Biosciences |
 | CD388 | — | Drug-Fc conjugate (long-acting neuraminidase inhibitor) | Influenza prophylaxis | Ph3 | Season-long flu protection that does not rely on an immune response to a vaccine; via Cidara |
 | MK-2010 | — | PD-1/VEGF bispecific antibody | Solid tumours, non-small-cell lung cancer first | Ph1 | Licensed from LaNova as a hedge against ivonescimab-class rivals; first-in-human data at AACR 2026 |
@@ -69,7 +69,7 @@ Rob Davis became CEO in July 2021, shortly after Merck spun off its women's-heal
 
 Merck's central strategic problem is that Keytruda — $31.7B in FY2025, roughly 49% of total revenue — loses US exclusivity in 2028. Management frames the transition as "more of a hill than a cliff," resting on three pillars.
 
-First, franchise extension. Keytruda Qlex (pembrolizumab with berahyaluronidase alfa), the subcutaneous version approved and launched in late 2025, injects in minutes rather than a half-hour infusion and is approved across most of the IV label; converting 30-40% of US volume before biosimilars arrive is the goal. Merck is also developing successor mechanisms, notably MK-2010 (LM-299), a PD-1/VEGF bispecific antibody licensed from China's LaNova Medicines in late 2024 ($588M upfront, up to $2.7B milestones) as a hedge against ivonescimab-class competitors, and the individualized mRNA cancer vaccine intismeran autogene (V940) with Moderna in Phase 3.
+First, franchise extension. Keytruda Qlex (pembrolizumab with berahyaluronidase alfa), the subcutaneous version approved and launched in late 2025, injects in minutes rather than a half-hour infusion and is approved across most of the IV label; converting 30-40% of US volume before biosimilars arrive is the goal. Merck is also developing successor mechanisms, notably MK-2010 (LM-299), a PD-1/VEGF bispecific antibody licensed from China's LaNova Medicines in late 2024 ($588M upfront, up to $2.7B milestones) as a hedge against ivonescimab-class competitors, and the individualized mRNA neoantigen therapy intismeran autogene (V940) with Moderna. On August 19, 2026, the Phase 3 INTerpath-001 trial met its primary recurrence-free-survival endpoint and key secondary distant-metastasis-free-survival endpoint in 1,137 patients with completely resected stage IIB-IV melanoma. The companies reported no new safety signal and plan regulatory discussions, but had not disclosed effect sizes; overall-survival follow-up continues.
 
 Second, a broad late-stage pipeline Merck values at over $70B in potential mid-2030s revenue. Key assets: sacituzumab tirumotecan (sac-TMT), a TROP2 antibody-drug conjugate from Kelun-Biotech in multiple Phase 3 trials (positive lung and endometrial cancer readouts 2025-26, FDA national priority voucher); Lipfendra (enlicitide), the first oral PCSK9 inhibitor, FDA-approved in 2026 after Phase 3 CORALreef trials showed ~56-60% LDL-cholesterol reductions, with a 14,500-patient outcomes trial ongoing; Winrevair label expansion (HYPERION stopped early for efficacy); tulisokibart in Phase 3 for ulcerative colitis and Crohn's; CD388 (Phase 3 flu prophylaxis, via Cidara); once-weekly oral HIV regimens (islatravir with doravirine, and with Gilead's lenacapavir — positive Phase 3 in 2026); and HRS-5346, an oral Lp(a) inhibitor licensed from Jiangsu Hengrui Pharma (March 2025; $200M upfront, up to $1.77B milestones). China-originated assets (Kelun, LaNova, Hengrui) are now central to the pipeline. The Terns Pharmaceuticals acquisition (~$6.7B, 2026) added an oral BCR::ABL1 inhibitor for chronic myeloid leukemia.
 
@@ -81,7 +81,7 @@ Third, commercial diversification: Ohtuvayre (analyst peak estimates $3-4B), Cap
 | MK-2010 / LM-299 | PD-1/VEGF bispecific | Ph1-3 ramp-up |
 | Tulisokibart | Anti-TL1A mAb | Ph3 (UC, Crohn's) |
 | CD388 | Long-acting flu antiviral (drug-Fc conjugate) | Ph3 |
-| Intismeran autogene (V940, w/ Moderna) | Individualized mRNA neoantigen therapy | Ph3 |
+| Intismeran autogene (V940, w/ Moderna) | Individualized mRNA neoantigen therapy | Positive Ph3 topline in resected melanoma; RFS and DMFS met, OS immature |
 | HRS-5346 | Oral Lp(a) inhibitor | Ph3-enabling/Ph2 |
 
 ## Key risks
@@ -99,4 +99,5 @@ Third, commercial diversification: Ohtuvayre (analyst peak estimates $3-4B), Cap
 - Merck 10-K for FY2025 (filed Feb 2026) — employee counts
 - Merck press releases: Verona Pharma acquisition completion (Oct 2025), Cidara agreement (Nov 14, 2025), Hengrui HRS-5346 license (Mar 25, 2025), LaNova LM-299 license close (Dec 2024), CORALreef Phase 3 results (2025), Welireg PPGL approval (May 2025)
 - Merck research pipeline (accessed Aug 18, 2026) for calderasib/MK-1084 identity, KRAS G12C mechanism, collaboration, and current development stage.
+- Merck and Moderna joint release, positive topline Phase 3 INTerpath-001 results, Aug 19, 2026: https://www.merck.com/news/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-autogene-plus-keytruda-met-endpoints-of-recurrence-free-survival-rfs-and-distant-metastasis-free-survival-dmfs-in-patient/
 - Fierce Pharma FY2025 earnings coverage (Feb 2026); BioPharma Dive on Keytruda Qlex launch (Oct 2025) and Cidara deal (Nov 2025); CNBC Q4 2025 coverage (Feb 3, 2026)

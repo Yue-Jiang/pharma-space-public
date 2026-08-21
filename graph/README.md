@@ -50,6 +50,8 @@ Modality records what the medicine is, not the protein or pathway it targets. Th
 | `acquired_via` / `via` | molecule → the deal that moved it |
 | `competes_with` | molecule ↔ molecule, derived from a shared indication (`basis`) — the only inferred relation; `etype` is `derived`, everything else is `fact` |
 
+Source-backed `studied_for` claims may include a controlled clinical `readout`. The fields keep topline status, endpoint outcomes, effect-size disclosure, overall-survival maturity, and safety wording separate, preventing a positive trial result from being presented as approval or as more mature evidence than the source supports.
+
 ## Querying it
 
 ```python

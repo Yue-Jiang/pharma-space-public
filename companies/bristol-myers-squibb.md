@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: bristol-myers-squibb
-updated: 2026-08-14
+updated: 2026-08-20
 status: curated
 ---
 # Bristol Myers Squibb
@@ -39,6 +39,7 @@ BMS splits reporting into a **Growth Portfolio** ($26.4B in 2025, +17%, now 55% 
 | Opdivo Qvantig (SC nivolumab) | Opdivo indications, subcutaneous | mAb + hyaluronidase | $238M | Launched Jan 2025; cliff mitigation to ~2038 |
 | Krazati (adagrasib) | KRAS G12C NSCLC, CRC | Small molecule | $205M | From Mirati |
 | Cobenfy (xanomeline-trospium) | Schizophrenia | Small molecule (M1/M4 muscarinic agonist) | $155M | From Karuna; patents 2030-2033 |
+| Zenbexus (iberdomide) | Multiple myeloma after at least one prior therapy | Oral CELMoD (cereblon E3 ligase modulator) | Approved Aug 2026; no 2025 sales | FDA accelerated approval with daratumumab/hyaluronidase and dexamethasone; confirmatory benefit remains required |
 
 ## Pipeline (clinical-stage)
 
@@ -79,7 +80,7 @@ Christopher Boerner became CEO in November 2023 and immediately executed a ~$23B
 
 ## Current strategic bets
 
-**2026 is the pivotal data year** — six registrational readouts expected: milvexian (secondary stroke prevention; AF pushed to Q1 2027), admilparant (IPF, ALOFT-IPF), iberdomide (EXCALIBER-RRMM), mezigdomide (SUCCESSOR-2, positive interim reported), arlo-cel (QUINTESSENTIAL), RYZ101 (ACTION-1, GEP-NETs), plus Sotyktu in lupus (POETYK SLE-1/2).
+**2026 is the pivotal data year.** One major event has landed: Zenbexus (iberdomide) received FDA accelerated approval on August 13 after EXCALIBER-RRMM showed a higher minimal-residual-disease-negative complete-response rate for the iberdomide regimen than for the comparator. Continued approval may depend on confirmatory clinical benefit. The remaining 2026-2027 slate includes milvexian (secondary stroke prevention; AF pushed to Q1 2027), admilparant (IPF, ALOFT-IPF), mezigdomide (SUCCESSOR-2, positive interim reported), arlo-cel (QUINTESSENTIAL), RYZ101 (ACTION-1, GEP-NETs), and Sotyktu in lupus (POETYK SLE-1/2).
 
 Key pipeline assets:
 
@@ -87,7 +88,7 @@ Key pipeline assets:
 |---|---|---|
 | Milvexian (w/ J&J) | Oral Factor XIa inhibitor (Eliquis successor) | Ph3 LIBREXIA program: SSP data 2026, AF Q1 2027 |
 | Cobenfy expansion | M1/M4 muscarinic | Ph3 Alzheimer's psychosis (ADEPT, 2027), bipolar I, AD agitation/cognition |
-| Iberdomide | Oral CELMoD (myeloma) | NDA filed; PDUFA Aug 17, 2026 — first CELMoD |
+| Zenbexus (iberdomide) | Oral CELMoD (myeloma) | FDA accelerated approval Aug 13, 2026; first approved CELMoD; confirmatory benefit required |
 | Mezigdomide | Oral CELMoD (myeloma) | NDA accepted; PDUFA May 13, 2027 |
 | Golcadomide | CELMoD (lymphoma) | Ph3 GOLSEEK-1, data 2027 |
 | Arlo-cel | GPRC5D CAR-T (myeloma) | Registrational data 2026 |
@@ -107,7 +108,7 @@ Key pipeline assets:
 - **Pipeline concentration/execution:** growth case leans heavily on unproven launches (Cobenfy, whose adjunctive-schizophrenia trial already missed) and 2026-2027 binary readouts (milvexian, admilparant, CELMoDs); Camzyos and Opdualag expansion trials failed in 2025.
 - **Pricing/policy:** IRA negotiation hits Eliquis (2026) then Pomalyst; Orencia selected for later cycles; MFN pricing agreement with US government adds further US price pressure; ~69% of revenue is US-based.
 - **Balance sheet:** ~$50B debt load from the Celgene/Karuna era constrains further large M&A.
-- **Litigation:** long-running Celgene CVR suit (~$6.4B claimed over missed liso-cel milestone; BMS prevailed at 2025 trial, appeal risk); routine IP challenges across the Growth Portfolio.
+- **Litigation:** the Second Circuit vacated the dismissal of the Celgene contingent-value-rights suit on August 13, 2026 and remanded it. The ruling addressed the trustee's capacity to sue and BMS's waiver or ratification of that challenge, not whether BMS breached the agreement's diligent-efforts obligation. The multi-billion-dollar merits dispute over the missed Breyanzi approval deadline is active again; routine IP challenges continue across the Growth Portfolio.
 
 ## Sources
 
@@ -115,6 +116,8 @@ Key pipeline assets:
 - BMS 2025 Form 10-K (filed Feb 2026): revenues, alliances (BioNTech, SystImmune, Pfizer), patent estate
 - BMS "Key Facts" investor page (accessed Aug 2026): FY2025 product-level revenues
 - BMS Q2 2026 earnings presentation & call transcript (Jul 30/Aug 3, 2026): PDUFA dates (iberdomide Aug 17, 2026; mezigdomide May 13, 2027), milvexian timing
+- FDA, accelerated approval notice for Zenbexus (iberdomide), Aug 13, 2026: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone
+- U.S. Court of Appeals for the Second Circuit, *UMB Bank, N.A. v. Bristol-Myers Squibb Co.*, Nos. 24-2865 and 24-2928, Aug 13, 2026: https://ww3.ca2.uscourts.gov/decisions/OPN/24-2865_opn.pdf
 - Fierce Pharma, "BMS leans on new growth drivers" (Feb 6, 2026); Fierce Biotech on RayzeBio, iza-bren, BNT327 (2023-2026)
 - Clinical Trials Arena, JPM 2026 coverage of BMS pipeline strategy (Jan 13, 2026)
 - BioNTech/BMS partnership announcements (Jun 2, 2025; amended Aug 15, 2025)

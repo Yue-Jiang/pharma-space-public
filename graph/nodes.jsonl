@@ -895,7 +895,7 @@
 {"id": "hyaluronic acid fillers", "kind": "molecule", "brands": ["Juvederm"], "class": "Injectable dermal filler", "modality": "polysaccharide", "sales_2025_usd_bn": 0.99, "phase": "marketed"}
 {"id": "hyoscine butylbromide", "kind": "molecule", "brands": ["Buscopan"], "class": "Anticholinergic antispasmodic", "modality": "small-molecule", "phase": "marketed"}
 {"id": "ianalumab", "kind": "molecule", "brands": ["Ianalumab"], "class": "Anti-BAFF-R mAb", "modality": "mab", "phase": "pipeline"}
-{"id": "iberdomide", "kind": "molecule", "brands": ["Iberdomide"], "class": "Oral small-molecule CELMoD", "modality": "small-molecule", "phase": "pipeline"}
+{"id": "iberdomide", "kind": "molecule", "brands": ["Zenbexus"], "class": "Oral small-molecule CELMoD", "modality": "small-molecule", "phase": "marketed"}
 {"id": "ibrutinib", "kind": "molecule", "brands": ["Imbruvica"], "class": "BTK inhibitor (oral)", "modality": "small-molecule", "sales_2025_usd_bn": 2.87, "loe_year": 2026, "phase": "marketed"}
 {"id": "iclepertin", "kind": "molecule", "phase": "failed", "modality": "small-molecule", "modality_note": "small molecule", "year_died": 2025, "failure_mode": "efficacy"}
 {"id": "icotrokinra", "kind": "molecule", "brands": ["Icotyde"], "class": "Oral IL-23R peptide antagonist", "modality": "peptide", "loe_year": 2026, "phase": "marketed"}

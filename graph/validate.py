@@ -474,14 +474,15 @@ for e in indication_edges:
             f"{claim_id} [claim intent={c.get('intended_use')}; edge intent={e.get('intended_use')}]"
         )
     if (c.get("development_stage"), c.get("study"), c.get("study_status"),
-            c.get("status_as_of")) != (
+            c.get("status_as_of"), c.get("readout")) != (
             e.get("development_stage"), e.get("study"), e.get("study_status"),
-            e.get("status_as_of")):
+            e.get("status_as_of"), e.get("readout")):
         claim_edge_mismatches.add(
             f"{claim_id} [claim development={c.get('development_stage')}/{c.get('study')}; "
             f"claim status={c.get('study_status')}/{c.get('status_as_of')}; "
             f"edge development={e.get('development_stage')}/{e.get('study')}; "
-            f"edge status={e.get('study_status')}/{e.get('status_as_of')}]"
+            f"edge status={e.get('study_status')}/{e.get('status_as_of')}; "
+            f"readout match={c.get('readout') == e.get('readout')}]"
         )
 orphan_claims = {
     c["id"] for c in claims
@@ -835,6 +836,81 @@ audited_development = [
     if record.get("audit_cycle") == 7
 ]
 valid_development_stages = {"phase-1", "phase-1/2", "phase-2", "phase-2/3", "phase-3"}
+development_readouts = [
+    (generic, record) for generic, records in development_cache.items() for record in records
+    if record.get("readout")
+]
+bad_development_readouts = set()
+for generic, record in development_readouts:
+    readout = record.get("readout", {})
+    endpoint_results = readout.get("endpoint_results") or []
+    endpoint_keys = [
+        (result.get("endpoint"), result.get("role")) for result in endpoint_results
+    ]
+    if (generic not in mol
+            or by_id.get(record.get("indication"), {}).get("kind") != "indication"
+            or readout.get("status") not in {
+                "positive-topline", "negative-topline", "mixed-topline"}
+            or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(readout.get("reported_on", "")))
+            or not endpoint_results or len(endpoint_keys) != len(set(endpoint_keys))
+            or any(
+                not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", str(result.get("endpoint", "")))
+                or result.get("role") not in {"primary", "key-secondary", "secondary"}
+                or result.get("status") not in {"met", "not-met", "pending"}
+                for result in endpoint_results
+            )
+            or readout.get("effect_sizes") not in {"disclosed", "not-disclosed"}
+            or readout.get("overall_survival") not in {"not-reported", "immature", "mature"}
+            or readout.get("safety") not in {
+                "not-reported", "no-new-safety-signal-reported",
+                "new-safety-signal-reported"}
+            or not str(readout.get("source", "")).startswith(("http://", "https://"))
+            or not readout.get("evidence")):
+        bad_development_readouts.add(
+            f"{generic} / {record.get('indication', '<missing>')}"
+        )
+if bad_development_readouts:
+    add("ERROR", "development-readout-cache-invalid",
+        "structured clinical readouts require controlled endpoint, disclosure, survival, safety, and provenance fields",
+        bad_development_readouts)
+
+audited_development_readouts = [
+    (generic, record) for generic, records in development_cache.items() for record in records
+    if record.get("readout_audit_cycle") == 11
+]
+readout_regressions = set()
+expected_intismeran_readout = {
+    "status": "positive-topline",
+    "reported_on": "2026-08-19",
+    "endpoint_results": [
+        {"endpoint": "recurrence-free-survival", "role": "primary", "status": "met"},
+        {"endpoint": "distant-metastasis-free-survival", "role": "key-secondary", "status": "met"},
+    ],
+    "effect_sizes": "not-disclosed",
+    "overall_survival": "immature",
+    "safety": "no-new-safety-signal-reported",
+    "source": "https://www.merck.com/news/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-autogene-plus-keytruda-met-endpoints-of-recurrence-free-survival-rfs-and-distant-metastasis-free-survival-dmfs-in-patient/",
+    "evidence": "Merck and Moderna reported that the prespecified interim analysis met the primary recurrence-free-survival endpoint and key secondary distant-metastasis-free-survival endpoint with statistically significant and clinically meaningful improvements versus pembrolizumab alone. Numerical effect sizes were not disclosed, overall-survival follow-up continues, and no new safety signal was reported.",
+}
+if HAS_PRIVATE_CACHE and len(audited_development_readouts) != 1:
+    readout_regressions.add(
+        f"expected one cycle-11 development readout, found {len(audited_development_readouts)}"
+    )
+for generic, record in audited_development_readouts:
+    key = (generic, record.get("indication"))
+    edge = next((e for e in indication_edges
+                 if (e.get("src"), e.get("dst")) == key), None)
+    claim = claims_by_id.get(edge.get("claim_id")) if edge else None
+    if (key != ("intismeran autogene", "melanoma")
+            or record.get("readout") != expected_intismeran_readout
+            or not edge or edge.get("readout") != expected_intismeran_readout
+            or not claim or claim.get("readout") != expected_intismeran_readout):
+        readout_regressions.add(f"{generic} / {record.get('indication')}")
+if readout_regressions:
+    add("ERROR", "audited-development-readout-regression",
+        "the cycle-11 INTerpath endpoint, disclosure, survival, safety, or provenance bundle changed",
+        readout_regressions)
+
 bad_development_cache = {
     f"{generic} / {record.get('indication', '<missing>')}"
     for generic, record in audited_development

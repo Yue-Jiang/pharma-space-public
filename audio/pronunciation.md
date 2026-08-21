@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-12
+updated: 2026-08-20
 status: curated
 ---
 # Pronunciation guide — drug names
@@ -138,7 +138,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | glycopyrronium | GLY-koe-pie-ROE-nee-um | Breztri |
 | golimumab | goh-LIM-ue-mab | Simponi |
 | guselkumab | goo-SEL-koo-mab | Tremfya |
-| iberdomide | eye-BER-doe-mide | — |
+| iberdomide | eye-BER-doe-mide | Zenbexus |
 | ibrutinib | eye-BROO-ti-nib | Imbruvica |
 | icotrokinra | eye-koh-troh-KIN-ra | — |
 | idarucizumab | eye-dar-ue-SIZ-ue-mab | Praxbind |
@@ -591,6 +591,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | Yescarta | yes-KAR-tah |
 | Yeztugo | yez-TOO-goh |
 | Zejula | zeh-JOO-lah |
+| Zenbexus | zen-BEX-us |
 | Zeposia | zeh-POH-zhah |
 | Zolgensma | zol-JENS-mah |
 | Zurzuvae | zur-ZOO-vay |

@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: eli-lilly
-updated: 2026-08-14
+updated: 2026-08-20
 status: curated
 ---
 # Eli Lilly
@@ -87,7 +87,7 @@ Mounjaro (May 2022) and Zepbound (Nov 2023; OSA indication Dec 2024) drove the s
 
 **Oncology.** Verzenio OS data (monarchE); **Jaypirca** head-to-head win vs. Imbruvica; **Inluriyo** (oral SERD) launched 2025; **olomorasib** (KRAS G12C, Ph3); STX-478 mutant-selective PI3Kα (from Scorpion); radioligand pipeline from POINT Biopharma; sofetabart mipitecan received FDA Breakthrough designation (2026).
 
-**Modality bets.** Oral small molecules for mass-market cardiometabolic disease; siRNA; in vivo gene editing (Verve); gene therapy (Prevail); radioligands (POINT); ADC exposure remains modest relative to peers. Unlike many large-cap peers, Lilly's recent BD has been US-centric — no headline China-originated in-licensing; its main China play is out-licensing (mazdutide to Innovent, approved in China 2025) and NRDL access.
+**Modality bets.** Oral small molecules for mass-market cardiometabolic disease; siRNA; in vivo gene editing (Verve); gene therapy (Prevail); radioligands (POINT); ADC exposure remains modest relative to peers. In August 2026 Lilly was selected in Sangamo Therapeutics' Chapter 11 auction to acquire its capsid-delivery, zinc-finger and modular-integrase platforms plus the ST-506 prion-disease program for $50 million cash. This is an announced platform acquisition, not a completed deal: the proposed sale remained subject to final bankruptcy-court approval and closing conditions at the August 20 cutoff. Unlike many large-cap peers, Lilly's recent BD has been US-centric; its main China play is out-licensing (mazdutide to Innovent, approved in China 2025) and NRDL access.
 
 **Stated strategy (management).** Ricks: 2026 revenue guidance $80–83B (raised to $85–87B by Aug 2026), pipeline with >25 positive Phase 3 readouts in 2025, >$50B US manufacturing buildout, direct-to-consumer via LillyDirect (>1M patients added in 2025; self-pay Zepbound vials = ~1/3 of new obesity-brand starts).
 
@@ -108,6 +108,7 @@ Mounjaro (May 2022) and Zepbound (Nov 2023; OSA indication Dec 2024) drove the s
 - Lilly press release / White House fact sheet on US government pricing agreement (Nov 6, 2025); CNBC, BioPharma Dive, NBC News coverage (Nov 6–7, 2025)
 - FDA press announcement and Lilly release on Foundayo (orforglipron) approval (Apr 1, 2026); Drugs.com approval history
 - Deal coverage: Fierce Biotech, pharmaphorum, C&EN, Pharmaceutical Technology, Boston Globe on Verve ($1.3B), Scorpion ($2.5B), SiteOne ($1B) (Jan–Jun 2025)
+- Sangamo Therapeutics auction-results release (Aug 12, 2026) and SEC-filed bankruptcy timetable: Lilly selected for a $50M platform and ST-506 asset purchase, subject to final court approval and closing conditions. https://investor.sangamo.com/node/20081
 - BioPharma Dive and FirstWord Pharma on FY2025 results and tirzepatide vs. Keytruda (Feb 4, 2026); PharmaLive "Company of the Year 2025" profile (Nov 2025)
 - Wikipedia / Revelio Labs / Bullfincher for headcount and corporate metadata (2025–2026)
 - Company history (1995–2021 era): public record — Lilly annual reports, DOJ Zyprexa settlement (Jan 2009), contemporaneous coverage of ImClone (2008), Loxo (2019), Elanco spinoff (2019)

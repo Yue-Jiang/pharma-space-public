@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: moderna
-updated: 2026-08-14
+updated: 2026-08-20
 status: curated
 ---
 # Moderna
@@ -30,7 +30,7 @@ Moderna's pipeline splits cleanly in two. The vaccines are what pay the bills: t
 
 | Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
 |---|---|---|---|---|---|
-| Intismeran autogene | intismeran autogene | Individualised neoantigen mRNA therapy (mRNA-4157/V940, + pembrolizumab) | Adjuvant melanoma, NSCLC, bladder, renal | Ph3 | Flagship pipeline bet, Merck-partnered; nine Ph2/Ph3 trials; Ph3 adjuvant melanoma fully enrolled with data possible 2026 |
+| Intismeran autogene | intismeran autogene | Individualised neoantigen mRNA therapy (mRNA-4157/V940, + pembrolizumab) | Adjuvant melanoma, NSCLC, bladder, renal | Ph3 | INTerpath-001 met RFS and DMFS endpoints in resected melanoma; effect sizes remain undisclosed and overall-survival follow-up continues |
 | mFLUSIVA | — | mRNA-LNP influenza vaccine (mRNA-1010) | Seasonal influenza, adults 50+ | Approved 2026 | FDA approved 5 Aug 2026; launching for the 2026-27 season, no sales yet; filings under review in EU, Canada, Australia |
 | mCOMBRIAX | — | mRNA-LNP flu + COVID combination vaccine (mRNA-1083) | Influenza + COVID-19 | Approved 2026 | EU approval Q1 2026; not yet approved in the US; ex-US launches from 2026-27 |
 | mRNA-1403 | — | mRNA-LNP trivalent norovirus vaccine | Norovirus gastroenteritis | Ph3 | Would be a fourth seasonal product; missed early-success criteria at Ph3 interim and is enrolling an additional cohort |
@@ -61,11 +61,11 @@ The endemic transition was brutal. Revenue fell to $6.8 billion in 2023 and $3.2
 
 Moderna's strategy for 2025–2026 is a seasonal respiratory-vaccine franchise funding an oncology and rare-disease pipeline, under severe cost discipline: guidance targets up to 10% revenue growth in 2026, opex down to $4.7–5.0 billion by 2027, and cash breakeven by 2028. Growth levers are geographic (EU launches of mNEXSPIKE and mCOMBRIAX from 2026–27, multi-year supply agreements with Mexico and Taiwan), new launches (mFLUSIVA in the US for 2026–27), and eventually norovirus — though mRNA-1403 missed its Phase 3 interim early-success criteria (mid-2026) and is enrolling an additional cohort.
 
-The flagship pipeline bet is intismeran autogene (mRNA-4157/V940), the Merck-partnered individualized neoantigen therapy: five-year KEYNOTE-942 follow-up (January 2026) showed a sustained 49% reduction in recurrence or death in resected high-risk melanoma, with eight to nine Phase 2/3 trials running across melanoma, non-small cell lung, bladder and renal cancers; Phase 3 melanoma (INTerpath-001) is fully enrolled with interim data possible in 2026. In rare disease, Moderna licensed global commercialization of its propionic acidemia candidate to Recordati (February 2026). No significant China-originated in-licensing — Moderna is an mRNA pure-play built on its own platform.
+The flagship pipeline bet is intismeran autogene (mRNA-4157/V940), the Merck-partnered individualized neoantigen therapy. Five-year KEYNOTE-942 follow-up (January 2026) showed a sustained 49% reduction in recurrence or death in resected high-risk melanoma. On August 19, 2026, the Phase 3 INTerpath-001 trial then met its primary recurrence-free-survival endpoint and key secondary distant-metastasis-free-survival endpoint in 1,137 patients with completely resected stage IIB-IV melanoma. The companies reported no new safety signal and plan regulatory discussions, but had not disclosed Phase 3 effect sizes; overall-survival follow-up continues. Eight to nine Phase 2/3 trials are running across melanoma, non-small cell lung, bladder and renal cancers. In rare disease, Moderna licensed global commercialization of its propionic acidemia candidate to Recordati (February 2026). No significant China-originated in-licensing; Moderna is an mRNA pure-play built on its own platform.
 
 | Key pipeline asset | Phase (mid-2026) |
 |---|---|
-| Intismeran autogene (mRNA-4157, +pembrolizumab, w/ Merck) | Ph3 melanoma (enrolled), Ph3 NSCLC, Ph2/3 bladder, renal |
+| Intismeran autogene (mRNA-4157, +pembrolizumab, w/ Merck) | Positive Ph3 melanoma topline; RFS and DMFS met, OS immature; Ph3 NSCLC and Ph2/3 bladder and renal studies continue |
 | mRNA-1403 (norovirus) | Ph3 (interim miss; extra cohort) |
 | mRNA-1083 / mCOMBRIAX (flu+COVID) | EU approved; US pending flu-vaccine precedent |
 | Propionic acidemia (mRNA-3927, w/ Recordati) | Pivotal study |
@@ -76,7 +76,7 @@ The flagship pipeline bet is intismeran autogene (mRNA-4157/V940), the Merck-par
 - **Revenue concentration in COVID**: $1.81B of $1.82B FY2025 product sales was the COVID franchise; the market shrinks each season and Pfizer/BioNTech dominate share. mRESVIA has effectively failed commercially ($8M in 2025).
 - **US policy/regulatory hostility to mRNA**: HHS canceled the $590M H5N1 contract (May 2025); the flu refusal-to-file (Feb 2026) showed unpredictable FDA behavior even though it was ultimately reversed; ACIP/CDC vaccine-policy turmoil threatens US uptake and reimbursement.
 - **Cash burn and litigation payouts**: net loss of $2.8B in 2025; the Arbutus/Genevant settlement costs $950M (Q3 2026) plus up to $1.3B contingent; year-end 2026 cash guided to $4.5–5.0B; breakeven not expected before 2028.
-- **Pipeline binary risk**: the equity story leans heavily on intismeran autogene Phase 3 readouts; CMV's failure (Oct 2025) and the norovirus interim miss (2026) show platform breadth does not guarantee wins.
+- **Pipeline execution risk**: positive INTerpath-001 topline results reduce one major binary risk, but effect sizes, overall survival, detailed safety data, regulatory review and individualized manufacturing at commercial scale remain unresolved. CMV's failure (Oct 2025) and the norovirus interim miss (2026) show platform breadth does not guarantee wins.
 - **Ongoing IP disputes**: offensive cases against Pfizer/BioNTech are before the UK Supreme Court; CureVac filed a new US suit (April 2026).
 - Patent cliffs in the classic sense are not the issue — demand, policy and competition are.
 
@@ -90,4 +90,5 @@ The flagship pipeline bet is intismeran autogene (mRNA-4157/V940), the Merck-par
 - Arbutus/Genevant–Moderna settlement releases and Moderna 8-K (Mar 3, 2026); IPWatchdog (Mar 4, 2026)
 - Goodwin / JUVE Patent: UK Court of Appeal upholds EP'949 vs Pfizer/BioNTech (Aug 1, 2025); Moderna 10-Q re CureVac complaint (Apr 2026)
 - Merck/Moderna releases: KEYNOTE-942 five-year data (Jan 20 & Jun 1, 2026); INTerpath Phase 3 program
+- Merck and Moderna joint release, positive topline Phase 3 INTerpath-001 results, Aug 19, 2026: https://news.modernatx.com/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-plus-keytruda-met-endpoints-of-rfs-and-dmfs-in-melanoma
 - Wikipedia/company history for founding, VC funding, 2018 IPO (~$604M)

@@ -1,7 +1,7 @@
 ---
 type: audio-script
 company: novartis
-updated: 2026-08-12
+updated: 2026-08-20
 status: generated
 ---
 
@@ -25,6 +25,6 @@ Strategically, Novartis is spending through the cliff. Twenty twenty-five brough
 
 The pipeline now faces a run of make-or-break readouts. Pelacarsen, partnered with Ionis, is the first drug designed to lower lipoprotein little-a, a genetic cardiovascular risk factor with no existing treatment — its outcomes trial is the readout analysts watch most. Rhapsido, generic name remibrutinib, an oral B T K inhibitor approved in twenty twenty-five for chronic hives, is being tested in multiple sclerosis, where a positive readout is widely seen as the key near-term growth question for the company. Abelacimab could offer blood-thinning with less bleeding risk. Ianalumab is heading for a launch in Sjögren's disease. And the Avidity drugs are expected to launch before twenty thirty.
 
-The risk list is real. About ten billion dollars of revenue sits exposed to generics through twenty twenty-seven. The United States Inflation Reduction Act put Entresto in the first round of Medicare price negotiation. The growth case leans heavily on Kisqali, which itself loses protection in the early twenty thirties. And the twenty twenty-five shopping spree has to convert into approved, reimbursed launches on schedule.
+The risk list is real. About ten billion dollars of revenue sits exposed to generics through twenty twenty-seven. The United States Inflation Reduction Act put Entresto in the first round of Medicare price negotiation. A United Kingdom court upheld the Entresto supplementary protection certificate in August twenty twenty-six, blocking Accord's planned launch there until the certificate expires in January twenty twenty-eight, but that ruling does not stop United States erosion or determine other countries' timelines. The growth case leans heavily on Kisqali, which itself loses protection in the early twenty thirties. And the twenty twenty-five shopping spree has to convert into approved, reimbursed launches on schedule.
 
 Still, the through-line of Novartis history is remarkable consistency of intent: from sprawling conglomerate to focused medicines company, funding each patent cliff with the proceeds of the last divestiture and a bet on new modalities. Guidance calls for five to six percent annual sales growth through twenty thirty. Whether radioligands, gene silencing and muscle-targeted R N A can outrun the generics — that is the Novartis story to watch.

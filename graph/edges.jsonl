@@ -1640,7 +1640,7 @@
 {"src": "anitocabtagene autoleucel", "rel": "competes_with", "dst": "daratumumab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "anitocabtagene autoleucel", "rel": "competes_with", "dst": "elranatamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "anitocabtagene autoleucel", "rel": "competes_with", "dst": "etentamig", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
-{"src": "anitocabtagene autoleucel", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "anitocabtagene autoleucel", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "anitocabtagene autoleucel", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "anitocabtagene autoleucel", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "anitocabtagene autoleucel", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
@@ -1914,7 +1914,7 @@
 {"src": "azd0120", "rel": "competes_with", "dst": "elranatamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "azd0120", "rel": "competes_with", "dst": "etentamig", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "azd0120", "rel": "competes_with", "dst": "gsk5926371", "basis": "shared_indication:systemic-lupus-erythematosus", "etype": "derived", "stage_pair": "pipeline+pipeline"}
-{"src": "azd0120", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "azd0120", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "azd0120", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "azd0120", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "azd0120", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
@@ -2308,7 +2308,7 @@
 {"src": "belantamab mafodotin", "rel": "competes_with", "dst": "daratumumab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "belantamab mafodotin", "rel": "competes_with", "dst": "elranatamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "belantamab mafodotin", "rel": "competes_with", "dst": "etentamig", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "belantamab mafodotin", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "belantamab mafodotin", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "belantamab mafodotin", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "belantamab mafodotin", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "belantamab mafodotin", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -2651,7 +2651,7 @@
 {"src": "bortezomib", "rel": "competes_with", "dst": "etentamig", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "legacy+pipeline"}
 {"src": "bortezomib", "rel": "competes_with", "dst": "glofitamab", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "legacy+marketed"}
 {"src": "bortezomib", "rel": "competes_with", "dst": "golcadomide", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "legacy+pipeline"}
-{"src": "bortezomib", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "legacy+pipeline"}
+{"src": "bortezomib", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "legacy+marketed"}
 {"src": "bortezomib", "rel": "competes_with", "dst": "ibrutinib", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "legacy+marketed"}
 {"src": "bortezomib", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "legacy+marketed"}
 {"src": "bortezomib", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "legacy+marketed"}
@@ -3110,7 +3110,7 @@
 {"src": "carfilzomib", "rel": "competes_with", "dst": "daratumumab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "carfilzomib", "rel": "competes_with", "dst": "elranatamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "carfilzomib", "rel": "competes_with", "dst": "etentamig", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "carfilzomib", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "carfilzomib", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "carfilzomib", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "carfilzomib", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "carfilzomib", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -3262,7 +3262,7 @@
 {"src": "ciltacabtagene autoleucel", "rel": "competes_with", "dst": "daratumumab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ciltacabtagene autoleucel", "rel": "competes_with", "dst": "elranatamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ciltacabtagene autoleucel", "rel": "competes_with", "dst": "etentamig", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "ciltacabtagene autoleucel", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "ciltacabtagene autoleucel", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ciltacabtagene autoleucel", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ciltacabtagene autoleucel", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ciltacabtagene autoleucel", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -3432,7 +3432,7 @@
 {"src": "dapirolizumab pegol", "rel": "competes_with", "dst": "zola-cel", "basis": "shared_indication:systemic-lupus-erythematosus", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "daratumumab", "rel": "competes_with", "dst": "elranatamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "daratumumab", "rel": "competes_with", "dst": "etentamig", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "daratumumab", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "daratumumab", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "daratumumab", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "daratumumab", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "daratumumab", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -4049,7 +4049,7 @@
 {"src": "eloralintide", "rel": "competes_with", "dst": "ubt251", "basis": "shared_indication:obesity", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "eloralintide", "rel": "competes_with", "dst": "zenagamtide", "basis": "shared_indication:obesity", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "elranatamab", "rel": "competes_with", "dst": "etentamig", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "elranatamab", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "elranatamab", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "elranatamab", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "elranatamab", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "elranatamab", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -4308,7 +4308,7 @@
 {"src": "etavopivat", "rel": "competes_with", "dst": "exagamglogene autotemcel", "basis": "shared_indication:beta-thalassemia", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "etavopivat", "rel": "competes_with", "dst": "exagamglogene autotemcel", "basis": "shared_indication:sickle-cell", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "etavopivat", "rel": "competes_with", "dst": "luspatercept", "basis": "shared_indication:beta-thalassemia", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "etentamig", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "etentamig", "rel": "competes_with", "dst": "iberdomide", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "etentamig", "rel": "competes_with", "dst": "idecabtagene vicleucel", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "etentamig", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "etentamig", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
@@ -4882,11 +4882,11 @@
 {"src": "ianalumab", "rel": "competes_with", "dst": "recombinant human thrombopoietin", "basis": "shared_indication:itp", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "ianalumab", "rel": "competes_with", "dst": "rilzabrutinib", "basis": "shared_indication:itp", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "ianalumab", "rel": "competes_with", "dst": "romiplostim", "basis": "shared_indication:itp", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "iberdomide", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "iberdomide", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "iberdomide", "rel": "competes_with", "dst": "linvoseltamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "iberdomide", "rel": "competes_with", "dst": "talquetamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "iberdomide", "rel": "competes_with", "dst": "teclistamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "iberdomide", "rel": "competes_with", "dst": "isatuximab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "iberdomide", "rel": "competes_with", "dst": "ixazomib", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "iberdomide", "rel": "competes_with", "dst": "linvoseltamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "iberdomide", "rel": "competes_with", "dst": "talquetamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "iberdomide", "rel": "competes_with", "dst": "teclistamab", "basis": "shared_indication:multiple-myeloma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ibrutinib", "rel": "competes_with", "dst": "lisocabtagene maraleucel", "basis": "shared_indication:leukemia", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ibrutinib", "rel": "competes_with", "dst": "lisocabtagene maraleucel", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ibrutinib", "rel": "competes_with", "dst": "mosunetuzumab", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -9272,10 +9272,9 @@
 {"src": "gym329", "rel": "studied_for", "dst": "obesity", "etype": "fact", "claim_id": "claim-indication-0a3dfa614395ca66c7d7", "intended_use": "treats", "phase": "pipeline"}
 {"src": "ianalumab", "rel": "studied_for", "dst": "itp", "etype": "fact", "claim_id": "claim-indication-125dbee642c350f4ebe5", "intended_use": "treats", "phase": "pipeline"}
 {"src": "ianalumab", "rel": "studied_for", "dst": "sjogrens-disease", "etype": "fact", "claim_id": "claim-indication-a253bd745b7bfd1795f1", "intended_use": "treats", "phase": "pipeline", "development_stage": "phase-3", "study": "NCT05349214", "study_status": "active-not-recruiting", "status_as_of": "2026-08-16", "source": "https://clinicaltrials.gov/study/NCT05349214", "evidence": "Sponsor-registered Phase 3 Sjogren's disease study; active, not recruiting on 2026-08-16."}
-{"src": "iberdomide", "rel": "studied_for", "dst": "multiple-myeloma", "etype": "fact", "claim_id": "claim-indication-8e4eb7ebaca4094f51a3", "intended_use": "treats", "phase": "pipeline"}
 {"src": "ifinatamab deruxtecan", "rel": "studied_for", "dst": "lung-cancer", "etype": "fact", "claim_id": "claim-indication-6e10a4f588fb200ecf70", "intended_use": "treats", "phase": "pipeline"}
 {"src": "inaxaplin", "rel": "studied_for", "dst": "chronic-kidney-disease", "etype": "fact", "claim_id": "claim-indication-fd209a9cf22019aa1c9f", "intended_use": "treats", "phase": "pipeline"}
-{"src": "intismeran autogene", "rel": "studied_for", "dst": "melanoma", "etype": "fact", "claim_id": "claim-indication-93ee778e4761bfe7282a", "intended_use": "treats", "phase": "pipeline", "development_stage": "phase-3", "study": "NCT05933577", "study_status": "active-not-recruiting", "status_as_of": "2026-08-16", "source": "https://clinicaltrials.gov/study/NCT05933577", "evidence": "Sponsor-registered Phase 3 high-risk melanoma study; active, not recruiting on 2026-08-16."}
+{"src": "intismeran autogene", "rel": "studied_for", "dst": "melanoma", "etype": "fact", "claim_id": "claim-indication-93ee778e4761bfe7282a", "intended_use": "treats", "phase": "pipeline", "development_stage": "phase-3", "study": "NCT05933577", "study_status": "active-not-recruiting", "status_as_of": "2026-08-16", "readout": {"status": "positive-topline", "reported_on": "2026-08-19", "endpoint_results": [{"endpoint": "recurrence-free-survival", "role": "primary", "status": "met"}, {"endpoint": "distant-metastasis-free-survival", "role": "key-secondary", "status": "met"}], "effect_sizes": "not-disclosed", "overall_survival": "immature", "safety": "no-new-safety-signal-reported", "source": "https://www.merck.com/news/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-autogene-plus-keytruda-met-endpoints-of-recurrence-free-survival-rfs-and-distant-metastasis-free-survival-dmfs-in-patient/", "evidence": "Merck and Moderna reported that the prespecified interim analysis met the primary recurrence-free-survival endpoint and key secondary distant-metastasis-free-survival endpoint with statistically significant and clinically meaningful improvements versus pembrolizumab alone. Numerical effect sizes were not disclosed, overall-survival follow-up continues, and no new safety signal was reported."}, "source": "https://clinicaltrials.gov/study/NCT05933577", "evidence": "Sponsor-registered Phase 3 high-risk melanoma study; active, not recruiting on 2026-08-16."}
 {"src": "itepekimab", "rel": "studied_for", "dst": "copd", "etype": "fact", "claim_id": "claim-indication-fc35db71b9a82beca72b", "intended_use": "treats", "phase": "pipeline"}
 {"src": "iza-bren", "rel": "studied_for", "dst": "other", "etype": "fact", "claim_id": "claim-indication-d33b92270e0bf8e5bbaf", "intended_use": "treats", "phase": "pipeline"}
 {"src": "jnj-64042056", "rel": "studied_for", "dst": "alzheimers", "etype": "fact", "claim_id": "claim-indication-8844154ce19c37b3f9eb", "intended_use": "prevents", "phase": "pipeline"}
@@ -9683,6 +9682,7 @@
 {"src": "hyaluronic acid fillers", "rel": "treats", "dst": "other", "etype": "fact", "claim_id": "claim-indication-c7107c1dfbfab0a68990", "phase": "marketed"}
 {"src": "hyoscine butylbromide", "rel": "treats", "dst": "irritable-bowel-syndrome", "etype": "fact", "claim_id": "claim-indication-952eaa2541f441ccb417", "phase": "marketed"}
 {"src": "hyoscine butylbromide", "rel": "treats", "dst": "pain", "etype": "fact", "claim_id": "claim-indication-d0bc23baf1a279afe6f6", "phase": "marketed"}
+{"src": "iberdomide", "rel": "treats", "dst": "multiple-myeloma", "etype": "fact", "claim_id": "claim-indication-534d91f741e94e8c2767", "phase": "marketed"}
 {"src": "ibrutinib", "rel": "treats", "dst": "leukemia", "etype": "fact", "claim_id": "claim-indication-8fe016dae999e493836b", "phase": "marketed"}
 {"src": "ibrutinib", "rel": "treats", "dst": "lymphoma", "etype": "fact", "claim_id": "claim-indication-510936d08734a750882c", "phase": "marketed"}
 {"src": "icotrokinra", "rel": "treats", "dst": "plaque-psoriasis", "etype": "fact", "claim_id": "claim-indication-2d14ef293f0dd12a317a", "phase": "marketed"}

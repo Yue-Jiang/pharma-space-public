@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: novartis
-updated: 2026-08-14
+updated: 2026-08-20
 status: curated
 ---
 
@@ -19,7 +19,7 @@ Novartis describes itself as a "pure-play" innovative medicines company after sp
 
 | Drug (brand/generic) | Indication(s) | Modality | 2025 sales (approx) | Patent cliff / LOE year |
 |---|---|---|---|---|
-| Entresto (sacubitril/valsartan) | Chronic heart failure, hypertension | Small molecule combo | $7.7B (-2% cc) | US generics launched Q3 2025; ex-US later (est.) |
+| Entresto (sacubitril/valsartan) | Chronic heart failure, hypertension | Small molecule combo | $7.7B (-2% cc) | US generics launched Q3 2025; UK SPC upheld Aug 2026 and expires Jan 15, 2028; other territories differ |
 | Cosentyx (secukinumab) | Psoriasis, PsA, axSpA, hidradenitis suppurativa | mAb (anti-IL-17A) | $6.7B (+8% cc) | ~2029-2030 (est.) |
 | Kisqali (ribociclib) | HR+/HER2- metastatic & early breast cancer | Small molecule (CDK4/6i) | $4.8B (+57% cc) | ~2031 (est.) |
 | Kesimpta (ofatumumab) | Relapsing multiple sclerosis | mAb (anti-CD20) | $4.4B (+36% cc) | early 2030s (est.) |
@@ -96,7 +96,7 @@ The modality thesis is distinctive: radioligand therapy (Pluvicto expanding into
 - **IRA / US pricing:** Entresto was in the first Medicare negotiation cohort (negotiated prices effective 2026); further selections and Part D redesign pressure US net pricing. US policy risk includes pharma tariff threats — an explicit backdrop to the USD 23B US investment pledge (April 2025).
 - **Pipeline binary events:** pelacarsen's Lp(a) outcomes readout and remibrutinib's two Phase III multiple sclerosis trials are high-value, high-uncertainty near-term catalysts (2026).
 - **Integration/BD execution:** the 2025 deal spree (17 transactions; Avidity at ~USD 12B the largest) must convert to launches before 2030 to sustain the growth algorithm.
-- **Litigation/compliance history:** ongoing US litigation with a generic manufacturer and FDA over Entresto IP; Lutathera US patent litigation; past kickback (USD 678M, 2020) and FCPA (USD 347M, 2020) settlements; Zolgensma data-integrity episode (2019) — reputational tail risks.
+- **Litigation/compliance history:** the UK Patents Court rejected Accord Healthcare's challenge to the Entresto patent and supplementary protection certificate in August 2026, found the certificate valid through January 15, 2028, and held that Accord's intended product would infringe. This is a UK ruling only; separate US Entresto litigation and generic erosion continue. Lutathera US patent litigation, the 2020 kickback and FCPA settlements, and the 2019 Zolgensma data-integrity episode remain additional legal and reputational risks.
 - **Radioligand supply chain:** Pluvicto depends on complex isotope manufacturing and delivery logistics; Novartis is adding US radioligand capacity (new Florida and Texas sites), but the modality remains operationally demanding.
 
 ## Sources
@@ -108,4 +108,5 @@ The modality thesis is distinctive: radioligand therapy (Pluvicto expanding into
 - Avidity acquisition: Novartis media release Oct 26, 2025; CNBC, Fierce Biotech, FirstWord Pharma coverage (~USD 12B, close expected H1 2026)
 - Tourmaline acquisition: BioPharma Dive and pharmaphorum, Sept 9, 2025 (USD 1.4B); DCAT, Oct 2025 (completion); MedCity News, Sept 2025 (Anthos USD 925M / Regulus USD 800M context; pharmaphorum cites Anthos at USD 3.1B total and Regulus up to USD 1.7B)
 - Fierce Pharma Q3 2025 earnings coverage, Oct 29, 2025; PharmaLive year-in-review, Nov 21, 2025; Precision Medicine Online Q2 coverage, July 17, 2025 (Entresto patent timeline)
+- High Court of Justice, Patents Court, *Accord Healthcare Limited v Novartis AG* [2026] EWHC 2127 (Pat), Aug 13, 2026: https://caselaw.nationalarchives.gov.uk/ewhc/pat/2026/2127
 - Historical M&A values (Ciba-Geigy/Sandoz merger, GSK swap, AveXis, Endocyte, The Medicines Company, 2020 settlements) from general knowledge of widely reported events; treat exact values as (est.) where not re-verified this session

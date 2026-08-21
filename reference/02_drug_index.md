@@ -305,7 +305,6 @@ status: curated
 | HyQvia | immune globulin + recombinant hyaluronidase | Takeda | Plasma-derived immunoglobulin (facilitated SC) | Primary immunodeficiency, CIDP | marketed | — |
 | Hyrnuo | sevabertinib | Bayer | Oral HER2 tyrosine kinase inhibitor | HER2-mutated non-small cell lung cancer | marketed | — |
 | Ianalumab | ianalumab | Novartis | Anti-BAFF-R mAb | Sjögren's disease; immune thrombocytopenia | pipeline | — |
-| Iberdomide | iberdomide | BMS | Oral small-molecule CELMoD | CELMoD oral myeloma; NDA filed; PDUFA Aug 2026; first CELMoD | pipeline | — |
 | IBI343 | — | Takeda | CLDN18.2-directed ADC | Pancreatic, gastric cancer | pipeline | — |
 | IBI363 | — | Takeda | PD-1/IL-2 alpha-bias bispecific fusion protein | NSCLC, melanoma, colorectal cancer | pipeline | — |
 | Ibrance | palbociclib | Pfizer | Small molecule, CDK4/6 inhibitor | HR+/HER2- metastatic breast cancer | marketed | — |
@@ -753,6 +752,7 @@ status: curated
 | Zasocitinib | zasocitinib | Takeda | Oral allosteric TYK2 inhibitor | Plaque psoriasis; psoriatic arthritis | pipeline | — |
 | Zejula | niraparib | GSK | Oral PARP inhibitor | Ovarian cancer maintenance | marketed | — |
 | Zelboraf | vemurafenib | Roche | BRAF V600E/V600K kinase inhibitor | Melanoma with BRAF V600E/V600K mutation | marketed | BRAF inhibitor for melanoma; personalized healthcare flagship |
+| Zenbexus | iberdomide | BMS | Oral small-molecule CELMoD | Multiple myeloma after at least one prior therapy, with daratumumab/hyaluronidase and dexamethasone | marketed | FDA accelerated approval Aug 13, 2026; first approved CELMoD; confirmatory benefit required |
 | Zepbound | tirzepatide | Lilly | GIP/GLP-1 dual agonist peptide | Obesity, sleep apnea | marketed | **= Mounjaro** |
 | Zeposia | ozanimod | BMS | S1P modulator (oral) | MS, ulcerative colitis | marketed | — |
 | Zibotentan | zibotentan | AstraZeneca | Oral small-molecule selective endothelin-A receptor antagonist | Chronic kidney disease | pipeline | ZD4054; developed with dapagliflozin |
