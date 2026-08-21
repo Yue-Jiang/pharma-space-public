@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"><title>pharma-space knowledge graph</title>
 <style>
  body{margin:0;font-family:-apple-system,Segoe UI,Helvetica,sans-serif;background:#0e0e12;color:#eee;overflow:hidden}
- #panel{position:fixed;top:10px;left:10px;background:rgba(20,20,25,.93);padding:14px 16px;border-radius:10px;max-width:280px;z-index:10;font-size:13px;line-height:1.75}
+ #panel{position:fixed;top:10px;left:10px;background:rgba(20,20,25,.93);padding:14px 16px;border-radius:10px;max-width:280px;max-height:calc(100vh - 20px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;box-sizing:border-box;z-index:10;font-size:13px;line-height:1.75}
  #panel h2{margin:0 0 6px;font-size:15px} label{display:block;cursor:pointer} input[type=checkbox]{margin-right:6px}
  .control-title{font-size:11px;color:#9aa;margin:8px 0 4px;text-transform:uppercase;letter-spacing:.06em}
  .seg{display:grid;grid-template-columns:1fr 1fr;gap:4px}
@@ -24,7 +24,7 @@
  .rel-name{font-size:12px;font-weight:600}
  .rel-types{font-size:9.5px;color:#8794aa;white-space:nowrap}
  #search{width:100%;box-sizing:border-box;margin:8px 0;padding:5px 8px;border-radius:6px;border:1px solid #444;background:#222;color:#eee}
- #info{position:fixed;bottom:10px;left:10px;background:rgba(20,20,25,.95);padding:12px 16px;border-radius:10px;max-width:520px;max-height:40vh;overflow-y:auto;font-size:13px;line-height:1.5;z-index:10;display:none;white-space:pre-line}
+ #info{position:fixed;bottom:10px;left:340px;right:10px;background:rgba(20,20,25,.95);padding:12px 16px;border-radius:10px;max-width:520px;max-height:40vh;overflow-y:auto;box-sizing:border-box;font-size:13px;line-height:1.5;z-index:10;display:none;white-space:pre-line}
  #info .close{float:right;cursor:pointer;color:#888;font-size:15px;margin-left:10px}
  .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
  [hidden]{display:none!important}
@@ -45,7 +45,7 @@
  @media (max-width:760px), (pointer:coarse){
    #ptoggle{display:block}
    /* drawer: slides over the graph only while open, full-height and scrollable */
-   #panel{top:0;left:0;bottom:0;max-width:78vw;width:290px;border-radius:0 12px 12px 0;
+   #panel{top:0;left:0;bottom:0;max-width:78vw;max-height:none;width:290px;border-radius:0 12px 12px 0;
           overflow-y:auto;-webkit-overflow-scrolling:touch;padding-top:56px;
           box-shadow:0 0 30px rgba(0,0,0,.6)}
    /* details as a bottom sheet, not a floating box that covers the network */
@@ -434,7 +434,7 @@ function visible(){
   return {vn,vl};
 }
 function info(html){const el=document.getElementById('info');
-  el.innerHTML='<span class="close" onclick="this.parentElement.style.display=\'none\'">&times;</span>'+html;
+  el.innerHTML='<span class="close" title="Close details. Click the selected node to reopen." aria-label="close details" onclick="this.parentElement.style.display=\'none\'">&times;</span>'+html;
   el.style.display='block';}
 function px(n){return n.fx!==undefined?n.fx:n.x;}
 function py(n){return n.fy!==undefined?n.fy:n.y;}
@@ -467,6 +467,29 @@ function focusLayout(f, showN){
     }
     if(!moved) break;
   }
+}
+function betCompanyFocusLayout(f, showN){
+  NODES.forEach(n=>{delete n.fx; delete n.fy;});
+  const companyId=NODES[f].id,fields=[...showN]
+    .filter(i=>NODES[i].kind==="indication")
+    .map(i=>{
+      const entry=selectedFields().find(([,field])=>field.node_id===NODES[i].id);
+      return {i,field:entry&&entry[1]};
+    })
+    .filter(x=>x.field&&(x.field.companies||{})[companyId])
+    .sort((a,b)=>(a.field.order||99)-(b.field.order||99)||a.field.label.localeCompare(b.field.label));
+  if(!fields.length)return focusLayout(f,showN);
+  const cx=W/2,cy=H/2,radius=Math.min(280,Math.max(150,130+fields.length*10));
+  NODES[f].fx=cx;NODES[f].fy=cy;
+  fields.forEach(({i},order)=>{
+    const angle=-Math.PI/2+order*2*Math.PI/fields.length;
+    NODES[i].fx=cx+Math.cos(angle)*radius;
+    NODES[i].fy=cy+Math.sin(angle)*radius;
+  });
+}
+function applyFocusLayout(f,showN){
+  if(assetLayer==="bets"&&currentField===ALL_FIELDS&&companyPortfolioFocus())betCompanyFocusLayout(f,showN);
+  else focusLayout(f,showN);
 }
 let focusDepth=1;
 function companyPortfolioFocus(){
@@ -605,7 +628,7 @@ function setAnchors(list, depth, pin){
   if(i!==null && collapsed()){
     const {vn,vl}=visible();
     const show=focusedNodes(vn,vl);
-    focusLayout(i, show);
+    applyFocusLayout(i, show);
     fitTo(show);
   }
 }
@@ -645,7 +668,7 @@ function refocusInPlace(){
   const f=focusPrimary();
   if(f===null || !collapsed()){NODES.forEach(n=>{delete n.fx; delete n.fy;}); return;}
   const {vn,vl}=visible();
-  focusLayout(f, focusedNodes(vn,vl));
+  applyFocusLayout(f, focusedNodes(vn,vl));
 }
 
 // ---- label placement ----
@@ -840,6 +863,10 @@ function render(){
     c.setAttribute('stroke-width',(isAnchor?3.2:(n.hollow?1.6:0.7))/(isAnchor?zoom*0.55:1));
     c.style.cursor='pointer';
     c.onclick=ev=>{ev.stopPropagation();selEdge=null;
+      const infoEl=document.getElementById('info');
+      if(anchors.length===1&&anchors[0]===i&&infoEl.style.display==='none'){
+        info(anchorInfo(i));render();return;
+      }
       if(ev.shiftKey||ev.metaKey){          // pin: keep browsing until 2+ anchors
         const at=anchors.indexOf(i);
         setAnchors(at>=0 ? anchors.filter(x=>x!==i) : anchors.concat([i]), focusDepth, true);
