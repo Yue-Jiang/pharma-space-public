@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-12
+updated: 2026-08-23
 status: curated
 ---
 # Drug Naming Primer — how to decode pharma drug names
@@ -21,7 +21,7 @@ status: curated
 
 | Generic (the real identity) | Brand #1 | Brand #2 | Why split |
 |---|---|---|---|
-| tirzepatide (Lilly) | Mounjaro — type 2 diabetes | Zepbound — obesity | Different indications, ~$36B combined 2025 |
+| tirzepatide (Lilly) | Mounjaro — type 2 diabetes | Zepbound — obesity | Different indications and commercial reporting |
 | semaglutide (Novo) | Ozempic — T2D injection | Wegovy — obesity; Rybelsus — oral T2D | Indication + formulation |
 | denosumab (Amgen) | Prolia — osteoporosis | Xgeva — cancer bone metastases | Different dose & indication |
 | nivolumab (BMS) | Opdivo — IV | Opdivo Qvantig — subcutaneous | Formulation (lifecycle management vs. patent cliff) |
@@ -36,8 +36,12 @@ The **suffix (stem) of a generic name tells you the drug's mechanism**. Learn ~2
 
 | Stem | Meaning | Examples in this KB |
 |---|---|---|
-| **-mab** | Monoclonal antibody | daratumumab (J&J), denosumab (Amgen), ixekizumab (Lilly) |
-| -ximab / -zumab / -umab | mAb sub-types: chimeric / humanized / fully human (pre-2022 naming) | ustekinumab, evolocumab |
+| **-mab** | Monoclonal antibody under the legacy INN scheme; still common among marketed drugs | daratumumab (J&J), denosumab (Amgen), ixekizumab (Lilly) |
+| -ximab / -zumab / -umab | Legacy antibody source infixes: chimeric / humanized / fully human | ustekinumab, evolocumab |
+| **-tug** | Monospecific, full-length immunoglobulin with an unmodified constant region | New WHO antibody scheme |
+| **-bart** | Monospecific, full-length immunoglobulin with an engineered constant region | New WHO antibody scheme |
+| **-mig** | Bi- or multispecific immunoglobulin | New WHO antibody scheme |
+| **-ment** | Monospecific immunoglobulin-derived fragment or domain | New WHO antibody scheme |
 | *two-word names: "mab + -tecan/-tansine"* | **Antibody-drug conjugate (ADC)** — antibody with chemo payload | trastuzumab **deruxtecan** (Enhertu), datopotamab deruxtecan |
 | **-cel** | Cell therapy (CAR-T etc.) | lisocabtagene maraleucel = "liso-cel" (Breyanzi, BMS), ciltacabtagene autoleucel = "cilta-cel" (Carvykti, J&J) |
 | **-gene … -vec** | Gene therapy (gene + vector) | onasemnogene abeparvovec (Zolgensma, Novartis) |
@@ -77,6 +81,8 @@ The **suffix (stem) of a generic name tells you the drug's mechanism**. Learn ~2
 3. **In earnings reports, expect brands; in trial readouts, expect generics or code names.** MK-3475 = pembrolizumab = Keytruda are the same drug at three life stages.
 4. **Biosimilars carry a random 4-letter suffix in the US** (adalimumab-atto, trastuzumab-anns) — the suffix carries no meaning; it just distinguishes copies.
 5. **Formulation suffixes** (Faspro, Qvantig, Hytrulo) usually mean "subcutaneous version of an IV drug" — a common patent-cliff defense strategy.
+
+WHO replaced the `-mab` stem for newly named antibodies in 2021. Older `-mab` names will remain dominant in marketed portfolios for years, so both systems matter. Source: [WHO, New INN monoclonal antibody nomenclature scheme](https://www.who.int/publications/i/item/inn-21-531).
 
 ---
 *Created 2026-08-12 for the pharma-space knowledge base.*

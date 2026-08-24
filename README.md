@@ -22,9 +22,9 @@ If a number matters to a decision you're making, verify it at the source.
 
 ## Four ways to use it
 
-**1. Read it.** Start with [`reference/01_drug_naming_primer.md`](reference/01_drug_naming_primer.md) — 15 minutes, and the highest-leverage thing here. Generic drug names are systematic: the suffix tells you what the molecule *is* (`-mab` = antibody, `-tinib` = kinase inhibitor, `-cel` = cell therapy, `-glutide` = GLP-1). Learn ~25 stems and unfamiliar names stop being noise. Then [`reference/04_industry_themes.md`](reference/04_industry_themes.md) for the four stories driving the industry right now, then any file in [`companies/`](companies) (~10 min each, self-contained).
+**1. Read it.** Start with [`reference/01_drug_naming_primer.md`](reference/01_drug_naming_primer.md), about 15 minutes and the highest-leverage thing here. Generic drug names are systematic: the suffix tells you what the molecule *is* (`-mab` = a legacy antibody stem, `-tinib` = kinase inhibitor, `-cel` = cell therapy, `-glutide` = GLP-1). Learn the main stems and unfamiliar names stop being noise. Then read the [`Core 22 coverage scope`](reference/00_company_list.md), any file in [`companies/`](companies), and one technology page in [`reference/modalities/`](reference/modalities).
 
-**2. Listen to it.** [`audio/scripts/`](audio/scripts) holds a narration script per company — tables converted to prose, abbreviations expanded, numbers written as spoken ("about sixty-five billion dollars"). Pipe one into any text-to-speech tool for an 8–10 minute listen; [`audio/pronunciation.md`](audio/pronunciation.md) is a substitution table so drug names come out right (*ustekinumab* is not obvious on sight). Useful for commutes, and it turns out hearing a drug name is what makes it stick.
+**2. Listen to it.** [`audio/scripts/`](audio/scripts) holds source-current company narrations with tables converted to prose, abbreviations expanded, and numbers written as spoken ("about sixty-five billion dollars"). A script older than its company profile is withheld until regenerated. Pipe one into any text-to-speech tool for an 8–10 minute listen; [`audio/pronunciation.md`](audio/pronunciation.md) is a substitution table so drug names come out right (*ustekinumab* is not obvious on sight). Useful for commutes, and it turns out hearing a drug name is what makes it stick.
 
 **3. Explore the graph.** Open the **[live explorer](https://yue-jiang.github.io/pharma-space-public/)** in a browser, or download [`graph/explorer.html`](graph/explorer.html) to use it offline. It is one self-contained file with no server. The Commercial layer shows marketed and legacy assets, with drug dot size driven by sales. The Bets layer opens with a portfolio-similarity map across twenty validated fields, then lets you drill into one field's active pipeline assets. Company dot size is driven by a validated commitment category. Selecting a company applies the same scale to its indication dots so its relative bets across fields are visible. Click any node for its evidence and context. Space expands the neighbourhood one hop, and shift+space retracts.
 
@@ -35,11 +35,11 @@ If a number matters to a decision you're making, verify it at the source.
 | Path | Contents |
 |---|---|
 | [`companies/`](companies) | 22 deep dives: marketed assets, 1995–2025 history, current strategic bets, key risks |
-| [`reference/`](reference) | Company list · drug naming primer · drug index (758 entries) · target convergence · industry themes · graveyard (130 failure records) |
+| [`reference/`](reference) | Coverage scope · drug naming primer · drug index (758 entries) · target convergence · modality pages · graveyard (130 failure records) |
 | [`reference/modalities/`](reference/modalities) | Technology pages: CAR-T, T-cell engagers, ADCs, radioligands, siRNA/ASO, gene therapy |
 | [`players/`](players) | 10 one-page profiles of licensors and partners outside the core 22 |
 | [`graph/`](graph) | Derived knowledge graph: 1,777 nodes (777 molecules, 423 targets, 353 deals) / 10,094 edges, plus the interactive explorer and a static overview figure |
-| [`audio/`](audio) | 22 narration scripts + pronunciation guide |
+| [`audio/`](audio) | Source-current narration scripts + pronunciation guide. Scripts older than their company profile are withheld until regenerated. |
 
 Companies are tagged by how much coverage they actually have: **core** (full deep dive), **partner** (one-page profile), **cited** (named by a deal record only — no file, unverified). The explorer renders the three differently so a passing mention is never mistaken for research.
 
@@ -66,4 +66,4 @@ Content: [CC BY 4.0](LICENSE) — use it, adapt it, attribute it. Sources are ci
 
 
 ---
-*This is a generated public snapshot of a private working repository (content as of 2026-08-21). Issues/PRs here are not monitored by the maintenance pipeline.*
+*This is a generated public snapshot of a private working repository (content as of 2026-08-23). Issues/PRs here are not monitored by the maintenance pipeline.*

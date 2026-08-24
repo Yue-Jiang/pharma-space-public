@@ -1,6 +1,6 @@
 ---
 type: modality-page
-updated: 2026-08-13
+updated: 2026-08-23
 status: curated
 ---
 # Antibody-drug conjugates (ADCs)
@@ -25,6 +25,8 @@ ADCs solve a specific problem: many validated tumour antigens are not *drivers* 
 | Tivdak (tisotumab vedotin) | Genmab / Pfizer (Seagen) | Tissue factor | Recurrent/metastatic cervical cancer | Small |
 | Blenrep (belantamab mafodotin) | GSK | BCMA | Relapsed/refractory myeloma (3L+ US, 2L+ EU/Japan) | Relaunch year: £4M through Q3 2025, US launch Q4 |
 | Emrelis (telisotuzumab vedotin) | AbbVie | c-Met | c-Met-high non-squamous NSCLC | Launch phase |
+| Decnupaz (pivekimab sunirine) | AbbVie | CD123 | Blastic plasmacytoid dendritic cell neoplasm | Launch phase; FDA approved May 2026 |
+| Jiatailai / sac-TMT (sacituzumab tirumotecan) | Kelun-Biotech / Merck | TROP2 | Four approved indications in China across breast and lung cancer | Not separately disclosed |
 
 **The category that Enhertu invented.** Before 2022, "HER2-negative" breast cancer meant no HER2 drug applied. **DESTINY-Breast04** (2022) showed Enhertu beat physician's-choice chemotherapy in tumours with only faint HER2 staining (median progression-free survival 9.9 vs 5.1 months; overall survival 23.4 vs 16.8 months, HR 0.64), creating **HER2-low** as a treatment category and a diagnostic market overnight. That is the modality's signature achievement: a bystander-effect payload redefined who counts as a candidate.
 
@@ -33,13 +35,12 @@ ADCs solve a specific problem: many validated tumour antigens are not *drivers* 
 |---|---|---|---|
 | Ifinatamab deruxtecan (I-DXd) | Daiichi Sankyo / Merck | B7-H3 | FDA priority review, relapsed extensive-stage SCLC (April 2026) |
 | Raludotatug deruxtecan (R-DXd) | Daiichi Sankyo / Merck | CDH6 | Pivotal, ovarian cancer |
-| Sacituzumab tirumotecan (sac-TMT) | Merck / Kelun-Biotech | TROP2 | Four China approvals; 1L TNBC and 1L NSCLC Ph3 wins 2026 |
 | Temab-A (ABBV-400) | AbbVie | c-Met | Phase 3 colorectal, breakthrough designation |
 | Risvutatug rezetecan | GSK (licensed from Hansoh) | B7-H3 | Pivotal starts 2025–26 |
 | Patritumab deruxtecan | Daiichi Sankyo | HER3 | Development reset post-2025 US withdrawal; biomarker-guided across ~15 tumour types |
 | DS-3790 | Daiichi Sankyo | (haematology) | Phase 1 (2026), first DXd ADC in blood cancers |
 
-**China is now a primary ADC source.** GSK licensed Hansoh's B7-H3 ADC HS-20093 in December 2023 for **$185M upfront plus up to $1.525B in milestones** (after $85M upfront for the B7-H4 asset HS-20089 two months earlier). Merck's TROP2 franchise is Kelun-Biotech's molecule: sac-TMT has four China approvals, met its primary endpoint in first-line metastatic TNBC (OptiTROP-Breast03, May 2026), and in **OptiTROP-Lung06 (July 2026) became the first ADC-plus-checkpoint-inhibitor combination to win a Phase 3 in first-line PD-L1-negative non-squamous NSCLC**; a separate ASCO 2026 readout showed a 65% reduction in progression risk versus Keytruda alone in PD-L1-positive first-line NSCLC. Chinese biotechs run large trials fast and cheap, and out-licensing became their business model during the 2021–24 domestic funding winter (see `reference/04_industry_themes.md` §4).
+**China is now a primary ADC source.** GSK licensed Hansoh's B7-H3 ADC HS-20093 in December 2023 for **$185M upfront plus up to $1.525B in milestones** (after $85M upfront for the B7-H4 asset HS-20089 two months earlier). Merck's TROP2 franchise is Kelun-Biotech's molecule: sac-TMT has four China approvals, met its primary endpoint in first-line metastatic TNBC (OptiTROP-Breast03, May 2026), and in **OptiTROP-Lung06 (July 2026) became the first ADC-plus-checkpoint-inhibitor combination to win a Phase 3 in first-line PD-L1-negative non-squamous NSCLC**; a separate ASCO 2026 readout showed a 65% reduction in progression risk versus Keytruda alone in PD-L1-positive first-line NSCLC. Chinese biotechs run large trials fast and cheap, and out-licensing became their business model during the 2021–24 domestic funding winter.
 
 ## The graveyard
 | Asset | Company | Target | What happened | Lesson type |

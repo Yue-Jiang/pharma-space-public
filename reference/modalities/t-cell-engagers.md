@@ -1,12 +1,12 @@
 ---
 type: modality-page
-updated: 2026-08-13
+updated: 2026-08-23
 status: curated
 ---
 # T-cell engagers (TCEs)
 
 ## What it is
-A T-cell engager is an antibody-derived protein with two different grippers. One arm binds **CD3**, part of the receptor complex on essentially every T cell; the other binds a marker on the cancer cell. Holding both at once drags a T cell against the tumour cell and triggers it to kill — no genetic engineering, no cells removed from the body. Because CD3 is a universal handle on any patient's T cells, the modality reduces to choosing the second arm: CD19, CD20, BCMA, GPRC5D, DLL3, STEAP1. Hence CD3 being the most crowded node in `reference/03_target_convergence.md` — **10 marketed assets across 7 companies**, more than HER2 or PD-1.
+A T-cell engager is an antibody-derived protein with two different grippers. One arm binds **CD3**, part of the receptor complex on essentially every T cell; the other binds a marker on the cancer cell. Holding both at once drags a T cell against the tumour cell and triggers it to kill — no genetic engineering, no cells removed from the body. Because CD3 is a universal handle on any patient's T cells, the modality reduces to choosing the second arm: CD19, CD20, BCMA, GPRC5D, DLL3, STEAP1. The marketed-assets table below contains **10 T-cell engagers across 7 companies**. This modality count is more reliable than counting the graph's CD3 target node, because graph target edges can omit the recruiting arm or include anti-CD3 antibodies that are not engagers.
 
 ## Why it matters
 TCEs deliver much of CAR-T's mechanism as an **off-the-shelf** drug: no apheresis, no weeks-long manufacturing wait, no factory slot, no certified cell-therapy centre — a vial in a fridge, given in a clinic. Responses are typically less deep and less durable than CAR-T's, and treatment is continuous rather than one-and-done, but the addressable population is far larger and the cost of goods is that of an ordinary biologic. That trade is why TCEs are eroding CAR-T's late-line franchises (Gilead's Yescarta/Tecartus fell ~7% in 2025) while their own sales compound: J&J's Tecvayli and Talvey sit inside a Carvykti+Tecvayli+Talvey block worth ~$3.0B in FY2025.
