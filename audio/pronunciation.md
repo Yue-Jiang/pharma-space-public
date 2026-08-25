@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-20
+updated: 2026-08-25
 status: curated
 ---
 # Pronunciation guide — drug names
@@ -132,6 +132,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | foscarbidopa/foslevodopa | fos-kar-bi-DOH-pa / fos-lee-voe-DOH-pa | Vyalev |
 | fruquintinib | froo-KWIN-tih-nib | Fruzaqla |
 | gadobutrol | gad-oh-BYOO-trol | Gadovist |
+| gadoquatrane | gad-oh-KWA-trane | Ambelvist |
 | galcanezumab | GAL-ka-NEZ-oo-mab | Emgality |
 | gepotidacin | JE-poe-TID-a-sin | Blujepa |
 | glofitamab | gloh-FIT-ah-mab | Columvi |
@@ -182,6 +183,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | lorlatinib | lor-LA-ti-nib | Lorbrena |
 | lumacaftor | LOO-ma-KAF-tor | Orkambi |
 | lumateperone | LOO-ma-TEP-er-ohn | Caplyta |
+| lunsotogene parvec | lun-SOH-toh-jeen PAR-vek | Otarmeni |
 | luspatercept | lus-PAT-er-sept | Reblozyl |
 | lutetium Lu-177 dotatate | loo-TEE-shee-um DOH-ta-tate | Lutathera |
 | lutetium Lu-177 vipivotide tetraxetan | loo-TEE-shee-um vih-PIV-oh-tide tet-RAX-e-tan | Pluvicto |
@@ -229,6 +231,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | ozanimod | oh-ZAN-i-mod | Zeposia |
 | palbociclib | pal-boe-SYE-klib | Ibrance |
 | paliperidone | PAL-ee-PAIR-i-dohn | Invega |
+| paltusotine | pal-TOO-soh-teen | Palsonify |
 | panitumumab | PAN-i-TOOM-ue-mab | Vectibix |
 | patritumab deruxtecan | pah-TRIT-oo-mab deh-rux-TEE-kan | (pipeline, HER3-DXd) |
 | pegcetacoplan | peg-set-a-KOE-plan | Syfovre, Empaveli |
@@ -239,6 +242,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | petrelintide | peh-treh-LIN-tide | (pipeline) |
 | pexidartinib | pex-ih-DAR-tih-nib | Turalio |
 | pimobendan | pim-oh-BEN-dan | Vetmedin |
+| pivekimab sunirine | piv-EK-ih-mab soo-NIR-een | Decnupaz |
 | pirtobrutinib | PIR-toh-BROO-ti-nib | Jaypirca |
 | polatuzumab vedotin | poh-lah-TOOZ-oo-mab veh-DOH-tin | Polivy |
 | pomalidomide | POH-ma-LID-oh-mide | Pomalyst |
@@ -296,6 +300,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | telisotuzumab vedotin | tel-i-soe-TOOZ-oo-mab ve-DOE-tin | Emrelis |
 | tenecteplase | te-NEK-te-plase | Metalyse |
 | tenofovir alafenamide | ten-OF-oh-veer al-uh-FEN-uh-mide | Vemlidy; Descovy, Biktarvy, Genvoya, Odefsey (component) |
+| tenofovir disoproxil fumarate | ten-OF-oh-veer dye-soe-PROX-il FYOO-ma-rate | Viread; Truvada, Atripla (component) |
 | teplizumab | tep-LIZ-ue-mab | Tzield |
 | teprotumumab | TEP-roh-TOOM-ue-mab | Tepezza |
 | tezacaftor | tez-a-KAF-tor | Trikafta, Alyftrek, Symdeko |
