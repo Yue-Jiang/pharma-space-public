@@ -66,4 +66,4 @@ Content: [CC BY 4.0](LICENSE) — use it, adapt it, attribute it. Sources are ci
 
 
 ---
-*This is a generated public snapshot of a private working repository (content as of 2026-08-23). Issues/PRs here are not monitored by the maintenance pipeline.*
+*This is a generated public snapshot of a private working repository (content as of 2026-08-25). Issues/PRs here are not monitored by the maintenance pipeline.*

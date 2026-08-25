@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-23
+updated: 2026-08-25
 status: generated
 ---
 # Target convergence — where the industry piles up
@@ -169,4 +169,4 @@ status: generated
 | CB1 | 2 | rimonabant, taranabant |
 | alpha-1 antitrypsin deficiency corrector | 2 | vx-814, vx-864 |
 
-*Marketed assets only — pipeline extraction pending. Molecules: 676 | targets: 380 | deals: 353 | rebuilt 2026-08-23.*
+*Marketed assets only — pipeline extraction pending. Molecules: 676 | targets: 380 | deals: 353 | rebuilt 2026-08-25.*
