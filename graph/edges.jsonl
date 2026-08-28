@@ -326,6 +326,8 @@
 {"src": "bi-765423", "rel": "acts_on", "dst": "IL-11", "action": "blocker", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT07036523", "evidence": "Boehringer Ingelheim identifies BI 765423 as an anti-IL-11 monoclonal antibody."}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "acts_on", "dst": "HIV integrase", "action": "inhibitor", "etype": "fact"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "acts_on", "dst": "HIV reverse transcriptase", "action": "inhibitor", "etype": "fact"}
+{"src": "bictegravir/lenacapavir", "rel": "acts_on", "dst": "HIV capsid", "action": "inhibitor", "etype": "fact"}
+{"src": "bictegravir/lenacapavir", "rel": "acts_on", "dst": "HIV integrase", "action": "inhibitor", "etype": "fact"}
 {"src": "biib122", "rel": "acts_on", "dst": "LRRK2", "action": "inhibitor", "etype": "fact", "source": "https://investors.biogen.com/static-files/7a6d8dcf-2646-471e-80ba-d6872a365dff", "evidence": "Biogen identifies BIIB122/DNL151 as a selective LRRK2 kinase inhibitor."}
 {"src": "bimagrumab", "rel": "acts_on", "dst": "ActRII", "action": "antagonist", "etype": "fact", "source": "https://investor.lilly.com/node/49216", "evidence": "Lilly identifies bimagrumab as a monoclonal antibody that binds activin type II A and B receptors and blocks activin and myostatin signaling."}
 {"src": "bleximenib", "rel": "acts_on", "dst": "menin", "action": "inhibitor", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT04811560", "evidence": "The registered cAMeLot-1 study calls bleximenib a menin-KMT2A inhibitor."}
@@ -341,6 +343,8 @@
 {"src": "brenipatide", "rel": "acts_on", "dst": "GIPR", "action": "agonist", "etype": "fact", "source": "https://investor.lilly.com/static-files/81645112-510f-4ce8-a860-c74596c1caa2", "evidence": "Lilly identifies brenipatide/LY3537031 as a GIP/GLP-1 receptor co-agonist."}
 {"src": "brenipatide", "rel": "acts_on", "dst": "GLP-1R", "action": "agonist", "etype": "fact", "source": "https://investor.lilly.com/static-files/81645112-510f-4ce8-a860-c74596c1caa2", "evidence": "Lilly identifies brenipatide/LY3537031 as a GIP/GLP-1 receptor co-agonist."}
 {"src": "brentuximab vedotin", "rel": "acts_on", "dst": "CD30", "action": "antagonist", "etype": "fact"}
+{"src": "brepocitinib", "rel": "acts_on", "dst": "JAK1", "action": "inhibitor", "etype": "fact"}
+{"src": "brepocitinib", "rel": "acts_on", "dst": "TYK2", "action": "inhibitor", "etype": "fact"}
 {"src": "bretisilocin", "rel": "acts_on", "dst": "5-HT2A", "action": "agonist", "etype": "fact"}
 {"src": "brexucabtagene autoleucel", "rel": "acts_on", "dst": "CD19", "action": "engager", "etype": "fact"}
 {"src": "brigatinib", "rel": "acts_on", "dst": "ALK", "action": "inhibitor", "etype": "fact"}
@@ -1614,6 +1618,7 @@
 {"src": "amoxicillin/clavulanate", "rel": "competes_with", "dst": "levofloxacin", "basis": "shared_indication:infection-other", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amoxicillin/clavulanate", "rel": "competes_with", "dst": "liposomal amphotericin b", "basis": "shared_indication:infection-other", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amprenavir", "rel": "competes_with", "dst": "bictegravir/emtricitabine/tenofovir alafenamide", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "amprenavir", "rel": "competes_with", "dst": "bictegravir/lenacapavir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amprenavir", "rel": "competes_with", "dst": "cabotegravir extended-release", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amprenavir", "rel": "competes_with", "dst": "cabotegravir/rilpivirine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amprenavir", "rel": "competes_with", "dst": "dolutegravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -2523,6 +2528,15 @@
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "competes_with", "dst": "fosamprenavir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "competes_with", "dst": "raltegravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "competes_with", "dst": "zidovudine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "cabotegravir extended-release", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "cabotegravir/rilpivirine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "dolutegravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "dolutegravir/abacavir/lamivudine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "dolutegravir/lamivudine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "doravirine/islatravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "fosamprenavir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "raltegravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "zidovudine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "biib122", "rel": "competes_with", "dst": "foscarbidopa/foslevodopa", "basis": "shared_indication:parkinsons", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "biib122", "rel": "competes_with", "dst": "ly3884961", "basis": "shared_indication:parkinsons", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "biib122", "rel": "competes_with", "dst": "ly3962681", "basis": "shared_indication:parkinsons", "etype": "derived", "stage_pair": "pipeline+pipeline"}
@@ -2742,6 +2756,7 @@
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "rituximab", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "tisagenlecleucel", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "legacy+marketed"}
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "valemetostat", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "brepocitinib", "rel": "competes_with", "dst": "dazukibart", "basis": "shared_indication:dermatomyositis", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "bretisilocin", "rel": "competes_with", "dst": "duloxetine", "basis": "shared_indication:depression", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "bretisilocin", "rel": "competes_with", "dst": "esketamine", "basis": "shared_indication:depression", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "bretisilocin", "rel": "competes_with", "dst": "fluoxetine", "basis": "shared_indication:depression", "etype": "derived", "stage_pair": "legacy+pipeline"}
@@ -7131,6 +7146,7 @@
 {"src": "bi 3720931", "rel": "has_modality", "dst": "gene-therapy", "etype": "fact"}
 {"src": "bi-765423", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
+{"src": "bictegravir/lenacapavir", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "biib122", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bimagrumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "bisacodyl", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -7144,6 +7160,7 @@
 {"src": "bosentan", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "brenipatide", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "brentuximab vedotin", "rel": "has_modality", "dst": "adc", "etype": "fact"}
+{"src": "brepocitinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bretisilocin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "brexucabtagene autoleucel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "brigatinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -8671,6 +8688,7 @@
 {"src": "gilead", "rel": "portfolio_includes", "dst": "anitocabtagene autoleucel", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "axicabtagene ciloleucel", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "bictegravir/emtricitabine/tenofovir alafenamide", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
+{"src": "gilead", "rel": "portfolio_includes", "dst": "bictegravir/lenacapavir", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "brexucabtagene autoleucel", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "bulevirtide", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "cidofovir", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
@@ -8917,6 +8935,7 @@
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "tofacitinib", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "tozinameran", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "vepdegestrant", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
+{"src": "priovant/roivant", "rel": "portfolio_includes", "dst": "brepocitinib", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Priovant/Roivant (US, Japan); Pfizer (other territories)"], "basis": "drug-index-company-column"}
 {"src": "regeneron", "rel": "portfolio_includes", "dst": "aflibercept", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Regeneron"], "basis": "drug-index-company-column"}
 {"src": "regeneron", "rel": "portfolio_includes", "dst": "alirocumab", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Regeneron"], "basis": "drug-index-company-column"}
 {"src": "regeneron", "rel": "portfolio_includes", "dst": "aln-5288", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Regeneron"], "basis": "drug-index-company-column"}
@@ -9528,6 +9547,7 @@
 {"src": "bevacizumab", "rel": "treats", "dst": "colorectal-cancer", "etype": "fact", "claim_id": "claim-indication-d8e54a30937c1cbecc7f", "phase": "marketed"}
 {"src": "bevacizumab", "rel": "treats", "dst": "lung-cancer", "etype": "fact", "claim_id": "claim-indication-f0655dfe3262534f7dfb", "phase": "marketed"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "treats", "dst": "hiv", "etype": "fact", "claim_id": "claim-indication-6936dc714f1c4d9fe877", "phase": "marketed"}
+{"src": "bictegravir/lenacapavir", "rel": "treats", "dst": "hiv", "etype": "fact", "claim_id": "claim-indication-a5117662473532b4ccac", "phase": "marketed"}
 {"src": "bisacodyl", "rel": "treats", "dst": "gi-other", "etype": "fact", "claim_id": "claim-indication-061f714179944deb1400", "phase": "marketed"}
 {"src": "blinatumomab", "rel": "treats", "dst": "leukemia", "etype": "fact", "claim_id": "claim-indication-363d6cccfbba3db9d28e", "phase": "marketed"}
 {"src": "bortezomib", "rel": "treats", "dst": "al-amyloidosis", "etype": "fact", "claim_id": "claim-indication-5004b2142c64b2b3339d", "phase": "legacy"}
@@ -9535,6 +9555,7 @@
 {"src": "bortezomib", "rel": "treats", "dst": "multiple-myeloma", "etype": "fact", "claim_id": "claim-indication-f3400ddffe54b07568a9", "phase": "legacy"}
 {"src": "bosentan", "rel": "treats", "dst": "hypertension", "etype": "fact", "claim_id": "claim-indication-9dbfdc4f65bcf2e16f27", "phase": "legacy"}
 {"src": "brentuximab vedotin", "rel": "treats", "dst": "lymphoma", "etype": "fact", "claim_id": "claim-indication-32b949a4a7a7f6abc54b", "phase": "marketed"}
+{"src": "brepocitinib", "rel": "treats", "dst": "dermatomyositis", "etype": "fact", "claim_id": "claim-indication-73418dfff8732c1419fc", "phase": "marketed"}
 {"src": "brexucabtagene autoleucel", "rel": "treats", "dst": "all-leukemia", "etype": "fact", "claim_id": "claim-indication-a8323f03a721b32b0135", "phase": "marketed"}
 {"src": "brexucabtagene autoleucel", "rel": "treats", "dst": "lymphoma", "etype": "fact", "claim_id": "claim-indication-748269668f0efdb453a0", "phase": "marketed"}
 {"src": "brigatinib", "rel": "treats", "dst": "lung-cancer", "etype": "fact", "claim_id": "claim-indication-608501865a1e6dcb84a7", "phase": "marketed"}

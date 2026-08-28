@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: astrazeneca
-updated: 2026-08-18
+updated: 2026-08-27
 status: curated
 ---
 # AstraZeneca
@@ -80,7 +80,7 @@ The Alexion deal closed in July 2021 (purchase consideration fair value $41.1B),
 
 ## Current strategic bets
 
-AstraZeneca's stated ambition is $80B in total revenue by 2030, with roughly half generated in the US. Three moves define 2025-2026. First, an American re-anchoring: a $50B US manufacturing and R&D investment pledge (July 2025), headlined by a $4.5B drug-substance facility in Virginia for the weight-management and metabolic portfolio; an October 2025 agreement with the Trump administration granting a three-year exemption from Section 232 pharmaceutical tariffs in exchange for most-favored-nation pricing to Medicaid, up-to-80% direct-to-consumer discounts and participation in TrumpRx; and a shareholder-approved direct listing on the NYSE. Second, a deliberate push into cardiometabolic and weight management: oral GLP-1 (AZD5004, licensed from Eccogene), oral PCSK9 (AZD0780), and baxdrostat, the aldosterone synthase inhibitor that delivered positive BaxHTN Phase III data in resistant hypertension (US PDUFA in 2026). Third, continued oncology depth — ADCs and next-generation endocrine therapy — despite the looming Farxiga cliff. In China, AstraZeneca is doubling down despite legal overhang, with a $2.5B Beijing R&D hub (March 2025) and a pledge exceeding 100 billion yuan by 2030.
+AstraZeneca's stated ambition is $80B in total revenue by 2030, with roughly half generated in the US. Three moves define 2025-2026. First, an American re-anchoring: a $50B US manufacturing and R&D investment pledge (July 2025), headlined by a $4.5B drug-substance facility in Virginia for the weight-management and metabolic portfolio; an October 2025 agreement with the Trump administration granting a three-year exemption from Section 232 pharmaceutical tariffs in exchange for most-favored-nation pricing to Medicaid, up-to-80% direct-to-consumer discounts and participation in TrumpRx; and a shareholder-approved direct listing on the NYSE. Second, a deliberate push into cardiometabolic and weight management: oral GLP-1 (AZD5004, licensed from Eccogene), oral PCSK9 (AZD0780), and baxdrostat, the aldosterone synthase inhibitor that delivered positive BaxHTN Phase III data in resistant hypertension (US PDUFA in 2026). Third, continued oncology depth — ADCs and next-generation endocrine therapy — despite the looming Farxiga cliff. The partnered Tezspire franchise also gained a late-stage expansion option when Phase 3 CROSSING met both co-primary and all key secondary endpoints in eosinophilic esophagitis; numerical effect sizes, dose-specific results, detailed safety data and a filing timetable remain undisclosed. In China, AstraZeneca is doubling down despite legal overhang, with a $2.5B Beijing R&D hub (March 2025) and a pledge exceeding 100 billion yuan by 2030.
 
 | Late-stage asset | Phase / status | Bet |
 |---|---|---|
@@ -104,6 +104,7 @@ AstraZeneca's stated ambition is $80B in total revenue by 2030, with roughly hal
 
 - AstraZeneca FY & Q4 2025 results announcement (10 Feb 2026); 9M/Q3 2025 results (6 Nov 2025); H1 2025 results (29 Jul 2025).
 - AstraZeneca Annual Report / Form 20-F 2025 (24 Feb 2026) — employees, patent expiry disclosures, product sales.
+- AstraZeneca and Amgen announcements, Aug 27, 2026; Reuters coverage of positive Phase 3 CROSSING topline results in eosinophilic esophagitis.
 - Fierce Pharma, "China indicts AstraZeneca and former exec Leon Wang" (11 Feb 2026); Caixin Global (12 Feb 2026); SCMP (13 Feb 2026); Yicai (30 Apr 2025).
 - CNBC, NPR, CNN, MSNBC coverage of AstraZeneca-Trump administration pricing deal and $50B US investment (10 Oct 2025); AstraZeneca US press release (10 Oct 2025).
 - Yahoo Finance / Zacks on $50B US manufacturing plan and oral GLP-1 strategy (21-22 Jul 2025); BioSpace on $80B 2030 ambition (29 Apr 2026) and China commitments (Mar 2025).

@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: pfizer
-updated: 2026-08-18
+updated: 2026-08-27
 status: curated
 ---
 
@@ -80,6 +80,8 @@ Pfizer's 2025-2026 strategy is defined by three moves: buying its way back into 
 
 **Policy positioning.** On September 30, 2025 Pfizer became the first pharma to sign a most-favored-nation pricing agreement with the Trump administration: MFN prices for Medicaid, discounted direct-to-consumer sales via TrumpRx.gov (live February 2026), MFN launch pricing for new drugs, and a pledged $70 billion in US R&D/manufacturing investment — in exchange for a three-year exemption from threatened 100% pharmaceutical tariffs.
 
+**Inflammation optionality.** Pfizer-originated Lisraya (brepocitinib), a once-daily TYK2/JAK1 inhibitor, became the first FDA-approved oral treatment for adults with dermatomyositis in August 2026. Priovant holds commercial rights in the US and Japan, while Pfizer retained rights elsewhere, giving Pfizer ex-US and ex-Japan upside without owning the American launch.
+
 Vaccines (Abrysvo expansion, next-generation pneumococcal candidates) and internal medicine round out the priorities. Guidance for 2026 is $59.5-62.5B revenue, absorbing ~$1.5B lower COVID revenue and ~$1.5B of LOE impact.
 
 | 2025-2026 BD highlights | Value | Focus |
@@ -101,6 +103,7 @@ Vaccines (Abrysvo expansion, next-generation pneumococcal candidates) and intern
 - Pfizer Q4/Full-Year 2025 earnings release (Feb 3, 2026) and FY2025 Form 10-K/Annual Report — revenue, product-level sales, guidance.
 - Pfizer 2026 guidance press release (Dec 16, 2025).
 - Pfizer press releases: Metsera completion (Nov 13, 2025); 3SBio license (May 19 / Jul 24, 2025); sigvotatug vedotin SigVie-002 topline (Jun 22, 2026); ASCO 2026 pipeline (Apr 2026); Q4 2025 pipeline update (Feb 3, 2026).
+- FDA and Roivant/Priovant announcements: Lisraya (brepocitinib) approval and territorial rights, Aug 27, 2026.
 - White House / Mintz / press coverage of Pfizer MFN-TrumpRx agreement (Sep 30, 2025; TrumpRx launch Feb 5, 2026).
 - FiercePharma/BioPharma Dive/Precision Medicine Online coverage of FY2025 results, LOE outlook, danuglipron discontinuation (Apr 2025).
 - Employee count: FY2025 10-K (~75,000); historical M&A values from contemporaneous filings/press (Warner-Lambert 2000, Pharmacia 2003, Wyeth 2009, Seagen 2023, etc.).

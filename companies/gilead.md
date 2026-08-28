@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: gilead
-updated: 2026-08-16
+updated: 2026-08-27
 status: curated
 ---
 
@@ -18,6 +18,7 @@ status: curated
 | Drug (brand/generic) | Indication(s) | Modality | 2025 sales (approx) | Patent cliff / LOE year |
 |---|---|---|---|---|
 | Biktarvy (bictegravir/emtricitabine/tenofovir alafenamide) | HIV-1 treatment | Oral single-tablet regimen | $14.3B | 2036 (US; Oct 2025 generic settlements set earliest entry Apr 1, 2036) |
+| Bixlenvo (bictegravir/lenacapavir) | HIV-1 treatment in virologically suppressed adults, including switches from complex regimens | Oral single-tablet INSTI + capsid-inhibitor regimen | Newly approved Aug 2026 | Not yet disclosed |
 | Descovy (emtricitabine/tenofovir alafenamide) | HIV treatment backbone; PrEP | Oral small molecule | $2.8B | ~2031-32 (est., TAF patent family) |
 | Genvoya (elvitegravir/cobicistat/emtricitabine/TAF) | HIV-1 treatment | Oral single-tablet regimen | ~$1.5B (est., declining) | 2032 (Apotex settlement license from Aug 2032) |
 | Odefsey (rilpivirine/emtricitabine/TAF) | HIV-1 treatment | Oral single-tablet regimen | ~$1.3B (est.) | ~2031-32 (est.) |
@@ -38,7 +39,6 @@ Gilead faces no major loss of exclusivity until 2036, and it is spending that un
 
 | Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
 |---|---|---|---|---|---|
-| BIC/LEN | bictegravir/lenacapavir | INSTI + capsid inhibitor, once-daily single tablet | HIV-1 treatment (virologically suppressed adults) | Filed | PDUFA Aug 27, 2026; first dedicated switch regimen and smallest single-tablet regimen if approved |
 | Anito-cel | anitocabtagene autoleucel | BCMA-directed CAR T-cell therapy | Relapsed/refractory multiple myeloma (4L+) | Filed | PDUFA Dec 23, 2026; the asset behind the $7.8B Arcellx acquisition, positioned against Carvykti |
 | Lenacapavir (weekly oral) | lenacapavir | HIV capsid inhibitor, once-weekly oral | HIV pre-exposure prophylaxis (PrEP) | Filed | FDA accepted the filing June 2026; extends the Yeztugo PrEP franchise from injection to pill |
 | ISL/LEN | islatravir/lenacapavir | NRTTI + capsid inhibitor, once-weekly oral | HIV-1 treatment (virologically suppressed adults) | Ph3 | Positive ISLEND-1/-2 at AIDS 2026; would be the first weekly oral regimen, launch targeted 2027; with Merck |
@@ -70,7 +70,7 @@ Yeztugo (lenacapavir), a twice-yearly injectable capsid inhibitor, was approved 
 
 Gilead enters 2026 with what management calls its strongest pipeline ever and no major loss of exclusivity expected until 2036 — a rare cliff-free decade it is using to build beyond HIV.
 
-**HIV long-acting franchise.** The lenacapavir platform is the core bet: Yeztugo PrEP uptake (Citi models ~$2.8B by 2030, est.), a once-daily bictegravir/lenacapavir combination for treatment (potential launch late 2026), the first once-weekly oral regimen (islatravir + lenacapavir, partnered with Merck, filing toward 2027), and once-yearly lenacapavir formulations in development. GS-1720/GS-4182 (weekly oral) hit an FDA clinical hold in early 2026, a watch item.
+**HIV long-acting franchise.** The lenacapavir platform is the core bet: Yeztugo PrEP uptake (Citi models ~$2.8B by 2030, est.), Bixlenvo (bictegravir/lenacapavir), approved in August 2026 as a compact once-daily switch regimen for virologically suppressed adults, the first once-weekly oral regimen (islatravir + lenacapavir, partnered with Merck, filing toward 2027), and once-yearly lenacapavir formulations in development. GS-1720/GS-4182 (weekly oral) hit an FDA clinical hold in early 2026, a watch item.
 
 **Oncology scale-up.** Nearly $13B of M&A in early 2026: Arcellx ($7.8B, closed April 2026) for anito-cel (anitocabtagene autoleucel), a BCMA CAR-T for multiple myeloma with a December 23, 2026 PDUFA date; Ouro Medicines ($2.2B, March 2026) for T-cell engagers; Tubulis ($3.15B upfront, up to $5B) for next-generation ADC platforms (lead asset GS-8824/TUB-040 in ovarian cancer). Trodelvy's first-line metastatic triple-negative breast cancer approval landed in 2026 (sales +26% YoY in Q2 2026). Kite is also pursuing in vivo CAR-T.
 
@@ -80,7 +80,7 @@ Gilead enters 2026 with what management calls its strongest pipeline ever and no
 |---|---|---|
 | 1L mTNBC | Trodelvy | Approved/launched 2026 |
 | Multiple myeloma (4L+) | anito-cel | PDUFA Dec 23, 2026 |
-| HIV treatment | bictegravir/lenacapavir | Filed; potential 2026 |
+| HIV treatment | Bixlenvo (bictegravir/lenacapavir) | Approved Aug 27, 2026 |
 | Hepatitis D (US) | Hepcludex (bulevirtide) | Launch underway 2026 |
 
 ## Key risks
@@ -99,5 +99,6 @@ Gilead enters 2026 with what management calls its strongest pipeline ever and no
 - Fierce Pharma: Yeztugo launch/Q4 coverage (Feb 11, 2026); Yeztugo $40/yr generics via Gates Foundation/CHAI (Sep 24, 2025); TDF $40M settlement (Jun 11, 2024); CAR-T erosion (Aug 8, 2025)
 - Endpoints News / BioPharma Dive / Fierce Biotech: Arcellx, Ouro, Tubulis acquisitions (Feb-Apr 2026)
 - Gilead press releases: Arcellx completion (Apr 28, 2026), Global Fund lenacapavir agreement (2025), IAS 2025 data
+- Gilead press release: FDA approval of Bixlenvo (bictegravir/lenacapavir), Aug 27, 2026
 - White House fact sheets & Gilead 10-Q: MFN agreement (Dec 2025)
 - Labiotech pipeline strategy review (Apr 2026); Pharmacy Times MFN roundup (May 2026)

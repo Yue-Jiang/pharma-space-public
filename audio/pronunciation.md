@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-25
+updated: 2026-08-27
 status: curated
 ---
 # Pronunciation guide — drug names
@@ -59,6 +59,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | bimagrumab | by-MAG-roo-mab | — |
 | blinatumomab | BLIN-a-TOOM-oh-mab | Blincyto |
 | brentuximab vedotin | bren-TUX-ih-mab veh-DOE-tin | Adcetris |
+| brepocitinib | brep-oh-SYE-tih-nib | Lisraya |
 | brexucabtagene autoleucel | brex-yoo-KAB-tuh-jean aw-toh-LOO-sel | Tecartus |
 | brigatinib | brih-GA-tih-nib | Alunbrig |
 | budesonide/formoterol | bue-DES-oh-nide for-MOE-ter-ol | Symbicort, Breztri |
@@ -363,6 +364,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | Beyfortus | bay-FOR-tus |
 | Beyonttra | bay-ON-trah |
 | Biktarvy | bik-TAR-vee |
+| Bixlenvo | bix-LEN-voh |
 | Blenrep | BLEN-rep |
 | Blujepa | bloo-JEP-ah |
 | Boehringer Ingelheim | BAY-ring-er ING-el-hime |
@@ -462,6 +464,7 @@ Stem shortcuts (say these right and most generics follow): **-mab** = "mab", **-
 | Leqvio | lek-VEE-oh |
 | Libtayo | lib-TAY-oh |
 | Lipfendra | lip-FEN-drah |
+| Lisraya | lis-RYE-ah |
 | Livdelzi | liv-DEL-zee |
 | Livtencity | liv-TEN-sih-tee |
 | Lixiana | lix-ee-AH-nah |

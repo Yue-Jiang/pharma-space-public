@@ -29,6 +29,7 @@
 {"id": "novartis", "kind": "company", "covered": true, "tier": "core"}
 {"id": "novo-nordisk", "kind": "company", "covered": true, "tier": "core"}
 {"id": "pfizer", "kind": "company", "covered": true, "tier": "core"}
+{"id": "priovant/roivant", "kind": "company", "covered": false, "tier": "cited"}
 {"id": "regeneron", "kind": "company", "covered": true, "tier": "core"}
 {"id": "roche", "kind": "company", "covered": true, "tier": "core"}
 {"id": "sanofi", "kind": "company", "covered": true, "tier": "core"}
@@ -687,6 +688,7 @@
 {"id": "bi 3720931", "kind": "molecule", "phase": "failed", "modality": "gene-therapy", "modality_note": "gene therapy", "year_died": 2026, "failure_mode": "strategic"}
 {"id": "bi-765423", "kind": "molecule", "brands": ["BI 765423"], "class": "Anti-IL-11 monoclonal antibody", "modality": "mab", "phase": "pipeline"}
 {"id": "bictegravir/emtricitabine/tenofovir alafenamide", "kind": "molecule", "brands": ["Biktarvy"], "class": "Oral single-tablet HIV regimen (INSTI + 2 NRTIs)", "modality": "small-molecule", "sales_2025_usd_bn": 14.3, "loe_year": 2036, "phase": "marketed"}
+{"id": "bictegravir/lenacapavir", "kind": "molecule", "brands": ["Bixlenvo"], "class": "Oral single-tablet HIV regimen (INSTI + capsid inhibitor)", "modality": "small-molecule", "phase": "marketed"}
 {"id": "biib122", "kind": "molecule", "brands": ["BIIB122"], "class": "CNS-penetrant small-molecule LRRK2 kinase inhibitor", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "bimagrumab", "kind": "molecule", "brands": ["Bimagrumab"], "class": "Anti-activin type II receptor mAb", "modality": "mab", "phase": "pipeline"}
 {"id": "bisacodyl", "kind": "molecule", "brands": ["Dulcolax"], "class": "Osmotic laxative", "modality": "small-molecule", "phase": "marketed"}
@@ -700,6 +702,7 @@
 {"id": "bosentan", "kind": "molecule", "brands": ["Tracleer"], "class": "Endothelin-1 receptor antagonist", "modality": "small-molecule", "phase": "legacy"}
 {"id": "brenipatide", "kind": "molecule", "brands": ["Brenipatide"], "class": "GIP/GLP-1 receptor co-agonist peptide", "modality": "peptide", "phase": "pipeline"}
 {"id": "brentuximab vedotin", "kind": "molecule", "brands": ["Adcetris"], "class": "CD30-directed antibody-drug conjugate", "modality": "adc", "sales_2025_usd_bn": 0.55, "loe_year": 2030, "phase": "marketed"}
+{"id": "brepocitinib", "kind": "molecule", "brands": ["Lisraya"], "class": "Oral TYK2/JAK1 inhibitor", "modality": "small-molecule", "phase": "marketed"}
 {"id": "bretisilocin", "kind": "molecule", "brands": ["Bretisilocin"], "class": "Psychedelic-derived serotonin 5-HT2A agonist", "modality": "small-molecule", "phase": "pipeline"}
 {"id": "brexucabtagene autoleucel", "kind": "molecule", "brands": ["Tecartus"], "class": "CD19 CAR T-cell therapy", "modality": "cell-therapy", "sales_2025_usd_bn": 0.34, "phase": "marketed"}
 {"id": "brigatinib", "kind": "molecule", "brands": ["Alunbrig"], "class": "Oral ALK tyrosine kinase inhibitor", "modality": "small-molecule", "sales_2025_usd_bn": 0.2, "loe_year": 2030, "phase": "marketed"}

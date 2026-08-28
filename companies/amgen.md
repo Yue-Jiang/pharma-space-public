@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: amgen
-updated: 2026-08-14
+updated: 2026-08-27
 status: curated
 ---
 # Amgen
@@ -82,7 +82,7 @@ Horizon integration drove a rare-disease business of ~$4.5B+/yr. MariTide Phase 
 - **Cardiovascular expansion**: Repatha label broadened (Aug 2025) to high-risk primary prevention; VESALIUS-CV (25% 3P-MACE reduction) supports further growth toward a multi-billion franchise. Olpasiran, a siRNA against Lp(a), is in Phase 3 outcomes development (OCEAN(a)).
 - **Oncology — bispecifics and protein degradation**: Imdelltra (DLL3xCD3 BiTE) received full approval in ES-SCLC; Blincyto growing 28%. Early bets: Dark Blue Therapeutics acquisition (Jan 2026, up to $840M — MLLT1/3 protein degrader for AML, first M&A since Horizon) and an exclusive license with DISCO Pharmaceuticals (announced Jan 7, 2026, up to $618M plus royalties — global rights to programs against an undisclosed cancer cell-surface target from DISCO's surfaceome-mapping platform). Xaluritamig (STEAP1 CD3-engager, prostate) in late-stage development.
 - **Rare disease**: Uplizna new indications (IgG4-related disease — first-ever approved therapy, 2025; generalized myasthenia gravis), Tepezza ex-US expansion (EU approval 2025), positioning as a top rare-disease player post-Horizon.
-- **Inflammation**: Tezspire (+52%) expanding into new indications (with AstraZeneca); rocatinlimab terminated — portfolio prioritization in favor of higher-conviction assets.
+- **Inflammation**: Tezspire (+52%, with AstraZeneca) gained a credible third-disease expansion path when Phase 3 CROSSING met both co-primary endpoints, histologic remission and reduced dysphagia, plus all key secondary endpoints in eosinophilic esophagitis. Numerical effect sizes, dose-specific results, detailed safety data and a filing timetable remain undisclosed. Rocatinlimab was terminated, reflecting portfolio prioritization in favor of higher-conviction assets.
 - **Biosimilars**: Pavblu (Eylea), Wezlana (Stelara), Bekemv (Soliris) launches offsetting innovator-side erosion.
 - **China/Asia**: ~20.5% BeOne Medicines (ex-BeiGene) equity stake (large mark-to-market gains in 2025); no major China in-licensing deals to date — Amgen has been notably absent from the China licensing wave.
 - **Stated strategy**: management guides FY2026 revenue of $37.0-38.4B, expecting six growth drivers (Repatha, Evenity, Tezspire, Blincyto, Imdelltra, Uplizna, plus rare disease) to outpace denosumab biosimilar erosion; capex ~$2.6B incl. US manufacturing expansion; buybacks capped at $3B.
@@ -104,6 +104,7 @@ Horizon integration drove a rare-disease business of ~$4.5B+/yr. MariTide Phase 
 - Amgen Q4/FY2024 earnings press release, Feb 4, 2025 (SEC 8-K)
 - Amgen press release, June 23, 2025 — MariTide Phase 2 full results / MARITIME Phase 3 program (ADA Scientific Sessions)
 - Amgen Q3 2025 earnings press release, Nov 4, 2025
+- Amgen and AstraZeneca announcements, Aug 27, 2026; Reuters coverage of positive Phase 3 CROSSING topline results in eosinophilic esophagitis
 - BioPharma Dive / Fierce Biotech / Pharmaceutical Technology, Jan 6-7, 2026 — Dark Blue Therapeutics acquisition (up to $840M)
 - DISCO Pharmaceuticals press release (via BioSpace), Jan 7, 2026; Inside Precision Medicine, Jan 9, 2026; Drug Discovery World, Jan 6, 2026 — Amgen-DISCO exclusive license (up to $618M plus royalties)
 - Fierce Pharma (Sept 2023), AJMC, Center for Biosimilars (Aug 2024) — IRA Medicare negotiation: Enbrel selection and ~67% negotiated discount effective 2026

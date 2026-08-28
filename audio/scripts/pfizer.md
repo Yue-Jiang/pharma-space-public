@@ -1,7 +1,7 @@
 ---
 type: audio-script
 company: pfizer
-updated: 2026-08-19
+updated: 2026-08-27
 status: generated
 ---
 
@@ -32,6 +32,8 @@ The second bet is oncology. Pfizer wants eight or more blockbuster cancer medici
 The breast-cancer pipeline includes atirmociclib, a selective C D K four inhibitor intended to succeed Ibrance, and prifetrastat, an epigenetic drug for patients whose disease has progressed after C D K four and six inhibitors. Sasanlimab has positive Phase three data in non-muscle-invasive bladder cancer. Several Seagen-originated antibody-drug conjugates remain important, including sigvotatug vedotin, fetrastobart vedotin, and a C E A C A M five-directed program. But the risk is real. A second-line lung-cancer trial of sigvotatug vedotin missed overall survival in June twenty twenty-six, although first-line studies continue.
 
 Pfizer also participated in a genuine platform milestone in May twenty twenty-six. Veppanu, generic name vepdegestrant, became the first Food and Drug Administration approved P R O T A C, or proteolysis-targeting chimera. It degrades the estrogen receptor in a genetically defined form of advanced breast cancer. Global rights have since been licensed to Rigel, with Pfizer and Arvinas sharing royalties, so the approval is scientifically important without becoming a fully owned Pfizer launch.
+
+There is also a smaller inflammation option. Lisraya, generic name brepocitinib, became the first oral treatment approved in the United States for adults with dermatomyositis in August twenty twenty-six. Priovant controls commercialization in the United States and Japan, while Pfizer retained rights elsewhere. That makes the approval a validation of a Pfizer-originated drug and creates ex-United-States upside without making Lisraya a core Pfizer launch.
 
 The third strategic bet is policy positioning. In September twenty twenty-five, Pfizer became the first drugmaker to sign a most-favored-nation pricing agreement with the Trump administration. The arrangement included lower Medicaid pricing, discounted direct-to-consumer sales, most-favored-nation launch pricing for new drugs, and a pledge of seventy billion dollars in United States research and manufacturing investment. In return, Pfizer received a three-year exemption from threatened pharmaceutical tariffs. The exact commercial tradeoff remains difficult to judge because some pricing terms are confidential.
 

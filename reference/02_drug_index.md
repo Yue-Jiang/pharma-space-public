@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-20
+updated: 2026-08-27
 status: curated
 ---
 # Drug Index — brand ↔ generic ↔ company cross-reference
@@ -123,6 +123,7 @@ status: curated
 | BIIB091 | — | Biogen | Oral peripheral BTK inhibitor | Relapsing multiple sclerosis | pipeline | — |
 | BIIB122 | BIIB122 | Biogen | CNS-penetrant small-molecule LRRK2 kinase inhibitor | Parkinson's disease | pipeline | DNL151; Denali partnership |
 | Biktarvy | bictegravir/emtricitabine/tenofovir alafenamide | Gilead | Oral single-tablet HIV regimen (INSTI + 2 NRTIs) | HIV-1 treatment | marketed | — |
+| Bixlenvo | bictegravir/lenacapavir | Gilead | Oral single-tablet HIV regimen (INSTI + capsid inhibitor) | HIV-1 treatment in virologically suppressed adults | marketed | FDA approved Aug 27, 2026 |
 | Bimagrumab | bimagrumab | Lilly | Anti-activin type II receptor mAb | Obesity (muscle preservation) | pipeline | — |
 | Blenrep | belantamab mafodotin | GSK | BCMA-targeted antibody-drug conjugate | Relapsed/refractory multiple myeloma | marketed | — |
 | Bleximenib | bleximenib | J&J | Menin-MLL inhibitor (oral) | Acute myeloid leukemia | pipeline | — |
@@ -380,6 +381,7 @@ status: curated
 | Lipitor | atorvastatin | Pfizer | HMG-CoA reductase inhibitor | Hyperlipidemia; coronary artery disease prevention | legacy | Best-selling drug in pharma history, peaked ~$13B/year, off-patent 2011 |
 | Lipobay | cerivastatin | Bayer | HMG-CoA reductase inhibitor | Hyperlipidemia | withdrawn | Statin withdrawn August 2001 after ~100 deaths from rhabdomyolysis |
 | Lifonebart | lifonebart | Novartis | TREM2-stabilizing agonist monoclonal antibody | Alzheimer's disease; amyotrophic lateral sclerosis | pipeline | VHB937 |
+| Lisraya | brepocitinib | Priovant/Roivant (US, Japan); Pfizer (other territories) | Oral TYK2/JAK1 inhibitor | Dermatomyositis in adults | marketed | FDA approved Aug 27, 2026; first oral FDA-approved treatment for the disease |
 | Litifilimab | litifilimab | Biogen | Anti-BDCA2 mAb | Systemic and cutaneous lupus erythematosus | pipeline | — |
 | Livdelzi | seladelpar | Gilead | Oral PPAR-delta agonist | Primary biliary cholangitis | marketed | — |
 | Livtencity | maribavir | Takeda | Oral UL97 kinase inhibitor antiviral | Refractory post-transplant cytomegalovirus | marketed | — |

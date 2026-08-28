@@ -1,7 +1,7 @@
 ---
 type: audio-script
 company: gilead
-updated: 2026-08-25
+updated: 2026-08-27
 status: generated
 ---
 
@@ -29,7 +29,7 @@ The coronavirus pandemic brought a temporary windfall. Veklury, generic name rem
 
 The present story centers on lenacapavir, an H I V capsid inhibitor. A twice-yearly injectable version for prevention was approved in June twenty twenty-five as Yeztugo after showing near-complete efficacy in the PURPOSE trials. It produced about one hundred fifty million dollars in its first half-year. Gilead agreed to supply up to two million people through the Global Fund on a no-profit basis and licensed generic manufacturers across one hundred twenty lower-income countries, where versions priced around forty dollars per year are expected from twenty twenty-seven. The treatment version is sold as Sunlenca for people with multidrug-resistant H I V.
 
-Lenacapavir is becoming a platform. A once-daily combination with bictegravir has been filed with the Food and Drug Administration, with a decision expected in August twenty twenty-six. If approved, it would be a compact switch regimen for people whose virus is already suppressed. A once-weekly oral lenacapavir formulation has also been filed for prevention. In treatment, a weekly combination of lenacapavir and Merck's islatravir produced positive phase three results and is targeted for a twenty twenty-seven launch. Gilead is also exploring once-yearly dosing.
+Lenacapavir is becoming a platform. In August twenty twenty-six, the Food and Drug Administration approved a once-daily combination with bictegravir under the brand Bixlenvo. It is a compact switch regimen for adults whose virus is already suppressed, including some people moving from complex regimens. A once-weekly oral lenacapavir formulation has also been filed for prevention. In treatment, a weekly combination of lenacapavir and Merck's islatravir produced positive phase three results and is targeted for a twenty twenty-seven launch. Gilead is also exploring once-yearly dosing.
 
 The company has unusual room to make these bets. Settlements with generic challengers set April twenty thirty-six as the earliest American entry date for Biktarvy copies. That leaves a decade without a major cliff, although the wider tenofovir alafenamide family, worth several billion dollars, may face competition around twenty thirty-one and twenty thirty-two.
 
