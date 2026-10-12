@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: pfizer
-updated: 2026-08-27
+updated: 2026-09-24
 status: curated
 ---
 
@@ -39,6 +39,7 @@ Pfizer has to replace roughly $20 billion of revenue that loses exclusivity by 2
 
 | Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
 |---|---|---|---|---|---|
+| 25vPnC | PF-07872412 (PG4) | 25-valent pneumococcal conjugate vaccine | Pneumococcal disease prevention | Ph3 | Fourth-generation candidate; adds serotypes 15A, 23A, 23B, 24F, and 35B beyond Prevnar 20 and uses next-generation serotype 3 technology; pediatric pivotal program is underway and adult lot-consistency study NCT07794748 is recruiting 4,670 participants |
 | PF-08653944 | — | Ultra-long-acting GLP-1 receptor agonist, weekly then monthly injection | Obesity | Ph3 | The ex-Metsera MET-097i; 10 Ph3 trials advancing in 2026, launch targeted 2028 |
 | PF-08634404 | PF-08634404 (SSGJ-707) | PD-1 x VEGF bispecific antibody | 1L NSCLC; 1L colorectal cancer | Ph3 | The 3SBio-licensed SSGJ-707 ($1.25B upfront); Symbiotic Ph3 programme |
 | PF-08046050 | PF-08046050 (SGN-CEACAM5C) | CEACAM5-directed ADC with topoisomerase-I payload | Colorectal cancer and other solid tumours | Ph1 | Active Pfizer/Seagen programme using Sanofi's tusamitamab antibody; worldwide rights shared with Sanofi |

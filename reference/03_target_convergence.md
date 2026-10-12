@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-27
+updated: 2026-10-11
 status: generated
 ---
 # Target convergence — where the industry piles up
@@ -16,8 +16,8 @@ status: generated
 | CD19 | 11: abbvie, amgen, astrazeneca, autolus, bristol-myers-squibb, eli-lilly, gilead, gsk, merck, novartis, roche | abbv-319, abbv-519, axicabtagene ciloleucel, azd0120, blinatumomab, brexucabtagene autoleucel, gsk5926371, lisocabtagene maraleucel, ly3541860, mk-1045, obecabtagene autoleucel, p-cd19cd20-allo1, pit565, rapcabtagene autoleucel, ro7507062, surovatamig, tisagenlecleucel, zola-cel |  |  |
 | PD-1 | 9: abbvie, akeso, astrazeneca, bristol-myers-squibb, gsk, merck, pfizer, regeneron, summit | azd7789, budigalimab, cadonilimab, cemiplimab, dostarlimab, ivonescimab, nivolumab, nivolumab + relatlimab, pembrolizumab, pembrolizumab with berahyaluronidase alfa, penpulimab, pf-08634404, rilvegostomig, sasanlimab, volrustomig |  |  |
 | BCMA | 9: abbvie, astrazeneca, bristol-myers-squibb, gilead, gsk, johnson-and-johnson, legend, pfizer, regeneron | anitocabtagene autoleucel, azd0120, belantamab mafodotin, ciltacabtagene autoleucel, elranatamab, etentamig, idecabtagene vicleucel, linvoseltamab, teclistamab | 2 |  |
-| JAK1 | 9: abbvie, alfasigma, eisai, eli-lilly, gsk, novartis, pfizer, priovant/roivant, sanofi | baricitinib, brepocitinib, filgotinib, momelotinib, rovadicitinib, ruxolitinib, tofacitinib, upadacitinib |  |  |
 | CD20 | 8: abbvie, amgen, astrazeneca, gsk, novartis, regeneron, roche, sanofi | abp 692, azd5492, epcoritamab, glofitamab, gsk5926371, mosunetuzumab, obinutuzumab, ocrelizumab, odronextamab, ofatumumab, p-cd19cd20-allo1, rituximab, sar448501, zareprumig |  |  |
+| JAK1 | 8: abbvie, alfasigma, eisai, eli-lilly, gsk, novartis, pfizer, sanofi | baricitinib, filgotinib, momelotinib, rovadicitinib, ruxolitinib, tofacitinib, upadacitinib |  |  |
 | TNF-alpha | 7: 3sbio, abbvie, amgen, biogen, boehringer-ingelheim, johnson-and-johnson, sanofi | adalimumab, adalimumab biosimilar, adalimumab-adbm, brivekimig, etanercept, etanercept biosimilar, etanercept-ykro, golimumab, infliximab, infliximab biosimilar, jnj-78934804 |  |  |
 | VEGF-A | 7: akeso, bayer, bristol-myers-squibb, pfizer, regeneron, roche, summit | aflibercept, bevacizumab, bnt327, faricimab, ivonescimab, pf-08634404, ranibizumab, ziv-aflibercept |  |  |
 | BTK | 7: abbvie, astrazeneca, eli-lilly, johnson-and-johnson, novartis, roche, sanofi | acalabrutinib, fenebrutinib, ibrutinib, pirtobrutinib, remibrutinib, rilzabrutinib, tolebrutinib |  |  |
@@ -30,7 +30,7 @@ status: generated
 | EGFR | 5: amgen, astrazeneca, bristol-myers-squibb, hansoh-pharma, johnson-and-johnson | amivantamab, aumolertinib, cetuximab, gefitinib, iza-bren, osimertinib, panitumumab |  |  |
 | DRD2 | 5: abbvie, boehringer-ingelheim, bristol-myers-squibb, eli-lilly, johnson-and-johnson | aripiprazole, cariprazine, olanzapine, paliperidone, paliperidone palmitate, pramipexole |  |  |
 | AT1R | 5: boehringer-ingelheim, bristol-myers-squibb, daiichi-sankyo, novartis, takeda | candesartan, irbesartan, olmesartan, sacubitril/valsartan, telmisartan, valsartan |  |  |
-| TSLP | 5: amgen, astrazeneca, gsk, pfizer, sanofi | gsk5784283, lunsekimig, tezepelumab, tilrekimig |  |  |
+| TSLP | 5: amgen, astrazeneca, gsk, pfizer, sanofi | felcorekibart, lunsekimig, tezepelumab, tilrekimig |  |  |
 | TROP2 | 5: astrazeneca, daiichi-sankyo, gilead, kelun-biotech, merck | datopotamab deruxtecan, sacituzumab govitecan, sacituzumab tirumotecan |  |  |
 | DLL3 | 5: boehringer-ingelheim, daiichi-sankyo, medilink, merck, zai-lab | gocatamig, obrixtamig, zocilurtatug pelitecan | 1 |  |
 | B7-H3 | 5: daiichi-sankyo, gsk, medilink, merck, roche | ifinatamab deruxtecan, risvutatug rezetecan, tambotatug pelitecan |  |  |
@@ -47,8 +47,8 @@ status: generated
 | TL1A | 4: merck, roche, sanofi, teva | afimkibart, duvakitug, ro7837195, tulisokibart |  |  |
 | MAPT | 4: biogen, eli-lilly, novartis, regeneron | aln-5288, diranersen, ly3954068, nio752 |  |  |
 | IL-33 | 4: gsk, pfizer, regeneron, sanofi | gsk3862995b, itepekimab, ompekimig |  |  |
-| HIV integrase | 3: gilead, gsk, merck | bictegravir/emtricitabine/tenofovir alafenamide, bictegravir/lenacapavir, cabotegravir extended-release, cabotegravir/rilpivirine, dolutegravir, dolutegravir/abacavir/lamivudine, dolutegravir/lamivudine, elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide, raltegravir |  |  |
 | INSR | 3: eli-lilly, novo-nordisk, sanofi | insulin aspart, insulin degludec, insulin glargine, insulin glargine u300, insulin icodec, insulin icodec/semaglutide, insulin lispro, insulin lispro etc., ly3938577 | 1 |  |
+| HIV integrase | 3: gilead, gsk, merck | bictegravir/emtricitabine/tenofovir alafenamide, cabotegravir extended-release, cabotegravir/rilpivirine, dolutegravir, dolutegravir/abacavir/lamivudine, dolutegravir/lamivudine, elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide, raltegravir |  |  |
 | amyloid-beta | 3: biogen, eli-lilly, roche | donanemab, lecanemab, lecanemab-irmb, remternetug, trontinemab | 6 |  |
 | LPA | 3: astrazeneca, eli-lilly, novartis | azd4954, dii235, lepodisiran, muvalaplin, pelacarsen |  |  |
 | AR | 3: bayer, johnson-and-johnson, pfizer | apalutamide, darolutamide, enzalutamide, finerenone |  |  |
@@ -59,7 +59,6 @@ status: generated
 | CDK4/6 | 3: eli-lilly, novartis, pfizer | abemaciclib, palbociclib, ribociclib |  |  |
 | KIT | 3: bayer, gsk, sanofi | avapritinib, regorafenib, velzatinib |  |  |
 | JAK2 | 3: eli-lilly, gsk, novartis | baricitinib, momelotinib, ruxolitinib |  |  |
-| TYK2 | 3: bristol-myers-squibb, priovant/roivant, takeda | brepocitinib, deucravacitinib, zasocitinib |  |  |
 | CTLA-4 | 3: akeso, astrazeneca, bristol-myers-squibb | cadonilimab, ipilimumab, volrustomig |  |  |
 | RSV F | 3: astrazeneca, merck, pfizer | clesrovimab, nirsevimab, rsv prefusion f vaccine |  |  |
 | BRAF | 3: novartis, pfizer, roche | dabrafenib, encorafenib, vemurafenib |  |  |
@@ -75,6 +74,7 @@ status: generated
 | ADRB2 | 2: astrazeneca, gsk | budesonide/formoterol, budesonide/glycopyrronium/formoterol, fluticasone furoate/umeclidinium/vilanterol, fluticasone/salmeterol, fluticasone/umeclidinium/vilanterol |  |  |
 | C5 | 2: astrazeneca, regeneron | cemdisiran, eculizumab, gefurulimab, pozelimab, ravulizumab |  |  |
 | H+/K+-ATPase | 2: astrazeneca, takeda | esomeprazole, lansoprazole, omeprazole, vonoprazan |  |  |
+| pneumococcal polysaccharide antigens | 2: merck, pfizer | pf-07872412, pneumococcal 15-valent conjugate vaccine, pneumococcal 20-valent conjugate vaccine, pneumococcal 21-valent conjugate vaccine |  |  |
 | MET | 2: abbvie, johnson-and-johnson | abbv-400, amivantamab, telisotuzumab vedotin |  |  |
 | Factor-VIII | 2: bayer, sanofi | antihemophilic factor, efanesoctocog alfa, octocog alfa / damoctocog alfa pegol |  |  |
 | ABL1 | 2: bristol-myers-squibb, novartis | asciminib, dasatinib, imatinib |  |  |
@@ -87,7 +87,6 @@ status: generated
 | DPP-4 | 2: boehringer-ingelheim, merck | linagliptin, sitagliptin, sitagliptin/metformin |  |  |
 | SMN2 | 2: biogen, roche | nusinersen, risdiplam, salanersen |  |  |
 | C3 | 2: astrazeneca, biogen | alxn2030, pegcetacoplan, pegcetacoplan injection |  |  |
-| pneumococcal polysaccharide antigens | 2: merck, pfizer | pneumococcal 15-valent conjugate vaccine, pneumococcal 20-valent conjugate vaccine, pneumococcal 21-valent conjugate vaccine |  |  |
 | soluble guanylate cyclase | 2: bayer, merck | frespaciguat, riociguat, vericiguat |  |  |
 | phospho-tau | 2: johnson-and-johnson, merck | jnj-64042056, mk-2214, posdinemab |  |  |
 | SNCA | 2: eli-lilly, regeneron | aln-snca, ly3962681, ly4006896 |  |  |
@@ -95,6 +94,7 @@ status: generated
 | PDE4 | 2: amgen, merck | apremilast, ensifentrine |  |  |
 | PDGFRA | 2: bayer, sanofi | avapritinib, regorafenib | 1 |  |
 | BAFF | 2: gsk, vertex | belimumab, povetacicept | 1 |  |
+| TYK2 | 2: bristol-myers-squibb, takeda | deucravacitinib, zasocitinib |  |  |
 | plasma kallikrein | 2: ionis, takeda | donidalorsen, lanadelumab |  |  |
 | NET | 2: eli-lilly, takeda | duloxetine, lisdexamfetamine | 1 |  |
 | CYP3A4 | 2: gilead, pfizer | elvitegravir/cobicistat/emtricitabine/tenofovir alafenamide, nirmatrelvir/ritonavir |  |  |
@@ -141,7 +141,6 @@ status: generated
 | HCV NS5B | 1: gilead | sofosbuvir, sofosbuvir/ledipasvir, sofosbuvir/velpatasvir | 1 |  |
 | fibrin | 1: boehringer-ingelheim | alteplase, tenecteplase |  |  |
 | ROCK2 | 1: sanofi | belumosudil, rovadicitinib |  |  |
-| HIV capsid | 1: gilead | bictegravir/lenacapavir, lenacapavir |  |  |
 | EDNRB | 1: johnson-and-johnson | bosentan, macitentan |  |  |
 | IL-5 | 1: gsk | depemokimab, mepolizumab |  |  |
 | CSF3R | 1: amgen | filgrastim, pegfilgrastim |  |  |
@@ -170,4 +169,4 @@ status: generated
 | CB1 | 2 | rimonabant, taranabant |
 | alpha-1 antitrypsin deficiency corrector | 2 | vx-814, vx-864 |
 
-*Marketed assets only — pipeline extraction pending. Molecules: 678 | targets: 380 | deals: 353 | rebuilt 2026-08-27.*
+*Marketed assets only — pipeline extraction pending. Molecules: 677 | targets: 380 | deals: 353 | rebuilt 2026-10-11.*

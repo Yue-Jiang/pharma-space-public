@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: astrazeneca
-updated: 2026-08-27
+updated: 2026-09-02
 status: curated
 ---
 # AstraZeneca
@@ -44,7 +44,7 @@ AstraZeneca's $80B-by-2030 ambition depends on a pipeline broad enough to outrun
 
 | Asset | Generic / code | Target / mechanism | Indication | Phase | Notes |
 |---|---|---|---|---|---|
-| Baxfendy | baxdrostat | Aldosterone synthase inhibitor | Uncontrolled / resistant hypertension | Approved 2026 | First-in-class ASI; US approval 18 May 2026, from the 2023 CinCor deal |
+| Baxfendy | baxdrostat | Aldosterone synthase inhibitor | Uncontrolled / resistant hypertension; chronic kidney disease with hypertension | Approved / Ph3 | US approval 18 May 2026 for hypertension; a 5,000-participant Phase III renal-outcomes trial with dapagliflozin is recruiting |
 | Camizestrant | camizestrant | Next-generation oral SERD | HR+/HER2- advanced breast cancer | Filed | SERENA-6 positive; US decision date extended in 2026, already approved in UAE and Saudi Arabia |
 | Gefurulimab | gefurulimab | Dual-binding anti-C5 nanobody | Generalised myasthenia gravis | Filed | PREVAIL Phase III met primary and all secondary endpoints; next-generation Alexion complement asset |
 | Efzimfotase alfa | efzimfotase alfa | Next-generation TNSALP enzyme replacement | Hypophosphatasia | Filed | Subcutaneous every-two-weeks successor to Strensiq; US and Japan filings under review |
@@ -80,11 +80,11 @@ The Alexion deal closed in July 2021 (purchase consideration fair value $41.1B),
 
 ## Current strategic bets
 
-AstraZeneca's stated ambition is $80B in total revenue by 2030, with roughly half generated in the US. Three moves define 2025-2026. First, an American re-anchoring: a $50B US manufacturing and R&D investment pledge (July 2025), headlined by a $4.5B drug-substance facility in Virginia for the weight-management and metabolic portfolio; an October 2025 agreement with the Trump administration granting a three-year exemption from Section 232 pharmaceutical tariffs in exchange for most-favored-nation pricing to Medicaid, up-to-80% direct-to-consumer discounts and participation in TrumpRx; and a shareholder-approved direct listing on the NYSE. Second, a deliberate push into cardiometabolic and weight management: oral GLP-1 (AZD5004, licensed from Eccogene), oral PCSK9 (AZD0780), and baxdrostat, the aldosterone synthase inhibitor that delivered positive BaxHTN Phase III data in resistant hypertension (US PDUFA in 2026). Third, continued oncology depth — ADCs and next-generation endocrine therapy — despite the looming Farxiga cliff. The partnered Tezspire franchise also gained a late-stage expansion option when Phase 3 CROSSING met both co-primary and all key secondary endpoints in eosinophilic esophagitis; numerical effect sizes, dose-specific results, detailed safety data and a filing timetable remain undisclosed. In China, AstraZeneca is doubling down despite legal overhang, with a $2.5B Beijing R&D hub (March 2025) and a pledge exceeding 100 billion yuan by 2030.
+AstraZeneca's stated ambition is $80B in total revenue by 2030, with roughly half generated in the US. Three moves define 2025-2026. First, an American re-anchoring: a $50B US manufacturing and R&D investment pledge (July 2025), headlined by a $4.5B drug-substance facility in Virginia for the weight-management and metabolic portfolio; an October 2025 agreement with the Trump administration granting a three-year exemption from Section 232 pharmaceutical tariffs in exchange for most-favored-nation pricing to Medicaid, up-to-80% direct-to-consumer discounts and participation in TrumpRx; and a shareholder-approved direct listing on the NYSE. Second, a deliberate push into cardiometabolic and weight management: oral GLP-1 (AZD5004, licensed from Eccogene), oral PCSK9 (AZD0780), and baxdrostat, the aldosterone synthase inhibitor approved for hypertension in May 2026 and now in a 5,000-participant Phase III renal-outcomes trial with dapagliflozin in chronic kidney disease and hypertension. Third, continued oncology depth — ADCs and next-generation endocrine therapy — despite the looming Farxiga cliff. The partnered Tezspire franchise also gained a late-stage expansion option when Phase 3 CROSSING met both co-primary and all key secondary endpoints in eosinophilic esophagitis; numerical effect sizes, dose-specific results, detailed safety data and a filing timetable remain undisclosed. In China, AstraZeneca is doubling down despite legal overhang, with a $2.5B Beijing R&D hub (March 2025) and a pledge exceeding 100 billion yuan by 2030.
 
 | Late-stage asset | Phase / status | Bet |
 |---|---|---|
-| Baxdrostat | Phase III positive (BaxHTN); US decision 2026 | First-in-class for resistant hypertension |
+| Baxdrostat | Approved for hypertension; Phase III CKD renal-outcomes trial recruiting | First-in-class ASI spanning hypertension and cardiorenal development |
 | Camizestrant | SERENA-6 positive; SERENA-4 readout H2 2026 | Oral SERD as new endocrine backbone in HR+ breast cancer (>$5B est.) |
 | Datroway (datopotamab deruxtecan) | Approved 2025 (breast, lung); TROPION/AVANZAR expansions | TROP2 ADC franchise with Daiichi Sankyo |
 | AZD5004 / AZD0780 | Oral GLP-1 and oral PCSK9 in development | Accessible, exportable cardiometabolic pills |
@@ -111,3 +111,4 @@ AstraZeneca's stated ambition is $80B in total revenue by 2030, with roughly hal
 - SEC filings: Alexion acquisition note (20-F FY2021); MedImmune tender offer 6-K (May 2007); pharmaphorum "A history of AstraZeneca" (2020).
 - Pharmaceutical Technology, FY2025 oncology coverage (10 Feb 2026); IJPS/DrugPatentWatch on Farxiga US generic approvals (Apr 2026).
 - AstraZeneca clinical-trial appendices and current ClinicalTrials.gov sponsor records for oleclumab, monalizumab, ceralasertib, and AZD7789 identity and active development.
+- ClinicalTrials.gov, baxdrostat plus dapagliflozin CKD studies NCT06742723 and NCT07222917, updated Aug-Sep 2026: https://clinicaltrials.gov/study/NCT06742723 and https://clinicaltrials.gov/study/NCT07222917

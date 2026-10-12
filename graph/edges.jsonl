@@ -326,8 +326,6 @@
 {"src": "bi-765423", "rel": "acts_on", "dst": "IL-11", "action": "blocker", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT07036523", "evidence": "Boehringer Ingelheim identifies BI 765423 as an anti-IL-11 monoclonal antibody."}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "acts_on", "dst": "HIV integrase", "action": "inhibitor", "etype": "fact"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "acts_on", "dst": "HIV reverse transcriptase", "action": "inhibitor", "etype": "fact"}
-{"src": "bictegravir/lenacapavir", "rel": "acts_on", "dst": "HIV capsid", "action": "inhibitor", "etype": "fact"}
-{"src": "bictegravir/lenacapavir", "rel": "acts_on", "dst": "HIV integrase", "action": "inhibitor", "etype": "fact"}
 {"src": "biib122", "rel": "acts_on", "dst": "LRRK2", "action": "inhibitor", "etype": "fact", "source": "https://investors.biogen.com/static-files/7a6d8dcf-2646-471e-80ba-d6872a365dff", "evidence": "Biogen identifies BIIB122/DNL151 as a selective LRRK2 kinase inhibitor."}
 {"src": "bimagrumab", "rel": "acts_on", "dst": "ActRII", "action": "antagonist", "etype": "fact", "source": "https://investor.lilly.com/node/49216", "evidence": "Lilly identifies bimagrumab as a monoclonal antibody that binds activin type II A and B receptors and blocks activin and myostatin signaling."}
 {"src": "bleximenib", "rel": "acts_on", "dst": "menin", "action": "inhibitor", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT04811560", "evidence": "The registered cAMeLot-1 study calls bleximenib a menin-KMT2A inhibitor."}
@@ -343,8 +341,6 @@
 {"src": "brenipatide", "rel": "acts_on", "dst": "GIPR", "action": "agonist", "etype": "fact", "source": "https://investor.lilly.com/static-files/81645112-510f-4ce8-a860-c74596c1caa2", "evidence": "Lilly identifies brenipatide/LY3537031 as a GIP/GLP-1 receptor co-agonist."}
 {"src": "brenipatide", "rel": "acts_on", "dst": "GLP-1R", "action": "agonist", "etype": "fact", "source": "https://investor.lilly.com/static-files/81645112-510f-4ce8-a860-c74596c1caa2", "evidence": "Lilly identifies brenipatide/LY3537031 as a GIP/GLP-1 receptor co-agonist."}
 {"src": "brentuximab vedotin", "rel": "acts_on", "dst": "CD30", "action": "antagonist", "etype": "fact"}
-{"src": "brepocitinib", "rel": "acts_on", "dst": "JAK1", "action": "inhibitor", "etype": "fact"}
-{"src": "brepocitinib", "rel": "acts_on", "dst": "TYK2", "action": "inhibitor", "etype": "fact"}
 {"src": "bretisilocin", "rel": "acts_on", "dst": "5-HT2A", "action": "agonist", "etype": "fact"}
 {"src": "brexucabtagene autoleucel", "rel": "acts_on", "dst": "CD19", "action": "engager", "etype": "fact"}
 {"src": "brigatinib", "rel": "acts_on", "dst": "ALK", "action": "inhibitor", "etype": "fact"}
@@ -501,6 +497,7 @@
 {"src": "faricimab", "rel": "acts_on", "dst": "ANG2", "action": "antagonist", "etype": "fact"}
 {"src": "faricimab", "rel": "acts_on", "dst": "VEGF-A", "action": "antagonist", "etype": "fact"}
 {"src": "fazirsiran", "rel": "acts_on", "dst": "SERPINA1", "action": "silencer", "etype": "fact"}
+{"src": "felcorekibart", "rel": "acts_on", "dst": "TSLP", "action": "blocker", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": "The curated asset record identifies GSK5784283 as an anti-TSLP monoclonal antibody."}
 {"src": "felzartamab", "rel": "acts_on", "dst": "CD38", "action": "antagonist", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT01421186", "evidence": "The registered study calls MOR202/felzartamab a human anti-CD38 antibody."}
 {"src": "fenebrutinib", "rel": "acts_on", "dst": "BTK", "action": "inhibitor", "etype": "fact"}
 {"src": "fentanyl transdermal", "rel": "acts_on", "dst": "OPRM1", "action": "agonist", "etype": "fact"}
@@ -549,7 +546,6 @@
 {"src": "gsk4528287", "rel": "acts_on", "dst": "IL-18", "action": "blocker", "etype": "fact", "source": "https://www.gsk.com/en-gb/innovation/pipeline/", "evidence": "GSK identifies GSK4528287 as an IL-23/IL-18 bispecific antibody."}
 {"src": "gsk4528287", "rel": "acts_on", "dst": "IL-23p19", "action": "blocker", "etype": "fact", "source": "https://www.gsk.com/en-gb/innovation/pipeline/", "evidence": "GSK identifies GSK4528287 as an IL-23/IL-18 bispecific antibody."}
 {"src": "gsk4532990", "rel": "acts_on", "dst": "HSD17B13", "action": "silencer", "etype": "fact", "source": "https://www.gsk.com/media/40yljs4u/q1-2026-pipeline-assets-and-clinical-trials-report.pdf", "evidence": "GSK identifies GSK4532990/ARO-HSD as an HSD17B13-targeting siRNA."}
-{"src": "gsk5784283", "rel": "acts_on", "dst": "TSLP", "action": "blocker", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": "The curated asset record identifies GSK5784283 as an anti-TSLP monoclonal antibody."}
 {"src": "gsk5926371", "rel": "acts_on", "dst": "CD19", "action": "engager", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT07371468", "evidence": "GSK5926371 is a CD19/CD20/CD3 trispecific T-cell engager."}
 {"src": "gsk5926371", "rel": "acts_on", "dst": "CD20", "action": "engager", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT07371468", "evidence": "GSK5926371 is a CD19/CD20/CD3 trispecific T-cell engager."}
 {"src": "gsk5926371", "rel": "acts_on", "dst": "CD3", "action": "engager", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT07371468", "evidence": "GSK5926371 is a CD19/CD20/CD3 trispecific T-cell engager."}
@@ -791,6 +787,7 @@
 {"src": "pexidartinib", "rel": "acts_on", "dst": "CSF1R", "action": "inhibitor", "etype": "fact"}
 {"src": "pf-06835375", "rel": "acts_on", "dst": "CXCR5", "action": "blocker", "etype": "fact", "source": "https://www.pfizer.com/science/focus-areas/immunology-inflammation/pipeline", "evidence": "Pfizer identifies PF-06835375 as an anti-CXCR5 monoclonal antibody."}
 {"src": "pf-07868489", "rel": "acts_on", "dst": "BMP9", "action": "blocker", "etype": "fact", "source": "https://www.pfizer.com/science/focus-areas/immunology-inflammation/pipeline?page=2", "evidence": "Pfizer identifies PF-07868489 as an anti-BMP9 monoclonal antibody."}
+{"src": "pf-07872412", "rel": "acts_on", "dst": "pneumococcal polysaccharide antigens", "action": "binder", "etype": "fact", "source": "https://clinicaltrials.gov/study/NCT07794748", "evidence": "The Pfizer-sponsored record identifies PF-07872412 as a 25-valent pneumococcal conjugate vaccine."}
 {"src": "pf-08046050", "rel": "acts_on", "dst": "CEACAM5", "action": "binder", "etype": "fact", "source": "https://www.pfizer.com/science/oncology-cancer/pipeline", "evidence": "Pfizer identifies PF-08046050/SGN-CEACAM5C as a CEACAM5-directed antibody-drug conjugate."}
 {"src": "pf-08049820", "rel": "acts_on", "dst": "STAT6", "action": "inhibitor", "etype": "fact", "source": "https://www.pfizer.com/science/focus-areas/immunology-inflammation/pipeline", "evidence": "Pfizer identifies PF-08049820 as an investigational small-molecule STAT6 inhibitor."}
 {"src": "pf-08634404", "rel": "acts_on", "dst": "PD-1", "action": "blocker", "etype": "fact", "source": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-3sbio-enter-license-agreement-novel-pd-1-and", "evidence": "Pfizer identifies SSGJ-707/PF-08634404 as a bispecific antibody targeting PD-1 and VEGF."}
@@ -1618,7 +1615,6 @@
 {"src": "amoxicillin/clavulanate", "rel": "competes_with", "dst": "levofloxacin", "basis": "shared_indication:infection-other", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amoxicillin/clavulanate", "rel": "competes_with", "dst": "liposomal amphotericin b", "basis": "shared_indication:infection-other", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amprenavir", "rel": "competes_with", "dst": "bictegravir/emtricitabine/tenofovir alafenamide", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "amprenavir", "rel": "competes_with", "dst": "bictegravir/lenacapavir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amprenavir", "rel": "competes_with", "dst": "cabotegravir extended-release", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amprenavir", "rel": "competes_with", "dst": "cabotegravir/rilpivirine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "amprenavir", "rel": "competes_with", "dst": "dolutegravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -1726,6 +1722,7 @@
 {"src": "astegolimab", "rel": "competes_with", "dst": "budesonide/glycopyrronium/formoterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "astegolimab", "rel": "competes_with", "dst": "dupilumab", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "astegolimab", "rel": "competes_with", "dst": "ensifentrine", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "astegolimab", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "astegolimab", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "astegolimab", "rel": "competes_with", "dst": "fluticasone/salmeterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "astegolimab", "rel": "competes_with", "dst": "fluticasone/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "legacy+pipeline"}
@@ -2128,6 +2125,7 @@
 {"src": "azd6234", "rel": "competes_with", "dst": "zenagamtide", "basis": "shared_indication:obesity", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "azd6793", "rel": "competes_with", "dst": "dupilumab", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "azd6793", "rel": "competes_with", "dst": "ensifentrine", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "azd6793", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "azd6793", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "azd6793", "rel": "competes_with", "dst": "fluticasone/salmeterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "azd6793", "rel": "competes_with", "dst": "fluticasone/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "legacy+pipeline"}
@@ -2353,9 +2351,9 @@
 {"src": "benralizumab", "rel": "competes_with", "dst": "brenipatide", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "benralizumab", "rel": "competes_with", "dst": "depemokimab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "benralizumab", "rel": "competes_with", "dst": "dupilumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "benralizumab", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "benralizumab", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "benralizumab", "rel": "competes_with", "dst": "fluticasone/salmeterol", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "benralizumab", "rel": "competes_with", "dst": "gsk5784283", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "benralizumab", "rel": "competes_with", "dst": "lunsekimig", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "benralizumab", "rel": "competes_with", "dst": "mepolizumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "benralizumab", "rel": "competes_with", "dst": "montelukast", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -2528,15 +2526,6 @@
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "competes_with", "dst": "fosamprenavir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "competes_with", "dst": "raltegravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "competes_with", "dst": "zidovudine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "cabotegravir extended-release", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "cabotegravir/rilpivirine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "dolutegravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "dolutegravir/abacavir/lamivudine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "dolutegravir/lamivudine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "doravirine/islatravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "fosamprenavir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "raltegravir", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "competes_with", "dst": "zidovudine", "basis": "shared_indication:hiv", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "biib122", "rel": "competes_with", "dst": "foscarbidopa/foslevodopa", "basis": "shared_indication:parkinsons", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "biib122", "rel": "competes_with", "dst": "ly3884961", "basis": "shared_indication:parkinsons", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "biib122", "rel": "competes_with", "dst": "ly3962681", "basis": "shared_indication:parkinsons", "etype": "derived", "stage_pair": "pipeline+pipeline"}
@@ -2708,10 +2697,10 @@
 {"src": "brenipatide", "rel": "competes_with", "dst": "dupilumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "brenipatide", "rel": "competes_with", "dst": "elecoglipron", "basis": "shared_indication:obesity", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "brenipatide", "rel": "competes_with", "dst": "enicepatide", "basis": "shared_indication:obesity", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "brenipatide", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "brenipatide", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "brenipatide", "rel": "competes_with", "dst": "fluticasone/salmeterol", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "brenipatide", "rel": "competes_with", "dst": "gs-4571", "basis": "shared_indication:obesity", "etype": "derived", "stage_pair": "pipeline+pipeline"}
-{"src": "brenipatide", "rel": "competes_with", "dst": "gsk5784283", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "brenipatide", "rel": "competes_with", "dst": "gym329", "basis": "shared_indication:obesity", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "brenipatide", "rel": "competes_with", "dst": "liraglutide", "basis": "shared_indication:obesity", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "brenipatide", "rel": "competes_with", "dst": "lumateperone", "basis": "shared_indication:bipolar-disorder", "etype": "derived", "stage_pair": "marketed+pipeline"}
@@ -2756,7 +2745,6 @@
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "rituximab", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "tisagenlecleucel", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "legacy+marketed"}
 {"src": "brentuximab vedotin", "rel": "competes_with", "dst": "valemetostat", "basis": "shared_indication:lymphoma", "etype": "derived", "stage_pair": "marketed+marketed"}
-{"src": "brepocitinib", "rel": "competes_with", "dst": "dazukibart", "basis": "shared_indication:dermatomyositis", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "bretisilocin", "rel": "competes_with", "dst": "duloxetine", "basis": "shared_indication:depression", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "bretisilocin", "rel": "competes_with", "dst": "esketamine", "basis": "shared_indication:depression", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "bretisilocin", "rel": "competes_with", "dst": "fluoxetine", "basis": "shared_indication:depression", "etype": "derived", "stage_pair": "legacy+pipeline"}
@@ -2833,6 +2821,8 @@
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "dupilumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "dupilumab", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "ensifentrine", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "budesonide/formoterol", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "budesonide/formoterol", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "fluticasone/salmeterol", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -2841,7 +2831,6 @@
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "frespaciguat", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "gdc-6988", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "gsk3862995b", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "budesonide/formoterol", "rel": "competes_with", "dst": "gsk5784283", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "itepekimab", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "lunsekimig", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "lunsekimig", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
@@ -2856,6 +2845,7 @@
 {"src": "budesonide/formoterol", "rel": "competes_with", "dst": "tiotropium", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "budesonide/glycopyrronium/formoterol", "rel": "competes_with", "dst": "dupilumab", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "budesonide/glycopyrronium/formoterol", "rel": "competes_with", "dst": "ensifentrine", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "budesonide/glycopyrronium/formoterol", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "budesonide/glycopyrronium/formoterol", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "budesonide/glycopyrronium/formoterol", "rel": "competes_with", "dst": "fluticasone/salmeterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "budesonide/glycopyrronium/formoterol", "rel": "competes_with", "dst": "fluticasone/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "legacy+marketed"}
@@ -3824,6 +3814,8 @@
 {"src": "duloxetine", "rel": "competes_with", "dst": "vortioxetine", "basis": "shared_indication:depression", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "duloxetine", "rel": "competes_with", "dst": "zuranolone", "basis": "shared_indication:depression", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "ensifentrine", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "dupilumab", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "dupilumab", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "fluticasone/salmeterol", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -3833,7 +3825,6 @@
 {"src": "dupilumab", "rel": "competes_with", "dst": "gdc-6988", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "gia632", "basis": "shared_indication:atopic-dermatitis", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "gsk3862995b", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "dupilumab", "rel": "competes_with", "dst": "gsk5784283", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "itepekimab", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "lebrikizumab", "basis": "shared_indication:atopic-dermatitis", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "dupilumab", "rel": "competes_with", "dst": "mepolizumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+marketed"}
@@ -4206,6 +4197,7 @@
 {"src": "enlicitide", "rel": "competes_with", "dst": "pravastatin", "basis": "shared_indication:dyslipidemia", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "enlicitide", "rel": "competes_with", "dst": "rosuvastatin", "basis": "shared_indication:dyslipidemia", "etype": "derived", "stage_pair": "legacy+marketed"}
 {"src": "enoxaparin", "rel": "competes_with", "dst": "rivaroxaban", "basis": "shared_indication:venous-thromboembolism", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "ensifentrine", "rel": "competes_with", "dst": "felcorekibart", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "ensifentrine", "rel": "competes_with", "dst": "fluticasone furoate/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ensifentrine", "rel": "competes_with", "dst": "fluticasone/salmeterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+marketed"}
 {"src": "ensifentrine", "rel": "competes_with", "dst": "fluticasone/umeclidinium/vilanterol", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "legacy+marketed"}
@@ -4359,6 +4351,19 @@
 {"src": "exenatide", "rel": "competes_with", "dst": "sitagliptin/metformin", "basis": "shared_indication:type-2-diabetes", "etype": "derived", "stage_pair": "legacy+marketed"}
 {"src": "exenatide", "rel": "competes_with", "dst": "ubt251", "basis": "shared_indication:type-2-diabetes", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "faricimab", "rel": "competes_with", "dst": "pegcetacoplan injection", "basis": "shared_indication:retinal-disease", "etype": "derived", "stage_pair": "marketed+marketed"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "frespaciguat", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "gdc-6988", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "itepekimab", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "lunsekimig", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "lunsekimig", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "montelukast", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "omalizumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "tezepelumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "tilrekimig", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "tilrekimig", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "pipeline+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "tiotropium", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "tiotropium", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "felcorekibart", "rel": "competes_with", "dst": "tozorakimab", "basis": "shared_indication:copd", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "felzartamab", "rel": "competes_with", "dst": "iptacopan", "basis": "shared_indication:iga-nephropathy", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "felzartamab", "rel": "competes_with", "dst": "maribavir", "basis": "shared_indication:transplant", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "felzartamab", "rel": "competes_with", "dst": "mezagitamab", "basis": "shared_indication:iga-nephropathy", "etype": "derived", "stage_pair": "pipeline+pipeline"}
@@ -4847,12 +4852,6 @@
 {"src": "gsk4532990", "rel": "competes_with", "dst": "rapirosiran", "basis": "shared_indication:mash", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "gsk4532990", "rel": "competes_with", "dst": "semaglutide", "basis": "shared_indication:mash", "etype": "derived", "stage_pair": "legacy+pipeline"}
 {"src": "gsk4532990", "rel": "competes_with", "dst": "survodutide", "basis": "shared_indication:mash", "etype": "derived", "stage_pair": "pipeline+pipeline"}
-{"src": "gsk5784283", "rel": "competes_with", "dst": "lunsekimig", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
-{"src": "gsk5784283", "rel": "competes_with", "dst": "montelukast", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "gsk5784283", "rel": "competes_with", "dst": "omalizumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "gsk5784283", "rel": "competes_with", "dst": "tezepelumab", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
-{"src": "gsk5784283", "rel": "competes_with", "dst": "tilrekimig", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "pipeline+pipeline"}
-{"src": "gsk5784283", "rel": "competes_with", "dst": "tiotropium", "basis": "shared_indication:asthma", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "gsk5926371", "rel": "competes_with", "dst": "pit565", "basis": "shared_indication:systemic-lupus-erythematosus", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "gsk5926371", "rel": "competes_with", "dst": "rapcabtagene autoleucel", "basis": "shared_indication:systemic-lupus-erythematosus", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "gsk5926371", "rel": "competes_with", "dst": "ro7507062", "basis": "shared_indication:systemic-lupus-erythematosus", "etype": "derived", "stage_pair": "pipeline+pipeline"}
@@ -6374,6 +6373,8 @@
 {"src": "pf-07868489", "rel": "competes_with", "dst": "sotatercept", "basis": "shared_indication:hypertension", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "pf-07868489", "rel": "competes_with", "dst": "telmisartan", "basis": "shared_indication:hypertension", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "pf-07868489", "rel": "competes_with", "dst": "valsartan", "basis": "shared_indication:hypertension", "etype": "derived", "stage_pair": "legacy+pipeline"}
+{"src": "pf-07872412", "rel": "competes_with", "dst": "pneumococcal 15-valent conjugate vaccine", "basis": "shared_indication:pneumococcal", "etype": "derived", "stage_pair": "marketed+pipeline"}
+{"src": "pf-07872412", "rel": "competes_with", "dst": "pneumococcal 21-valent conjugate vaccine", "basis": "shared_indication:pneumococcal", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "pf-08046050", "rel": "competes_with", "dst": "pf-08634404", "basis": "shared_indication:colorectal-cancer", "etype": "derived", "stage_pair": "pipeline+pipeline"}
 {"src": "pf-08046050", "rel": "competes_with", "dst": "regorafenib", "basis": "shared_indication:colorectal-cancer", "etype": "derived", "stage_pair": "marketed+pipeline"}
 {"src": "pf-08046050", "rel": "competes_with", "dst": "repotrectinib", "basis": "shared_indication:pan-tumor", "etype": "derived", "stage_pair": "marketed+pipeline"}
@@ -7146,7 +7147,6 @@
 {"src": "bi 3720931", "rel": "has_modality", "dst": "gene-therapy", "etype": "fact"}
 {"src": "bi-765423", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
-{"src": "bictegravir/lenacapavir", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "biib122", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bimagrumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "bisacodyl", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -7160,7 +7160,6 @@
 {"src": "bosentan", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "brenipatide", "rel": "has_modality", "dst": "peptide", "etype": "fact"}
 {"src": "brentuximab vedotin", "rel": "has_modality", "dst": "adc", "etype": "fact"}
-{"src": "brepocitinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "bretisilocin", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "brexucabtagene autoleucel", "rel": "has_modality", "dst": "cell-therapy", "etype": "fact"}
 {"src": "brigatinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -7303,6 +7302,7 @@
 {"src": "fasiglifam", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "favezelimab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "fazirsiran", "rel": "has_modality", "dst": "sirna", "etype": "fact"}
+{"src": "felcorekibart", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "felzartamab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "fenebrutinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "fenfluramine/dexfenfluramine", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
@@ -7348,7 +7348,6 @@
 {"src": "gsk3862995b", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "gsk4528287", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "gsk4532990", "rel": "has_modality", "dst": "sirna", "etype": "fact"}
-{"src": "gsk5784283", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "gsk5926371", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
 {"src": "guselkumab", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "gym329", "rel": "has_modality", "dst": "mab", "etype": "fact"}
@@ -7581,6 +7580,7 @@
 {"src": "pexidartinib", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "pf-06835375", "rel": "has_modality", "dst": "mab", "etype": "fact"}
 {"src": "pf-07868489", "rel": "has_modality", "dst": "mab", "etype": "fact"}
+{"src": "pf-07872412", "rel": "has_modality", "dst": "vaccine", "etype": "fact"}
 {"src": "pf-08046050", "rel": "has_modality", "dst": "adc", "etype": "fact"}
 {"src": "pf-08049820", "rel": "has_modality", "dst": "small-molecule", "etype": "fact"}
 {"src": "pf-08634404", "rel": "has_modality", "dst": "bispecific-ab", "etype": "fact"}
@@ -8688,7 +8688,6 @@
 {"src": "gilead", "rel": "portfolio_includes", "dst": "anitocabtagene autoleucel", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "axicabtagene ciloleucel", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "bictegravir/emtricitabine/tenofovir alafenamide", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
-{"src": "gilead", "rel": "portfolio_includes", "dst": "bictegravir/lenacapavir", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "brexucabtagene autoleucel", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "bulevirtide", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
 {"src": "gilead", "rel": "portfolio_includes", "dst": "cidofovir", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Gilead"], "basis": "drug-index-company-column"}
@@ -8727,6 +8726,7 @@
 {"src": "gsk", "rel": "portfolio_includes", "dst": "dolutegravir/lamivudine", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "dostarlimab", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "efimosfermin alfa", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
+{"src": "gsk", "rel": "portfolio_includes", "dst": "felcorekibart", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "fluticasone furoate/umeclidinium/vilanterol", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "fluticasone/salmeterol", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "fluticasone/umeclidinium/vilanterol", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
@@ -8734,7 +8734,6 @@
 {"src": "gsk", "rel": "portfolio_includes", "dst": "gsk3862995b", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "gsk4528287", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "gsk4532990", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
-{"src": "gsk", "rel": "portfolio_includes", "dst": "gsk5784283", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "gsk5926371", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "linerixibat", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
 {"src": "gsk", "rel": "portfolio_includes", "dst": "menabcwy vaccine", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["GSK"], "basis": "drug-index-company-column"}
@@ -8917,6 +8916,7 @@
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "palbociclib", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "pf-06835375", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "pf-07868489", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
+{"src": "pfizer", "rel": "portfolio_includes", "dst": "pf-07872412", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "pf-08046050", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer (w/ Sanofi)"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "pf-08049820", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "pf-08634404", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
@@ -8935,7 +8935,6 @@
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "tofacitinib", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "tozinameran", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
 {"src": "pfizer", "rel": "portfolio_includes", "dst": "vepdegestrant", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Pfizer"], "basis": "drug-index-company-column"}
-{"src": "priovant/roivant", "rel": "portfolio_includes", "dst": "brepocitinib", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Priovant/Roivant (US, Japan); Pfizer (other territories)"], "basis": "drug-index-company-column"}
 {"src": "regeneron", "rel": "portfolio_includes", "dst": "aflibercept", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Regeneron"], "basis": "drug-index-company-column"}
 {"src": "regeneron", "rel": "portfolio_includes", "dst": "alirocumab", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Regeneron"], "basis": "drug-index-company-column"}
 {"src": "regeneron", "rel": "portfolio_includes", "dst": "aln-5288", "etype": "fact", "source": "reference/02_drug_index.md", "evidence": ["Regeneron"], "basis": "drug-index-company-column"}
@@ -9265,6 +9264,8 @@
 {"src": "etentamig", "rel": "studied_for", "dst": "multiple-myeloma", "etype": "fact", "claim_id": "claim-indication-b03816ba3e6d3a8e54dc", "intended_use": "treats", "phase": "pipeline", "development_stage": "phase-3", "study": "NCT06158841", "source": "https://clinicaltrials.gov/study/NCT06158841", "evidence": "Sponsor-registered Phase 3 study in relapsed or refractory multiple myeloma."}
 {"src": "evuzamitide", "rel": "studied_for", "dst": "amyloidosis", "etype": "fact", "claim_id": "claim-indication-6fa82869a85d910ae0b5", "intended_use": "treats", "phase": "pipeline"}
 {"src": "fazirsiran", "rel": "studied_for", "dst": "alpha-1-antitrypsin-deficiency-liver-disease", "etype": "fact", "claim_id": "claim-indication-3c7530665a1b957a1936", "intended_use": "treats", "phase": "pipeline", "development_stage": "phase-3", "study": "NCT05677971", "study_status": "recruiting", "status_as_of": "2026-08-16", "source": "https://clinicaltrials.gov/study/NCT05677971", "evidence": "Sponsor-registered Phase 3 alpha-1 antitrypsin deficiency liver-disease study; recruiting on 2026-08-16."}
+{"src": "felcorekibart", "rel": "studied_for", "dst": "asthma", "etype": "fact", "claim_id": "claim-indication-3c3731874e70c256497e", "intended_use": "treats", "phase": "pipeline"}
+{"src": "felcorekibart", "rel": "studied_for", "dst": "copd", "etype": "fact", "claim_id": "claim-indication-1c8d4d9bf3046b604685", "intended_use": "treats", "phase": "pipeline"}
 {"src": "felzartamab", "rel": "studied_for", "dst": "iga-nephropathy", "etype": "fact", "claim_id": "claim-indication-cf8acc4e574b21c41670", "intended_use": "treats", "phase": "pipeline", "development_stage": "phase-3", "study": "NCT06935357", "study_status": "recruiting", "status_as_of": "2026-08-16", "source": "https://clinicaltrials.gov/study/NCT06935357", "evidence": "Sponsor-registered Phase 3 IgA nephropathy study; recruiting on 2026-08-16."}
 {"src": "felzartamab", "rel": "studied_for", "dst": "transplant", "etype": "fact", "claim_id": "claim-indication-6637f1dac0d04988e664", "intended_use": "treats", "phase": "pipeline"}
 {"src": "fenebrutinib", "rel": "studied_for", "dst": "multiple-sclerosis", "etype": "fact", "claim_id": "claim-indication-47e85701aada6d175f5d", "intended_use": "treats", "phase": "pipeline", "development_stage": "phase-3", "study": "NCT04586023", "source": "https://clinicaltrials.gov/study/NCT04586023", "evidence": "Sponsor-registered Phase 3 study in relapsing multiple sclerosis."}
@@ -9286,7 +9287,6 @@
 {"src": "gsk3862995b", "rel": "studied_for", "dst": "copd", "etype": "fact", "claim_id": "claim-indication-de9e930738a45013a924", "intended_use": "treats", "phase": "pipeline"}
 {"src": "gsk4528287", "rel": "studied_for", "dst": "ibd", "etype": "fact", "claim_id": "claim-indication-c7be585e10a2fc573063", "intended_use": "treats", "phase": "pipeline"}
 {"src": "gsk4532990", "rel": "studied_for", "dst": "mash", "etype": "fact", "claim_id": "claim-indication-a1a7b9364323b17d7938", "intended_use": "treats", "phase": "pipeline"}
-{"src": "gsk5784283", "rel": "studied_for", "dst": "asthma", "etype": "fact", "claim_id": "claim-indication-f7c845a09fbc5d908662", "intended_use": "treats", "phase": "pipeline"}
 {"src": "gsk5926371", "rel": "studied_for", "dst": "systemic-lupus-erythematosus", "etype": "fact", "claim_id": "claim-indication-6ac9838a645b068f64a9", "intended_use": "treats", "phase": "pipeline"}
 {"src": "gym329", "rel": "studied_for", "dst": "obesity", "etype": "fact", "claim_id": "claim-indication-0a3dfa614395ca66c7d7", "intended_use": "treats", "phase": "pipeline"}
 {"src": "ianalumab", "rel": "studied_for", "dst": "itp", "etype": "fact", "claim_id": "claim-indication-125dbee642c350f4ebe5", "intended_use": "treats", "phase": "pipeline"}
@@ -9367,6 +9367,7 @@
 {"src": "petrelintide", "rel": "studied_for", "dst": "obesity", "etype": "fact", "claim_id": "claim-indication-203e98f05609052b142f", "intended_use": "treats", "phase": "pipeline"}
 {"src": "pf-06835375", "rel": "studied_for", "dst": "itp", "etype": "fact", "claim_id": "claim-indication-1be28f4247a18318581e", "intended_use": "treats", "phase": "pipeline"}
 {"src": "pf-07868489", "rel": "studied_for", "dst": "hypertension", "etype": "fact", "claim_id": "claim-indication-fa3c79636942be8774b9", "intended_use": "treats", "phase": "pipeline"}
+{"src": "pf-07872412", "rel": "studied_for", "dst": "pneumococcal", "etype": "fact", "claim_id": "claim-indication-c3817f0a902cc2708054", "intended_use": "prevents", "phase": "pipeline"}
 {"src": "pf-08046050", "rel": "studied_for", "dst": "colorectal-cancer", "etype": "fact", "claim_id": "claim-indication-3443a6020bc4e4ffa288", "intended_use": "treats", "phase": "pipeline"}
 {"src": "pf-08046050", "rel": "studied_for", "dst": "pan-tumor", "etype": "fact", "claim_id": "claim-indication-82f68638156eb8bc23ec", "intended_use": "treats", "phase": "pipeline"}
 {"src": "pf-08049820", "rel": "studied_for", "dst": "atopic-dermatitis", "etype": "fact", "claim_id": "claim-indication-01361d517600cf66e4eb", "intended_use": "treats", "phase": "pipeline"}
@@ -9547,7 +9548,6 @@
 {"src": "bevacizumab", "rel": "treats", "dst": "colorectal-cancer", "etype": "fact", "claim_id": "claim-indication-d8e54a30937c1cbecc7f", "phase": "marketed"}
 {"src": "bevacizumab", "rel": "treats", "dst": "lung-cancer", "etype": "fact", "claim_id": "claim-indication-f0655dfe3262534f7dfb", "phase": "marketed"}
 {"src": "bictegravir/emtricitabine/tenofovir alafenamide", "rel": "treats", "dst": "hiv", "etype": "fact", "claim_id": "claim-indication-6936dc714f1c4d9fe877", "phase": "marketed"}
-{"src": "bictegravir/lenacapavir", "rel": "treats", "dst": "hiv", "etype": "fact", "claim_id": "claim-indication-a5117662473532b4ccac", "phase": "marketed"}
 {"src": "bisacodyl", "rel": "treats", "dst": "gi-other", "etype": "fact", "claim_id": "claim-indication-061f714179944deb1400", "phase": "marketed"}
 {"src": "blinatumomab", "rel": "treats", "dst": "leukemia", "etype": "fact", "claim_id": "claim-indication-363d6cccfbba3db9d28e", "phase": "marketed"}
 {"src": "bortezomib", "rel": "treats", "dst": "al-amyloidosis", "etype": "fact", "claim_id": "claim-indication-5004b2142c64b2b3339d", "phase": "legacy"}
@@ -9555,7 +9555,6 @@
 {"src": "bortezomib", "rel": "treats", "dst": "multiple-myeloma", "etype": "fact", "claim_id": "claim-indication-f3400ddffe54b07568a9", "phase": "legacy"}
 {"src": "bosentan", "rel": "treats", "dst": "hypertension", "etype": "fact", "claim_id": "claim-indication-9dbfdc4f65bcf2e16f27", "phase": "legacy"}
 {"src": "brentuximab vedotin", "rel": "treats", "dst": "lymphoma", "etype": "fact", "claim_id": "claim-indication-32b949a4a7a7f6abc54b", "phase": "marketed"}
-{"src": "brepocitinib", "rel": "treats", "dst": "dermatomyositis", "etype": "fact", "claim_id": "claim-indication-73418dfff8732c1419fc", "phase": "marketed"}
 {"src": "brexucabtagene autoleucel", "rel": "treats", "dst": "all-leukemia", "etype": "fact", "claim_id": "claim-indication-a8323f03a721b32b0135", "phase": "marketed"}
 {"src": "brexucabtagene autoleucel", "rel": "treats", "dst": "lymphoma", "etype": "fact", "claim_id": "claim-indication-748269668f0efdb453a0", "phase": "marketed"}
 {"src": "brigatinib", "rel": "treats", "dst": "lung-cancer", "etype": "fact", "claim_id": "claim-indication-608501865a1e6dcb84a7", "phase": "marketed"}

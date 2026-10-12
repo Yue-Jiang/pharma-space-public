@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: gsk
-updated: 2026-08-16
+updated: 2026-08-24
 status: curated
 ---
 
@@ -50,7 +50,7 @@ GSK's pipeline problem is arithmetic: dolutegravir, the backbone of a £7.7 bill
 | Exdensur | depemokimab | Ultra-long-acting anti-IL-5 mAb, twice-yearly | Severe eosinophilic asthma; nasal polyps; COPD and EGPA next | Approved 2025 | GSK sees up to ~$4B peak sales (est.); EU and China approvals followed in 2026 |
 | Utebzi | tebipenem pivoxil | Oral carbapenem antibiotic | Complicated urinary tract infection | Approved 2026 | First oral carbapenem approved in the US; licensed from Spero |
 | Lynavoy | linerixibat | IBAT (ileal bile acid transporter) inhibitor | Cholestatic pruritus in primary biliary cholangitis | Approved 2026 | First US approval for the indication; worldwide rights being out-licensed to Alfasigma |
-| GSK5784283 | — | Ultra-long-acting anti-TSLP mAb, twice-yearly | Asthma | Ph2 | Ex-Aiolos, Hengrui-originated; Ph3 starts H2 2026 |
+| GSK5784283 | felcorekibart (AIO-001; SHR-1905) | Ultra-long-acting anti-TSLP mAb, twice-yearly | Asthma; COPD; chronic rhinosinusitis with nasal polyps | Ph3 | Ex-Aiolos, Hengrui-originated; six PERSIST Phase 3 trials posted in August 2026 |
 
 ## History: 1995-2025
 

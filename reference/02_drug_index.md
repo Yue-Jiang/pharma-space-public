@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-08-27
+updated: 2026-08-28
 status: curated
 ---
 # Drug Index — brand ↔ generic ↔ company cross-reference
@@ -123,7 +123,6 @@ status: curated
 | BIIB091 | — | Biogen | Oral peripheral BTK inhibitor | Relapsing multiple sclerosis | pipeline | — |
 | BIIB122 | BIIB122 | Biogen | CNS-penetrant small-molecule LRRK2 kinase inhibitor | Parkinson's disease | pipeline | DNL151; Denali partnership |
 | Biktarvy | bictegravir/emtricitabine/tenofovir alafenamide | Gilead | Oral single-tablet HIV regimen (INSTI + 2 NRTIs) | HIV-1 treatment | marketed | — |
-| Bixlenvo | bictegravir/lenacapavir | Gilead | Oral single-tablet HIV regimen (INSTI + capsid inhibitor) | HIV-1 treatment in virologically suppressed adults | marketed | FDA approved Aug 27, 2026 |
 | Bimagrumab | bimagrumab | Lilly | Anti-activin type II receptor mAb | Obesity (muscle preservation) | pipeline | — |
 | Blenrep | belantamab mafodotin | GSK | BCMA-targeted antibody-drug conjugate | Relapsed/refractory multiple myeloma | marketed | — |
 | Bleximenib | bleximenib | J&J | Menin-MLL inhibitor (oral) | Acute myeloid leukemia | pipeline | — |
@@ -289,7 +288,7 @@ status: curated
 | GDC-6988 | GDC-6988 | Roche | Inhaled small-molecule TMEM16A potentiator | COPD; muco-obstructive lung disease | pipeline | ETD002 |
 | GSK3862995B | GSK3862995B | GSK | Anti-IL-33 monoclonal antibody | COPD | pipeline | — |
 | GSK4528287 | GSK4528287 | GSK | IL-23/IL-18 bispecific antibody | Inflammatory bowel disease | pipeline | — |
-| GSK5784283 | GSK5784283 | GSK | Ultra-long-acting anti-TSLP mAb | Asthma | pipeline | — |
+| GSK5784283 | felcorekibart | GSK | Ultra-long-acting anti-TSLP mAb | Asthma; COPD; chronic rhinosinusitis with nasal polyps | pipeline | AIO-001; SHR-1905; six Phase 3 PERSIST trials posted August 2026 |
 | GSK5926371 | GSK5926371 | GSK | CD19×CD20×CD3 trispecific T-cell engager | Systemic lupus erythematosus | pipeline | CMG1A46 |
 | GSK4532990 | GSK4532990 | GSK | HSD17B13-targeting siRNA | MASH; alcohol-related liver disease | pipeline | ARO-HSD |
 | GYM329 | GYM329 | Roche | Recycling monoclonal antibody against latent myostatin | Obesity; neuromuscular diseases | pipeline | RO7204239; RG6237 |
@@ -338,7 +337,7 @@ status: curated
 | Janumet | sitagliptin/metformin | Merck | DPP-4 inhibitor/biguanide | Type 2 diabetes mellitus | legacy | Combination DPP-4/biguanide; loses US exclusivity 2026 |
 | Januvia / Janumet | sitagliptin (± metformin) | Merck | Oral DPP-4 inhibitor | Type 2 diabetes | marketed | — |
 | Jardiance | empagliflozin | Lilly (w/ Boehringer) | SGLT2 inhibitor (oral) | Diabetes, heart failure, kidney | marketed | — |
-| Jascayd | nerandomilast | Boehringer | PDE4B inhibitor (oral) | Idiopathic pulmonary fibrosis, progressive pulmonary fibrosis | marketed | — |
+| Jascayd | nerandomilast | Boehringer | PDE4B inhibitor (oral) | Idiopathic pulmonary fibrosis, progressive pulmonary fibrosis | marketed | Phase 3 expansion trials in systemic sclerosis and idiopathic inflammatory myopathies |
 | Jaypirca | pirtobrutinib | Lilly | Non-covalent BTK inhibitor (oral) | CLL, MCL | marketed | — |
 | Jyseleca | filgotinib | Alfasigma / Eisai | Oral JAK1 inhibitor | Rheumatoid arthritis; ulcerative colitis | marketed | Authorized in Europe and Japan; US rheumatoid-arthritis path abandoned in 2020 |
 | Jemperli | dostarlimab | GSK | Anti-PD-1 monoclonal antibody | Endometrial cancer, dMMR solid tumors | marketed | — |
@@ -381,7 +380,6 @@ status: curated
 | Lipitor | atorvastatin | Pfizer | HMG-CoA reductase inhibitor | Hyperlipidemia; coronary artery disease prevention | legacy | Best-selling drug in pharma history, peaked ~$13B/year, off-patent 2011 |
 | Lipobay | cerivastatin | Bayer | HMG-CoA reductase inhibitor | Hyperlipidemia | withdrawn | Statin withdrawn August 2001 after ~100 deaths from rhabdomyolysis |
 | Lifonebart | lifonebart | Novartis | TREM2-stabilizing agonist monoclonal antibody | Alzheimer's disease; amyotrophic lateral sclerosis | pipeline | VHB937 |
-| Lisraya | brepocitinib | Priovant/Roivant (US, Japan); Pfizer (other territories) | Oral TYK2/JAK1 inhibitor | Dermatomyositis in adults | marketed | FDA approved Aug 27, 2026; first oral FDA-approved treatment for the disease |
 | Litifilimab | litifilimab | Biogen | Anti-BDCA2 mAb | Systemic and cutaneous lupus erythematosus | pipeline | — |
 | Livdelzi | seladelpar | Gilead | Oral PPAR-delta agonist | Primary biliary cholangitis | marketed | — |
 | Livtencity | maribavir | Takeda | Oral UL97 kinase inhibitor antiviral | Refractory post-transplant cytomegalovirus | marketed | — |
@@ -514,6 +512,7 @@ status: curated
 | P-CD19CD20-ALLO1 | P-CD19CD20-ALLO1 | Roche | Allogeneic dual CD19/CD20 CAR-T cell therapy | Multiple sclerosis | pipeline | Acquired with Poseida |
 | PF-06835375 | PF-06835375 | Pfizer | Anti-CXCR5 monoclonal antibody | Immune thrombocytopenia | pipeline | — |
 | PF-07868489 | PF-07868489 | Pfizer | Anti-BMP9 monoclonal antibody | Pulmonary arterial hypertension | pipeline | — |
+| 25vPnC | PF-07872412 | Pfizer | 25-valent pneumococcal conjugate vaccine | Pneumococcal disease prevention | pipeline | PG4; adds serotypes 15A, 23A, 23B, 24F, and 35B beyond Prevnar 20; Phase 3 |
 | PF-08046050 | PF-08046050 | Pfizer (w/ Sanofi) | CEACAM5-directed antibody-drug conjugate with topoisomerase-I payload | Colorectal cancer; solid tumors | pipeline | SGN-CEACAM5C |
 | PF-08049820 | PF-08049820 | Pfizer | Oral small-molecule STAT6 inhibitor | Atopic dermatitis | pipeline | — |
 | PF-08634404 | PF-08634404 | Pfizer | PD-1 x VEGF bispecific antibody | Non-small cell lung cancer; colorectal cancer | pipeline | SSGJ-707 |

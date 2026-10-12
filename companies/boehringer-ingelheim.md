@@ -1,7 +1,7 @@
 ---
 type: company-deep-dive
 company: boehringer-ingelheim
-updated: 2026-08-14
+updated: 2026-08-28
 status: curated
 ---
 
@@ -74,7 +74,7 @@ BI's stated ambition is roughly 25 new launches across the decade to 2035, funde
 
 - **Obesity/MASH — survodutide.** The glucagon/GLP-1 dual agonist (licensed from Zealand Pharma) read out Phase 3 SYNCHRONIZE-1 in April 2026: 16.6% mean weight loss vs 3.2% placebo at 76 weeks, with data suggesting relatively preserved lean mass and up to 63% liver-fat reduction. Two Phase 3 MASH trials (LIVERAGE, ~1,800 pts; LIVERAGE-Cirrhosis, ~1,590 pts) are ongoing, with FDA Breakthrough status in F2/F3 MASH. BI is a late entrant vs Lilly/Novo in obesity but is positioning survodutide on liver and visceral-fat differentiation; a triple GLP-1/GIP/NPY2 agonist (BI 3034701) enters Phase 2 in mid-2026.
 - **Oncology — zongertinib expansion and next waves.** Hernexeos is in a global Phase 3 for first-line HER2-mutant NSCLC (77% response rate in treatment-naïve Phase 1b data). Behind it: ADC platforms (NBE, Synaffix), T-cell engagers, and T3 Pharma's bacterial delivery approach.
-- **Fibrosis franchise defense.** Jascayd is explicitly the Ofev succession plan ahead of Ofev's late-decade LOE, launched first in the US and China with EU review ongoing (est.).
+- **Fibrosis franchise defense and immune-disease expansion.** Jascayd is explicitly the Ofev succession plan ahead of Ofev's late-decade LOE, launched first in the US and China with EU review ongoing (est.). Boehringer is also testing nerandomilast in Phase 3 beyond fibrotic lung disease: a 448-participant systemic-sclerosis trial is recruiting, and a 270-participant idiopathic-inflammatory-myopathies trial is scheduled to start in November 2026.
 - **Immunology via China-originated BD.** In January 2026 BI licensed SIM0709, a preclinical TL1A×IL-23 bispecific for inflammatory bowel disease, from Shanghai-based Simcere for up to ~€1.06B (worldwide ex-Greater China rights) — part of a broader pattern of European pharma sourcing candidates from Chinese biotechs. Earlier 2025 deals: Cue Biopharma CUE-501 B-cell depleter for autoimmunity ($12M upfront, ~$345M milestones), Re-Vana ocular sustained-delivery (> $1B potential), and out-licensing Spevigo to LEO Pharma (June 2025) to focus resources.
 - **Portfolio pruning and manufacturing.** The halt of the inhaled cystic fibrosis gene therapy BI 3720931 (2026) and the iclepertin discontinuation show willingness to cut. Meanwhile BI is investing in manufacturing (new Japan facility; ~$314M Yamagata expansion) and remains a top-tier biologics CDMO via BioXcellence, including in Shanghai.
 
@@ -82,7 +82,7 @@ BI's stated ambition is roughly 25 new launches across the decade to 2035, funde
 |---|---|---|
 | Survodutide (obesity) | Phase 3 read out (SYNCHRONIZE-1/2) | Filing expected; MASH Phase 3 ongoing |
 | Zongertinib 1L NSCLC | Phase 3 | Beamion LUNG-2 (est. name) |
-| Nerandomilast global rollout | Approved US/China | EU and other markets pending (est.) |
+| Nerandomilast rollout and expansion | Approved US/China; Phase 3 in systemic sclerosis and idiopathic inflammatory myopathies | EU and other markets pending (est.); autoimmune trials are recruiting or not yet recruiting |
 | BI 3034701 (GLP-1/GIP/NPY2) | Phase 2 from mid-2026 | Next-gen obesity |
 | SIM0709 (TL1A×IL-23, IBD) | Preclinical | Simcere license, ~€1.06B biodollars |
 
